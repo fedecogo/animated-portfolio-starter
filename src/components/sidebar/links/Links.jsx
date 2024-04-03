@@ -1,5 +1,6 @@
-const Links = () =>{
+import { motion } from "framer-motion"
 
+const Links = () =>{
 const items=[
     "Homepage",
     "Service",
@@ -7,13 +8,26 @@ const items=[
     "Contact",
     "About",
 ]    
-
+ const variants = {
+        open:{
+            transition :{
+                staggeredChildren:0.1,
+            },
+        },
+        closed:{
+            transition :{
+                staggeredChildren:0.05,
+                staggeredDirection: -1,
+            }
+        }
+    }
     return(
-       <div className="links">{items.map (item =>(
+       <motion.div className="links" variants={variants}>
+        {items.map (item =>(
         <a href={`#${item}`} key={item}>
             {item}</a>
        ))}
-       </div>
+       </motion.div>
     )
 }
 
