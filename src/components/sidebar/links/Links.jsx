@@ -1,7 +1,7 @@
-const ToggleBTN = () =>{
+const Links = () =>{
     return(
-       <div></div>
+       <div className="links">Links</div>
     )
 }
 
-export default ToggleBTN
+export default Links

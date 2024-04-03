@@ -1,10 +1,10 @@
 
-const ToggleBTN = () =>{
-    return(
-       <button>
-        Button
-       </button>
-    )
-}
+const ToggleBTN = ({ setOpen }) => {
+    return (
+        <button onClick={() => setOpen((prev) => !prev)}>
+            Button
+        </button>
+    );
+};
 
-export default ToggleBTN
+export default ToggleBTN;
