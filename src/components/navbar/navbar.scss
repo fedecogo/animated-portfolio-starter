@@ -1,17 +1,17 @@
-.navbar{
-    height: 100px;
+.navbar{    
+    height: 100px !important;
     margin-top: 10px;
     .wrapper{
         max-width: 1366px;
         margin: auto;
         display: flex;
-        align-self: center;
+        align-items: center;
         justify-content: space-between;
-        // background-color: rebeccapurple;
         height: 100%;
         
 
         span{
+            margin-left: 100px;
             font-weight: bold;
         }
 
