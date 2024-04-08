@@ -11,21 +11,31 @@ const items=[
  const variants = {
         open:{
             transition :{
-                staggeredChildren:0.1,
+                staggerChildren:0.1,
             },
         },
         closed:{
             transition :{
-                staggeredChildren:0.05,
-                staggeredDirection: -1,
+                staggerChildren:0.05,
+                staggerDirection: -1,
             }
         }
     }
+ const itemsVariants = {
+        open:{
+            y:0,
+            opacity:1,
+        },
+        closed:{
+            y:50,
+            opacity:0,
+        }
+    }   
     return(
        <motion.div className="links" variants={variants}>
         {items.map (item =>(
-        <a href={`#${item}`} key={item}>
-            {item}</a>
+        <motion.a href={`#${item}`} key={item} variants={itemsVariants} whileHover={{scale:1.1}} whileTap={{scale:0.8}} > 
+            {item}</motion.a>
        ))}
        </motion.div>
     )
