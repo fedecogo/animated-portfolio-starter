@@ -8,6 +8,7 @@
   max-width: 1366px;
   height: 100%;
   margin: auto;
+  margin-left: 10px;
 }
 .hero .wrapper .textContainer {
   width: 50%;
@@ -22,8 +23,20 @@
   color: rebeccapurple;
   letter-spacing: 10px;
 }
+@media (max-width: 768px) {
+  .hero .wrapper .textContainer h2 {
+    font-size: 15px;
+    letter-spacing: 5px;
+  }
+}
 .hero .wrapper .textContainer h1 {
   font-size: 88px;
+}
+@media (max-width: 768px) {
+  .hero .wrapper .textContainer h1 {
+    font-size: 15px;
+    letter-spacing: 5px;
+  }
 }
 .hero .wrapper .textContainer .buttons button {
   padding: 20px;
@@ -38,17 +51,22 @@
   width: 50px;
 }
 .hero .imageContainer {
-  height: 100%;
+  height: auto;
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
+}
+@media (max-width: 768px) {
+  .hero .imageContainer {
+    width: 50%;
+  }
 }
 .hero .imageContainer iframe {
   height: calc(100vh - 100px);
-  width: 600px;
   border-width: 0 !important;
 }
-.hero .SLIDINGtEXTcONTAINER {
+
+.SLIDINGtEXTcONTAINER {
   position: absolute;
   font-size: 50vh;
   bottom: -120px;

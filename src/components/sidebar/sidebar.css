@@ -13,6 +13,7 @@
   bottom: 0;
   width: 400px;
   background-color: white;
+  z-index: 10000000000;
 }
 .sidebar .bg .links {
   position: absolute;
@@ -37,4 +38,5 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  z-index: 100000000011;
 }/*# sourceMappingURL=sidebar.css.map */

@@ -1,3 +1,6 @@
+$md-breakpoint: 768px;
+
+
 .hero{
     //100 px is navbar height
     height: calc(100vh - 100px);
@@ -9,6 +12,7 @@
         max-width: 1366px;
         height: 100%;
         margin: auto;
+        margin-left: 10px;
         .textContainer{
             width: 50%;
             height: 100%;
@@ -17,13 +21,24 @@
             justify-content: center;
             gap: 40px;
             
-            h2{
-                font-size: 30px;
-                color: rebeccapurple;
-                letter-spacing: 10px;
-            }
+            
+            h2 {
+              font-size: 30px;
+              color: rebeccapurple;
+              letter-spacing: 10px;
+          
+              @media (max-width: $md-breakpoint) {
+                  
+                  font-size: 15px;
+                  letter-spacing: 5px;
+              }
+          }
             h1{
                 font-size: 88px;
+                @media (max-width: $md-breakpoint) {
+                  font-size: 15px;
+                  letter-spacing: 5px;
+              }
             }
             .buttons{
                 button{
@@ -45,14 +60,20 @@
     }
 
     .imageContainer{
-    height: 100%;
+    height: auto;
     position: absolute;
-    top: 0;
-    right: 0;
-    iframe{
+    bottom: 0;
+    right: 0;  
+    @media (max-width: $md-breakpoint) {
+        width: 50%;
+        
+    }
+    iframe{  
       height: calc(100vh - 100px);
-      width: 600px;
       border-width: 0 !important;
+
+    
+      }
     }
 }
 .SLIDINGtEXTcONTAINER{
@@ -64,7 +85,7 @@
 
 }
 
-}
+
 
 
 

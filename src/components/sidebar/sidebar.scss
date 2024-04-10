@@ -13,6 +13,8 @@
         bottom: 0;
         width: 400px;
         background-color: white;
+        z-index: 10000000000;
+        //è esagerato lo so ma funzionale XD
         
 
         .links{
@@ -40,6 +42,7 @@
             background-color: transparent;
             border: none;
             cursor: pointer;
+            z-index: 100000000011;
 
         }
 }
