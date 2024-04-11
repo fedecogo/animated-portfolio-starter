@@ -33,7 +33,7 @@ const  sliderVariants = {
        x:"-220%",
        transition:{
             repeat:Infinity,
-           duration: 20,
+           duration: 30,
        },
     },
    };

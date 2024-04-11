@@ -70,6 +70,7 @@ $md-breakpoint: 768px;
     }
     iframe{  
       height: calc(100vh - 100px);
+      max-width: 50vh;
       border-width: 0 !important;
 
     
