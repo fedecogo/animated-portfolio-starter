@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 const Links = () =>{
 const items=[
     "Homepage",
-    "Service",
+    "Introduzione",
     "Portfolio",
     "Contact",
     "About",

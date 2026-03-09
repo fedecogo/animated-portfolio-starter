@@ -1,0 +1,396 @@
+Sezione 1 — Introduzione
+
+Qui spieghi:
+
+cos’è una moto 2T
+
+differenza base tra 2T e 4T
+
+perché il 2T è interessante
+
+un cenno storico
+
+Testo semplice, quasi divulgativo.
+
+Esempio di sottosezioni:
+
+Cos’è il motore a 2 tempi
+
+Perché si chiama “2 tempi”
+
+Breve storia
+
+2T vs 4T in poche righe
+
+Questa sezione è importante perché prepara l’utente prima di buttarsi nei componenti.
+
+Sezione 2 — Il ciclo del motore 2T
+
+Questa secondo me deve essere il cuore del sito.
+
+Qui non devi limitarti a elencare i pezzi: devi spiegare il flusso.
+
+Ordine consigliato:
+
+aria e carburante
+
+aspirazione
+
+compressione
+
+combustione
+
+scarico
+
+lavaggio dei gas
+
+nuovo ciclo
+
+Qui puoi fare uno dei pezzi più belli del sito, con:
+
+schema semplificato
+
+animazioni
+
+step card
+
+eventualmente evidenziazione grafica di frecce e flussi
+
+Questa è la parte davvero distintiva del progetto.
+Molti sanno cos’è un pistone, pochi capiscono bene come scorre realmente il ciclo 2T.
+
+Sezione 3 — I componenti del motore
+
+Qui puoi dividere molto bene in blocchi.
+
+Alimentazione
+
+filtro aria
+
+carburatore / corpo farfallato
+
+pompa benzina
+
+miscelatore
+
+rapporto aria/benzina
+
+pacco lamellare
+
+Gruppo termico
+
+cilindro
+
+pistone
+
+fasce
+
+testata
+
+candela
+
+Organi meccanici
+
+biella
+
+albero motore
+
+cuscinetti
+
+guarnizioni
+
+carter
+
+olio
+
+Trasmissione primaria e cambio
+
+frizione
+
+cambio
+
+albero primario e secondario
+
+selettore
+
+ingranaggi
+
+Scarico e gestione gas
+
+espansione / scarico
+
+terminale
+
+catalizzatore se vuoi citarlo
+
+valvola di scarico
+
+Raffreddamento e accensione
+
+radiatore
+
+accensione
+
+alternatore
+
+pedale avviamento / starter motor
+
+Questo blocco è ottimo perché rende il motore meno “misterioso” e più sezionabile.
+
+Sezione 4 — Telaio
+
+Questa la farei dopo il motore, non prima.
+
+Perché?
+Perché chi entra nel sito probabilmente arriva per il motore 2T. Il telaio è importante, ma viene come seconda area.
+
+Argomenti:
+
+cos’è il telaio
+
+funzione strutturale
+
+materiali
+
+rigidità
+
+geometrie
+
+distribuzione dei pesi
+
+canotto di sterzo
+
+forcellone
+
+cavalletto
+
+Qui puoi collegare bene anche i cuscinetti:
+
+cuscinetti di sterzo
+
+cuscinetti del forcellone
+
+Sezione 5 — Ciclistica
+
+Questa è molto interessante perché rende la moto “dinamica”.
+
+Puoi dividerla in:
+
+Ruote e pneumatici
+
+mozzi
+
+cerchi
+
+pneumatici
+
+grip
+
+impronta a terra
+
+Trasmissione finale
+
+pignone
+
+corona
+
+catena
+
+rapporti
+
+Sospensioni
+
+forcella
+
+monoammortizzatore
+
+escursione
+
+regolazioni
+
+olio
+
+compressione / ritorno
+
+Freni
+
+pompa
+
+pinza
+
+disco
+
+olio freni
+
+radiale / assiale
+
+Questa parte deve spiegare che la moto non è solo motore:
+la prestazione dipende dal sistema completo.
+
+Sezione 6 — Elettronica
+
+Su una 2T classica questa parte può essere più corta, ma comunque utile.
+
+Puoi fare distinzione tra:
+
+elettronica base
+
+elettronica moderna
+
+Base
+
+accensione
+
+chiave
+
+batteria
+
+cablaggio
+
+luci
+
+strumentazione
+
+Avanzata / moderna
+
+centralina
+
+mappe
+
+sensori
+
+ride by wire
+
+quickshifter
+
+ABS / cornering ABS
+
+sensore lambda
+
+sensore piega / yaw
+
+traction control
+
+Attenzione: su una 2T “pura” tante di queste cose non sono centrali, quindi devi decidere se il sito parla di:
+
+moto 2T tradizionali
+oppure
+
+architettura generale della moto prendendo il 2T come base
+
+Io starei più sulla prima opzione, altrimenti rischi di uscire troppo dal focus.
+
+Sezione 7 — Carrozzeria e aerodinamica
+
+Qui puoi tenere una sezione più breve, elegante, quasi finale.
+
+serbatoio
+
+plastiche
+
+convogliatori
+
+sella
+
+codone
+
+aerodinamica
+
+Questa sezione è utile per chiudere il discorso “anatomia completa della moto”.
+
+Sezione 8 — Concetti chiave / Glossario
+
+Questa te la consiglio molto.
+
+Per esempio:
+
+cavalli
+
+coppia
+
+cilindrata
+
+temperatura ottimale
+
+rapporto aria/benzina
+
+detonazione
+
+lubrificazione
+
+compressione
+
+Questa sezione aiuta chi non è esperto.
+Ed è perfetta in un sito user friendly.
+
+3. Come riorganizzerei i tuoi capitoli
+
+Io farei così:
+
+Ordine finale consigliato
+
+Hero
+
+Introduzione al 2T
+
+Ciclo del motore 2T
+
+Componenti del motore
+
+Telaio
+
+Ciclistica
+
+Elettronica
+
+Carrozzeria
+
+Glossario / FAQ
+
+Footer
+
+Questa struttura è molto più leggibile della divisione subito per macroaree nude e crude.
+
+4. Cose che terrei e cose che toglierei
+Terrei assolutamente
+
+flusso/ciclo dell’aria
+
+rapporto aria/benzina
+
+pacco lamellare
+
+gruppo termico
+
+biella e albero motore
+
+cambio
+
+scarico
+
+radiatore
+
+accensione
+
+telaio
+
+sospensioni
+
+freni
+
+trasmissione finale
+
+glossario su cavalli/coppia
+
+Da trattare con attenzione
+
+corpo farfallato: su un sito 2T “classico” non è centrale come il carburatore
+
+ABS cornering / yaw / ride by wire / traction control: rischiano di sembrare fuori asse rispetto al focus 2T
+
+compressore centrifugo Kawasaki: interessante, ma è un tema laterale. Io non lo metterei nella prima versione del sito, oppure lo metterei come box “curiosità tecnica”
+
+Cose da evitare nella prima release
+
+Evita di mettere troppa roba specialistica tutta insieme.
+Meglio un sito con 8 sezioni fatte bene che 30 mini-argomenti appena accennati.

@@ -45,8 +45,8 @@ const Hero = ()=>{
         <div className="hero">
         <div className="wrapper">
           <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
-            <motion.h2 variants={textVariants} >FEDERICO CAPIZZI</motion.h2>
-            <motion.h1 variants={textVariants} >Web developer and Full-Stack-Developer</motion.h1>
+            {/* <motion.h2 variants={textVariants} ></motion.h2> */}
+            <motion.h1 variants={textVariants} >How a 2-stroke motorcycle works</motion.h1>
             <motion.div className="buttons" variants={textVariants}>
                 <motion.button variants={textVariants}>See the Latest Works</motion.button>
                 <motion.button variants={textVariants}>Contact Me </motion.button>
@@ -58,7 +58,7 @@ const Hero = ()=>{
             Front-End-Developer     Back-End-Developer
           </motion.div>
           <div className="imageContainer">
-          <iframe src="https://modelcapizz.netlify.app/" title="Modello 3D" className="model-iframe" />
+          {/* <iframe src="https://modelcapizz.netlify.app/" title="Modello 3D" className="model-iframe" /> */}
           </div>
         </div>
         
