@@ -5,7 +5,7 @@ import Parallax from "./components/parallax/Parallax";
 import Introduzione from "./components/1intro/introduzione/Introduzione";
 import WhatIsA2TMotorcycle from "./components/1intro/whatIsA2TMotorcycle/WhatIsA2TMotorcycle";
 import TwoStrokeVsFourStroke from "./components/1intro/twoStrokeVsFourStroke/TwoStrokeVsFourStroke";
-import EngineLifeTitle from "./components/2Ciclo/EngineLifeTitle/EngineLifeTitle";
+import EngineLifeTitle from "./components/2Ciclo/engineLifeTitle/EngineLifeTitle";
 import AirAndFuel from "./components/2Ciclo/airAndFuel/AirAndFuel";
 import FuelAndMixture from "./components/2Ciclo/fuelAndMixture/FuelAndMixture";
 import FirstCyclePhases from "./components/2Ciclo/firstCyclePhases/FirstCyclePhases";
