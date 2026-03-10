@@ -58,7 +58,7 @@ const Hero = () => {
         >
           {/* <motion.h2 variants={textVariants} ></motion.h2> */}
           <motion.h1 variants={textVariants}>
-            How a 2-stroke motorcycle works
+            
           </motion.h1>
           <motion.div className="buttons" variants={textVariants}>
             <motion.button variants={textVariants}>
@@ -80,7 +80,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Front-End-Developer Back-End-Developer
+     How a 2-stroke motorcycle works
       </motion.div>
       <div className="imageContainer">
         {/* <iframe src="https://modelcapizz.netlify.app/" title="Modello 3D" className="model-iframe" /> */}
