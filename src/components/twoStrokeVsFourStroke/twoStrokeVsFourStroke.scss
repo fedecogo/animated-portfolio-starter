@@ -355,13 +355,13 @@ $laptop: 1200px;
       padding: 0 20px;
     }
 
-    .comparisonGrid {
-      grid-template-columns: 1fr;
-    }
+    // .comparisonGrid {
+    //   grid-template-columns: 1fr;
+    // }
 
-    .accordionInner {
-      grid-template-columns: 1fr;
-    }
+    // .accordionInner {
+    //   grid-template-columns: 1fr;
+    // }
 
     h2 {
       font-size: clamp(2rem, 8vw, 3.5rem);

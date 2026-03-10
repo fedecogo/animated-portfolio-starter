@@ -41,26 +41,51 @@ const cardVariants = {
   },
 };
 
+
 const accordionData = [
   {
     id: 1,
     title: "Cycle frequency",
-    twoStroke: "A 2T engine produces a power event every two piston strokes, which makes its operation feel more immediate and concentrated.",
-    fourStroke: "A 4T engine needs four strokes to complete the same cycle, so intake, compression, combustion and exhaust are more separated.",
+    twoStroke:
+      "A 2-stroke engine completes its full operating cycle in two piston strokes. This means the engine produces a power event more frequently, which often results in a more immediate and reactive character.",
+    fourStroke:
+      "A 4-stroke engine requires four piston strokes to complete the same cycle: intake, compression, combustion and exhaust. Because the phases are more separated, the engine usually delivers power in a smoother and more progressive way.",
   },
   {
     id: 2,
     title: "Mechanical complexity",
-    twoStroke: "The 2-stroke layout is generally simpler in concept, with much of its character depending on piston motion, intake timing and exhaust flow.",
-    fourStroke: "The 4-stroke architecture is usually more articulated because it relies on a dedicated valvetrain, camshafts and a more segmented operating sequence.",
+    twoStroke:
+      "The 2-stroke architecture is mechanically simpler in its core concept. Much of its behavior is controlled by piston movement, intake timing, port design and exhaust flow rather than a complex valvetrain.",
+    fourStroke:
+      "The 4-stroke architecture is generally more complex because it relies on additional components such as valves, camshafts and timing systems that regulate the engine cycle.",
   },
   {
     id: 3,
-    title: "Riding character",
-    twoStroke: "A 2T often feels sharper, lighter and more explosive, with power strongly influenced by rev range and resonance effects.",
-    fourStroke: "A 4T often feels broader, smoother and more progressive, delivering power in a way that is easier to manage across a wider range.",
+    title: "Power delivery",
+    twoStroke:
+      "A 2T engine often produces a more aggressive and concentrated powerband. When the engine reaches its effective operating range, the increase in power can feel sharp and energetic.",
+    fourStroke:
+      "A 4T engine usually delivers power in a broader and more linear way. The progression is often easier to control, especially across a wider rev range.",
+  },
+  {
+    id: 4,
+    title: "Weight and simplicity",
+    twoStroke:
+      "Because of its simpler architecture and reduced number of moving parts, a 2-stroke engine is often lighter and more compact compared with a comparable 4-stroke design.",
+    fourStroke:
+      "The additional components required for valve timing and the longer operating cycle typically make a 4-stroke engine heavier and structurally more complex.",
+  },
+  {
+    id: 5,
+    title: "Maintenance and operation",
+    twoStroke:
+      "A 2T engine usually requires simpler mechanical maintenance but depends heavily on correct lubrication and mixture management to operate properly.",
+    fourStroke:
+      "A 4T engine often requires more complex mechanical servicing due to its valvetrain and timing components, but lubrication and fuel systems are typically more separated.",
   },
 ];
+
+
 
 const AccordionItem = ({ item, isOpen, onClick }) => {
   return (
@@ -167,10 +192,6 @@ const TwoStrokeVsFourStroke = () => {
             </div>
           </motion.div>
         </motion.div>
-              
-              
-              
-              
               
               
               {/* comparisonGrid */}

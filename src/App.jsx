@@ -5,7 +5,6 @@ import Parallax from "./components/parallax/Parallax";
 import Introduzione from "./components/introduzione/Introduzione";
 import WhatIsA2TMotorcycle from "./components/whatIsA2TMotorcycle/WhatIsA2TMotorcycle";
 import TwoStrokeVsFourStroke from "./components/twoStrokeVsFourStroke/TwoStrokeVsFourStroke";
-import TwoStrokeVsFourStroke2 from "./components/twoStrokeVsFourStroke2/TwoStrokeVsFourStroke2";
 
 const App = () => {
   return (
@@ -27,10 +26,6 @@ const App = () => {
         <TwoStrokeVsFourStroke />
       </section>
 
-      
-      <section id="TwoStrokeVsFourStroke2">
-        <TwoStrokeVsFourStroke2 />
-      </section>
 
 
 
