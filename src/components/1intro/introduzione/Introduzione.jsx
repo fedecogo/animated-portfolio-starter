@@ -97,16 +97,17 @@ const Introduzione = () => {
         </motion.div>
 
         <div className="imageContainer">
-          {/* Qui dopo puoi inserire:
-              - un'immagine della moto
-              - un modello 3D
-              - una silhouette tecnica
-              - un blocco grafico decorativo
-          */}
-          <div className="imagePlaceholder">
-            <span>2T ENGINE / BIKE VISUAL</span>
-          </div>
-        </div>
+
+  <div className="imagePlaceholder">
+    
+    <img
+      src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWM4cG9tZHlzOTl5cmNycWd2ZGkxamlmOGd4Y25tZzF0dWd1YjN6ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pTmey0RxjqSoaX7y4f/giphy.gif"
+      alt="2 stroke engine animation"
+    />
+
+  </div>
+
+</div>
       </div>
 
       <div className="slidingTextWrapper">

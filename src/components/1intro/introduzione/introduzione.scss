@@ -4,7 +4,7 @@ $laptop: 1200px;
 
 .introduzione {
   position: relative;
-  min-height: calc(100vh - 100px);
+  min-height: 100vh;
   overflow: hidden;
   background:
     radial-gradient(circle at top right, rgba(255, 107, 53, 0.12), transparent 25%),
@@ -114,53 +114,23 @@ $laptop: 1200px;
     }
   }
 
-  .imageContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 460px;
-    position: relative;
-  }
+.imagePlaceholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .imagePlaceholder {
-    width: 100%;
-    max-width: 520px;
-    aspect-ratio: 1 / 1;
-    border-radius: 28px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background:
-      radial-gradient(circle at top, rgba(255, 107, 53, 0.14), transparent 35%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+.imagePlaceholder img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
 
-    span {
-      text-align: center;
-      padding: 20px;
-      color: rgba(245, 247, 250, 0.35);
-      font-size: 0.95rem;
-      letter-spacing: 2px;
-      font-weight: 700;
-    }
+  border-radius: 12px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-          135deg,
-          transparent 0%,
-          rgba(255, 255, 255, 0.03) 45%,
-          transparent 100%
-        );
-      pointer-events: none;
-    }
-  }
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.35),
+    0 0 20px rgba(255,107,53,0.2);
+}
 
   .slidingTextWrapper {
     position: absolute;
