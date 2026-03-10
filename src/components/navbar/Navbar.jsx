@@ -1,34 +1,34 @@
-import Sidebar from "../sidebar/Sidebar"
-import "./navbar.scss"
-import { motion } from "framer-motion"
-import { useEffect, useState } from "react"
+import Sidebar from "../sidebar/Sidebar";
+import "./navbar.scss";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [language, setLanguage] = useState("en")
+  const [language, setLanguage] = useState("en");
 
   useEffect(() => {
-    const storedLanguage = localStorage.getItem("language")
+    const storedLanguage = localStorage.getItem("language");
+    console.log("the stored language is " + storedLanguage);
 
     if (storedLanguage) {
-      setLanguage(storedLanguage)
-      return
+      setLanguage(storedLanguage);
+      console.log("the stored language is " + storedLanguage);
+      return;
     }
 
-    const browserLanguage = navigator.language.toLowerCase()
-    console.log("browserLanguage") 
-    console.log(browserLanguage)
-
-    const defaultLanguage = browserLanguage.startsWith("it") ? "it" : "en"
-
-    localStorage.setItem("language", defaultLanguage)
-    setLanguage(defaultLanguage)
-  }, [])
+    const browserLanguage = navigator.language.toLowerCase();
+    const defaultLanguage = browserLanguage.startsWith("it") ? "it" : "en";
+    localStorage.setItem("language", defaultLanguage);
+    setLanguage(defaultLanguage);
+    console.log("the default language is " + defaultLanguage);
+  }, []);
 
   const toggleLanguage = () => {
-    const newLanguage = language === "en" ? "it" : "en"
-    localStorage.setItem("language", newLanguage)
-    setLanguage(newLanguage)
-  }
+    const newLanguage = language === "en" ? "it" : "en";
+    localStorage.setItem("language", newLanguage);
+    setLanguage(newLanguage);
+    console.log("the new language is " + newLanguage);
+  };
 
   return (
     <div className="navbar">
@@ -56,12 +56,12 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {language === "en" ? "🇬🇧 EN" : "🇮🇹 IT"}
+            {language === "en" ? "Cambia lingua 🇮🇹" : "Change language 🇬🇧"}
           </motion.span>
         </motion.button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
