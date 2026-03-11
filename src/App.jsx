@@ -11,7 +11,7 @@ import FuelAndMixture from "./components/2Ciclo/fuelAndMixture/FuelAndMixture";
 import FirstCyclePhases from "./components/2Ciclo/firstCyclePhases/FirstCyclePhases";
 import CombustionAndIgnition from "./components/2Ciclo/combustionAndIgnition/CombustionAndIgnition";
 import ExhaustSystem from "./components/2Ciclo/exhaustSystem/ExhaustSystem";
-import Carburatore from "./components/3componentiDelMotore/Carburatore/Carburatore";
+import Carburatore from "./components/3componentiDelMotore/carburatore/Carburatore";
 import CorpoFarfallato from "./components/3componentiDelMotore/corpoFarfallato/CorpoFarfallato";
 import PompaBenzina from "./components/3componentiDelMotore/pompaBenzina/PompaBenzina";
 import Miscelatore from "./components/3componentiDelMotore/miscelatore/Miscelatore";
