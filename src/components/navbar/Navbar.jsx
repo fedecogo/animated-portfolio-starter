@@ -21,6 +21,7 @@ const Navbar = () => {
     localStorage.setItem("language", defaultLanguage);
     setLanguage(defaultLanguage);
     console.log("the default language is " + defaultLanguage);
+    return
   }, []);
 
   const toggleLanguage = () => {

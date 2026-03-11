@@ -1,0 +1,814 @@
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 1200px;
+
+.corpoFarfallato {
+  position: relative;
+  padding: 120px 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 107, 53, 0.07), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(255, 107, 53, 0.05), transparent 28%),
+    linear-gradient(180deg, #0b0d13 0%, #0e1020 50%, #0b0d13 100%);
+  color: #f5f7fa;
+  overflow: hidden;
+
+  .wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  // ─── INTRO BLOCK ───────────────────────────────────────────────────────────
+
+  .introBlock {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 42px;
+  }
+
+  .titleColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 780px;
+  }
+
+  .sectionLabel {
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 107, 53, 0.12);
+    border: 1px solid rgba(255, 107, 53, 0.18);
+    color: #ff8a5f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
+    line-height: 1;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+    max-width: 760px;
+  }
+
+  .lead {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.88);
+    max-width: 760px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.72);
+    max-width: 760px;
+  }
+
+  // ─── INFO PANEL ────────────────────────────────────────────────────────────
+
+  .infoPanel {
+    position: sticky;
+    top: 110px;
+    padding: 28px;
+    border-radius: 28px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(255, 107, 53, 0.08), transparent 30%);
+      pointer-events: none;
+    }
+  }
+
+  .panelHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+
+    .panelTag {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: #ff6b35;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.35rem;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
+
+  .flowStepsMini {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .miniStep {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .miniIndex {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 107, 53, 0.22);
+    background: rgba(255, 107, 53, 0.08);
+    color: #ff8a5f;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  .miniText {
+    padding-top: 6px;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: rgba(245, 247, 250, 0.9);
+    font-weight: 500;
+  }
+
+  // ─── VISUAL PLACEHOLDER ────────────────────────────────────────────────────
+
+  .visualBlock {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 32px;
+
+    &.visualBlockAlt {
+      grid-template-columns: 380px 1fr;
+
+      .visualCaption {
+        order: -1;
+      }
+    }
+  }
+
+  .mediaPlaceholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 24px;
+    border: 2px dashed rgba(255, 107, 53, 0.25);
+    background: rgba(255, 107, 53, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      border-color: rgba(255, 107, 53, 0.45);
+      background: rgba(255, 107, 53, 0.07);
+    }
+
+    // ── quando inserisci l'immagine, rimuovi il placeholder e lascia solo img/video
+    img,
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 22px;
+      display: block;
+    }
+  }
+
+  .placeholderInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 24px;
+    pointer-events: none;
+  }
+
+  .placeholderIcon {
+    font-size: 2.4rem;
+    color: rgba(255, 107, 53, 0.35);
+    line-height: 1;
+  }
+
+  .placeholderText {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(255, 138, 95, 0.6);
+    letter-spacing: 0.3px;
+  }
+
+  .placeholderSub {
+    font-size: 0.82rem;
+    color: rgba(245, 247, 250, 0.3);
+    font-family: monospace;
+  }
+
+  .visualCaption {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .captionTag {
+      display: inline-block;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255, 107, 53, 0.10);
+      border: 1px solid rgba(255, 107, 53, 0.16);
+      color: #ff8a5f;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: rgba(245, 247, 250, 0.72);
+      max-width: none;
+    }
+  }
+
+  // ─── DIAGRAM BLOCK ─────────────────────────────────────────────────────────
+
+  .diagramBlock {
+    margin-bottom: 32px;
+  }
+
+  .flowDiagram {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px;
+    border-radius: 28px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.02) 45%, transparent 100%);
+      pointer-events: none;
+    }
+  }
+
+  .diagramTrack {
+    position: absolute;
+    top: 78px;
+    left: 9%;
+    right: 9%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 107, 53, 0.16),
+      rgba(255, 107, 53, 0.6),
+      rgba(255, 107, 53, 0.16)
+    );
+    z-index: 0;
+  }
+
+  .diagramNode {
+    position: relative;
+    z-index: 1;
+    padding: 24px 20px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    min-height: 240px;
+
+    h3 {
+      margin: 18px 0 12px;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p {
+      max-width: none;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: rgba(245, 247, 250, 0.72);
+    }
+  }
+
+  .nodeNumber {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: #ff6b35;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 800;
+    box-shadow: 0 10px 24px rgba(255, 107, 53, 0.22);
+  }
+
+  // ─── ECU BLOCK ─────────────────────────────────────────────────────────────
+
+  .ecuBlock {
+    margin-bottom: 32px;
+    padding: 36px;
+    border-radius: 28px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(255, 107, 53, 0.06), transparent 40%);
+      pointer-events: none;
+    }
+  }
+
+  .ecuHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 32px;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    h3 {
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 1.25;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p {
+      max-width: none;
+    }
+  }
+
+  .ecuGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .ecuSensor {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 107, 53, 0.2);
+    }
+  }
+
+  .sensorDot {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 5px;
+
+    &.dot1 { background: #ff6b35; box-shadow: 0 0 8px rgba(255, 107, 53, 0.6); }
+    &.dot2 { background: #ff8f5e; box-shadow: 0 0 8px rgba(255, 143, 94, 0.5); }
+    &.dot3 { background: #ffb085; box-shadow: 0 0 8px rgba(255, 176, 133, 0.45); }
+    &.dot4 { background: #e05a2a; box-shadow: 0 0 8px rgba(224, 90, 42, 0.5); }
+    &.dot5 { background: #ff4500; box-shadow: 0 0 8px rgba(255, 69, 0, 0.55); }
+    &.dot6 { background: #ffd0b5; box-shadow: 0 0 8px rgba(255, 208, 181, 0.4); }
+  }
+
+  .sensorBody {
+    h4 {
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: rgba(245, 247, 250, 0.6);
+      max-width: none;
+    }
+  }
+
+  // ─── COMPARE BLOCK ─────────────────────────────────────────────────────────
+
+  .compareBlock {
+    margin-bottom: 32px;
+  }
+
+  .compareHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+
+    h3 {
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 1.25;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
+
+  .compareTable {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    gap: 0;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  .compareCol {
+    padding: 36px 32px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 0.96rem;
+      line-height: 1.65;
+      color: rgba(245, 247, 250, 0.75);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+      }
+    }
+
+    &.compareColLeft li::before {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    &.compareColRight li::before {
+      background: #ff6b35;
+      box-shadow: 0 0 6px rgba(255, 107, 53, 0.5);
+    }
+  }
+
+  .compareColLabel {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &.carb {
+      color: rgba(245, 247, 250, 0.45);
+    }
+
+    &.fi {
+      color: #ff6b35;
+    }
+  }
+
+  .compareDivider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .dividerLine {
+    flex: 1;
+    width: 1px;
+    background: rgba(255, 107, 53, 0.2);
+  }
+
+  .dividerLabel {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: rgba(255, 107, 53, 0.5);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+  }
+
+  // ─── CARDS GRID ────────────────────────────────────────────────────────────
+
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .infoCard {
+    position: relative;
+    min-height: 250px;
+    padding: 28px;
+    border-radius: 24px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.55), transparent);
+      opacity: 0.7;
+    }
+
+    h3 {
+      margin: 0 0 14px;
+      font-size: 1.24rem;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.75;
+      color: rgba(245, 247, 250, 0.72);
+      max-width: none;
+    }
+  }
+
+  .cardTag {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ff6b35;
+    text-transform: uppercase;
+  }
+}
+
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────────
+
+@media (max-width: $laptop) {
+  .corpoFarfallato {
+    .introBlock {
+      grid-template-columns: 1fr;
+    }
+
+    .infoPanel {
+      position: relative;
+      top: 0;
+    }
+
+    .visualBlock,
+    .visualBlock.visualBlockAlt {
+      grid-template-columns: 1fr;
+
+      .visualCaption {
+        order: 0;
+      }
+    }
+
+    .flowDiagram {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .diagramTrack {
+      display: none;
+    }
+
+    .ecuGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .compareTable {
+      grid-template-columns: 1fr;
+    }
+
+    .compareDivider {
+      flex-direction: row;
+      padding: 0 20px;
+      border-left: none;
+      border-right: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      height: 40px;
+    }
+
+    .dividerLine {
+      width: auto;
+      flex: 1;
+      height: 1px;
+    }
+
+    .dividerLabel {
+      writing-mode: horizontal-tb;
+    }
+
+    .cardsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .corpoFarfallato {
+    padding: 90px 0;
+
+    .wrapper {
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      line-height: 1.02;
+    }
+
+    .lead,
+    p {
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    .infoPanel,
+    .flowDiagram,
+    .infoCard,
+    .ecuBlock {
+      padding: 24px;
+      border-radius: 22px;
+    }
+
+    .flowDiagram {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .diagramNode {
+      min-height: auto;
+      padding: 22px 18px 18px;
+    }
+
+    .ecuGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .compareCol {
+      padding: 28px 24px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .corpoFarfallato {
+    padding: 70px 0;
+
+    .wrapper {
+      padding: 0 16px;
+    }
+
+    .sectionLabel {
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      padding: 7px 12px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      letter-spacing: -1px;
+    }
+
+    .lead,
+    p,
+    .infoCard p,
+    .diagramNode p,
+    .miniText,
+    .sensorBody p {
+      font-size: 0.95rem;
+      line-height: 1.68;
+    }
+
+    .infoPanel,
+    .flowDiagram,
+    .infoCard,
+    .ecuBlock {
+      padding: 20px;
+    }
+
+    .infoCard h3,
+    .diagramNode h3,
+    .panelHeader h3,
+    .ecuHeader h3,
+    .compareHeader h3 {
+      font-size: 1.12rem;
+    }
+
+    .miniStep {
+      grid-template-columns: 38px 1fr;
+      gap: 10px;
+    }
+
+    .miniIndex {
+      width: 32px;
+      height: 32px;
+      font-size: 0.72rem;
+    }
+
+    .ecuSensor {
+      padding: 14px 16px;
+    }
+
+    .compareCol {
+      padding: 22px 18px;
+    }
+
+    .mediaPlaceholder {
+      aspect-ratio: 4 / 3;
+      border-radius: 18px;
+    }
+
+    .ecuBlock {
+      padding: 20px;
+      border-radius: 22px;
+    }
+  }
+}

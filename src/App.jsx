@@ -11,6 +11,17 @@ import FuelAndMixture from "./components/2Ciclo/fuelAndMixture/FuelAndMixture";
 import FirstCyclePhases from "./components/2Ciclo/firstCyclePhases/FirstCyclePhases";
 import CombustionAndIgnition from "./components/2Ciclo/combustionAndIgnition/CombustionAndIgnition";
 import ExhaustSystem from "./components/2Ciclo/exhaustSystem/ExhaustSystem";
+import Carburatore from "./components/3componentiDelMotore/Carburatore/Carburatore";
+import CorpoFarfallato from "./components/3componentiDelMotore/corpoFarfallato/CorpoFarfallato";
+import PompaBenzina from "./components/3componentiDelMotore/pompaBenzina/PompaBenzina";
+import Miscelatore from "./components/3componentiDelMotore/miscelatore/Miscelatore";
+import PaccoLamellare from "./components/3componentiDelMotore/paccoLamellare/PaccoLamellare";
+import GruppoTermicoIntro from "./components/3gruppoTermico/gruppoTermicoIntro/GruppoTermicoIntro";
+import Pistone from "./components/3gruppoTermico/pistone/Pistone";
+import Fasce from "./components/3gruppoTermico/fasce/Fasce";
+import Cilindro from "./components/3gruppoTermico/cilindro/Cilindro";
+import Testata from "./components/3gruppoTermico/testata/Testata";
+import Candela from "./components/3gruppoTermico/candela/Candela";
 
 
 
@@ -57,6 +68,49 @@ const App = () => {
       </section>
 
      
+
+     {/* Componenti del motore */}
+     <section id="Carburatore">
+        <Carburatore />
+      </section>
+
+      <section id="CorpoFarfallato">
+        <CorpoFarfallato />
+      </section>
+
+      <section id="PompaBenzina">
+        <PompaBenzina />
+      </section>
+
+      <section id="Miscelatore">
+        <Miscelatore />
+      </section>
+
+      <section id="PaccoLamellare">
+        <PaccoLamellare />
+      </section>
+
+
+      {/* Gruppo termico */}
+      <section id="GruppoTermico">
+        <GruppoTermicoIntro />
+      </section>
+      <section id="Pistone">
+        <Pistone />
+      </section>
+      <section id="Fasce">
+        <Fasce />
+      </section>
+      <section id="Cilindro">
+        <Cilindro />
+      </section>
+      {/* testat */}
+       <section id="Testata">
+        <Testata />
+      </section>
+      <section id="Candela">
+        <Candela />
+      </section>
 
 
 

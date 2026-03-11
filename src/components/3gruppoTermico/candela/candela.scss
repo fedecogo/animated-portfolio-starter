@@ -1,0 +1,921 @@
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 1200px;
+
+$orange:      #ff6b35;
+$orange-soft: #ff8a5f;
+$orange-dim:  rgba(255, 107, 53, 0.12);
+$orange-bdr:  rgba(255, 107, 53, 0.18);
+
+$red:         #f05252;
+$red-dim:     rgba(240, 82, 82, 0.1);
+$red-bdr:     rgba(240, 82, 82, 0.22);
+
+$green:       #3ecf8e;
+$green-dim:   rgba(62, 207, 142, 0.1);
+$green-bdr:   rgba(62, 207, 142, 0.2);
+
+$yellow:      #f0c040;
+$yellow-dim:  rgba(240, 192, 64, 0.1);
+$yellow-bdr:  rgba(240, 192, 64, 0.2);
+
+$violet:      #a78bfa;
+$violet-dim:  rgba(167, 139, 250, 0.1);
+$violet-bdr:  rgba(167, 139, 250, 0.2);
+
+$blue:        #4fa3e0;
+$blue-dim:    rgba(79, 163, 224, 0.1);
+$blue-bdr:    rgba(79, 163, 224, 0.2);
+
+$steel:       #94a3b8;
+$steel-dim:   rgba(148, 163, 184, 0.1);
+$steel-bdr:   rgba(148, 163, 184, 0.2);
+
+$teal:        #2dd4bf;
+$teal-dim:    rgba(45, 212, 191, 0.1);
+$teal-bdr:    rgba(45, 212, 191, 0.2);
+
+.candela {
+  position: relative;
+  padding: 120px 0;
+  background:
+    radial-gradient(circle at 10% 7%,  rgba(255, 107, 53, 0.07), transparent 25%),
+    radial-gradient(circle at 90% 88%, rgba(167, 139, 250, 0.04), transparent 25%),
+    linear-gradient(180deg, #0d1019 0%, #0b0d13 50%, #0d1019 100%);
+  color: #f5f7fa;
+  overflow: hidden;
+
+  .wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  // ─── INTRO BLOCK ───────────────────────────────────────────────────────────
+
+  .introBlock {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 42px;
+  }
+
+  .titleColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 780px;
+  }
+
+  .sectionLabel {
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: $orange-dim;
+    border: 1px solid $orange-bdr;
+    color: $orange-soft;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
+    line-height: 1;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+    max-width: 760px;
+  }
+
+  .lead {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.88);
+    max-width: 760px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.72);
+    max-width: 760px;
+  }
+
+  // ─── INFO PANEL ────────────────────────────────────────────────────────────
+
+  .infoPanel {
+    position: sticky;
+    top: 110px;
+    padding: 28px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.28);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(255,107,53,0.08), transparent 30%);
+      pointer-events: none;
+    }
+  }
+
+  .panelHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+
+    .panelTag {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: $orange;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    h3 { margin: 0; font-size: 1.35rem; line-height: 1.3; font-weight: 700; color: #ffffff; }
+  }
+
+  .flowStepsMini {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .miniStep {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    &:last-child { border-bottom: 0; padding-bottom: 0; }
+  }
+
+  .miniIndex {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid $orange-bdr;
+    background: $orange-dim;
+    color: $orange-soft;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  .miniText {
+    padding-top: 6px;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: rgba(245,247,250,0.9);
+    font-weight: 500;
+  }
+
+  // ─── VISUAL PLACEHOLDER ────────────────────────────────────────────────────
+
+  .visualBlock {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 32px;
+
+    &.visualBlockAlt {
+      grid-template-columns: 380px 1fr;
+      .visualCaption { order: -1; }
+    }
+  }
+
+  .mediaPlaceholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 24px;
+    border: 2px dashed rgba(255,107,53,0.25);
+    background: rgba(255,107,53,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background 0.3s ease;
+
+    &.mediaPlaceholderSquare { aspect-ratio: 1 / 1; }
+
+    &:hover {
+      border-color: rgba(255,107,53,0.45);
+      background: rgba(255,107,53,0.07);
+    }
+
+    img, video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 22px;
+      display: block;
+    }
+  }
+
+  .placeholderInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 24px;
+    pointer-events: none;
+  }
+
+  .placeholderIcon { font-size: 2.4rem; color: rgba(255,107,53,0.35); line-height: 1; }
+  .placeholderText { font-size: 1rem; font-weight: 700; color: rgba(255,138,95,0.6); }
+  .placeholderSub  { font-size: 0.82rem; color: rgba(245,247,250,0.3); font-family: monospace; }
+
+  .visualCaption {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .captionTag {
+      display: inline-block;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: $orange-dim;
+      border: 1px solid $orange-bdr;
+      color: $orange-soft;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    p { font-size: 1rem; line-height: 1.75; color: rgba(245,247,250,0.72); max-width: none; }
+  }
+
+  // ─── SHARED BLOCK SHELL ────────────────────────────────────────────────────
+
+  .gradoBlock,
+  .codiciBlock,
+  .letturaBlock,
+  .comprBlock {
+    margin-bottom: 32px;
+    padding: 36px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gradoBlock::before  { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top left,  rgba(255,107,53,0.06), transparent 40%); pointer-events: none; }
+  .codiciBlock::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top right, rgba(79,163,224,0.05), transparent 40%); pointer-events: none; }
+  .letturaBlock::before{ content: ""; position: absolute; inset: 0; background: radial-gradient(circle at bottom right, rgba(62,207,142,0.04), transparent 40%); pointer-events: none; }
+  .comprBlock::before  { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at bottom left, rgba(167,139,250,0.05), transparent 38%); pointer-events: none; }
+
+  // ─── SHARED HEADER ─────────────────────────────────────────────────────────
+
+  .gradoHeader,
+  .codiciHeader,
+  .letturaHeader,
+  .comprHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    h3 { margin: 0; font-size: clamp(1.4rem, 2.2vw, 1.8rem); font-weight: 700; color: #ffffff; line-height: 1.25; }
+    p  { max-width: none; }
+  }
+
+  // ─── GRADO TERMICO ─────────────────────────────────────────────────────────
+
+  .gradoContent {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .gradoScale {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .gradoScaleLabel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(245,247,250,0.5);
+
+    span:nth-child(2) { text-align: center; color: $green; }
+    span:last-child   { text-align: right; }
+  }
+
+  .gradoScaleBar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 14px;
+    border-radius: 999px;
+    overflow: hidden;
+    gap: 3px;
+  }
+
+  .gradoZone {
+    position: relative;
+    height: 100%;
+
+    &.zoneFredda   { background: linear-gradient(90deg, rgba(79,163,224,0.3), rgba(79,163,224,0.6)); border-radius: 999px 0 0 999px; }
+    &.zoneOttimale { background: linear-gradient(90deg, rgba(62,207,142,0.5), rgba(255,107,53,0.5)); display: flex; align-items: center; justify-content: center; }
+    &.zoneCalda    { background: linear-gradient(90deg, rgba(240,82,82,0.5), rgba(240,82,82,0.8)); border-radius: 0 999px 999px 0; }
+  }
+
+  .gradoZoneLabel {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: rgba(245,247,250,0.9);
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+  }
+
+  .gradoScaleDesc {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 0.78rem;
+    color: rgba(245,247,250,0.4);
+    line-height: 1.4;
+
+    .descOttimale { text-align: center; color: rgba(62,207,142,0.8); }
+    .descCalda    { text-align: right; color: rgba(240,82,82,0.8); }
+  }
+
+  .gradoCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .gradoCard {
+    padding: 24px 22px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.93rem; line-height: 1.7; color: rgba(245,247,250,0.65); max-width: none; }
+
+    &.gradoCardFredda { background: rgba(79,163,224,0.05); border: 1px solid rgba(79,163,224,0.16); }
+    &.gradoCardCalda  { background: rgba(240,82,82,0.05);  border: 1px solid rgba(240,82,82,0.16); }
+  }
+
+  .gradoBadge {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &.badgeFredda { background: $blue-dim;  border: 1px solid $blue-bdr;  color: $blue; }
+    &.badgeCalda  { background: $red-dim;   border: 1px solid $red-bdr;   color: $red; }
+  }
+
+  // ─── CODICI BLOCK ──────────────────────────────────────────────────────────
+
+  .codiciGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  .codiceCard {
+    padding: 26px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .codiceExample {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .codiceLettera {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: monospace;
+    letter-spacing: 0;
+
+    &.letteraMarchio { background: rgba(255,255,255,0.07); color: rgba(245,247,250,0.6); }
+    &.letteraDim     { background: $blue-dim;   border: 1px solid $blue-bdr;   color: $blue; }
+    &.letteraGrado   { background: $orange-dim; border: 1px solid $orange-bdr; color: $orange-soft; }
+    &.letteraTipo    { background: $green-dim;  border: 1px solid $green-bdr;  color: $green; }
+    &.letteraSpec    { background: $violet-dim; border: 1px solid $violet-bdr; color: $violet; }
+  }
+
+  .codiceSep {
+    color: rgba(245,247,250,0.2);
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  .codiceLeggenda {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .codiceRow {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 0.88rem;
+    color: rgba(245,247,250,0.72);
+
+    &:last-child { border-bottom: 0; padding-bottom: 0; }
+  }
+
+  .codiceCol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    width: 36px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    font-family: monospace;
+
+    &.letteraDim     { background: $blue-dim;   border: 1px solid $blue-bdr;   color: $blue; }
+    &.letteraGrado   { background: $orange-dim; border: 1px solid $orange-bdr; color: $orange-soft; }
+    &.letteraTipo    { background: $green-dim;  border: 1px solid $green-bdr;  color: $green; }
+    &.letteraSpec    { background: $violet-dim; border: 1px solid $violet-bdr; color: $violet; }
+    &.letteraMarchio { background: rgba(255,255,255,0.07); color: rgba(245,247,250,0.5); }
+  }
+
+  .codiceInfoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .codiceInfo {
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    p { margin: 0; font-size: 0.88rem; line-height: 1.65; color: rgba(245,247,250,0.6); max-width: none; }
+  }
+
+  .codiceInfoLabel {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $orange-soft;
+  }
+
+  .codiceInfoValues {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .civBadge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(245,247,250,0.55);
+
+    &.civActive { background: $orange-dim; border-color: $orange-bdr; color: $orange-soft; }
+    &.civWarn   { background: $yellow-dim; border-color: $yellow-bdr; color: $yellow; }
+  }
+
+  // ─── LETTURA CANDELA ───────────────────────────────────────────────────────
+
+  .letturaGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .letturaCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(255,255,255,0.04); }
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.65); max-width: none; }
+  }
+
+  .coloreDot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+
+    &.dotoNocciola   { background: #b07a3a; box-shadow: 0 4px 14px rgba(176,122,58,0.4); }
+    &.dotoBianco     { background: #e8e4d8; box-shadow: 0 4px 14px rgba(232,228,216,0.3); }
+    &.dotoNero       { background: #1a1a1a; border: 1px solid rgba(255,255,255,0.1); }
+    &.dotoOliato     { background: #1a1a0a; border: 1px solid rgba(255,220,50,0.15); }
+    &.dotoDetonazione{ background: #3a2a1a; border: 1px solid rgba(240,192,64,0.3); }
+    &.dotoFuso       { background: #4a1a1a; border: 1px solid rgba(240,82,82,0.3); }
+  }
+
+  .letturaBadge {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &.badgeOttimo  { background: $green-dim;  border: 1px solid $green-bdr;  color: $green; }
+    &.badgeMagro   { background: $yellow-dim; border: 1px solid $yellow-bdr; color: $yellow; }
+    &.badgeRicco   { background: $blue-dim;   border: 1px solid $blue-bdr;   color: $blue; }
+    &.badgeOlio    { background: $steel-dim;  border: 1px solid $steel-bdr;  color: $steel; }
+    &.badgeDeton   { background: $orange-dim; border: 1px solid $orange-bdr; color: $orange-soft; }
+    &.badgeFuso    { background: $red-dim;    border: 1px solid $red-bdr;    color: $red; }
+  }
+
+  // ─── COMPRESSIMETRO ────────────────────────────────────────────────────────
+
+  .comprContent {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .comprLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .comprValori {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .comprValoreCard {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .comprValoreLabel {
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: rgba(245,247,250,0.8);
+  }
+
+  .comprValoreBar {
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.07);
+    overflow: hidden;
+  }
+
+  .comprValoreFill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(255,107,53,0.5), $orange);
+    box-shadow: 0 0 8px rgba(255,107,53,0.3);
+
+    &.comprValoreFillAlt  { background: linear-gradient(90deg, rgba(79,163,224,0.5), $blue); box-shadow: 0 0 8px rgba(79,163,224,0.3); }
+    &.comprValoreFillWarn { background: linear-gradient(90deg, rgba(240,82,82,0.5), $red);  box-shadow: 0 0 8px rgba(240,82,82,0.3); }
+  }
+
+  .comprValore {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: $orange-soft;
+    letter-spacing: 0.3px;
+  }
+
+  .comprProcedura {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .comprProcLabel {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $orange;
+  }
+
+  .comprSteps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .comprStep {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    &:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    p { margin: 0; font-size: 0.9rem; line-height: 1.6; color: rgba(245,247,250,0.7); max-width: none; }
+  }
+
+  .comprStepN {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: $orange;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    box-shadow: 0 6px 16px rgba(255,107,53,0.22);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .comprRight {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .comprStrumento {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .comprStrumentoInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.65); max-width: none; }
+  }
+
+  .comprStrumentoTag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $violet;
+  }
+
+  .comprInterpreta {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .comprInterpretaTag {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(245,247,250,0.5);
+  }
+
+  .comprInterpretaGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .ciItem {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    &:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    strong { display: block; font-size: 0.9rem; font-weight: 700; color: #ffffff; margin-bottom: 3px; }
+    p { margin: 0; font-size: 0.84rem; line-height: 1.55; color: rgba(245,247,250,0.58); max-width: none; }
+  }
+
+  .ciDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $green;
+    box-shadow: 0 0 8px rgba(62,207,142,0.5);
+    flex-shrink: 0;
+    margin-top: 6px;
+
+    &.ciDotYellow { background: $yellow; box-shadow: 0 0 8px rgba(240,192,64,0.5); }
+    &.ciDotRed    { background: $red;    box-shadow: 0 0 8px rgba(240,82,82,0.5); }
+  }
+
+  // ─── CARDS GRID ────────────────────────────────────────────────────────────
+
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .infoCard {
+    position: relative;
+    min-height: 250px;
+    padding: 28px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.2);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,107,53,0.55), transparent);
+      opacity: 0.7;
+    }
+
+    h3 { margin: 0 0 14px; font-size: 1.24rem; line-height: 1.3; font-weight: 700; color: #ffffff; }
+    p  { margin: 0; font-size: 0.98rem; line-height: 1.75; color: rgba(245,247,250,0.72); max-width: none; }
+  }
+
+  .cardTag {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $orange;
+    text-transform: uppercase;
+  }
+}
+
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────────
+
+@media (max-width: $laptop) {
+  .candela {
+    .introBlock { grid-template-columns: 1fr; }
+    .infoPanel  { position: relative; top: 0; }
+
+    .visualBlock,
+    .visualBlock.visualBlockAlt {
+      grid-template-columns: 1fr;
+      .visualCaption { order: 0; }
+    }
+
+    .gradoCards    { grid-template-columns: 1fr; }
+    .codiciGrid    { grid-template-columns: 1fr; }
+    .letturaGrid   { grid-template-columns: repeat(2, 1fr); }
+    .comprContent  { grid-template-columns: 1fr; }
+    .cardsGrid     { grid-template-columns: 1fr; }
+    .codiceInfoGrid{ grid-template-columns: 1fr; }
+  }
+}
+
+@media (max-width: $tablet) {
+  .candela {
+    padding: 90px 0;
+
+    .wrapper { padding: 0 20px; }
+
+    h2 { font-size: clamp(2rem, 8vw, 3.5rem); line-height: 1.02; }
+    .lead, p { font-size: 0.98rem; line-height: 1.75; }
+
+    .gradoBlock,
+    .codiciBlock,
+    .letturaBlock,
+    .comprBlock,
+    .infoPanel,
+    .infoCard { padding: 24px; border-radius: 22px; }
+
+    .letturaGrid { grid-template-columns: 1fr; gap: 14px; }
+    .letturaCard,
+    .gradoCard,
+    .codiceInfo  { padding: 20px 18px; }
+
+    .gradoScaleLabel,
+    .gradoScaleDesc { font-size: 0.72rem; }
+  }
+}
+
+@media (max-width: $mobile) {
+  .candela {
+    padding: 70px 0;
+
+    .wrapper { padding: 0 16px; }
+
+    .sectionLabel { font-size: 0.72rem; letter-spacing: 1.5px; padding: 7px 12px; }
+    h2 { font-size: 2rem; letter-spacing: -1px; }
+
+    .lead, p,
+    .infoCard p,
+    .letturaCard p,
+    .gradoCard p,
+    .codiceInfo p,
+    .comprStep p,
+    .ciItem p,
+    .miniText { font-size: 0.95rem; line-height: 1.68; }
+
+    .gradoBlock,
+    .codiciBlock,
+    .letturaBlock,
+    .comprBlock,
+    .infoPanel,
+    .infoCard { padding: 20px; }
+
+    .miniStep  { grid-template-columns: 38px 1fr; gap: 10px; }
+    .miniIndex { width: 32px; height: 32px; font-size: 0.72rem; }
+
+    .mediaPlaceholder          { aspect-ratio: 4 / 3; border-radius: 18px; }
+    .mediaPlaceholderSquare    { aspect-ratio: 1 / 1; }
+
+    .codiceExample { gap: 4px; }
+    .codiceLettera { min-width: 32px; height: 32px; font-size: 0.88rem; padding: 0 8px; }
+
+    .gradoScaleBar { height: 10px; }
+    .comprStepN    { width: 28px; height: 28px; font-size: 0.68rem; }
+    .infoCard h3   { font-size: 1.1rem; }
+  }
+}

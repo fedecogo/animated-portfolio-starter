@@ -76,7 +76,7 @@ const Introduzione = () => {
           </motion.span>
 
           <motion.h1 variants={itemVariants}>
-            How a 2-stroke motorcycle works
+            Introduction
           </motion.h1>
 
           <motion.p className="description" variants={itemVariants}>

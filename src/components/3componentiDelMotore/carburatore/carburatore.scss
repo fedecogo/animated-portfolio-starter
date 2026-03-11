@@ -1,0 +1,578 @@
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 1200px;
+
+.carburatore {
+  position: relative;
+  padding: 120px 0;
+  background:
+    radial-gradient(circle at top right, rgba(255, 107, 53, 0.08), transparent 22%),
+    linear-gradient(180deg, #0b0d13 0%, #111132 50%, #0b0d13 100%);
+  color: #f5f7fa;
+  overflow: hidden;
+
+  .wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  // ─── INTRO BLOCK ───────────────────────────────────────────────────────────
+
+  .introBlock {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 42px;
+  }
+
+  .titleColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 780px;
+  }
+
+  .sectionLabel {
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 107, 53, 0.12);
+    border: 1px solid rgba(255, 107, 53, 0.18);
+    color: #ff8a5f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
+    line-height: 1;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+    max-width: 760px;
+  }
+
+  .lead {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.88);
+    max-width: 760px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.72);
+    max-width: 760px;
+  }
+
+  // ─── INFO PANEL ────────────────────────────────────────────────────────────
+
+  .infoPanel {
+    position: sticky;
+    top: 110px;
+    padding: 28px;
+    border-radius: 28px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(255, 107, 53, 0.08), transparent 30%);
+      pointer-events: none;
+    }
+  }
+
+  .panelHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+
+    .panelTag {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: #ff6b35;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.35rem;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
+
+  .flowStepsMini {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .miniStep {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .miniIndex {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 107, 53, 0.22);
+    background: rgba(255, 107, 53, 0.08);
+    color: #ff8a5f;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  .miniText {
+    padding-top: 6px;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: rgba(245, 247, 250, 0.9);
+    font-weight: 500;
+  }
+
+  // ─── DIAGRAM BLOCK ─────────────────────────────────────────────────────────
+
+  .diagramBlock {
+    margin-bottom: 32px;
+  }
+
+  .flowDiagram {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px;
+    border-radius: 28px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          135deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.02) 45%,
+          transparent 100%
+        );
+      pointer-events: none;
+    }
+  }
+
+  .diagramTrack {
+    position: absolute;
+    top: 78px;
+    left: 9%;
+    right: 9%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 107, 53, 0.16),
+      rgba(255, 107, 53, 0.6),
+      rgba(255, 107, 53, 0.16)
+    );
+    z-index: 0;
+  }
+
+  .diagramNode {
+    position: relative;
+    z-index: 1;
+    padding: 24px 20px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    min-height: 220px;
+
+    h3 {
+      margin: 18px 0 12px;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p {
+      max-width: none;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: rgba(245, 247, 250, 0.72);
+    }
+  }
+
+  .nodeNumber {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: #ff6b35;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 800;
+    box-shadow: 0 10px 24px rgba(255, 107, 53, 0.22);
+  }
+
+  // ─── THROTTLE RANGE BLOCK ──────────────────────────────────────────────────
+
+  .throttleBlock {
+    margin-bottom: 32px;
+    padding: 36px;
+    border-radius: 28px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at bottom left, rgba(255, 107, 53, 0.06), transparent 40%);
+      pointer-events: none;
+    }
+  }
+
+  .throttleHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 32px;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    h3 {
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 1.25;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p {
+      max-width: none;
+    }
+  }
+
+  .throttleRanges {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .rangeRow {
+    display: grid;
+    grid-template-columns: 160px 1fr 80px;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .rangeLabel {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: rgba(245, 247, 250, 0.85);
+    letter-spacing: 0.3px;
+    text-align: right;
+  }
+
+  .rangeBar {
+    position: relative;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.07);
+    overflow: hidden;
+  }
+
+  .rangeFill {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-radius: 999px;
+
+    &.fill1 {
+      left: 0;
+      background: linear-gradient(90deg, rgba(255, 107, 53, 0.5), #ff6b35);
+    }
+    &.fill2 {
+      left: 0;
+      background: linear-gradient(90deg, rgba(255, 107, 53, 0.4), rgba(255, 107, 53, 0.7));
+    }
+    &.fill3 {
+      background: linear-gradient(90deg, rgba(255, 107, 53, 0.55), #ff6b35, rgba(255, 107, 53, 0.55));
+    }
+    &.fill4 {
+      background: linear-gradient(90deg, rgba(255, 107, 53, 0.6), #ff4500);
+      box-shadow: 0 0 12px rgba(255, 107, 53, 0.35);
+    }
+  }
+
+  .rangePercent {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #ff8a5f;
+    letter-spacing: 0.5px;
+  }
+
+  // ─── CARDS GRID ────────────────────────────────────────────────────────────
+
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .infoCard {
+    position: relative;
+    min-height: 250px;
+    padding: 28px;
+    border-radius: 24px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 107, 53, 0.55),
+        transparent
+      );
+      opacity: 0.7;
+    }
+
+    h3 {
+      margin: 0 0 14px;
+      font-size: 1.24rem;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.75;
+      color: rgba(245, 247, 250, 0.72);
+      max-width: none;
+    }
+  }
+
+  .cardTag {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ff6b35;
+    text-transform: uppercase;
+  }
+}
+
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────────
+
+@media (max-width: $laptop) {
+  .carburatore {
+    .introBlock {
+      grid-template-columns: 1fr;
+    }
+
+    .infoPanel {
+      position: relative;
+      top: 0;
+    }
+
+    .flowDiagram {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .diagramTrack {
+      display: none;
+    }
+
+    .cardsGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .rangeRow {
+      grid-template-columns: 130px 1fr 70px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .carburatore {
+    padding: 90px 0;
+
+    .wrapper {
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      line-height: 1.02;
+    }
+
+    .lead,
+    p {
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    .infoPanel,
+    .flowDiagram,
+    .infoCard,
+    .throttleBlock {
+      padding: 24px;
+      border-radius: 22px;
+    }
+
+    .flowDiagram {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .diagramNode {
+      min-height: auto;
+      padding: 22px 18px 18px;
+    }
+
+    .rangeRow {
+      grid-template-columns: 110px 1fr 60px;
+      gap: 12px;
+    }
+
+    .rangeLabel {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .carburatore {
+    padding: 70px 0;
+
+    .wrapper {
+      padding: 0 16px;
+    }
+
+    .sectionLabel {
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      padding: 7px 12px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      letter-spacing: -1px;
+    }
+
+    .lead,
+    p,
+    .infoCard p,
+    .diagramNode p,
+    .miniText {
+      font-size: 0.95rem;
+      line-height: 1.68;
+    }
+
+    .infoPanel,
+    .flowDiagram,
+    .infoCard,
+    .throttleBlock {
+      padding: 20px;
+    }
+
+    .infoCard h3,
+    .diagramNode h3,
+    .panelHeader h3,
+    .throttleHeader h3 {
+      font-size: 1.12rem;
+    }
+
+    .miniStep {
+      grid-template-columns: 38px 1fr;
+      gap: 10px;
+    }
+
+    .miniIndex {
+      width: 32px;
+      height: 32px;
+      font-size: 0.72rem;
+    }
+
+    .rangeRow {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .rangeLabel {
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    .rangePercent {
+      font-size: 0.78rem;
+    }
+
+    .rangeBar {
+      height: 8px;
+    }
+  }
+}
