@@ -44,7 +44,6 @@ const CorpoFarfallato = () => {
   return (
     <section className="corpoFarfallato" id="corpo-farfallato">
       <div className="wrapper">
-
         {/* ── INTRO BLOCK ─────────────────────────────────────────────────── */}
         <motion.div
           className="introBlock"
@@ -89,19 +88,27 @@ const CorpoFarfallato = () => {
             <div className="flowStepsMini">
               <div className="miniStep">
                 <span className="miniIndex">01</span>
-                <span className="miniText">Farfalla — regola il flusso d'aria nel condotto</span>
+                <span className="miniText">
+                  Farfalla — regola il flusso d'aria nel condotto
+                </span>
               </div>
               <div className="miniStep">
                 <span className="miniIndex">02</span>
-                <span className="miniText">TPS — sensore di posizione farfalla</span>
+                <span className="miniText">
+                  TPS — sensore di posizione farfalla
+                </span>
               </div>
               <div className="miniStep">
                 <span className="miniIndex">03</span>
-                <span className="miniText">MAP / MAF — misura pressione o massa d'aria</span>
+                <span className="miniText">
+                  MAP / MAF — misura pressione o massa d'aria
+                </span>
               </div>
               <div className="miniStep">
                 <span className="miniIndex">04</span>
-                <span className="miniText">Iniettore — eroga il carburante per impulsi</span>
+                <span className="miniText">
+                  Iniettore — eroga il carburante per impulsi
+                </span>
               </div>
             </div>
           </motion.div>
@@ -118,9 +125,10 @@ const CorpoFarfallato = () => {
           {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — corpo farfallato</span>
-              <span className="placeholderSub">Sostituisci questo div con un tag &lt;img&gt; o &lt;video&gt;</span>
+              <img
+                src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773191568/ChatGPT_Image_Mar_11_2026_10_41_48_AM_ymssjy.png"
+                alt="Product image"
+             />
             </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
@@ -152,9 +160,9 @@ const CorpoFarfallato = () => {
               <p>
                 Il disco metallico ruota sull'asse del condotto in risposta al
                 comando del gas. Più è aperta, maggiore è la quantità d'aria che
-                fluisce verso il motore. Nei sistemi ride-by-wire non è collegata
-                meccanicamente al manubrio: è la centralina a decidere l'angolo
-                reale di apertura.
+                fluisce verso il motore. Nei sistemi ride-by-wire non è
+                collegata meccanicamente al manubrio: è la centralina a decidere
+                l'angolo reale di apertura.
               </p>
             </div>
 
@@ -163,9 +171,9 @@ const CorpoFarfallato = () => {
               <h3>Sensore TPS</h3>
               <p>
                 Il Throttle Position Sensor trasmette alla ECU l'angolo esatto
-                della farfalla decine di volte al secondo. È il parametro primario
-                su cui si basa il calcolo dell'iniezione: senza un TPS preciso,
-                la mappa carburante non può funzionare correttamente.
+                della farfalla decine di volte al secondo. È il parametro
+                primario su cui si basa il calcolo dell'iniezione: senza un TPS
+                preciso, la mappa carburante non può funzionare correttamente.
               </p>
             </div>
 
@@ -175,8 +183,8 @@ const CorpoFarfallato = () => {
               <p>
                 Il sensore di pressione assoluta (MAP) misura la depressione nel
                 condotto, indicando il carico reale del motore. Il sensore di
-                temperatura aria (IAT) corregge la densità dell'aria in base alla
-                temperatura, permettendo alla ECU di adattare il dosaggio.
+                temperatura aria (IAT) corregge la densità dell'aria in base
+                alla temperatura, permettendo alla ECU di adattare il dosaggio.
               </p>
             </div>
 
@@ -185,9 +193,10 @@ const CorpoFarfallato = () => {
               <h3>Iniettore</h3>
               <p>
                 L'iniettore è una valvola elettromagnetica che si apre per
-                impulsi di durata precisa (tempo di iniezione). Più lungo l'impulso,
-                più carburante viene erogato. La centralina calcola questo tempo
-                basandosi su TPS, MAP, regime, temperatura e sonda lambda.
+                impulsi di durata precisa (tempo di iniezione). Più lungo
+                l'impulso, più carburante viene erogato. La centralina calcola
+                questo tempo basandosi su TPS, MAP, regime, temperatura e sonda
+                lambda.
               </p>
             </div>
           </motion.div>
@@ -213,7 +222,6 @@ const CorpoFarfallato = () => {
           </motion.div>
 
           <motion.div className="ecuGrid" variants={cardVariants}>
-
             <div className="ecuSensor">
               <span className="sensorDot dot1"></span>
               <div className="sensorBody">
@@ -261,7 +269,6 @@ const CorpoFarfallato = () => {
                 <p>Temperatura motore → arricchimento a freddo e limitatori</p>
               </div>
             </div>
-
           </motion.div>
         </motion.div>
 
@@ -277,8 +284,12 @@ const CorpoFarfallato = () => {
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
               <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — schema ECU & sensori</span>
-              <span className="placeholderSub">Sostituisci questo div con un tag &lt;img&gt; o &lt;video&gt;</span>
+              <span className="placeholderText">
+                Immagine / GIF — schema ECU & sensori
+              </span>
+              <span className="placeholderSub">
+                Sostituisci questo div con un tag &lt;img&gt; o &lt;video&gt;
+              </span>
             </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
@@ -350,10 +361,10 @@ const CorpoFarfallato = () => {
             <span className="cardTag">Ride-by-wire</span>
             <h3>Farfalla senza cavo</h3>
             <p>
-              Nei sistemi ride-by-wire il gas non è collegato meccanicamente alla
-              farfalla. Il manubrio invia un segnale elettrico alla ECU, che
-              decide l'apertura reale. Questo permette traction control, launch
-              control e mappe di potenza selezionabili.
+              Nei sistemi ride-by-wire il gas non è collegato meccanicamente
+              alla farfalla. Il manubrio invia un segnale elettrico alla ECU,
+              che decide l'apertura reale. Questo permette traction control,
+              launch control e mappe di potenza selezionabili.
             </p>
           </motion.article>
 
@@ -373,13 +384,12 @@ const CorpoFarfallato = () => {
             <h3>Errori e auto-correzione</h3>
             <p>
               La ECU salva i codici di errore (DTC) in caso di anomalie su
-              qualsiasi sensore. Un TPS fuori range, un iniettore che non risponde
-              o una sonda lambda satura vengono rilevati e gestiti con strategie
-              di fallback per proteggere il motore.
+              qualsiasi sensore. Un TPS fuori range, un iniettore che non
+              risponde o una sonda lambda satura vengono rilevati e gestiti con
+              strategie di fallback per proteggere il motore.
             </p>
           </motion.article>
         </motion.div>
-
       </div>
     </section>
   );

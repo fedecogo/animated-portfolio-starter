@@ -1,0 +1,759 @@
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 1200px;
+
+$orange:      #ff6b35;
+$orange-soft: #ff8a5f;
+$orange-dim:  rgba(255, 107, 53, 0.12);
+$orange-bdr:  rgba(255, 107, 53, 0.18);
+
+$red:         #f05252;
+$red-dim:     rgba(240, 82, 82, 0.1);
+$red-bdr:     rgba(240, 82, 82, 0.22);
+
+$green:       #3ecf8e;
+$green-dim:   rgba(62, 207, 142, 0.1);
+$green-bdr:   rgba(62, 207, 142, 0.2);
+
+$yellow:      #f0c040;
+$yellow-dim:  rgba(240, 192, 64, 0.1);
+$yellow-bdr:  rgba(240, 192, 64, 0.2);
+
+$violet:      #a78bfa;
+$violet-dim:  rgba(167, 139, 250, 0.1);
+$violet-bdr:  rgba(167, 139, 250, 0.2);
+
+$blue:        #4fa3e0;
+$blue-dim:    rgba(79, 163, 224, 0.1);
+$blue-bdr:    rgba(79, 163, 224, 0.2);
+
+$steel:       #94a3b8;
+$steel-dim:   rgba(148, 163, 184, 0.1);
+$steel-bdr:   rgba(148, 163, 184, 0.2);
+
+$teal:        #2dd4bf;
+$teal-dim:    rgba(45, 212, 191, 0.1);
+$teal-bdr:    rgba(45, 212, 191, 0.2);
+
+.cuscinettiDiBanco {
+  position: relative;
+  padding: 120px 0;
+  background:
+    radial-gradient(circle at 7%  5%,  rgba(79, 163, 224, 0.07),  transparent 26%),
+    radial-gradient(circle at 93% 90%, rgba(255, 107, 53, 0.05),  transparent 24%),
+    linear-gradient(180deg, #0b0d13 0%, #0d1019 55%, #0b0d13 100%);
+  color: #f5f7fa;
+  overflow: hidden;
+
+  .wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  // ─── INTRO BLOCK ───────────────────────────────────────────────────────────
+
+  .introBlock {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 42px;
+  }
+
+  .titleColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 780px;
+  }
+
+  .sectionLabel {
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: $orange-dim;
+    border: 1px solid $orange-bdr;
+    color: $orange-soft;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
+    line-height: 1;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+    max-width: 760px;
+  }
+
+  .lead {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.88);
+    max-width: 760px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.72);
+    max-width: 760px;
+  }
+
+  // ─── INFO PANEL ────────────────────────────────────────────────────────────
+
+  .infoPanel {
+    position: sticky;
+    top: 110px;
+    padding: 28px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.28);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(79,163,224,0.08), transparent 30%);
+      pointer-events: none;
+    }
+  }
+
+  .panelHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+
+    .panelTag {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: $blue;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    h3 { margin: 0; font-size: 1.35rem; line-height: 1.3; font-weight: 700; color: #ffffff; }
+  }
+
+  .flowStepsMini {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .miniStep {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    &:last-child { border-bottom: 0; padding-bottom: 0; }
+  }
+
+  .miniIndex {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid $blue-bdr;
+    background: $blue-dim;
+    color: $blue;
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+
+  .miniText {
+    padding-top: 6px;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: rgba(245,247,250,0.9);
+    font-weight: 500;
+  }
+
+  // ─── VISUAL PLACEHOLDER ────────────────────────────────────────────────────
+
+  .visualBlock {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 32px;
+
+    &.visualBlockAlt {
+      grid-template-columns: 380px 1fr;
+      .visualCaption { order: -1; }
+    }
+  }
+
+  .mediaPlaceholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 24px;
+    border: 2px dashed rgba(79,163,224,0.22);
+    background: rgba(79,163,224,0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      border-color: rgba(79,163,224,0.42);
+      background: rgba(79,163,224,0.06);
+    }
+
+    img, video { width: 100%; height: 100%; object-fit: cover; border-radius: 22px; display: block; }
+  }
+
+  .placeholderInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 24px;
+    pointer-events: none;
+  }
+
+  .placeholderIcon { font-size: 2.4rem; color: rgba(79,163,224,0.32); line-height: 1; }
+  .placeholderText { font-size: 1rem; font-weight: 700; color: rgba(79,163,224,0.55); }
+  .placeholderSub  { font-size: 0.82rem; color: rgba(245,247,250,0.28); font-family: monospace; }
+
+  .visualCaption {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .captionTag {
+      display: inline-block;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: $blue-dim;
+      border: 1px solid $blue-bdr;
+      color: $blue;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    p { font-size: 1rem; line-height: 1.75; color: rgba(245,247,250,0.72); max-width: none; }
+  }
+
+  // ─── SHARED BLOCK SHELL ────────────────────────────────────────────────────
+
+  .tipologieBlock,
+  .lubrificazioneBlock,
+  .codificaBlock,
+  .montaggioBlock,
+  .usuraBlock {
+    margin-bottom: 32px;
+    padding: 36px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tipologieBlock::before     { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top left,   rgba(79,163,224,0.06),  transparent 40%); pointer-events: none; }
+  .lubrificazioneBlock::before{ content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top right,  rgba(255,107,53,0.05),  transparent 40%); pointer-events: none; }
+  .codificaBlock::before      { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at bottom right,rgba(167,139,250,0.05), transparent 38%); pointer-events: none; }
+  .montaggioBlock::before     { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at bottom left, rgba(62,207,142,0.04),  transparent 38%); pointer-events: none; }
+  .usuraBlock::before         { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top right,  rgba(240,192,64,0.04),  transparent 36%); pointer-events: none; }
+
+  // ─── SHARED HEADER ─────────────────────────────────────────────────────────
+
+  .tipologieHeader,
+  .lubrificazioneHeader,
+  .codificaHeader,
+  .montaggioHeader,
+  .usuraHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    h3 { margin: 0; font-size: clamp(1.4rem, 2.2vw, 1.8rem); font-weight: 700; color: #ffffff; line-height: 1.25; }
+    p  { max-width: none; }
+  }
+
+  // ─── TIPOLOGIE GRID ────────────────────────────────────────────────────────
+
+  .tipologieGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .tipoCard {
+    padding: 24px 22px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: background 0.25s ease, border-color 0.25s ease;
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.65); max-width: none; }
+
+    &.tipoSfere  { background: rgba(79,163,224,0.05);  border: 1px solid rgba(79,163,224,0.15);  &:hover { background: rgba(79,163,224,0.09); } }
+    &.tipoRulli  { background: rgba(255,107,53,0.05);  border: 1px solid rgba(255,107,53,0.15);  &:hover { background: rgba(255,107,53,0.09); } }
+    &.tipoAghi   { background: rgba(45,212,191,0.05);  border: 1px solid rgba(45,212,191,0.15);  &:hover { background: rgba(45,212,191,0.09); } }
+  }
+
+  .tipoCardTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .tipoBadge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &.badgeSfere { background: $blue-dim;  border: 1px solid $blue-bdr;  color: $blue; }
+    &.badgeRulli { background: $orange-dim;border: 1px solid $orange-bdr;color: $orange-soft; }
+    &.badgeAghi  { background: $teal-dim;  border: 1px solid $teal-bdr;  color: $teal; }
+  }
+
+  .tipoSigla {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: rgba(245,247,250,0.28);
+    font-style: italic;
+    white-space: nowrap;
+  }
+
+  .tipoSpec {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: auto;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding-top: 14px;
+  }
+
+  .tipoSpecRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+
+    &:last-child { border-bottom: 0; padding-bottom: 0; }
+  }
+
+  .tipoSpecK {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(245,247,250,0.45);
+  }
+
+  .tipoSpecV {
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 999px;
+
+    &.tipoSpecOk  { background: $green-dim;  border: 1px solid $green-bdr;  color: $green; }
+    &.tipoSpecMed { background: $yellow-dim; border: 1px solid $yellow-bdr; color: $yellow; }
+    &.tipoSpecNo  { background: $red-dim;    border: 1px solid $red-bdr;    color: $red; }
+  }
+
+  // ─── LUBRIFICAZIONE CONTENT ────────────────────────────────────────────────
+
+  .lubrificazioneContent {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .lubLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .lubItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p { font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.65); max-width: none; }
+  }
+
+  .lubLabel {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: $orange-soft;
+  }
+
+  .lubBar {
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.07);
+    overflow: hidden;
+  }
+
+  .lubFill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(255,107,53,0.5), $orange);
+    box-shadow: 0 0 8px rgba(255,107,53,0.3);
+
+    &.lubFillWarn {
+      background: linear-gradient(90deg, rgba(240,192,64,0.5), $yellow);
+      box-shadow: 0 0 8px rgba(240,192,64,0.3);
+    }
+  }
+
+  .lubValue {
+    font-size: 1rem;
+    font-weight: 800;
+    color: $orange-soft;
+
+    &.lubValueWarn { color: $yellow; }
+  }
+
+  .lubRight {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .lubCard {
+    padding: 24px 22px;
+    border-radius: 18px;
+    background: rgba(255,107,53,0.04);
+    border: 1px solid rgba(255,107,53,0.13);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(255,107,53,0.07); border-color: rgba(255,107,53,0.22); }
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.65); max-width: none; }
+  }
+
+  .lubCardTag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $orange-soft;
+  }
+
+  // ─── CODIFICA GRID ─────────────────────────────────────────────────────────
+
+  .codificaGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .codificaCard {
+    padding: 24px 22px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(255,255,255,0.04); }
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.65); max-width: none; }
+
+    &.codificaCardC3 {
+      background: rgba(62,207,142,0.04);
+      border-color: rgba(62,207,142,0.18);
+      &:hover { background: rgba(62,207,142,0.08); border-color: rgba(62,207,142,0.28); }
+    }
+
+    &.codificaCardC4 {
+      background: rgba(167,139,250,0.04);
+      border-color: rgba(167,139,250,0.14);
+      &:hover { background: rgba(167,139,250,0.07); border-color: rgba(167,139,250,0.24); }
+    }
+  }
+
+  .codificaIdx {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+
+    &.codificaIdxCN { background: $steel-dim;  border: 1px solid $steel-bdr;  color: $steel; }
+    &.codificaIdxC3 { background: $green-dim;  border: 1px solid $green-bdr;  color: $green; }
+    &.codificaIdxC4 { background: $violet-dim; border: 1px solid $violet-bdr; color: $violet; }
+  }
+
+  // ─── MONTAGGIO GRID ────────────────────────────────────────────────────────
+
+  .montaggioGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .montaggioCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: rgba(62,207,142,0.04);
+    border: 1px solid rgba(62,207,142,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(62,207,142,0.07); border-color: rgba(62,207,142,0.22); }
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.65); max-width: none; }
+  }
+
+  .montaggioIdx {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: $green;
+    color: #0b0d13;
+    font-size: 0.78rem;
+    font-weight: 900;
+    box-shadow: 0 6px 18px rgba(62,207,142,0.22);
+  }
+
+  // ─── USURA GRID ────────────────────────────────────────────────────────────
+
+  .usuraGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .usuraCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(255,255,255,0.04); }
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.65); max-width: none; }
+  }
+
+  .usuraBadge {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &.badgeSintomo    { background: $yellow-dim; border: 1px solid $yellow-bdr; color: $yellow; }
+    &.badgeVerifica   { background: $green-dim;  border: 1px solid $green-bdr;  color: $green; }
+    &.badgeIntervallo { background: $violet-dim; border: 1px solid $violet-bdr; color: $violet; }
+  }
+
+  // ─── CARDS GRID ────────────────────────────────────────────────────────────
+
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .infoCard {
+    position: relative;
+    min-height: 250px;
+    padding: 28px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.2);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(79,163,224,0.55), transparent);
+      opacity: 0.7;
+    }
+
+    h3 { margin: 0 0 14px; font-size: 1.24rem; line-height: 1.3; font-weight: 700; color: #ffffff; }
+    p  { margin: 0; font-size: 0.98rem; line-height: 1.75; color: rgba(245,247,250,0.72); max-width: none; }
+  }
+
+  .cardTag {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $blue;
+    text-transform: uppercase;
+  }
+}
+
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────────
+
+@media (max-width: $laptop) {
+  .cuscinettiDiBanco {
+    .introBlock { grid-template-columns: 1fr; }
+    .infoPanel  { position: relative; top: 0; }
+
+    .visualBlock,
+    .visualBlock.visualBlockAlt {
+      grid-template-columns: 1fr;
+      .visualCaption { order: 0; }
+    }
+
+    .tipologieGrid        { grid-template-columns: 1fr; }
+    .lubrificazioneContent{ grid-template-columns: 1fr; }
+    .codificaGrid         { grid-template-columns: 1fr; }
+    .montaggioGrid        { grid-template-columns: repeat(2, 1fr); }
+    .usuraGrid            { grid-template-columns: repeat(2, 1fr); }
+    .cardsGrid            { grid-template-columns: 1fr; }
+  }
+}
+
+@media (max-width: $tablet) {
+  .cuscinettiDiBanco {
+    padding: 90px 0;
+
+    .wrapper { padding: 0 20px; }
+
+    h2 { font-size: clamp(2rem, 8vw, 3.5rem); line-height: 1.02; }
+    .lead, p { font-size: 0.98rem; line-height: 1.75; }
+
+    .tipologieBlock,
+    .lubrificazioneBlock,
+    .codificaBlock,
+    .montaggioBlock,
+    .usuraBlock,
+    .infoPanel,
+    .infoCard { padding: 24px; border-radius: 22px; }
+
+    .montaggioGrid { grid-template-columns: 1fr; gap: 14px; }
+    .usuraGrid     { grid-template-columns: 1fr; gap: 14px; }
+
+    .tipoCard,
+    .codificaCard,
+    .montaggioCard,
+    .usuraCard,
+    .lubCard { padding: 20px 18px; }
+
+    .lubLeft,
+    .lubRight { gap: 18px; }
+  }
+}
+
+@media (max-width: $mobile) {
+  .cuscinettiDiBanco {
+    padding: 70px 0;
+
+    .wrapper { padding: 0 16px; }
+
+    .sectionLabel { font-size: 0.72rem; letter-spacing: 1.5px; padding: 7px 12px; }
+    h2 { font-size: 2rem; letter-spacing: -1px; }
+
+    .lead, p,
+    .infoCard p,
+    .tipoCard p,
+    .codificaCard p,
+    .montaggioCard p,
+    .usuraCard p,
+    .lubCard p,
+    .lubItem p,
+    .miniText { font-size: 0.95rem; line-height: 1.68; }
+
+    .tipologieBlock,
+    .lubrificazioneBlock,
+    .codificaBlock,
+    .montaggioBlock,
+    .usuraBlock,
+    .infoPanel,
+    .infoCard { padding: 20px; }
+
+    .miniStep  { grid-template-columns: 38px 1fr; gap: 10px; }
+    .miniIndex { width: 32px; height: 32px; font-size: 0.72rem; }
+
+    .mediaPlaceholder { aspect-ratio: 4 / 3; border-radius: 18px; }
+
+    .tipoCardTop  { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .tipoSigla    { white-space: normal; }
+
+    .codificaIdx  { width: 40px; height: 40px; font-size: 0.95rem; border-radius: 10px; }
+    .montaggioIdx { width: 30px; height: 30px; font-size: 0.72rem; }
+
+    .infoCard h3  { font-size: 1.1rem; }
+    .infoCard::before { opacity: 0.5; }
+  }
+}

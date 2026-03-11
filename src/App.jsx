@@ -22,8 +22,10 @@ import Fasce from "./components/3gruppoTermico/fasce/Fasce";
 import Cilindro from "./components/3gruppoTermico/cilindro/Cilindro";
 import Testata from "./components/3gruppoTermico/testata/Testata";
 import Candela from "./components/3gruppoTermico/candela/Candela";
-
-
+import OrganiMeccaniciIntro from "./components/3organiMeccanici/organiMeccaniciIntro/OrganiMeccaniciIntro";
+import Biella from "./components/3organiMeccanici/biella/Biella";
+import AlberoMotore from "./components/3organiMeccanici/alberoMotore/AlberoMotore";
+import CuscinettiDiBanco from "./components/3organiMeccanici/cuscinettiDiBanco/CuscinettiDiBanco";
 
 
 const App = () => {
@@ -47,7 +49,7 @@ const App = () => {
         <TwoStrokeVsFourStroke />
       </section>
 
-      {/* ciclo del motore */}
+      {/* Ciclo del motore */}
       <section id="The engine cycle">
         <EngineLifeTitle />
       </section>
@@ -73,19 +75,15 @@ const App = () => {
      <section id="Carburatore">
         <Carburatore />
       </section>
-
       <section id="CorpoFarfallato">
         <CorpoFarfallato />
       </section>
-
       <section id="PompaBenzina">
         <PompaBenzina />
       </section>
-
       <section id="Miscelatore">
         <Miscelatore />
       </section>
-
       <section id="PaccoLamellare">
         <PaccoLamellare />
       </section>
@@ -113,6 +111,21 @@ const App = () => {
       </section>
 
 
+
+
+    {/* Organi meccanici */}
+    <section id="OrganiMeccanici">
+        <OrganiMeccaniciIntro />
+      </section>
+      <section id="Biella">
+        <Biella />
+      </section>
+      <section id="AlberoMotore">
+        <AlberoMotore />
+      </section>
+      <section id="CuscinettiDiBanco">
+        <CuscinettiDiBanco />
+      </section>
 
 
       {/* <section id="Filosofia" type="fs">
