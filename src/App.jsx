@@ -26,12 +26,34 @@ import OrganiMeccaniciIntro from "./components/3organiMeccanici/organiMeccaniciI
 import Biella from "./components/3organiMeccanici/biella/Biella";
 import AlberoMotore from "./components/3organiMeccanici/alberoMotore/AlberoMotore";
 import CuscinettiDiBanco from "./components/3organiMeccanici/cuscinettiDiBanco/CuscinettiDiBanco";
+import Carter from "./components/3organiMeccanici/crater/Carter";
+import Olio from "./components/3organiMeccanici/olio/Olio";
+import Guarnizioni from "./components/3organiMeccanici/guarnizioni/Guarnizioni";
+import TrasmissioneIntro from "./components/3trasmissione/trasmissioneIntro/TrasmissioneIntro";
+import Frizione from "./components/3trasmissione/frizione/Frizione";
+import Cambio from "./components/3trasmissione/cambio/Cambio";
+import Alberi from "./components/3trasmissione/alberi/Alberi";
+import Selettore from "./components/3trasmissione/selettore/Selettore";
+import Ingranaggi from "./components/3trasmissione/ingranaggi/Ingranaggi";
+import ScaricaIntro from "./components/3scarico/scaricoIntro/ScaricaIntro";
+import Espansione from "./components/3scarico/espansione/Espansione";
+import Terminale from "./components/3scarico/terminale/Terminale";
+import ValvolaScarico from "./components/3scarico/valvolaDiScarico/valvolaScarico";
+import RaffreddamentoEAccensioneIntro from "./components/3raffreddamentoEAccensione/raffreddamentoEAccensioneIntro/RaffreddamentoEAccensioneIntro";
+import Radiatore from "./components/3raffreddamentoEAccensione/radiatore/Radiatore";
+import PompaAcqua from "./components/3raffreddamentoEAccensione/pompaAcqua/PompaAcqua";
+import CircuitoAcqua from "./components/3raffreddamentoEAccensione/circuitoAcqua/CircuitoAcqua";
+import VolanoEStatore from "./components/3raffreddamentoEAccensione/volanoEStatore/VolanoEStatore";
+import CDIeBobina from "./components/3raffreddamentoEAccensione/cdiEBobbina/CDIeBobina";
+import Avviamento from "./components/3raffreddamentoEAccensione/avviamento/Avviamento";
+import TelaioIntro from "./components/4telaio/telaioIntro/TelaioIntro";
+
+
 
 
 const App = () => {
   return (
     <div>
-       
       <section id="Homepage">
         <Navbar />
         <Hero />
@@ -53,7 +75,7 @@ const App = () => {
       <section id="The engine cycle">
         <EngineLifeTitle />
       </section>
-       <section id="FuelAndMixture">
+      <section id="FuelAndMixture">
         <FuelAndMixture />
       </section>
       <section id="AirAndFuel">
@@ -69,10 +91,8 @@ const App = () => {
         <ExhaustSystem />
       </section>
 
-     
-
-     {/* Componenti del motore */}
-     <section id="Carburatore">
+      {/* Componenti del motore */}
+      <section id="Carburatore">
         <Carburatore />
       </section>
       <section id="CorpoFarfallato">
@@ -88,7 +108,6 @@ const App = () => {
         <PaccoLamellare />
       </section>
 
-
       {/* Gruppo termico */}
       <section id="GruppoTermico">
         <GruppoTermicoIntro />
@@ -103,18 +122,15 @@ const App = () => {
         <Cilindro />
       </section>
       {/* testat */}
-       <section id="Testata">
+      <section id="Testata">
         <Testata />
       </section>
       <section id="Candela">
         <Candela />
       </section>
 
-
-
-
-    {/* Organi meccanici */}
-    <section id="OrganiMeccanici">
+      {/* Organi meccanici */}
+      <section id="OrganiMeccanici">
         <OrganiMeccaniciIntro />
       </section>
       <section id="Biella">
@@ -126,9 +142,127 @@ const App = () => {
       <section id="CuscinettiDiBanco">
         <CuscinettiDiBanco />
       </section>
+      <section id="Carter">
+        <Carter />
+      </section>
+      <section id="Olio">
+        <Olio />
+      </section>
+      <section id="Guarnizioni">
+        <Guarnizioni />
+      </section>
+
+      {/* Trasmissione e cambio */}
+      <section id="Trasmissione">
+        <TrasmissioneIntro />
+      </section>
+      <section id="Frizione">
+        <Frizione />
+      </section>
+      <section id="Cambio">
+        <Cambio />
+      </section>
+      <section id="Alberi">
+        <Alberi />
+      </section>
+      <section id="Selettore">
+        <Selettore />
+      </section>
+      <section id="Ingranaggi">
+        <Ingranaggi />
+      </section>
+
+      {/* Scarico e espansione */}
+      <section id="Scarico">
+        <ScaricaIntro />
+      </section>
+      <section id="Espansione">
+        <Espansione />
+      </section>
+      <section id="Terminale">
+        <Terminale />
+      </section>
+      <section id="ValvolaDiScarico">
+        <ValvolaScarico />
+      </section>
+
+      {/* Raffreddamento e accensione */}
+      <section id="Raffreddamento">
+        <RaffreddamentoEAccensioneIntro />
+      </section>
+      <section id="Radiatore">
+        <Radiatore />
+      </section>
+      <section id="PompaAcqua">
+        <PompaAcqua />
+      </section>
+      <section id="CircuitoAcqua">
+        <CircuitoAcqua />
+      </section>
+      <section id="Volano">
+        <VolanoEStatore />
+      </section>
+      <section id="CDI">
+        <CDIeBobina />
+      </section>
+      <section id="Avviamento">
+        <Avviamento />
+      </section>
 
 
-      {/* <section id="Filosofia" type="fs">
+
+
+
+    {/* Telaio */}
+
+    <section id="Telaio">
+        <TelaioIntro />
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section id="Contact">Contact</section>
+    </div>
+  );
+};
+
+export default App;
+
+{
+  /* <section id="Filosofia" type="fs">
         <Parallax type="fs" />
       </section>
       
@@ -136,10 +270,5 @@ const App = () => {
       <section id="Copetenze" type="cp">
         <Parallax type="cp" />
       </section>
-      <section>Copetenze</section> */}
-      <section id="Contact">Contact</section>
-    </div>
-  );
-};
-
-export default App;
+      <section>Copetenze</section> */
+}

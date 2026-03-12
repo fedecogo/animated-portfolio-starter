@@ -1,0 +1,604 @@
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 1200px;
+
+$teal:        #2dd4bf;
+$teal-soft:   #5ee0ce;
+$teal-dim:    rgba(45, 212, 191, 0.12);
+$teal-bdr:    rgba(45, 212, 191, 0.22);
+
+$blue:        #4fa3e0;
+$blue-soft:   #74b8e8;
+$blue-dim:    rgba(79, 163, 224, 0.12);
+$blue-bdr:    rgba(79, 163, 224, 0.2);
+
+$green:       #3ecf8e;
+$green-soft:  #6edba8;
+$green-dim:   rgba(62, 207, 142, 0.12);
+$green-bdr:   rgba(62, 207, 142, 0.2);
+
+$yellow:      #f0c040;
+$yellow-dim:  rgba(240, 192, 64, 0.1);
+$yellow-bdr:  rgba(240, 192, 64, 0.2);
+
+$orange:      #ff6b35;
+$orange-dim:  rgba(255, 107, 53, 0.1);
+$orange-bdr:  rgba(255, 107, 53, 0.2);
+
+$violet:      #a78bfa;
+$violet-dim:  rgba(167, 139, 250, 0.1);
+$violet-bdr:  rgba(167, 139, 250, 0.2);
+
+$steel:       #94a3b8;
+$steel-dim:   rgba(148, 163, 184, 0.1);
+$steel-bdr:   rgba(148, 163, 184, 0.2);
+
+.radiatore {
+  position: relative;
+  padding: 120px 0;
+  background:
+    radial-gradient(circle at 8%   8%,  rgba(45,  212, 191, 0.08), transparent 30%),
+    radial-gradient(circle at 94%  85%, rgba(79,  163, 224, 0.06), transparent 28%),
+    radial-gradient(circle at 50%  50%, rgba(45,  212, 191, 0.03), transparent 50%),
+    linear-gradient(180deg, #0b0d13 0%, #0d1019 55%, #0b0d13 100%);
+  color: #f5f7fa;
+  overflow: hidden;
+
+  .wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  // ─── INTRO BLOCK ───────────────────────────────────────────────────────────
+
+  .introBlock {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 42px;
+  }
+
+  .titleColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 780px;
+  }
+
+  .sectionLabel {
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: $teal-dim;
+    border: 1px solid $teal-bdr;
+    color: $teal-soft;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
+    line-height: 1;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+    max-width: 760px;
+  }
+
+  .lead {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.88);
+    max-width: 760px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.72);
+    max-width: 760px;
+  }
+
+  // ─── INFO PANEL ────────────────────────────────────────────────────────────
+
+  .infoPanel {
+    position: sticky;
+    top: 110px;
+    padding: 28px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.28);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(45,212,191,0.09), transparent 35%);
+      pointer-events: none;
+    }
+  }
+
+  .panelHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+
+    .panelTag {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: $teal-soft;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    h3 { margin: 0; font-size: 1.3rem; line-height: 1.3; font-weight: 700; color: #ffffff; }
+  }
+
+  .flowStepsMini {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .miniStep {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+
+    &:last-child { border-bottom: 0; padding-bottom: 0; }
+    &:first-child { padding-top: 0; }
+  }
+
+  .miniIndex {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid $teal-bdr;
+    background: $teal-dim;
+    color: $teal-soft;
+    font-size: 0.78rem;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .miniText {
+    padding-top: 6px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: rgba(245,247,250,0.85);
+    font-weight: 500;
+  }
+
+  // ─── VISUAL BLOCK ──────────────────────────────────────────────────────────
+
+  .visualBlock {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 32px;
+
+    &.visualBlockAlt { grid-template-columns: 380px 1fr; }
+  }
+
+  .mediaPlaceholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 24px;
+    border: 2px dashed rgba(45,212,191,0.22);
+    background: rgba(45,212,191,0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      border-color: rgba(45,212,191,0.42);
+      background: rgba(45,212,191,0.07);
+    }
+
+    img, video { width: 100%; height: 100%; object-fit: cover; border-radius: 22px; display: block; }
+  }
+
+  .placeholderInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 24px;
+    pointer-events: none;
+  }
+
+  .placeholderIcon { font-size: 2.4rem; color: rgba(45,212,191,0.35); line-height: 1; }
+  .placeholderText { font-size: 1rem;   font-weight: 700; color: rgba(45,212,191,0.6); }
+  .placeholderSub  { font-size: 0.82rem; color: rgba(245,247,250,0.3); font-family: monospace; }
+
+  .visualCaption {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .captionTag {
+      display: inline-block;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: $teal-dim;
+      border: 1px solid $teal-bdr;
+      color: $teal-soft;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    p { font-size: 1rem; line-height: 1.75; color: rgba(245,247,250,0.72); max-width: none; }
+  }
+
+  // ─── SHARED BLOCK SHELL ────────────────────────────────────────────────────
+
+  .costruzioneBlock,
+  .materialiBlock,
+  .liquidoBlock,
+  .manutBlock {
+    margin-bottom: 32px;
+    padding: 36px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .costruzioneBlock::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top left,   rgba(45,212,191,0.07),  transparent 38%); pointer-events: none; }
+  .materialiBlock::before   { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top right,  rgba(79,163,224,0.06),  transparent 38%); pointer-events: none; }
+  .liquidoBlock::before     { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top left,   rgba(45,212,191,0.06),  transparent 36%); pointer-events: none; }
+  .manutBlock::before       { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at bottom left, rgba(62,207,142,0.05),  transparent 36%); pointer-events: none; }
+
+  // ─── SHARED HEADER ─────────────────────────────────────────────────────────
+
+  .costruzioneHeader,
+  .materialiHeader,
+  .liquidoHeader,
+  .manutHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    h3 { margin: 0; font-size: clamp(1.4rem, 2.2vw, 1.8rem); font-weight: 700; color: #ffffff; line-height: 1.25; }
+    p  { max-width: none; }
+  }
+
+  // ─── COSTRUZIONE GRID — 3 col ──────────────────────────────────────────────
+
+  .costruzioneGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .costrCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(45,212,191,0.05); border-color: rgba(45,212,191,0.18); }
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.65); max-width: none; }
+  }
+
+  .costrIdx {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-weight: 800;
+    background: $teal-dim;
+    border: 1px solid $teal-bdr;
+    color: $teal-soft;
+  }
+
+  // ─── MATERIALI GRID — 3 col ────────────────────────────────────────────────
+
+  .materialiGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .matCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: background 0.25s ease, border-color 0.25s ease;
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.65); max-width: none; }
+
+    &.matAlluminio  { background: rgba(45,212,191,0.05);  border: 1px solid rgba(45,212,191,0.14);  &:hover { background: rgba(45,212,191,0.09); } }
+    &.matRacing     { background: rgba(79,163,224,0.05);  border: 1px solid rgba(79,163,224,0.14);  &:hover { background: rgba(79,163,224,0.09); } }
+    &.matSaldatura  { background: rgba(167,139,250,0.05); border: 1px solid rgba(167,139,250,0.14); &:hover { background: rgba(167,139,250,0.09); } }
+  }
+
+  .matBadge {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &.badgeStd      { background: $teal-dim;   border: 1px solid $teal-bdr;   color: $teal-soft; }
+    &.badgeRacing   { background: $blue-dim;   border: 1px solid $blue-bdr;   color: $blue-soft; }
+    &.badgeBrasatura{ background: $violet-dim; border: 1px solid $violet-bdr; color: $violet; }
+  }
+
+  // ─── LIQUIDO GRID — 3 col ──────────────────────────────────────────────────
+
+  .liquidoGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 18px;
+  }
+
+  .liquidoCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(255,255,255,0.04); border-color: rgba(45,212,191,0.18); }
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.65); max-width: none; }
+    strong { color: rgba(245,247,250,0.92); font-weight: 700; }
+  }
+
+  // ─── BARRE CONCENTRAZIONE — elemento unico ─────────────────────────────────
+
+  .concBarre {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .concRiga {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .concLabel {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(245,247,250,0.55);
+  }
+
+  .concBar {
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    overflow: hidden;
+  }
+
+  .concFill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.8s ease;
+
+    &.fill40 { background: linear-gradient(90deg, $teal,      rgba(45,212,191,0.4)); }
+    &.fill50 { background: linear-gradient(90deg, $blue-soft, rgba(79,163,224,0.4)); }
+    &.fill60 { background: linear-gradient(90deg, $violet,    rgba(167,139,250,0.4)); }
+  }
+
+  .concVal {
+    font-size: 0.76rem;
+    color: rgba(245,247,250,0.4);
+    font-family: monospace;
+    letter-spacing: 0.3px;
+  }
+
+  // ─── MANUTENZIONE GRID — 2x2 ───────────────────────────────────────────────
+
+  .manutGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .manutCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 18px;
+    align-items: start;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(255,255,255,0.04); border-color: rgba(62,207,142,0.18); }
+  }
+
+  .manutNum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: $green-dim;
+    border: 1px solid $green-bdr;
+    color: $green-soft;
+    font-size: 1.1rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .manutContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.65); max-width: none; }
+  }
+
+  // ─── CARDS GRID ────────────────────────────────────────────────────────────
+
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .infoCard {
+    position: relative;
+    min-height: 250px;
+    padding: 28px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.2);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(45,212,191,0.55), transparent);
+    }
+
+    h3 { margin: 0 0 14px; font-size: 1.24rem; line-height: 1.3; font-weight: 700; color: #ffffff; }
+    p  { margin: 0; font-size: 0.98rem; line-height: 1.75; color: rgba(245,247,250,0.72); max-width: none; }
+  }
+
+  .cardTag {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $teal-soft;
+    text-transform: uppercase;
+  }
+}
+
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────────
+
+@media (max-width: $laptop) {
+  .radiatore {
+    .introBlock   { grid-template-columns: 1fr; }
+    .infoPanel    { position: relative; top: 0; }
+
+    .visualBlock,
+    .visualBlock.visualBlockAlt { grid-template-columns: 1fr; }
+
+    .costruzioneGrid { grid-template-columns: 1fr; }
+    .materialiGrid   { grid-template-columns: 1fr; }
+    .liquidoGrid     { grid-template-columns: 1fr; }
+    .manutGrid       { grid-template-columns: 1fr; }
+    .cardsGrid       { grid-template-columns: 1fr; }
+  }
+}
+
+@media (max-width: $tablet) {
+  .radiatore {
+    padding: 90px 0;
+
+    .wrapper { padding: 0 20px; }
+
+    h2 { font-size: clamp(2rem, 8vw, 3.5rem); line-height: 1.02; }
+    .lead, p { font-size: 0.98rem; line-height: 1.75; }
+
+    .costruzioneBlock,
+    .materialiBlock,
+    .liquidoBlock,
+    .manutBlock,
+    .infoPanel,
+    .infoCard { padding: 24px; border-radius: 22px; }
+
+    .manutCard { grid-template-columns: 1fr; gap: 12px; }
+    .manutNum  { width: 38px; height: 38px; font-size: 1rem; border-radius: 10px; }
+  }
+}
+
+@media (max-width: $mobile) {
+  .radiatore {
+    padding: 70px 0;
+
+    .wrapper { padding: 0 16px; }
+
+    .sectionLabel { font-size: 0.72rem; letter-spacing: 1.5px; padding: 7px 12px; }
+    h2 { font-size: 2rem; letter-spacing: -1px; }
+
+    .costruzioneBlock,
+    .materialiBlock,
+    .liquidoBlock,
+    .manutBlock,
+    .infoPanel,
+    .infoCard { padding: 20px; }
+
+    .miniStep   { grid-template-columns: 40px 1fr; }
+    .concLabel  { font-size: 0.72rem; }
+    .infoCard h3{ font-size: 1.1rem; }
+  }
+}
