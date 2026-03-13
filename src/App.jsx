@@ -64,7 +64,11 @@ import Mozzi from "./components/5ciclistica/5.1ruotePneumatici/mozzi/Mozzi";
 import Pneumatici from "./components/5ciclistica/5.1ruotePneumatici/pneumatici/Pneumatici"; 
 import Cerchi from "./components/5ciclistica/5.1ruotePneumatici/cerchi/cerchi";
 import Grip from "./components/5ciclistica/5.1ruotePneumatici/grip/Grip";
-
+import TrasmissioneFinaleIntro from "./components/5ciclistica/5.2trasmissioneFinale/trasmissioneFinaleIntro/TrasmissioneFinaleIntro";
+import Pignone from "./components/5ciclistica/5.2trasmissioneFinale/pignone/Pignone";
+import Corona from "./components/5ciclistica/5.2trasmissioneFinale/corona/Corona";
+import Rapporti from "./components/5ciclistica/5.2trasmissioneFinale/rapporti/Rapporti";
+import Catena from "./components/5ciclistica/5.2trasmissioneFinale/catena/Catena";
 
 
 const App = () => {
@@ -290,6 +294,29 @@ const App = () => {
       <section id="Grip">
         <Grip />
       </section>
+
+
+      {/* 5.2 Trasmissione Finale */}
+
+      <section id="TrasmissioneFinaleIntro">
+        <TrasmissioneFinaleIntro />
+      </section>
+      <section id="Pignone">
+        <Pignone />
+      </section>
+      <section id="Corona">
+        <Corona />
+      </section>
+      <section id="Rapporti">
+        <Rapporti />
+      </section>
+      <section id="Catena">
+        <Catena />
+      </section>
+
+
+       {/* 5.3 Sospensioni */}
+
 
 
 

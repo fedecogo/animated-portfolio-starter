@@ -1,0 +1,1124 @@
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 1200px;
+
+$steel:       #94a3b8;
+$steel-soft:  #b0bec5;
+$steel-light: #cbd5e1;
+$steel-dim:   rgba(148, 163, 184, 0.12);
+$steel-bdr:   rgba(148, 163, 184, 0.22);
+
+$silver:      #e2e8f0;
+$silver-dim:  rgba(226, 232, 240, 0.08);
+$silver-bdr:  rgba(226, 232, 240, 0.14);
+
+$blue:        #4fa3e0;
+$blue-soft:   #74b8e8;
+$blue-dim:    rgba(79, 163, 224, 0.12);
+$blue-bdr:    rgba(79, 163, 224, 0.2);
+
+$teal:        #2dd4bf;
+$teal-soft:   #5ee0ce;
+$teal-dim:    rgba(45, 212, 191, 0.10);
+$teal-bdr:    rgba(45, 212, 191, 0.20);
+
+$green:       #3ecf8e;
+$green-soft:  #6edba8;
+$green-dim:   rgba(62, 207, 142, 0.10);
+$green-bdr:   rgba(62, 207, 142, 0.20);
+
+$yellow:      #f0c040;
+$yellow-soft: #f5d060;
+$yellow-dim:  rgba(240, 192, 64, 0.10);
+$yellow-bdr:  rgba(240, 192, 64, 0.20);
+
+$orange:      #fb923c;
+$orange-soft: #fdba74;
+$orange-dim:  rgba(251, 146, 60, 0.10);
+$orange-bdr:  rgba(251, 146, 60, 0.20);
+
+$red:         #f05252;
+$red-soft:    #f47070;
+$red-dim:     rgba(240, 82, 82, 0.10);
+$red-bdr:     rgba(240, 82, 82, 0.22);
+
+$violet:      #a78bfa;
+$violet-soft: #c4b5fd;
+$violet-dim:  rgba(167, 139, 250, 0.10);
+$violet-bdr:  rgba(167, 139, 250, 0.20);
+
+.rapporti {
+  position: relative;
+  padding: 120px 0;
+  background:
+    radial-gradient(circle at 12% 9%, rgba(167, 139, 250, 0.06), transparent 30%),
+    radial-gradient(circle at 88% 84%, rgba(79, 163, 224, 0.05), transparent 30%),
+    linear-gradient(180deg, #0a0c10 0%, #0c0e13 55%, #0a0c10 100%);
+  color: #f5f7fa;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 80px,
+      rgba(148, 163, 184, 0.012) 80px,
+      rgba(148, 163, 184, 0.012) 81px
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  // ─── TYPO BASE ─────────────────────────────────────────────────────────
+
+  .sectionLabel {
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: $violet-dim;
+    border: 1px solid $violet-bdr;
+    color: $violet-soft;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
+    line-height: 1.02;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+    line-height: 1.25;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .lead {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.88);
+    max-width: 760px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.72);
+    max-width: 760px;
+  }
+
+  // ─── INTRO BLOCK ──────────────────────────────────────────────────────
+
+  .introBlock {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 42px;
+  }
+
+  .titleColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 780px;
+  }
+
+  // ─── INFO PANEL ───────────────────────────────────────────────────────
+
+  .infoPanel {
+    position: sticky;
+    top: 110px;
+    padding: 28px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.042), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.3);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(167,139,250,0.08), transparent 38%);
+      pointer-events: none;
+    }
+  }
+
+  .panelHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+
+    .panelTag {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: $violet-soft;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+
+  .flowStepsMini {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .miniStep {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .miniIndex {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 0.92rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    background: $steel-dim;
+    border: 1px solid $steel-bdr;
+    color: $steel-light;
+
+    &[data-color="primary"] {
+      background: $violet-dim;
+      border-color: $violet-bdr;
+      color: $violet-soft;
+    }
+
+    &[data-color="gear"] {
+      background: $blue-dim;
+      border-color: $blue-bdr;
+      color: $blue-soft;
+    }
+
+    &[data-color="final"] {
+      background: $yellow-dim;
+      border-color: $yellow-bdr;
+      color: $yellow-soft;
+    }
+
+    &[data-color="total"] {
+      background: $teal-dim;
+      border-color: $teal-bdr;
+      color: $teal-soft;
+    }
+
+    &[data-color="wheel"] {
+      background: $green-dim;
+      border-color: $green-bdr;
+      color: $green-soft;
+    }
+  }
+
+  .miniText {
+    padding-top: 7px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(245,247,250,0.82);
+    font-weight: 500;
+  }
+
+  // ─── BLOCK SHELL GENERICO ─────────────────────────────────────────────
+
+  .architetturaBlock,
+  .cortoLungoBlock,
+  .formuleBlock,
+  .disciplineBlock,
+  .erroriBlock,
+  .diagnosiBlock,
+  .strategiaBlock {
+    margin-bottom: 28px;
+    padding: 36px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.038), rgba(255,255,255,0.016));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.24);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .architetturaBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(167,139,250,0.07), transparent 36%);
+    pointer-events: none;
+  }
+
+  .cortoLungoBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(240,192,64,0.06), transparent 36%);
+    pointer-events: none;
+  }
+
+  .formuleBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(79,163,224,0.06), transparent 36%);
+    pointer-events: none;
+  }
+
+  .disciplineBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(45,212,191,0.05), transparent 36%);
+    pointer-events: none;
+  }
+
+  .erroriBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(240,82,82,0.05), transparent 36%);
+    pointer-events: none;
+  }
+
+  .diagnosiBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(251,146,60,0.05), transparent 36%);
+    pointer-events: none;
+  }
+
+  .strategiaBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(62,207,142,0.05), transparent 36%);
+    pointer-events: none;
+  }
+
+  .architetturaHeader,
+  .cortoLungoHeader,
+  .formuleHeader,
+  .disciplineHeader,
+  .erroriHeader,
+  .diagnosiHeader,
+  .strategiaHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+    max-width: 820px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    p {
+      max-width: none;
+    }
+  }
+
+  // ─── ARCHITETTURA BLOCK ───────────────────────────────────────────────
+
+  .architetturaGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .archCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 100%;
+
+    p {
+      max-width: none;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: rgba(245,247,250,0.62);
+    }
+
+    &.archCardPrimary {
+      background: rgba(167,139,250,0.05);
+      border: 1px solid rgba(167,139,250,0.13);
+    }
+
+    &.archCardGear {
+      background: rgba(79,163,224,0.05);
+      border: 1px solid rgba(79,163,224,0.13);
+    }
+
+    &.archCardFinal {
+      background: rgba(240,192,64,0.05);
+      border: 1px solid rgba(240,192,64,0.13);
+    }
+  }
+
+  .archTag {
+    display: inline-flex;
+    width: fit-content;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: rgba(245,247,250,0.72);
+  }
+
+  // ─── CORTO / LUNGO BLOCK ──────────────────────────────────────────────
+
+  .cortoLungoGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .ratioCard {
+    padding: 24px 22px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 100%;
+    transition: background 0.25s ease, border-color 0.25s ease;
+
+    h4 {
+      font-size: 1.05rem;
+    }
+
+    p {
+      max-width: none;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: rgba(245,247,250,0.68);
+    }
+
+    &.ratioShort {
+      background: rgba(240,192,64,0.05);
+      border: 1px solid rgba(240,192,64,0.15);
+
+      &:hover {
+        background: rgba(240,192,64,0.08);
+      }
+    }
+
+    &.ratioLong {
+      background: rgba(79,163,224,0.05);
+      border: 1px solid rgba(79,163,224,0.15);
+
+      &:hover {
+        background: rgba(79,163,224,0.08);
+      }
+    }
+  }
+
+  .ratioCardTop {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .ratioBadge {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    &.badgeShort {
+      background: $yellow-dim;
+      border: 1px solid $yellow-bdr;
+      color: $yellow-soft;
+    }
+
+    &.badgeLong {
+      background: $blue-dim;
+      border: 1px solid $blue-bdr;
+      color: $blue-soft;
+    }
+  }
+
+  .curveBars {
+    margin-top: 8px;
+    height: 120px;
+    display: flex;
+    align-items: end;
+    gap: 8px;
+    padding: 14px 12px;
+    border-radius: 16px;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .curveBar {
+    flex: 1;
+    min-width: 0;
+    border-radius: 999px 999px 6px 6px;
+    opacity: 0.72;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    &.curvePeak {
+      opacity: 1;
+      transform: scaleY(1.03);
+    }
+  }
+
+  .curveBarsShort .curveBar {
+    background: linear-gradient(180deg, $yellow-soft 0%, rgba(240,192,64,0.18) 100%);
+  }
+
+  .curveBarsLong .curveBar {
+    background: linear-gradient(180deg, $blue-soft 0%, rgba(79,163,224,0.18) 100%);
+  }
+
+  .curveLabel {
+    font-size: 0.78rem;
+    color: rgba(245,247,250,0.5);
+    font-weight: 600;
+  }
+
+  // ─── FORMULE BLOCK ────────────────────────────────────────────────────
+
+  .formuleContent {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .formulaPanel {
+    padding: 24px 20px;
+    border-radius: 22px;
+    background: rgba(0,0,0,0.22);
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .formulaEq {
+    font-size: 1.35rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #ffffff;
+    word-break: break-word;
+  }
+
+  .formulaLabel {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(245,247,250,0.42);
+    font-weight: 700;
+  }
+
+  .formulaText {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    p {
+      max-width: none;
+      font-size: 0.97rem;
+      line-height: 1.78;
+      color: rgba(245,247,250,0.72);
+    }
+
+    strong {
+      color: #ffffff;
+      font-weight: 800;
+    }
+  }
+
+  // ─── VISUAL BLOCK ─────────────────────────────────────────────────────
+
+  .visualBlock {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 28px;
+  }
+
+  .visualBlockAlt {
+    grid-template-columns: 380px 1fr;
+  }
+
+  .mediaPlaceholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 24px;
+    border: 2px dashed rgba(148,163,184,0.2);
+    background: rgba(148,163,184,0.025);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      border-color: rgba(148,163,184,0.4);
+      background: rgba(148,163,184,0.06);
+    }
+
+    img,
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 22px;
+      display: block;
+    }
+  }
+
+  .placeholderInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 24px;
+    pointer-events: none;
+  }
+
+  .placeholderIcon {
+    font-size: 2.4rem;
+    color: rgba(148,163,184,0.28);
+    line-height: 1;
+  }
+
+  .placeholderText {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(148,163,184,0.52);
+  }
+
+  .placeholderSub {
+    font-size: 0.82rem;
+    color: rgba(245,247,250,0.28);
+    font-family: monospace;
+  }
+
+  .visualCaption {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .captionTag {
+      display: inline-block;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: $steel-dim;
+      border: 1px solid $steel-bdr;
+      color: $steel-light;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: rgba(245,247,250,0.7);
+      max-width: none;
+    }
+  }
+
+  // ─── DISCIPLINE BLOCK ─────────────────────────────────────────────────
+
+  .disciplineGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .disciplinaCard {
+    padding: 22px 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 100%;
+    transition: background 0.25s ease, border-color 0.25s ease;
+
+    p {
+      max-width: none;
+      font-size: 0.92rem;
+      line-height: 1.68;
+      color: rgba(245,247,250,0.64);
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    &.disciplinaCross {
+      background: rgba(240,192,64,0.05);
+      border: 1px solid rgba(240,192,64,0.14);
+    }
+
+    &.disciplinaEnduro {
+      background: rgba(45,212,191,0.05);
+      border: 1px solid rgba(45,212,191,0.14);
+    }
+
+    &.disciplinaMotard {
+      background: rgba(79,163,224,0.05);
+      border: 1px solid rgba(79,163,224,0.14);
+    }
+
+    &.disciplinaStradale {
+      background: rgba(167,139,250,0.05);
+      border: 1px solid rgba(167,139,250,0.14);
+    }
+  }
+
+  .disciplinaCardHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 2px;
+  }
+
+  .disciplinaMarchio {
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: rgba(245,247,250,0.45);
+  }
+
+  .disciplinaNome {
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  .disciplinaClaim {
+    font-size: 0.82rem;
+    color: rgba(245,247,250,0.52);
+    line-height: 1.45;
+  }
+
+  .disciplinaCross .disciplinaNome { color: $yellow-soft; }
+  .disciplinaEnduro .disciplinaNome { color: $teal-soft; }
+  .disciplinaMotard .disciplinaNome { color: $blue-soft; }
+  .disciplinaStradale .disciplinaNome { color: $violet-soft; }
+
+  // ─── ERRORI BLOCK ─────────────────────────────────────────────────────
+
+  .erroriGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .erroreCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    p {
+      max-width: none;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: rgba(245,247,250,0.62);
+    }
+
+    &.erroreCard1 {
+      background: rgba(240,82,82,0.045);
+      border: 1px solid rgba(240,82,82,0.13);
+    }
+
+    &.erroreCard2 {
+      background: rgba(251,146,60,0.05);
+      border: 1px solid rgba(251,146,60,0.13);
+    }
+
+    &.erroreCard3 {
+      background: rgba(79,163,224,0.05);
+      border: 1px solid rgba(79,163,224,0.13);
+    }
+
+    &.erroreCard4 {
+      background: rgba(167,139,250,0.05);
+      border: 1px solid rgba(167,139,250,0.13);
+    }
+  }
+
+  .erroreNum {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.9);
+  }
+
+  // ─── DIAGNOSI BLOCK ───────────────────────────────────────────────────
+
+  .diagnosiGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .diagnosiCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: background 0.25s ease;
+
+    p {
+      max-width: none;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: rgba(245,247,250,0.62);
+    }
+
+    &.diagnosiCard1 {
+      background: rgba(240,192,64,0.05);
+      border: 1px solid rgba(240,192,64,0.13);
+    }
+
+    &.diagnosiCard2 {
+      background: rgba(240,82,82,0.045);
+      border: 1px solid rgba(240,82,82,0.13);
+    }
+
+    &.diagnosiCard3 {
+      background: rgba(45,212,191,0.05);
+      border: 1px solid rgba(45,212,191,0.13);
+    }
+
+    &.diagnosiCard4 {
+      background: rgba(79,163,224,0.05);
+      border: 1px solid rgba(79,163,224,0.13);
+    }
+  }
+
+  .diagnosiBadge {
+    display: inline-flex;
+    width: fit-content;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    background: $orange-dim;
+    border: 1px solid $orange-bdr;
+    color: $orange-soft;
+  }
+
+  // ─── STRATEGIA BLOCK ──────────────────────────────────────────────────
+
+  .strategiaGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .stepCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: rgba(62,207,142,0.04);
+    border: 1px solid rgba(62,207,142,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    p {
+      max-width: none;
+      font-size: 0.9rem;
+      line-height: 1.66;
+      color: rgba(245,247,250,0.64);
+    }
+  }
+
+  .stepNum {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    background: $green-dim;
+    border: 1px solid $green-bdr;
+    color: $green-soft;
+  }
+
+  // ─── CARDS GRID ───────────────────────────────────────────────────────
+
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .infoCard {
+    position: relative;
+    min-height: 250px;
+    padding: 28px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.038), rgba(255,255,255,0.016));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.22);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(167,139,250,0.45),
+        rgba(79,163,224,0.35),
+        transparent
+      );
+    }
+
+    h3 {
+      margin: 0 0 14px;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.96rem;
+      line-height: 1.75;
+      color: rgba(245,247,250,0.7);
+      max-width: none;
+    }
+  }
+
+  .cardTag {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $steel-light;
+    text-transform: uppercase;
+  }
+}
+
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────
+
+@media (max-width: $laptop) {
+  .rapporti {
+    .introBlock,
+    .visualBlock,
+    .visualBlockAlt,
+    .formuleContent,
+    .cortoLungoGrid,
+    .disciplineGrid,
+    .erroriGrid,
+    .diagnosiGrid,
+    .strategiaGrid,
+    .cardsGrid,
+    .architetturaGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .infoPanel {
+      position: relative;
+      top: 0;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .rapporti {
+    padding: 90px 0;
+
+    .wrapper {
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+
+    .lead,
+    p {
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    .architetturaBlock,
+    .cortoLungoBlock,
+    .formuleBlock,
+    .disciplineBlock,
+    .erroriBlock,
+    .diagnosiBlock,
+    .strategiaBlock,
+    .infoPanel,
+    .infoCard {
+      padding: 24px;
+      border-radius: 22px;
+    }
+
+    .curveBars {
+      height: 105px;
+      gap: 6px;
+      padding: 12px 10px;
+    }
+
+    .formulaEq {
+      font-size: 1.15rem;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .rapporti {
+    padding: 70px 0;
+
+    .wrapper {
+      padding: 0 16px;
+    }
+
+    .sectionLabel {
+      font-size: 0.72rem;
+      padding: 7px 12px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      letter-spacing: -1px;
+    }
+
+    .architetturaBlock,
+    .cortoLungoBlock,
+    .formuleBlock,
+    .disciplineBlock,
+    .erroriBlock,
+    .diagnosiBlock,
+    .strategiaBlock,
+    .infoPanel,
+    .infoCard {
+      padding: 20px;
+    }
+
+    .miniStep {
+      grid-template-columns: 40px 1fr;
+    }
+
+    .miniText {
+      font-size: 0.86rem;
+    }
+
+    .disciplinaNome {
+      font-size: 1rem;
+    }
+
+    .placeholderText {
+      font-size: 0.92rem;
+    }
+
+    .infoCard h3 {
+      font-size: 1.1rem;
+    }
+
+    .formulaEq {
+      font-size: 1rem;
+    }
+  }
+}
