@@ -35,36 +35,37 @@ const ExhaustSystem = () => {
         >
           <div className="titleColumn">
             <motion.span className="sectionLabel" variants={fadeUpVariants}>
-              Two-stroke cycle
+              Ciclo a due tempi
             </motion.span>
 
             <motion.h2 variants={fadeUpVariants}>
-              Exhaust flow and expansion chamber
+              Flusso di scarico e camera di espansione
             </motion.h2>
 
             <motion.p className="lead" variants={fadeUpVariants}>
-              In a two-stroke engine the exhaust system is not just responsible
-              for removing burnt gases. It also plays a fundamental role in the
-              way the engine breathes and how efficiently the cylinder is
-              scavenged.
+              In un motore a due tempi lo scarico non è responsabile solo della
+              rimozione dei gas combusti. Svolge anche un ruolo fondamentale nel
+              modo in cui il motore respira e nell'efficacia con cui il cilindro
+              viene lavato.
             </motion.p>
 
             <motion.p variants={fadeUpVariants}>
-              Through pressure waves generated inside the expansion chamber, the
-              exhaust can help push fresh mixture back toward the cylinder,
-              improving filling efficiency and overall engine performance.
+              Attraverso le onde di pressione generate all'interno della camera
+              di espansione, lo scarico può aiutare a spingere la miscela fresca
+              nuovamente verso il cilindro, migliorando l'efficienza di
+              riempimento e le prestazioni complessive del motore.
             </motion.p>
           </div>
         </motion.div>
 
-        {/* IMAGE BLOCK */}
+        {/* BLOCCO IMMAGINE */}
 
         <div className="exhaustImageBlock">
           <div className="imageContainer">
             {/* QUI METTERAI LA TUA IMMAGINE */}
             <img
               src="https://i.makeagif.com/media/11-08-2016/GHFqhJ.gif"
-              alt="Two stroke expansion chamber diagram"
+              alt="Diagramma camera di espansione a due tempi"
             />
           </div>
         </div>
@@ -77,32 +78,32 @@ const ExhaustSystem = () => {
           viewport={{ once: true }}
         >
           <motion.article className="exhaustCard" variants={fadeUpVariants}>
-            <span className="cardTag">Exhaust port</span>
-            <h3>Burnt gases leave the cylinder</h3>
+            <span className="cardTag">Luce di scarico</span>
+            <h3>I gas combusti lasciano il cilindro</h3>
             <p>
-              When the piston uncovers the exhaust port, the high-pressure gases
-              produced by combustion begin to escape from the cylinder toward
-              the exhaust system.
+              Quando il pistone scopre la luce di scarico, i gas ad alta pressione
+              prodotti dalla combustione iniziano a fuoriuscire dal cilindro verso
+              il sistema di scarico.
             </p>
           </motion.article>
 
           <motion.article className="exhaustCard" variants={fadeUpVariants}>
-            <span className="cardTag">Expansion chamber</span>
-            <h3>Pressure waves shape engine behavior</h3>
+            <span className="cardTag">Camera di espansione</span>
+            <h3>Le onde di pressione definiscono il comportamento del motore</h3>
             <p>
-              The expansion chamber is designed to reflect pressure waves that
-              travel back toward the cylinder. These waves can help prevent
-              fresh mixture from escaping too early.
+              La camera di espansione è progettata per riflettere onde di
+              pressione che viaggiano verso il cilindro. Queste onde possono
+              aiutare a impedire che la miscela fresca fuoriesca troppo presto.
             </p>
           </motion.article>
 
           <motion.article className="exhaustCard" variants={fadeUpVariants}>
-            <span className="cardTag">Scavenging</span>
-            <h3>Fresh charge replaces exhaust gases</h3>
+            <span className="cardTag">Lavaggio</span>
+            <h3>La carica fresca sostituisce i gas di scarico</h3>
             <p>
-              During scavenging, the fresh mixture entering the cylinder helps
-              push the remaining burnt gases out through the exhaust port,
-              preparing the chamber for the next cycle.
+              Durante il lavaggio, la miscela fresca che entra nel cilindro
+              aiuta a spingere fuori i gas combusti rimanenti attraverso la
+              luce di scarico, preparando la camera per il ciclo successivo.
             </p>
           </motion.article>
         </motion.div>

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -n '53,55p' \"c:/Users/ASUS/Documents/GitHub/animated-portfolio-starter/src/components/3organiMeccanici/organiMeccaniciIntro/OrganiMeccaniciIntro.jsx\")",
+      "Bash(sed -n '53,55p' \"c:/Users/ASUS/Documents/GitHub/animated-portfolio-starter/src/components/3trasmissione/trasmissioneIntro/TrasmissioneIntro.jsx\")",
+      "Bash(sed -n '50,52p' \"c:/Users/ASUS/Documents/GitHub/animated-portfolio-starter/src/components/3scarico/scaricoIntro/ScaricaIntro.jsx\")",
+      "Bash(sed -n '53,55p' \"c:/Users/ASUS/Documents/GitHub/animated-portfolio-starter/src/components/3raffreddamentoEAccensione/raffreddamentoEAccensioneIntro/RaffreddamentoEAccensioneIntro.jsx\")",
+      "Bash(sed -n '54,56p' \"c:/Users/ASUS/Documents/GitHub/animated-portfolio-starter/src/components/4telaio/telaioIntro/TelaioIntro.jsx\")"
+    ]
+  }
+}

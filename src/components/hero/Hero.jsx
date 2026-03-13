@@ -61,7 +61,7 @@ const sliderVariants = {
   },
 };
 
-const Hero = () => {
+const Hero = ({ onOpenSidebar }) => {
   return (
     <section className="hero">
       <div className="heroBackground">
@@ -81,24 +81,34 @@ const Hero = () => {
           animate="animate"
         >
           <motion.span className="eyebrow" variants={itemVariants}>
-            2-Stroke Engine Guide
+            Guida al Motore 2 Tempi
           </motion.span>
 
           <motion.h1 variants={itemVariants}>
-            How a 2-stroke motorcycle works
+            Dentro il<br />
+            <span className="gradientText">2 tempi</span><br />
+            da corsa
           </motion.h1>
 
           <motion.p className="description" variants={itemVariants}>
-            A visual and technical guide to the engine cycle, intake,
-            combustion, exhaust flow and the core mechanics of the 2T world.
+            Una guida visiva e tecnica al ciclo del motore, aspirazione,
+            combustione, scarico e ai principi meccanici fondamentali del mondo 2T.
           </motion.p>
 
+          <motion.div className="statsRow" variants={itemVariants}>
+            <span>5 Capitoli</span>
+            <span className="dot">·</span>
+            <span>40+ Componenti</span>
+            <span className="dot">·</span>
+            <span>Guida tecnica completa</span>
+          </motion.div>
+
           <motion.div className="buttons" variants={itemVariants}>
-            <a href="#motore" className="primaryBtn">
-              Explore the engine
-            </a>
-            <a href="#capitoli" className="secondaryBtn">
-              View all sections
+            <button className="primaryBtn" onClick={onOpenSidebar}>
+              Esplora le sezioni ↗
+            </button>
+            <a href="#MotoreIntro" className="secondaryBtn">
+              Inizia a leggere
             </a>
           </motion.div>
 
@@ -119,8 +129,8 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        How a 2-stroke motorcycle works • How a 2-stroke motorcycle works • How
-        a 2-stroke motorcycle works •
+        Come funziona un motore 2 tempi • Come funziona un motore 2 tempi • Come
+        funziona un motore 2 tempi •
       </motion.div>
     </section>
   );

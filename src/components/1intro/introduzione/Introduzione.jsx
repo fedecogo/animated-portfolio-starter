@@ -72,25 +72,25 @@ const Introduzione = () => {
           animate="animate"
         >
           <motion.span className="eyebrow" variants={itemVariants}>
-            2-Stroke Engine Guide
+            Guida al Motore 2 Tempi
           </motion.span>
 
           <motion.h1 variants={itemVariants}>
-            Introduction
+            Introduzione
           </motion.h1>
 
           <motion.p className="description" variants={itemVariants}>
-            A clear and visual introduction to the anatomy of a 2-stroke bike:
-            engine, intake, combustion cycle, chassis, suspension, brakes and
-            core mechanical principles.
+            Un'introduzione visiva e chiara all'anatomia di una moto 2 tempi:
+            motore, aspirazione, ciclo di combustione, telaio, sospensioni,
+            freni e principi meccanici fondamentali.
           </motion.p>
 
           <motion.div className="buttons" variants={itemVariants}>
             <a href="#motore" className="primaryBtn">
-              Explore the engine
+              Esplora il motore
             </a>
             <a href="#capitoli" className="secondaryBtn">
-              View all sections
+              Vedi tutte le sezioni
             </a>
           </motion.div>
 
@@ -117,9 +117,9 @@ const Introduzione = () => {
           initial="initial"
           animate="animate"
         >
-          Two-Stroke • Intake • Combustion • Expansion Chamber • Chassis •
-          Suspension • Brakes • Mechanics • Two-Stroke • Intake • Combustion •
-          Expansion Chamber • Chassis • Suspension • Brakes • Mechanics •
+          Due Tempi • Aspirazione • Combustione • Camera di Espansione • Telaio •
+          Sospensioni • Freni • Meccanica • Due Tempi • Aspirazione • Combustione •
+          Camera di Espansione • Telaio • Sospensioni • Freni • Meccanica •
         </motion.div>
       </div>
     </section>

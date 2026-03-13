@@ -53,49 +53,50 @@ const AirAndFuel = () => {
         >
           <div className="titleColumn">
             <motion.span className="sectionLabel" variants={fadeUpVariants}>
-              Engine cycle
+              Ciclo del motore
             </motion.span>
 
             <motion.h2 variants={fadeUpVariants}>
-              Air and fuel flow
+              Flusso di aria e carburante
             </motion.h2>
 
             <motion.p className="lead" variants={fadeUpVariants}>
-              In a 2-stroke engine, the path of air and fuel is one of the most
-              important parts of the whole system. Before combustion happens,
-              the engine must draw air in, mix it with fuel, guide it through
-              the intake side and move it toward the crankcase and cylinder.
+              In un motore 2 tempi, il percorso dell'aria e del carburante è
+              uno degli aspetti più importanti dell'intero sistema. Prima che
+              avvenga la combustione, il motore deve aspirare aria, mescolarla
+              con il carburante, guidarla attraverso il lato aspirazione e
+              spingerla verso il carter e il cilindro.
             </motion.p>
 
             <motion.p variants={fadeUpVariants}>
-              This flow is not just a simple passage. It directly influences
-              throttle response, combustion quality, engine efficiency and the
-              overall character of the bike.
+              Questo flusso non è un semplice passaggio. Influisce direttamente
+              sulla risposta all'acceleratore, sulla qualità della combustione,
+              sull'efficienza del motore e sul carattere complessivo della moto.
             </motion.p>
           </div>
 
           <motion.div className="infoPanel" variants={fadeUpVariants}>
             <div className="panelHeader">
-              <span className="panelTag">Flow overview</span>
-              <h3>Basic path of the mixture</h3>
+              <span className="panelTag">Panoramica del flusso</span>
+              <h3>Percorso base della miscela</h3>
             </div>
 
             <div className="flowStepsMini">
               <div className="miniStep">
                 <span className="miniIndex">01</span>
-                <span className="miniText">Air enters through the air filter</span>
+                <span className="miniText">L'aria entra attraverso il filtro dell'aria</span>
               </div>
               <div className="miniStep">
                 <span className="miniIndex">02</span>
-                <span className="miniText">Fuel is dosed by the carburetor</span>
+                <span className="miniText">Il carburante viene dosato dal carburatore</span>
               </div>
               <div className="miniStep">
                 <span className="miniIndex">03</span>
-                <span className="miniText">The mixture passes the reed valve</span>
+                <span className="miniText">La miscela attraversa il pacco lamellare</span>
               </div>
               <div className="miniStep">
                 <span className="miniIndex">04</span>
-                <span className="miniText">The crankcase helps transfer the charge</span>
+                <span className="miniText">Il carter aiuta a trasferire la carica fresca</span>
               </div>
             </div>
           </motion.div>
@@ -113,34 +114,34 @@ const AirAndFuel = () => {
 
             <div className="diagramNode node1">
               <span className="nodeNumber">01</span>
-              <h3>Air filter</h3>
-              <p>Outside air is cleaned before entering the intake system.</p>
+              <h3>Filtro dell'aria</h3>
+              <p>L'aria esterna viene pulita prima di entrare nel sistema di aspirazione.</p>
             </div>
 
             <div className="diagramNode node2">
               <span className="nodeNumber">02</span>
-              <h3>Carburetor</h3>
+              <h3>Carburatore</h3>
               <p>
-                Fuel is mixed with incoming air in the correct proportion for
-                engine operation.
+                Il carburante viene miscelato con l'aria in entrata nella
+                proporzione corretta per il funzionamento del motore.
               </p>
             </div>
 
             <div className="diagramNode node3">
               <span className="nodeNumber">03</span>
-              <h3>Reed valve</h3>
+              <h3>Pacco lamellare</h3>
               <p>
-                The mixture passes toward the crankcase while helping limit
-                reverse flow.
+                La miscela passa verso il carter aiutando a limitare
+                il flusso inverso.
               </p>
             </div>
 
             <div className="diagramNode node4">
               <span className="nodeNumber">04</span>
-              <h3>Crankcase and transfer</h3>
+              <h3>Carter e travaso</h3>
               <p>
-                The charge is compressed and guided upward toward the cylinder
-                through the transfer phase.
+                La carica viene compressa e guidata verso l'alto nel cilindro
+                attraverso la fase di travaso.
               </p>
             </div>
           </motion.div>
@@ -154,32 +155,35 @@ const AirAndFuel = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.article className="infoCard" variants={cardVariants}>
-            <span className="cardTag">Air</span>
-            <h3>Why air quality matters</h3>
+            <span className="cardTag">Aria</span>
+            <h3>Perché la qualità dell'aria è importante</h3>
             <p>
-              The engine depends on a stable volume of clean incoming air. If
-              the filter is dirty or flow is restricted, the mixture balance can
-              change and engine behavior becomes less precise.
+              Il motore dipende da un volume stabile di aria pulita in entrata.
+              Se il filtro è sporco o il flusso è limitato, l'equilibrio della
+              miscela può cambiare e il comportamento del motore diventa meno
+              preciso.
             </p>
           </motion.article>
 
           <motion.article className="infoCard" variants={cardVariants}>
-            <span className="cardTag">Fuel</span>
-            <h3>Why fuel dosing matters</h3>
+            <span className="cardTag">Carburante</span>
+            <h3>Perché il dosaggio del carburante è importante</h3>
             <p>
-              In a carbureted 2T, fuel metering strongly affects combustion,
-              response and temperature. The mixture must be close to the right
-              ratio for the engine to run correctly.
+              In un 2T con carburatore, la dosatura del carburante influisce
+              fortemente sulla combustione, sulla risposta e sulla temperatura.
+              La miscela deve essere vicina al rapporto corretto perché il
+              motore funzioni correttamente.
             </p>
           </motion.article>
 
           <motion.article className="infoCard" variants={cardVariants}>
-            <span className="cardTag">Flow</span>
-            <h3>Why the path matters</h3>
+            <span className="cardTag">Flusso</span>
+            <h3>Perché il percorso è importante</h3>
             <p>
-              Air and fuel do not just “enter the engine”. They follow a timed
-              path through filter, carburetor, reed valve and crankcase before
-              contributing to combustion inside the cylinder.
+              Aria e carburante non "entrano semplicemente nel motore". Seguono
+              un percorso temporizzato attraverso filtro, carburatore, pacco
+              lamellare e carter prima di contribuire alla combustione nel
+              cilindro.
             </p>
           </motion.article>
         </motion.div>

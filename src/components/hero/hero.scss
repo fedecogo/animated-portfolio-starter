@@ -3,7 +3,7 @@ $tablet: 768px;
 
 .hero {
   position: relative;
-  height: calc(100vh - 100px) ;
+  height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -85,12 +85,36 @@ $tablet: 768px;
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   }
 
+  .gradientText {
+    background: linear-gradient(90deg, #ff6b35 0%, #ffb347 60%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .description {
     max-width: 650px;
     margin: 0;
     font-size: 1.05rem;
     line-height: 1.75;
     color: rgba(245, 247, 250, 0.8);
+  }
+
+  .statsRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(245, 247, 250, 0.45);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    .dot {
+      color: rgba(255, 107, 53, 0.5);
+      font-size: 1rem;
+    }
   }
 
   .buttons {
@@ -193,6 +217,10 @@ $tablet: 768px;
 
 @media (max-width: $mobile) {
   .hero {
+    .heroBackground img {
+      object-position: 70% center;
+    }
+
     .wrapper {
       padding: 24px 16px 80px;
     }

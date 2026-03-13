@@ -53,53 +53,54 @@ const FuelAndMixture = () => {
         >
           <div className="titleColumn">
             <motion.span className="sectionLabel" variants={fadeUpVariants}>
-              Fuel system
+              Sistema carburante
             </motion.span>
 
             <motion.h2 variants={fadeUpVariants}>
-              Fuel, oil and mixture balance
+              Carburante, olio e bilanciamento della miscela
             </motion.h2>
 
             <motion.p className="lead" variants={fadeUpVariants}>
-              In a 2-stroke engine, fuel does more than simply support
-              combustion. It works together with air and two-stroke oil to form
-              the fresh charge that enters the engine and allows it to operate
-              correctly.
+              In un motore 2 tempi, il carburante fa molto di più che supportare
+              la combustione. Lavora insieme all'aria e all'olio 2T per formare
+              la carica fresca che entra nel motore e gli consente di funzionare
+              correttamente.
             </motion.p>
 
             <motion.p variants={fadeUpVariants}>
-              Mixture quality affects throttle response, combustion behavior,
-              operating temperature and reliability under load. For that reason,
-              understanding lean, correct and rich mixture conditions is one of
-              the most important parts of reading a 2T engine.
+              La qualità della miscela influisce sulla risposta all'acceleratore,
+              sul comportamento della combustione, sulla temperatura di esercizio
+              e sull'affidabilità sotto carico. Per questo motivo, comprendere
+              le condizioni di miscela magra, corretta e ricca è uno degli
+              aspetti più importanti nella lettura di un motore 2T.
             </motion.p>
           </div>
 
           <motion.div className="infoPanel" variants={fadeUpVariants}>
             <div className="panelHeader">
-              <span className="panelTag">Core balance</span>
-              <h3>Air, fuel and oil must work together</h3>
+              <span className="panelTag">Equilibrio fondamentale</span>
+              <h3>Aria, carburante e olio devono lavorare insieme</h3>
             </div>
 
             <div className="miniRows">
               <div className="miniRow">
-                <span className="miniLabel">Fuel</span>
+                <span className="miniLabel">Carburante</span>
                 <span className="miniValue">
-                  Supplies the chemical energy released during combustion
+                  Fornisce l'energia chimica rilasciata durante la combustione
                 </span>
               </div>
 
               <div className="miniRow">
-                <span className="miniLabel">Two-stroke oil</span>
+                <span className="miniLabel">Olio 2T</span>
                 <span className="miniValue">
-                  Provides essential lubrication for internal moving parts
+                  Garantisce la lubrificazione essenziale delle parti interne in movimento
                 </span>
               </div>
 
               <div className="miniRow">
-                <span className="miniLabel">Mixture ratio</span>
+                <span className="miniLabel">Rapporto di miscela</span>
                 <span className="miniValue">
-                  Must remain within a safe and effective operating range
+                  Deve rimanere entro un range operativo sicuro ed efficace
                 </span>
               </div>
             </div>
@@ -114,32 +115,34 @@ const FuelAndMixture = () => {
           viewport={{ once: true, amount: 0.15 }}
         >
           <motion.article className="featureCard" variants={cardVariants}>
-            <span className="cardTag">Fuel</span>
-            <h3>Fuel</h3>
+            <span className="cardTag">Carburante</span>
+            <h3>Carburante</h3>
             <p>
-              Fuel is the energy-bearing part of the fresh charge. Once mixed
-              with incoming air, it becomes part of the combustible mixture that
-              will later ignite inside the cylinder.
+              Il carburante è la parte energetica della carica fresca. Una volta
+              miscelato con l'aria in entrata, diventa parte della miscela
+              combustibile che si accenderà nel cilindro.
             </p>
           </motion.article>
 
           <motion.article className="featureCard" variants={cardVariants}>
-            <span className="cardTag">Lubrication</span>
-            <h3>Two-stroke oil</h3>
+            <span className="cardTag">Lubrificazione</span>
+            <h3>Olio due tempi</h3>
             <p>
-              In many 2T engines, oil is carried with the mixture or delivered
-              by a separate system. Its role is essential because internal
-              components still require lubrication while the engine is running.
+              In molti motori 2T, l'olio è trasportato insieme alla miscela o
+              erogato da un sistema separato. Il suo ruolo è essenziale perché
+              i componenti interni richiedono lubrificazione anche durante il
+              funzionamento del motore.
             </p>
           </motion.article>
 
           <motion.article className="featureCard" variants={cardVariants}>
-            <span className="cardTag">Mixture ratio</span>
-            <h3>Air-fuel balance</h3>
+            <span className="cardTag">Rapporto di miscela</span>
+            <h3>Equilibrio aria-carburante</h3>
             <p>
-              The engine requires the correct proportion of air and fuel. If the
-              balance shifts too far in one direction, combustion quality,
-              temperature and response can change significantly.
+              Il motore richiede la proporzione corretta di aria e carburante.
+              Se l'equilibrio si sposta troppo in una direzione, la qualità
+              della combustione, la temperatura e la risposta possono cambiare
+              significativamente.
             </p>
           </motion.article>
         </motion.div>
@@ -152,53 +155,53 @@ const FuelAndMixture = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.article className="mixtureCard lean" variants={cardVariants}>
-            <span className="mixtureBadge">Lean</span>
-            <h3>Lean mixture</h3>
+            <span className="mixtureBadge">Magra</span>
+            <h3>Miscela magra</h3>
             <p>
-              A lean mixture contains too much air in relation to fuel. The
-              engine may feel sharp and reactive at first, but combustion
-              temperature can rise and the safety margin can decrease.
+              Una miscela magra contiene troppa aria in relazione al carburante.
+              Il motore può sembrare reattivo all'inizio, ma la temperatura di
+              combustione può salire e il margine di sicurezza può diminuire.
             </p>
 
             <div className="stateBox">
-              <span className="stateLabel">Typical effect</span>
+              <span className="stateLabel">Effetto tipico</span>
               <span className="stateValue">
-                Higher running temperature, reduced safety margin
+                Temperatura di esercizio elevata, margine di sicurezza ridotto
               </span>
             </div>
           </motion.article>
 
           <motion.article className="mixtureCard medium" variants={cardVariants}>
-            <span className="mixtureBadge">Correct</span>
-            <h3>Correct mixture</h3>
+            <span className="mixtureBadge">Corretta</span>
+            <h3>Miscela corretta</h3>
             <p>
-              A correct mixture keeps the engine in a healthier operating zone.
-              Combustion is cleaner, throttle response is more consistent and
-              the engine works with a better balance between performance and
-              reliability.
+              Una miscela corretta mantiene il motore in una zona operativa più
+              sana. La combustione è più pulita, la risposta all'acceleratore è
+              più costante e il motore lavora con un migliore equilibrio tra
+              prestazioni e affidabilità.
             </p>
 
             <div className="stateBox">
-              <span className="stateLabel">Typical effect</span>
+              <span className="stateLabel">Effetto tipico</span>
               <span className="stateValue">
-                Best compromise between performance and safety
+                Miglior compromesso tra prestazioni e sicurezza
               </span>
             </div>
           </motion.article>
 
           <motion.article className="mixtureCard rich" variants={cardVariants}>
-            <span className="mixtureBadge">Rich</span>
-            <h3>Rich mixture</h3>
+            <span className="mixtureBadge">Ricca</span>
+            <h3>Miscela ricca</h3>
             <p>
-              A rich mixture contains more fuel than necessary relative to the
-              amount of air. The engine may feel softer, less clean in response
-              and less willing to rev out freely.
+              Una miscela ricca contiene più carburante del necessario rispetto
+              alla quantità d'aria. Il motore può sembrare meno reattivo, meno
+              pulito nella risposta e meno propenso a salire di giri liberamente.
             </p>
 
             <div className="stateBox">
-              <span className="stateLabel">Typical effect</span>
+              <span className="stateLabel">Effetto tipico</span>
               <span className="stateValue">
-                Softer response, less efficient combustion
+                Risposta attutita, combustione meno efficiente
               </span>
             </div>
           </motion.article>
@@ -214,10 +217,10 @@ const FuelAndMixture = () => {
           <motion.div className="stripCard" variants={cardVariants}>
             <span className="stripIndex">01</span>
             <div>
-              <h4>Too lean</h4>
+              <h4>Troppo magra</h4>
               <p>
-                More air, less fuel. This can increase combustion temperature
-                and reduce the engine’s safety margin.
+                Più aria, meno carburante. Questo può aumentare la temperatura
+                di combustione e ridurre il margine di sicurezza del motore.
               </p>
             </div>
           </motion.div>
@@ -225,10 +228,10 @@ const FuelAndMixture = () => {
           <motion.div className="stripCard" variants={cardVariants}>
             <span className="stripIndex">02</span>
             <div>
-              <h4>Correct operating range</h4>
+              <h4>Range operativo corretto</h4>
               <p>
-                The best balance between combustion quality, throttle response
-                and engine reliability.
+                Il miglior equilibrio tra qualità della combustione, risposta
+                all'acceleratore e affidabilità del motore.
               </p>
             </div>
           </motion.div>
@@ -236,10 +239,10 @@ const FuelAndMixture = () => {
           <motion.div className="stripCard" variants={cardVariants}>
             <span className="stripIndex">03</span>
             <div>
-              <h4>Too rich</h4>
+              <h4>Troppo ricca</h4>
               <p>
-                More fuel, less clean burning. The engine can feel heavier and
-                less precise in power delivery.
+                Più carburante, combustione meno pulita. Il motore può sembrare
+                più pesante e meno preciso nell'erogazione della potenza.
               </p>
             </div>
           </motion.div>

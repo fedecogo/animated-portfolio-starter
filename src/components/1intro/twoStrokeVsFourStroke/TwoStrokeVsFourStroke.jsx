@@ -45,43 +45,43 @@ const cardVariants = {
 const accordionData = [
   {
     id: 1,
-    title: "Cycle frequency",
+    title: "Frequenza del ciclo",
     twoStroke:
-      "A 2-stroke engine completes its full operating cycle in two piston strokes. This means the engine produces a power event more frequently, which often results in a more immediate and reactive character.",
+      "Un motore 2 tempi completa il suo intero ciclo operativo in due colpi di pistone. Questo significa che il motore produce un evento di potenza più frequentemente, il che spesso si traduce in un carattere più immediato e reattivo.",
     fourStroke:
-      "A 4-stroke engine requires four piston strokes to complete the same cycle: intake, compression, combustion and exhaust. Because the phases are more separated, the engine usually delivers power in a smoother and more progressive way.",
+      "Un motore 4 tempi richiede quattro colpi di pistone per completare lo stesso ciclo: aspirazione, compressione, combustione e scarico. Poiché le fasi sono più separate, il motore di solito eroga la potenza in modo più fluido e progressivo.",
   },
   {
     id: 2,
-    title: "Mechanical complexity",
+    title: "Complessità meccanica",
     twoStroke:
-      "The 2-stroke architecture is mechanically simpler in its core concept. Much of its behavior is controlled by piston movement, intake timing, port design and exhaust flow rather than a complex valvetrain.",
+      "L'architettura 2 tempi è meccanicamente più semplice nel suo concetto base. Gran parte del suo comportamento è controllata dal moto del pistone, dalla fasatura dell'aspirazione, dal design delle luci e dal flusso di scarico piuttosto che da una complessa distribuzione.",
     fourStroke:
-      "The 4-stroke architecture is generally more complex because it relies on additional components such as valves, camshafts and timing systems that regulate the engine cycle.",
+      "L'architettura 4 tempi è generalmente più complessa perché si affida a componenti aggiuntivi come valvole, alberi a camme e sistemi di fasatura che regolano il ciclo del motore.",
   },
   {
     id: 3,
-    title: "Power delivery",
+    title: "Erogazione della potenza",
     twoStroke:
-      "A 2T engine often produces a more aggressive and concentrated powerband. When the engine reaches its effective operating range, the increase in power can feel sharp and energetic.",
+      "Un motore 2T produce spesso una banda di potenza più aggressiva e concentrata. Quando il motore raggiunge il suo range operativo efficace, l'aumento di potenza può sembrare brusco ed energico.",
     fourStroke:
-      "A 4T engine usually delivers power in a broader and more linear way. The progression is often easier to control, especially across a wider rev range.",
+      "Un motore 4T di solito eroga la potenza in modo più ampio e lineare. La progressione è spesso più facile da controllare, specialmente su un range di giri più esteso.",
   },
   {
     id: 4,
-    title: "Weight and simplicity",
+    title: "Peso e semplicità",
     twoStroke:
-      "Because of its simpler architecture and reduced number of moving parts, a 2-stroke engine is often lighter and more compact compared with a comparable 4-stroke design.",
+      "Grazie alla sua architettura più semplice e al numero ridotto di parti in movimento, un motore 2 tempi è spesso più leggero e compatto rispetto a un design 4 tempi comparabile.",
     fourStroke:
-      "The additional components required for valve timing and the longer operating cycle typically make a 4-stroke engine heavier and structurally more complex.",
+      "I componenti aggiuntivi richiesti per la fasatura delle valvole e il ciclo operativo più lungo rendono tipicamente un motore 4 tempi più pesante e strutturalmente più complesso.",
   },
   {
     id: 5,
-    title: "Maintenance and operation",
+    title: "Manutenzione e funzionamento",
     twoStroke:
-      "A 2T engine usually requires simpler mechanical maintenance but depends heavily on correct lubrication and mixture management to operate properly.",
+      "Un motore 2T richiede di solito una manutenzione meccanica più semplice ma dipende fortemente dalla corretta lubrificazione e dalla gestione della miscela per funzionare correttamente.",
     fourStroke:
-      "A 4T engine often requires more complex mechanical servicing due to its valvetrain and timing components, but lubrication and fuel systems are typically more separated.",
+      "Un motore 4T richiede spesso un'assistenza meccanica più complessa a causa dei componenti della distribuzione, ma i sistemi di lubrificazione e carburante sono tipicamente più separati.",
   },
 ];
 
@@ -147,53 +147,53 @@ const TwoStrokeVsFourStroke = () => {
         >
           <div className="headingBlock">
             <motion.span className="sectionLabel" variants={fadeUpVariants}>
-              Engine Comparison
+              Confronto tra motori
             </motion.span>
 
             <motion.h2 variants={fadeUpVariants}>
-              2-stroke vs 4-stroke: the basic difference
+              2 tempi vs 4 tempi: la differenza fondamentale
             </motion.h2>
 
             <motion.p className="lead" variants={fadeUpVariants}>
-              The essential distinction is in how the engine completes its power
-              cycle. A 2-stroke generates power every two piston strokes,
-              while a 4-stroke completes the same cycle in four separate
-              strokes.
+              La distinzione essenziale sta in come il motore completa il suo
+              ciclo di potenza. Un 2 tempi genera potenza ogni due colpi di
+              pistone, mentre un 4 tempi completa lo stesso ciclo in quattro
+              colpi separati.
             </motion.p>
 
             <motion.p variants={fadeUpVariants}>
-              That difference changes the whole personality of the motorcycle:
-              response, architecture, complexity, maintenance character and
-              riding feel.
+              Quella differenza cambia tutta la personalità della moto:
+              risposta, architettura, complessità, carattere di manutenzione e
+              sensazione di guida.
             </motion.p>
           </div>
 
           <motion.div className="comparisonPanel" variants={fadeUpVariants}>
             <div className="panelHeader">
-              <span className="panelTag">Quick View</span>
-              <h3>One idea, two very different engine philosophies</h3>
+              <span className="panelTag">Sintesi rapida</span>
+              <h3>Un'idea, due filosofie motoristiche molto diverse</h3>
             </div>
 
             <div className="miniRows">
               <div className="miniRow">
-                <span className="miniLabel">2T cycle</span>
-                <span className="miniValue">Power stroke more frequently</span>
+                <span className="miniLabel">Ciclo 2T</span>
+                <span className="miniValue">Tempo motore più frequente</span>
               </div>
 
               <div className="miniRow">
-                <span className="miniLabel">4T cycle</span>
-                <span className="miniValue">More separated operating phases</span>
+                <span className="miniLabel">Ciclo 4T</span>
+                <span className="miniValue">Fasi operative più separate</span>
               </div>
 
               <div className="miniRow">
-                <span className="miniLabel">Main effect</span>
-                <span className="miniValue">Different response, complexity and feel</span>
+                <span className="miniLabel">Effetto principale</span>
+                <span className="miniValue">Risposta, complessità e sensazione diverse</span>
               </div>
             </div>
           </motion.div>
         </motion.div>
-              
-              
+
+
               {/* comparisonGrid */}
         <motion.div
           className="comparisonGrid"
@@ -203,26 +203,26 @@ const TwoStrokeVsFourStroke = () => {
           viewport={{ once: true, amount: 0.15 }}
         >
           <motion.article className="engineCard twoStrokeCard" variants={cardVariants}>
-            <span className="engineTag">2-Stroke</span>
-            <h3>More compact and direct</h3>
+            <span className="engineTag">2 Tempi</span>
+            <h3>Più compatto e diretto</h3>
 
             <ul>
-              <li>Completes the cycle in two strokes</li>
-              <li>Produces power more frequently</li>
-              <li>Usually has a simpler mechanical layout</li>
-              <li>Feels lighter, sharper and more immediate</li>
+              <li>Completa il ciclo in due tempi</li>
+              <li>Produce potenza più frequentemente</li>
+              <li>Ha di solito una struttura meccanica più semplice</li>
+              <li>Si sente più leggero, reattivo e immediato</li>
             </ul>
           </motion.article>
 
           <motion.article className="engineCard fourStrokeCard" variants={cardVariants}>
-            <span className="engineTag">4-Stroke</span>
-            <h3>More gradual and structured</h3>
+            <span className="engineTag">4 Tempi</span>
+            <h3>Più progressivo e strutturato</h3>
 
             <ul>
-              <li>Completes the cycle in four strokes</li>
-              <li>Has more separated engine phases</li>
-              <li>Usually uses a more articulated valve system</li>
-              <li>Often feels smoother and broader in delivery</li>
+              <li>Completa il ciclo in quattro tempi</li>
+              <li>Ha fasi motore più separate</li>
+              <li>Usa di solito un sistema di valvole più articolato</li>
+              <li>Si sente spesso più fluido e ampio nell'erogazione</li>
             </ul>
           </motion.article>
         </motion.div>
@@ -235,8 +235,8 @@ const TwoStrokeVsFourStroke = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div className="accordionHeading" variants={fadeUpVariants}>
-            <span className="accordionLabel">Expandable Comparison</span>
-            <h3>Open each point to compare 2T and 4T more clearly</h3>
+            <span className="accordionLabel">Confronto espandibile</span>
+            <h3>Apri ogni punto per confrontare 2T e 4T più chiaramente</h3>
           </motion.div>
 
           <div className="accordionList">

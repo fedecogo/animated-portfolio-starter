@@ -1,11 +1,9 @@
 import "./sidebar.scss"
 import ToggleBTN from "../sidebar/toggle/ToggleBTN"
 import Links from "./links/Links"
-import { useState } from "react"
 import { motion } from "framer-motion"
 
-const Sidebar = () =>{
-    const [open,setOpen] = useState(false)
+const Sidebar = ({ open, setOpen }) =>{
     const variants = {
         open:{
             clipPath: "circle(1200px at 50px 50px)",

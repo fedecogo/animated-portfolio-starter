@@ -53,53 +53,54 @@ const CombustionAndIgnition = () => {
         >
           <div className="titleColumn">
             <motion.span className="sectionLabel" variants={fadeUpVariants}>
-              Two-stroke cycle
+              Ciclo a due tempi
             </motion.span>
 
             <motion.h2 variants={fadeUpVariants}>
-              Combustion, spark plug and pressure rise
+              Combustione, candela e aumento di pressione
             </motion.h2>
 
             <motion.p className="lead" variants={fadeUpVariants}>
-              Once the fresh charge has been compressed inside the combustion
-              chamber, the spark plug initiates ignition. At that moment, the
-              compressed air-fuel mixture begins to burn, pressure rises
-              rapidly, and the expanding gases push the piston downward.
+              Una volta che la carica fresca è stata compressa nella camera di
+              combustione, la candela dà inizio all'accensione. In quel momento,
+              la miscela aria-carburante compressa inizia a bruciare, la
+              pressione sale rapidamente e i gas in espansione spingono il
+              pistone verso il basso.
             </motion.p>
 
             <motion.p variants={fadeUpVariants}>
-              This is the core energy event of the engine. The combustion phase
-              transforms chemical energy into cylinder pressure, and that
-              pressure becomes mechanical work through the piston, connecting rod
-              and crankshaft.
+              Questo è l'evento energetico centrale del motore. La fase di
+              combustione trasforma l'energia chimica in pressione nel cilindro,
+              e quella pressione diventa lavoro meccanico attraverso il pistone,
+              la biella e l'albero motore.
             </motion.p>
           </div>
 
           <motion.div className="infoPanel" variants={fadeUpVariants}>
             <div className="panelHeader">
-              <span className="panelTag">Core event</span>
-              <h3>Ignition starts the pressure rise that drives the power stroke</h3>
+              <span className="panelTag">Evento centrale</span>
+              <h3>L'accensione avvia l'aumento di pressione che guida il tempo motore</h3>
             </div>
 
             <div className="miniRows">
               <div className="miniRow">
-                <span className="miniLabel">Spark plug</span>
+                <span className="miniLabel">Candela</span>
                 <span className="miniValue">
-                  Generates the spark that ignites the compressed mixture
+                  Genera la scintilla che accende la miscela compressa
                 </span>
               </div>
 
               <div className="miniRow">
-                <span className="miniLabel">Combustion chamber</span>
+                <span className="miniLabel">Camera di combustione</span>
                 <span className="miniValue">
-                  The space where the trapped charge burns and pressure rises
+                  Lo spazio in cui la carica intrappolata brucia e la pressione sale
                 </span>
               </div>
 
               <div className="miniRow">
-                <span className="miniLabel">Result</span>
+                <span className="miniLabel">Risultato</span>
                 <span className="miniValue">
-                  Expanding gases force the piston downward
+                  I gas in espansione spingono il pistone verso il basso
                 </span>
               </div>
             </div>
@@ -114,34 +115,34 @@ const CombustionAndIgnition = () => {
           viewport={{ once: true, amount: 0.15 }}
         >
           <motion.article className="mainCard" variants={cardVariants}>
-            <span className="cardTag">Ignition</span>
-            <h3>The role of the spark plug</h3>
+            <span className="cardTag">Accensione</span>
+            <h3>Il ruolo della candela</h3>
             <p>
-              The spark plug is responsible for igniting the compressed mixture
-              at the correct moment. It creates an electrical spark across its
-              electrodes, and that spark becomes the starting point of the flame
-              front inside the chamber.
+              La candela è responsabile dell'accensione della miscela compressa
+              al momento corretto. Crea una scintilla elettrica tra i suoi
+              elettrodi, e quella scintilla diventa il punto di partenza del
+              fronte di fiamma nella camera.
             </p>
             <p>
-              Timing matters. If ignition occurs too early or too late, pressure
-              development inside the cylinder changes and the engine may lose
-              efficiency, smoothness or safety.
+              La fasatura è importante. Se l'accensione avviene troppo presto o
+              troppo tardi, lo sviluppo della pressione nel cilindro cambia e
+              il motore può perdere efficienza, fluidità o sicurezza.
             </p>
           </motion.article>
 
           <motion.article className="mainCard" variants={cardVariants}>
-            <span className="cardTag">Compression</span>
-            <h3>Compression ratio and pressure build-up</h3>
+            <span className="cardTag">Compressione</span>
+            <h3>Rapporto di compressione e aumento di pressione</h3>
             <p>
-              Before ignition, the piston compresses the trapped charge inside
-              the cylinder head volume and combustion chamber. This reduction in
-              volume increases mixture density and raises the pressure level
-              before the spark occurs.
+              Prima dell'accensione, il pistone comprime la carica intrappolata
+              nel volume della testata e nella camera di combustione. Questa
+              riduzione di volume aumenta la densità della miscela e innalza il
+              livello di pressione prima che scocchi la scintilla.
             </p>
             <p>
-              In general terms, the compression ratio describes the relationship
-              between the larger cylinder volume and the smaller volume that
-              remains when the piston reaches top dead center.
+              In termini generali, il rapporto di compressione descrive la
+              relazione tra il volume maggiore del cilindro e il volume minore
+              che rimane quando il pistone raggiunge il punto morto superiore.
             </p>
           </motion.article>
         </motion.div>
@@ -155,38 +156,39 @@ const CombustionAndIgnition = () => {
         >
           <motion.article className="processCard" variants={cardVariants}>
             <span className="stepNumber">01</span>
-            <h3>Mixture trapped in the chamber</h3>
+            <h3>Miscela intrappolata nella camera</h3>
             <p>
-              The compressed air-fuel charge is confined above the piston, in
-              the combustion chamber and the final cylinder volume near top dead
-              center.
+              La carica aria-carburante compressa è confinata sopra il pistone,
+              nella camera di combustione e nel volume finale del cilindro vicino
+              al punto morto superiore.
             </p>
           </motion.article>
 
           <motion.article className="processCard" variants={cardVariants}>
             <span className="stepNumber">02</span>
-            <h3>The spark initiates ignition</h3>
+            <h3>La scintilla dà inizio all'accensione</h3>
             <p>
-              The spark plug fires and creates a controlled ignition point. The
-              flame front begins to propagate through the compressed mixture.
+              La candela scocca e crea un punto di accensione controllato. Il
+              fronte di fiamma inizia a propagarsi attraverso la miscela compressa.
             </p>
           </motion.article>
 
           <motion.article className="processCard" variants={cardVariants}>
             <span className="stepNumber">03</span>
-            <h3>Pressure rises rapidly</h3>
+            <h3>La pressione sale rapidamente</h3>
             <p>
-              Combustion increases gas temperature and pressure. The chamber is
-              small, the gases expand, and cylinder pressure rises very quickly.
+              La combustione aumenta la temperatura e la pressione dei gas. La
+              camera è piccola, i gas si espandono e la pressione nel cilindro
+              sale molto rapidamente.
             </p>
           </motion.article>
 
           <motion.article className="processCard" variants={cardVariants}>
             <span className="stepNumber">04</span>
-            <h3>The piston is forced downward</h3>
+            <h3>Il pistone viene spinto verso il basso</h3>
             <p>
-              The expanding gases push on the piston crown, producing the force
-              that drives the connecting rod and rotates the crankshaft.
+              I gas in espansione premono sulla testa del pistone, producendo la
+              forza che muove la biella e fa ruotare l'albero motore.
             </p>
           </motion.article>
         </motion.div>
@@ -199,31 +201,32 @@ const CombustionAndIgnition = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.article className="techCard" variants={cardVariants}>
-            <span className="cardTag">Spark timing</span>
-            <h3>Combustion must begin at the right moment</h3>
+            <span className="cardTag">Fasatura accensione</span>
+            <h3>La combustione deve iniziare al momento giusto</h3>
             <p>
-              The ignition event has to be synchronized with piston position.
-              Correct timing allows pressure to build in the most effective part
-              of the cycle.
+              L'evento di accensione deve essere sincronizzato con la posizione
+              del pistone. La fasatura corretta consente alla pressione di
+              costruirsi nella parte più efficace del ciclo.
             </p>
           </motion.article>
 
           <motion.article className="techCard" variants={cardVariants}>
-            <span className="cardTag">Combustion chamber</span>
-            <h3>Chamber shape affects flame development</h3>
+            <span className="cardTag">Camera di combustione</span>
+            <h3>La forma della camera influisce sullo sviluppo della fiamma</h3>
             <p>
-              The geometry of the head and chamber influences turbulence, flame
-              travel and the overall quality of the combustion event.
+              La geometria della testata e della camera influenza la turbolenza,
+              la propagazione della fiamma e la qualità complessiva dell'evento
+              di combustione.
             </p>
           </motion.article>
 
           <motion.article className="techCard" variants={cardVariants}>
-            <span className="cardTag">Pressure</span>
-            <h3>Combustion is a controlled pressure event</h3>
+            <span className="cardTag">Pressione</span>
+            <h3>La combustione è un evento di pressione controllato</h3>
             <p>
-              The engine does not work because of a chaotic explosion, but
-              because combustion creates a rapid and controlled pressure rise
-              that acts on the piston crown.
+              Il motore non funziona grazie a un'esplosione caotica, ma perché
+              la combustione crea un rapido e controllato aumento di pressione
+              che agisce sulla testa del pistone.
             </p>
           </motion.article>
         </motion.div>
@@ -238,10 +241,10 @@ const CombustionAndIgnition = () => {
           <motion.div className="stripCard" variants={cardVariants}>
             <span className="stripIndex">A</span>
             <div>
-              <h4>Top dead center</h4>
+              <h4>Punto morto superiore</h4>
               <p>
-                Ignition happens when the piston is very near top dead center,
-                where the trapped volume is at its minimum.
+                L'accensione avviene quando il pistone è molto vicino al punto
+                morto superiore, dove il volume intrappolato è al minimo.
               </p>
             </div>
           </motion.div>
@@ -249,10 +252,10 @@ const CombustionAndIgnition = () => {
           <motion.div className="stripCard" variants={cardVariants}>
             <span className="stripIndex">B</span>
             <div>
-              <h4>Compressed charge</h4>
+              <h4>Carica compressa</h4>
               <p>
-                A denser charge is easier to ignite effectively and allows a
-                stronger pressure rise during combustion.
+                Una carica più densa è più facile da accendere efficacemente e
+                consente un aumento di pressione più forte durante la combustione.
               </p>
             </div>
           </motion.div>
@@ -260,10 +263,11 @@ const CombustionAndIgnition = () => {
           <motion.div className="stripCard" variants={cardVariants}>
             <span className="stripIndex">C</span>
             <div>
-              <h4>Power stroke begins</h4>
+              <h4>Inizio del tempo motore</h4>
               <p>
-                Once combustion pressure acts on the piston crown, the energy
-                event becomes mechanical motion in the rotating assembly.
+                Una volta che la pressione di combustione agisce sulla testa del
+                pistone, l'evento energetico diventa moto meccanico nel gruppo
+                rotante.
               </p>
             </div>
           </motion.div>

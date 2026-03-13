@@ -1,37 +1,28 @@
-import "./gruppoTermicoIntro.scss";
+import "./alimentazioneIntro.scss";
 import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
   show: {
-    transition: {
-      staggerChildren: 0.14,
-    },
+    transition: { staggerChildren: 0.14 },
   },
 };
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 32 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
-  },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-const GruppoTermicoIntro = () => {
+const AlimentazioneIntro = () => {
   return (
-    <section className="gruppoTermicoIntro" id="gruppo-termico">
+    <section className="alimentazioneIntro" id="alimentazione-intro">
       <div className="wrapper">
+
         {/* ── EYEBROW + TITOLO ────────────────────────────────────────────── */}
         <motion.div
           className="heroText"
@@ -41,17 +32,21 @@ const GruppoTermicoIntro = () => {
           viewport={{ once: true, amount: 0.25 }}
         >
           <motion.span className="sectionLabel" variants={fadeUpVariants}>
-            Capitolo 3.2 — Gruppo termico
+            Capitolo 3.1 — Alimentazione
           </motion.span>
 
-          <motion.h2 variants={fadeUpVariants}>Il cuore del motore</motion.h2>
+          <motion.h2 variants={fadeUpVariants}>
+            Come entra il carburante nel motore
+          </motion.h2>
 
           <motion.p className="lead" variants={fadeUpVariants}>
-            Il gruppo termico è l'insieme dei componenti in cui avviene la
-            combustione: il cilindro, il pistone, la testa e le relative
-            guarnizioni. È qui che l'energia chimica del carburante diventa
-            lavoro meccanico. Ogni sezione che segue esplora uno di questi
-            componenti nel dettaglio — geometria, materiali, usura e setup.
+            Prima che avvenga qualsiasi combustione, il carburante deve
+            arrivare al cilindro — nella giusta quantità, alla giusta
+            concentrazione, al momento giusto. Il sistema di alimentazione
+            è la catena di componenti che trasforma benzina e aria in
+            una miscela combustibile pronta per entrare nel carter.
+            In questa sezione esploriamo ogni anello di quella catena —
+            dal carburatore al pacco lamellare.
           </motion.p>
         </motion.div>
 
@@ -65,14 +60,11 @@ const GruppoTermicoIntro = () => {
         >
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <img
-                src="https://wemalossistore.blob.core.windows.net/imgproducts/31%207083/31%207083_store.jpg"
-                alt="Product image"
-                className="placeholderImage"
-              />
+              <span className="placeholderIcon">⊕</span>
+              <span className="placeholderText">Immagine / GIF — schema circuito carburante con carburatore, pompa e pacco lamellare</span>
+              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
             </div>
           </div>
-          {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
         </motion.div>
 
         {/* ── PILL ARGOMENTI ──────────────────────────────────────────────── */}
@@ -84,18 +76,13 @@ const GruppoTermicoIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Cilindro" },
-            { num: "02", label: "Pistone" },
-            { num: "03", label: "Testa" },
-            { num: "04", label: "Guarnizione" },
-            { num: "05", label: "Fascia elastica" },
-            { num: "06", label: "Spinotto" },
+            { num: "01", label: "Carburatore" },
+            { num: "02", label: "Corpo farfallato" },
+            { num: "03", label: "Pompa benzina" },
+            { num: "04", label: "Miscelatore" },
+            { num: "05", label: "Pacco lamellare" },
           ].map((t) => (
-            <motion.div
-              className="topicPill"
-              key={t.num}
-              variants={cardVariants}
-            >
+            <motion.div className="topicPill" key={t.num} variants={cardVariants}>
               <span className="pillNum">{t.num}</span>
               <span className="pillLabel">{t.label}</span>
             </motion.div>
@@ -114,19 +101,24 @@ const GruppoTermicoIntro = () => {
           <div className="introCardBody">
             <span className="introCardTag">Perché è importante</span>
             <p>
-              Nel motore a 2 tempi il gruppo termico lavora con sollecitazioni
-              termiche e meccaniche molto più intense rispetto a un 4 tempi
-              equivalente. Il pistone completa un ciclo completo ogni giro di
-              albero — il doppio rispetto al 4 tempi — e le temperature in
-              camera di combustione raggiungono valori estremi ad alti regimi.
-              Conoscere ogni componente significa saper leggere l'usura,
-              prevenire i guasti e ottimizzare il setup.
+              Nel motore a 2 tempi il sistema di alimentazione non ha
+              valvole — usa il movimento del pistone e la geometria
+              delle luci per controllare il flusso. Questo significa
+              che ogni componente dell'alimentazione ha un impatto
+              diretto sulla curva di erogazione: il carburatore
+              determina la risposta all'acceleratore, il pacco lamellare
+              controlla la retroazione del gas nel carter, la miscela
+              olio-benzina lubrifica ogni componente in movimento.
+              Capire questo sistema è capire perché una moto tira
+              forte in allungo ma è balbuziente in uscita di curva —
+              o viceversa.
             </p>
           </div>
         </motion.div>
+
       </div>
     </section>
   );
 };
 
-export default GruppoTermicoIntro;
+export default AlimentazioneIntro;

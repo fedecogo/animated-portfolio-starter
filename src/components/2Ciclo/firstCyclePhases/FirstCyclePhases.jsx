@@ -53,54 +53,55 @@ const FirstCyclePhases = () => {
         >
           <div className="titleColumn">
             <motion.span className="sectionLabel" variants={fadeUpVariants}>
-              Two-stroke cycle
+              Ciclo a due tempi
             </motion.span>
 
             <motion.h2 variants={fadeUpVariants}>
-              Aspiration and compression
+              Aspirazione e compressione
             </motion.h2>
 
             <motion.p className="lead" variants={fadeUpVariants}>
-              The first part of the 2-stroke cycle is built around two tightly
-              connected processes: the fresh charge is drawn into the engine,
-              and then prepared for combustion by compression. These phases are
-              simple in appearance, but they define how effectively the engine
-              fills, seals and builds pressure.
+              La prima parte del ciclo 2 tempi è costruita attorno a due
+              processi strettamente collegati: la carica fresca viene aspirata
+              nel motore e poi preparata per la combustione attraverso la
+              compressione. Queste fasi sembrano semplici, ma definiscono
+              l'efficacia con cui il motore si riempie, sigilla e costruisce
+              pressione.
             </motion.p>
 
             <motion.p variants={fadeUpVariants}>
-              In a 2T engine, piston motion controls both pressure variation and
-              charge movement. That is why aspiration and compression should not
-              be seen as isolated events, but as part of the same dynamic
-              mechanical sequence.
+              In un motore 2T, il moto del pistone controlla sia la variazione
+              di pressione che il movimento della carica. Ecco perché
+              aspirazione e compressione non devono essere visti come eventi
+              isolati, ma come parte della stessa sequenza meccanica dinamica.
             </motion.p>
           </div>
 
           <motion.div className="infoPanel" variants={fadeUpVariants}>
             <div className="panelHeader">
-              <span className="panelTag">Phase overview</span>
-              <h3>The first stage of the 2T cycle prepares the engine to fire</h3>
+              <span className="panelTag">Panoramica delle fasi</span>
+              <h3>La prima fase del ciclo 2T prepara il motore all'accensione</h3>
             </div>
 
             <div className="miniRows">
               <div className="miniRow">
-                <span className="miniLabel">Aspiration</span>
+                <span className="miniLabel">Aspirazione</span>
                 <span className="miniValue">
-                  The engine draws the fresh charge toward the intake side
+                  Il motore aspira la carica fresca verso il lato aspirazione
                 </span>
               </div>
 
               <div className="miniRow">
-                <span className="miniLabel">Compression</span>
+                <span className="miniLabel">Compressione</span>
                 <span className="miniValue">
-                  The trapped mixture is compressed before combustion
+                  La miscela intrappolata viene compressa prima della combustione
                 </span>
               </div>
 
               <div className="miniRow">
-                <span className="miniLabel">Key role</span>
+                <span className="miniLabel">Ruolo chiave</span>
                 <span className="miniValue">
-                  Filling quality and pressure build-up shape the next power event
+                  La qualità del riempimento e l'aumento di pressione definiscono il prossimo evento di potenza
                 </span>
               </div>
             </div>
@@ -117,38 +118,38 @@ const FirstCyclePhases = () => {
           <motion.article className="phaseCard aspirationCard" variants={cardVariants}>
             <div className="phaseTop">
               <span className="phaseIndex">01</span>
-              <span className="phaseTag">Aspiration</span>
+              <span className="phaseTag">Aspirazione</span>
             </div>
 
-            <h3>Fresh charge enters the engine</h3>
+            <h3>La carica fresca entra nel motore</h3>
 
             <p>
-              During aspiration, the engine draws the air-fuel mixture from the
-              intake side toward the crankcase. This happens because piston
-              motion changes internal pressure and creates the conditions needed
-              for the fresh charge to move inward.
+              Durante l'aspirazione, il motore aspira la miscela aria-carburante
+              dal lato aspirazione verso il carter. Questo avviene perché il
+              moto del pistone cambia la pressione interna e crea le condizioni
+              necessarie perché la carica fresca si sposti verso l'interno.
             </p>
 
             <p>
-              In many two-stroke layouts, the reed valve helps regulate this
-              entry process by allowing flow in the correct direction and
-              reducing reverse movement of the mixture.
+              In molte configurazioni a due tempi, il pacco lamellare aiuta a
+              regolare questo processo di ingresso consentendo il flusso nella
+              direzione corretta e riducendo il movimento inverso della miscela.
             </p>
 
             <div className="phaseDetails">
               <div className="detailItem">
-                <span className="detailLabel">Main event</span>
-                <span className="detailValue">Mixture admission</span>
+                <span className="detailLabel">Evento principale</span>
+                <span className="detailValue">Ammissione della miscela</span>
               </div>
 
               <div className="detailItem">
-                <span className="detailLabel">Key elements</span>
-                <span className="detailValue">Carburetor, intake tract, reed valve</span>
+                <span className="detailLabel">Elementi chiave</span>
+                <span className="detailValue">Carburatore, condotto di aspirazione, pacco lamellare</span>
               </div>
 
               <div className="detailItem">
-                <span className="detailLabel">Main objective</span>
-                <span className="detailValue">Fill the engine with a fresh charge</span>
+                <span className="detailLabel">Obiettivo principale</span>
+                <span className="detailValue">Riempire il motore con una carica fresca</span>
               </div>
             </div>
           </motion.article>
@@ -156,38 +157,39 @@ const FirstCyclePhases = () => {
           <motion.article className="phaseCard compressionCard" variants={cardVariants}>
             <div className="phaseTop">
               <span className="phaseIndex">02</span>
-              <span className="phaseTag">Compression</span>
+              <span className="phaseTag">Compressione</span>
             </div>
 
-            <h3>The mixture is prepared for ignition</h3>
+            <h3>La miscela viene preparata per l'accensione</h3>
 
             <p>
-              Once the fresh charge is in the correct part of the engine, the
-              compression phase raises pressure before combustion. As the piston
-              travels upward, the trapped mixture inside the cylinder is
-              compressed and brought closer to ignition conditions.
+              Una volta che la carica fresca si trova nella parte corretta del
+              motore, la fase di compressione aumenta la pressione prima della
+              combustione. Mentre il pistone sale, la miscela intrappolata nel
+              cilindro viene compressa e portata più vicino alle condizioni di
+              accensione.
             </p>
 
             <p>
-              Compression is fundamental because it affects combustion quality,
-              flame development, efficiency and the overall sharpness of the
-              engine’s response.
+              La compressione è fondamentale perché influisce sulla qualità
+              della combustione, sullo sviluppo della fiamma, sull'efficienza
+              e sulla reattività complessiva del motore.
             </p>
 
             <div className="phaseDetails">
               <div className="detailItem">
-                <span className="detailLabel">Main event</span>
-                <span className="detailValue">Pressure increase</span>
+                <span className="detailLabel">Evento principale</span>
+                <span className="detailValue">Aumento di pressione</span>
               </div>
 
               <div className="detailItem">
-                <span className="detailLabel">Key elements</span>
-                <span className="detailValue">Piston, cylinder, combustion chamber</span>
+                <span className="detailLabel">Elementi chiave</span>
+                <span className="detailValue">Pistone, cilindro, camera di combustione</span>
               </div>
 
               <div className="detailItem">
-                <span className="detailLabel">Main objective</span>
-                <span className="detailValue">Prepare the mixture for ignition</span>
+                <span className="detailLabel">Obiettivo principale</span>
+                <span className="detailValue">Preparare la miscela per l'accensione</span>
               </div>
             </div>
           </motion.article>
@@ -195,7 +197,7 @@ const FirstCyclePhases = () => {
 <div className="combustionImage">
   <img
     src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773112974/ChatGPT_Image_Mar_10_2026_12_16_58_PM_lt0rco.png"
-    alt="Two-stroke combustion chamber diagram"
+    alt="Diagramma camera di combustione a due tempi"
   />
 </div>
 
@@ -207,30 +209,31 @@ const FirstCyclePhases = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.article className="techCard" variants={cardVariants}>
-            <span className="cardTag">Pressure</span>
-            <h3>Pressure variation drives the cycle</h3>
+            <span className="cardTag">Pressione</span>
+            <h3>La variazione di pressione guida il ciclo</h3>
             <p>
-              In a 2-stroke engine, piston movement is not only mechanical
-              motion: it also generates the pressure changes that make aspiration
-              and compression possible.
+              In un motore 2 tempi, il moto del pistone non è solo movimento
+              meccanico: genera anche le variazioni di pressione che rendono
+              possibili aspirazione e compressione.
             </p>
           </motion.article>
 
           <motion.article className="techCard" variants={cardVariants}>
-            <span className="cardTag">Sealing</span>
-            <h3>Compression depends on control</h3>
+            <span className="cardTag">Tenuta</span>
+            <h3>La compressione dipende dal controllo</h3>
             <p>
-              The effectiveness of compression depends on how well the mixture
-              is trapped and contained inside the cylinder before ignition.
+              L'efficacia della compressione dipende da quanto bene la miscela
+              è intrappolata e contenuta nel cilindro prima dell'accensione.
             </p>
           </motion.article>
 
           <motion.article className="techCard" variants={cardVariants}>
-            <span className="cardTag">Result</span>
-            <h3>These two phases shape combustion</h3>
+            <span className="cardTag">Risultato</span>
+            <h3>Queste due fasi definiscono la combustione</h3>
             <p>
-              If aspiration is poor or compression is weak, the next combustion
-              event cannot be as efficient, clean or forceful as it should be.
+              Se l'aspirazione è scarsa o la compressione è debole, il
+              successivo evento di combustione non potrà essere efficiente,
+              pulito o potente come dovrebbe.
             </p>
           </motion.article>
         </motion.div>

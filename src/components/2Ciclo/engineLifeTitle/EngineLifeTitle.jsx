@@ -37,11 +37,11 @@ const EngineLifeTitle = () => {
         viewport={{ once: true }}
       >
         <motion.span className="eyebrow" variants={itemVariants}>
-          Engine fundamentals
+          Fondamentali del motore
         </motion.span>
 
         <motion.h2 variants={itemVariants}>
-          The engine cycle
+          Il ciclo del motore
         </motion.h2>
 
         <motion.div className="engineGifContainer" variants={itemVariants}>
@@ -52,7 +52,7 @@ const EngineLifeTitle = () => {
           >
             <img
               src="https://i.makeagif.com/media/7-03-2015/t4M_0h.gif"
-              alt="Two stroke engine animation"
+              alt="Animazione motore a due tempi"
             />
           </a>
         </motion.div>

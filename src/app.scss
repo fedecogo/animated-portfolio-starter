@@ -18,10 +18,14 @@ a{
     color: inherit;
 }
 section{
-   
   min-height: 100vh;
+  scroll-snap-align: center;
+}
 
-    scroll-snap-align: center;
+#Homepage {
+  position: relative;
+  height: auto;
+  min-height: unset;
 }
 
 

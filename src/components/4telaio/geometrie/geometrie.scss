@@ -1,0 +1,957 @@
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 1200px;
+
+$steel:       #94a3b8;
+$steel-soft:  #b0bec5;
+$steel-light: #cbd5e1;
+$steel-dim:   rgba(148, 163, 184, 0.12);
+$steel-bdr:   rgba(148, 163, 184, 0.22);
+
+$silver:      #e2e8f0;
+$silver-dim:  rgba(226, 232, 240, 0.08);
+$silver-bdr:  rgba(226, 232, 240, 0.14);
+
+$blue:        #4fa3e0;
+$blue-soft:   #74b8e8;
+$blue-dim:    rgba(79, 163, 224, 0.12);
+$blue-bdr:    rgba(79, 163, 224, 0.2);
+
+$teal:        #2dd4bf;
+$teal-soft:   #5ee0ce;
+$teal-dim:    rgba(45, 212, 191, 0.10);
+$teal-bdr:    rgba(45, 212, 191, 0.20);
+
+$green:       #3ecf8e;
+$green-soft:  #6edba8;
+$green-dim:   rgba(62, 207, 142, 0.10);
+$green-bdr:   rgba(62, 207, 142, 0.20);
+
+$yellow:      #f0c040;
+$yellow-soft: #f5d060;
+$yellow-dim:  rgba(240, 192, 64, 0.10);
+$yellow-bdr:  rgba(240, 192, 64, 0.20);
+
+$red:         #f05252;
+$red-soft:    #f47070;
+$red-dim:     rgba(240, 82, 82, 0.10);
+$red-bdr:     rgba(240, 82, 82, 0.22);
+
+$violet:      #a78bfa;
+$violet-soft: #c4b5fd;
+$violet-dim:  rgba(167, 139, 250, 0.10);
+$violet-bdr:  rgba(167, 139, 250, 0.20);
+
+.geometrie {
+  position: relative;
+  padding: 120px 0;
+  background:
+    radial-gradient(circle at 10%  8%,  rgba(148, 163, 184, 0.07), transparent 32%),
+    radial-gradient(circle at 90%  88%, rgba(148, 163, 184, 0.05), transparent 28%),
+    linear-gradient(180deg, #0a0c10 0%, #0c0e13 55%, #0a0c10 100%);
+  color: #f5f7fa;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 80px,
+      rgba(148, 163, 184, 0.012) 80px,
+      rgba(148, 163, 184, 0.012) 81px
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  // ─── INTRO BLOCK ───────────────────────────────────────────────────────────
+
+  .introBlock {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 42px;
+  }
+
+  .titleColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 780px;
+  }
+
+  .sectionLabel {
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: $steel-dim;
+    border: 1px solid $steel-bdr;
+    color: $steel-light;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
+    line-height: 1.02;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  .accentText {
+    background: linear-gradient(135deg, $steel-soft 0%, $silver 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .lead {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.88);
+    max-width: 760px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.72);
+    max-width: 760px;
+  }
+
+  // ─── INFO PANEL ────────────────────────────────────────────────────────────
+
+  .infoPanel {
+    position: sticky;
+    top: 110px;
+    padding: 28px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.042), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.3);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(148,163,184,0.09), transparent 38%);
+      pointer-events: none;
+    }
+  }
+
+  .panelHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+
+    .panelTag {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: $steel-light;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    h3 { margin: 0; font-size: 1.3rem; line-height: 1.3; font-weight: 700; color: #ffffff; }
+  }
+
+  .flowStepsMini {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .miniStep {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+
+    &:last-child { border-bottom: 0; padding-bottom: 0; }
+    &:first-child { padding-top: 0; }
+
+    strong { color: rgba(245,247,250,0.95); font-weight: 700; }
+  }
+
+  // miniIndex con varianti colore per simbolo parametro
+  .miniIndex {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 800;
+    font-style: italic;
+    flex-shrink: 0;
+
+    &.miSteel  { background: $steel-dim;  border: 1px solid $steel-bdr;  color: $steel-light; }
+    &.miBlue   { background: $blue-dim;   border: 1px solid $blue-bdr;   color: $blue-soft; }
+    &.miSilver { background: $silver-dim; border: 1px solid $silver-bdr; color: $silver; }
+    &.miTeal   { background: $teal-dim;   border: 1px solid $teal-bdr;   color: $teal-soft; }
+  }
+
+  .miniText {
+    padding-top: 7px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(245,247,250,0.82);
+    font-weight: 500;
+  }
+
+  // ─── PARAMETRO BLOCK SHELL ─────────────────────────────────────────────────
+
+  .parametroBlock {
+    margin-bottom: 28px;
+    padding: 36px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.038), rgba(255,255,255,0.016));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.24);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(148,163,184,0.07), transparent 38%);
+      pointer-events: none;
+    }
+
+    &.avancorsaBlock::before { background: radial-gradient(circle at top left, rgba(79,163,224,0.07), transparent 36%); }
+    &.interasseBlock::before { background: radial-gradient(circle at top left, rgba(226,232,240,0.05), transparent 36%); }
+  }
+
+  .parametroHeader {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 28px;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    h3 { margin: 0; font-size: clamp(1.3rem, 2vw, 1.75rem); font-weight: 700; color: #ffffff; line-height: 1.25; }
+  }
+
+  // tag simbolo parametro — grande, corsivo
+  .parametroTag {
+    display: inline-flex;
+    width: 52px;
+    height: 52px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-style: italic;
+    flex-shrink: 0;
+
+    &.tagAlpha  { background: $steel-dim;  border: 1px solid $steel-bdr;  color: $steel-light; }
+    &.tagBlue   { background: $blue-dim;   border: 1px solid $blue-bdr;   color: $blue-soft; }
+    &.tagSilver { background: $silver-dim; border: 1px solid $silver-bdr; color: $silver; }
+    &.tagTeal   { background: $teal-dim;   border: 1px solid $teal-bdr;   color: $teal-soft; }
+  }
+
+  .parametroContent {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 32px;
+    align-items: start;
+
+    &.avancorsaContent { grid-template-columns: 1fr 280px; }
+  }
+
+  .parametroText {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    p { max-width: none; font-size: 0.97rem; line-height: 1.78; color: rgba(245,247,250,0.72); }
+  }
+
+  // ─── DIAGRAMMA ANGOLO DI STERZO — CSS only ─────────────────────────────────
+
+  .parametroDiagram {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .diagramAngolo {
+    padding: 24px 20px;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.22);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .angoloSchema {
+    position: relative;
+    height: 160px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  // linea verticale di riferimento
+  .angoloVerticale {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 130px;
+    background: rgba(255,255,255,0.15);
+
+    &::before {
+      content: "90°";
+      position: absolute;
+      top: -18px;
+      left: 6px;
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.2);
+      font-weight: 700;
+    }
+  }
+
+  // linea terra
+  .angoloTerra {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+  }
+
+  // le due forcelle — angolo chiuso e aperto
+  .angoloForcella {
+    position: absolute;
+    bottom: 20px;
+    width: 3px;
+    height: 110px;
+    border-radius: 2px;
+    transform-origin: bottom center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    &.angoloChiuso {
+      background: rgba(62, 207, 142, 0.7);
+      left: calc(50% - 30px);
+      transform: rotate(-26deg);
+      box-shadow: 0 0 8px rgba(62,207,142,0.3);
+    }
+
+    &.angoloAperto {
+      background: rgba(79, 163, 224, 0.7);
+      left: calc(50% + 20px);
+      transform: rotate(-30deg);
+      box-shadow: 0 0 8px rgba(79,163,224,0.3);
+    }
+  }
+
+  .angoloLabel {
+    position: absolute;
+    top: -44px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.62rem;
+    font-weight: 800;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1.3;
+
+    .angoloChiuso & { color: $green-soft; }
+    .angoloAperto & { color: $blue-soft; }
+
+    small { font-size: 0.58rem; font-weight: 600; opacity: 0.8; }
+  }
+
+  .diagramLegenda {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .legendaItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    color: rgba(245,247,250,0.55);
+    font-weight: 600;
+  }
+
+  .legendaDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    flex-shrink: 0;
+
+    &.dotChiuso { background: $green-soft; box-shadow: 0 0 6px rgba(62,207,142,0.5); }
+    &.dotAperto { background: $blue-soft;  box-shadow: 0 0 6px rgba(79,163,224,0.5); }
+  }
+
+  // ─── AVANCORSA SCHEMA — CSS only ───────────────────────────────────────────
+
+  .avancorsaSchemaWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .avancorsaSchema {
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.22);
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .avSchema {
+    position: relative;
+    height: 140px;
+  }
+
+  .avAsseCannotto {
+    position: absolute;
+    left: 42%;
+    top: 0;
+    width: 2px;
+    height: 100px;
+    background: rgba(79,163,224,0.6);
+    transform: rotate(28deg);
+    transform-origin: top center;
+
+    &::after {
+      content: "asse cannotto";
+      position: absolute;
+      top: 30px;
+      left: 8px;
+      font-size: 0.6rem;
+      color: $blue-soft;
+      font-weight: 700;
+      white-space: nowrap;
+      transform: rotate(-28deg);
+    }
+  }
+
+  .avTerraLine {
+    position: absolute;
+    bottom: 16px;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+  }
+
+  .avPuntoAsseATerra,
+  .avPuntoRuota {
+    position: absolute;
+    bottom: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    transform: translateX(-50%);
+  }
+
+  .avPuntoAsseATerra {
+    left: 38%;
+    background: $blue-soft;
+    box-shadow: 0 0 6px rgba(79,163,224,0.6);
+
+    .avPuntoLabel {
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.58rem;
+      color: $blue-soft;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+  }
+
+  .avPuntoRuota {
+    left: 62%;
+    background: $steel-light;
+    box-shadow: 0 0 6px rgba(148,163,184,0.5);
+
+    .avPuntoLabel {
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.58rem;
+      color: $steel-light;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+  }
+
+  .avTrail {
+    position: absolute;
+    bottom: 22px;
+    left: 38%;
+    width: 24%;
+    height: 2px;
+    background: linear-gradient(90deg, $blue-soft, $steel-light);
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      top: -3px;
+      width: 2px;
+      height: 8px;
+      background: rgba(255,255,255,0.4);
+    }
+    &::before { left: 0; }
+    &::after  { right: 0; }
+
+    .avTrailLabel {
+      position: absolute;
+      top: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: rgba(245,247,250,0.6);
+      white-space: nowrap;
+    }
+  }
+
+  .avancorsaNote {
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: $blue-dim;
+    border: 1px solid $blue-bdr;
+
+    .avNoteTitle {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: $blue-soft;
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+
+    p { font-size: 0.82rem; line-height: 1.55; color: rgba(245,247,250,0.6); max-width: none; }
+  }
+
+  // ─── INTERASSE COMPARE ─────────────────────────────────────────────────────
+
+  .interasseCompare {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .compareItem {
+    padding: 18px 16px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &.compareCorto { background: $teal-dim;  border: 1px solid $teal-bdr; }
+    &.compareLungo { background: $blue-dim;  border: 1px solid $blue-bdr; }
+  }
+
+  .compareBadge {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    .compareCorto & { color: $teal-soft; }
+    .compareLungo & { color: $blue-soft; }
+  }
+
+  .compareBar {
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    overflow: hidden;
+  }
+
+  .compareBarFill {
+    height: 100%;
+    border-radius: 999px;
+
+    &.compareBarFillCorto { width: 55%; background: linear-gradient(90deg, $teal-soft, rgba(45,212,191,0.4)); }
+    &.compareBarFillLungo { width: 80%; background: linear-gradient(90deg, $blue-soft, rgba(79,163,224,0.4)); }
+  }
+
+  .compareList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    li {
+      font-size: 0.82rem;
+      line-height: 1.45;
+      color: rgba(245,247,250,0.65);
+      padding-left: 12px;
+      position: relative;
+
+      &::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        font-weight: 700;
+        color: rgba(245,247,250,0.3);
+      }
+    }
+  }
+
+  .compareUso {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(245,247,250,0.25);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 8px;
+  }
+
+  // ─── VISUAL BLOCK ──────────────────────────────────────────────────────────
+
+  .visualBlock {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 28px;
+  }
+
+  .mediaPlaceholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 24px;
+    border: 2px dashed rgba(148,163,184,0.2);
+    background: rgba(148,163,184,0.025);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background 0.3s ease;
+
+    &:hover { border-color: rgba(148,163,184,0.4); background: rgba(148,163,184,0.06); }
+    img, video { width: 100%; height: 100%; object-fit: cover; border-radius: 22px; display: block; }
+  }
+
+  .placeholderInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 24px;
+    pointer-events: none;
+  }
+
+  .placeholderIcon { font-size: 2.4rem; color: rgba(148,163,184,0.28); line-height: 1; }
+  .placeholderText { font-size: 1rem;   font-weight: 700; color: rgba(148,163,184,0.52); }
+  .placeholderSub  { font-size: 0.82rem; color: rgba(245,247,250,0.28); font-family: monospace; }
+
+  .visualCaption {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .captionTag {
+      display: inline-block;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: $steel-dim;
+      border: 1px solid $steel-bdr;
+      color: $steel-light;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    p { font-size: 1rem; line-height: 1.75; color: rgba(245,247,250,0.7); max-width: none; }
+  }
+
+  // ─── DISTRIBUZIONE PESI BLOCK ──────────────────────────────────────────────
+
+  .pesoBlock {
+    margin-bottom: 28px;
+    padding: 36px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.038), rgba(255,255,255,0.016));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.24);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(148,163,184,0.06), transparent 36%);
+      pointer-events: none;
+    }
+  }
+
+  .pesoHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    h3 { margin: 0; font-size: clamp(1.3rem, 2.2vw, 1.75rem); font-weight: 700; color: #ffffff; line-height: 1.25; }
+    p  { max-width: none; }
+  }
+
+  .pesoGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .pesoCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.022);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(148,163,184,0.06); border-color: rgba(148,163,184,0.2); }
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.92rem; line-height: 1.68; color: rgba(245,247,250,0.62); max-width: none; }
+  }
+
+  .pesoIdx {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    &.pesoIdxTeal   { background: $teal-dim;   border: 1px solid $teal-bdr;   color: $teal-soft; }
+    &.pesoIdxBlue   { background: $blue-dim;   border: 1px solid $blue-bdr;   color: $blue-soft; }
+    &.pesoIdxSilver { background: $silver-dim; border: 1px solid $silver-bdr; color: $silver; }
+    &.pesoIdxSteel  { background: $steel-dim;  border: 1px solid $steel-bdr;  color: $steel-light; }
+  }
+
+  // ─── EFFETTI COMBINATI BLOCK ───────────────────────────────────────────────
+
+  .effettiBlock {
+    margin-bottom: 32px;
+    padding: 36px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.038), rgba(255,255,255,0.016));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.24);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(148,163,184,0.06), transparent 38%);
+      pointer-events: none;
+    }
+  }
+
+  .effettiHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    h3 { margin: 0; font-size: clamp(1.3rem, 2.2vw, 1.75rem); font-weight: 700; color: #ffffff; line-height: 1.25; }
+  }
+
+  .effettiGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .effettoCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.022);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(148,163,184,0.06); border-color: rgba(148,163,184,0.2); }
+
+    h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    p  { margin: 0; font-size: 0.9rem; line-height: 1.65; color: rgba(245,247,250,0.62); max-width: none; }
+  }
+
+  .effettoScenario {
+    display: inline-block;
+    width: fit-content;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: $steel-dim;
+    border: 1px solid $steel-bdr;
+    color: $steel-light;
+  }
+
+  // ─── CARDS GRID ────────────────────────────────────────────────────────────
+
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .infoCard {
+    position: relative;
+    min-height: 250px;
+    padding: 28px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.038), rgba(255,255,255,0.016));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.22);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(148,163,184,0.55), rgba(226,232,240,0.45), transparent);
+    }
+
+    h3 { margin: 0 0 14px; font-size: 1.2rem; line-height: 1.3; font-weight: 700; color: #ffffff; }
+    p  { margin: 0; font-size: 0.96rem; line-height: 1.75; color: rgba(245,247,250,0.7); max-width: none; }
+  }
+
+  .cardTag {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $steel-light;
+    text-transform: uppercase;
+  }
+}
+
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────────
+
+@media (max-width: $laptop) {
+  .geometrie {
+    .introBlock     { grid-template-columns: 1fr; }
+    .infoPanel      { position: relative; top: 0; }
+    .visualBlock    { grid-template-columns: 1fr; }
+    .parametroContent { grid-template-columns: 1fr; }
+    .pesoGrid       { grid-template-columns: 1fr; }
+    .effettiGrid    { grid-template-columns: 1fr; }
+    .cardsGrid      { grid-template-columns: 1fr; }
+    .interasseCompare { flex-direction: row; }
+  }
+}
+
+@media (max-width: $tablet) {
+  .geometrie {
+    padding: 90px 0;
+
+    .wrapper { padding: 0 20px; }
+    h2 { font-size: clamp(2rem, 8vw, 3.5rem); }
+    .lead, p { font-size: 0.98rem; line-height: 1.75; }
+
+    .parametroBlock, .pesoBlock,
+    .effettiBlock, .infoPanel, .infoCard { padding: 24px; border-radius: 22px; }
+
+    .parametroHeader { gap: 12px; }
+    .parametroTag    { width: 44px; height: 44px; font-size: 1.3rem; }
+    .interasseCompare { flex-direction: column; }
+  }
+}
+
+@media (max-width: $mobile) {
+  .geometrie {
+    padding: 70px 0;
+
+    .wrapper { padding: 0 16px; }
+    .sectionLabel { font-size: 0.72rem; padding: 7px 12px; }
+    h2 { font-size: 2rem; letter-spacing: -1px; }
+
+    .parametroBlock, .pesoBlock,
+    .effettiBlock, .infoPanel, .infoCard { padding: 20px; }
+
+    .parametroTag  { width: 38px; height: 38px; font-size: 1.1rem; border-radius: 12px; }
+    .miniStep      { grid-template-columns: 40px 1fr; }
+    .miniText      { font-size: 0.86rem; }
+    .angoloSchema  { height: 130px; }
+    .avSchema      { height: 120px; }
+    .infoCard h3   { font-size: 1.1rem; }
+  }
+}

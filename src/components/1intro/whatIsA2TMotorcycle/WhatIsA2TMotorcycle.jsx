@@ -53,57 +53,58 @@ const WhatIsA2TMotorcycle = () => {
         >
           <div className="leftColumn">
             <motion.span className="sectionLabel" variants={fadeUpVariants}>
-              Introduction
+              Introduzione
             </motion.span>
 
             <motion.h2 variants={fadeUpVariants}>
-              What is a 2-stroke motorcycle?
+              Cos'è una moto 2 tempi?
             </motion.h2>
 
             <motion.p className="lead" variants={fadeUpVariants}>
-              A 2-stroke motorcycle is built around an engine that completes its
-              power cycle in just two piston strokes. Compared with a 4-stroke,
-              the design is mechanically simpler, lighter, and often more
-              immediate in its power delivery.
+              Una moto 2 tempi è costruita attorno a un motore che completa il
+              suo ciclo di potenza in soli due colpi di pistone. Rispetto a un
+              4 tempi, il progetto è meccanicamente più semplice, più leggero e
+              spesso più diretto nell'erogazione della potenza.
             </motion.p>
 
             <motion.p variants={fadeUpVariants}>
-              That simplicity is part of the fascination. A 2T bike is not just
-              “an older type of motorcycle”: it is a different mechanical logic,
-              with its own combustion rhythm, intake flow, lubrication system,
-              exhaust behavior and riding character.
+              Quella semplicità è parte del fascino. Una moto 2T non è solo
+              "un tipo di moto più vecchio": è una logica meccanica diversa,
+              con il proprio ritmo di combustione, il flusso di aspirazione, il
+              sistema di lubrificazione, il comportamento dello scarico e il
+              carattere di guida.
             </motion.p>
 
             <motion.p variants={fadeUpVariants}>
-              This project is designed as a visual guide to understand that
-              logic step by step, starting from the engine and then expanding to
-              chassis, suspension, brakes, electronics and bodywork.
+              Questo progetto è pensato come una guida visiva per comprendere
+              quella logica passo dopo passo, partendo dal motore e poi
+              espandendosi a telaio, sospensioni, freni, elettronica e carrozzeria.
             </motion.p>
           </div>
 
           <motion.div className="rightColumn" variants={fadeUpVariants}>
             <div className="infoPanel">
               <div className="panelHeader">
-                <span className="panelTag">2T Overview</span>
-                <h3>Core identity of a two-stroke bike</h3>
+                <span className="panelTag">Panoramica 2T</span>
+                <h3>L'identità di una moto a due tempi</h3>
               </div>
 
               <div className="panelLines">
                 <div className="lineItem">
-                  <span className="lineLabel">Cycle</span>
-                  <span className="lineValue">Power every 2 strokes</span>
+                  <span className="lineLabel">Ciclo</span>
+                  <span className="lineValue">Potenza ogni 2 tempi</span>
                 </div>
                 <div className="lineItem">
-                  <span className="lineLabel">Character</span>
-                  <span className="lineValue">Light, reactive, mechanical</span>
+                  <span className="lineLabel">Carattere</span>
+                  <span className="lineValue">Leggera, reattiva, meccanica</span>
                 </div>
                 <div className="lineItem">
-                  <span className="lineLabel">Complexity</span>
-                  <span className="lineValue">Lower than many 4T layouts</span>
+                  <span className="lineLabel">Complessità</span>
+                  <span className="lineValue">Inferiore a molte configurazioni 4T</span>
                 </div>
                 <div className="lineItem">
                   <span className="lineLabel">Focus</span>
-                  <span className="lineValue">Flow, combustion, response</span>
+                  <span className="lineValue">Flusso, combustione, risposta</span>
                 </div>
               </div>
             </div>
@@ -119,32 +120,34 @@ const WhatIsA2TMotorcycle = () => {
         >
           <motion.article className="infoCard" variants={cardVariants}>
             <span className="cardNumber">01</span>
-            <h3>Simpler mechanical architecture</h3>
+            <h3>Architettura meccanica più semplice</h3>
             <p>
-              In general terms, the 2-stroke engine achieves its cycle with
-              fewer moving valvetrain components, concentrating much of its
-              behavior in piston motion, intake timing and exhaust flow.
+              In linea generale, il motore 2 tempi realizza il suo ciclo con
+              meno componenti in movimento nella distribuzione, concentrando
+              gran parte del suo comportamento nel moto del pistone, nella
+              fasatura dell'aspirazione e nel flusso di scarico.
             </p>
           </motion.article>
 
           <motion.article className="infoCard" variants={cardVariants}>
             <span className="cardNumber">02</span>
-            <h3>Distinct power delivery</h3>
+            <h3>Erogazione di potenza caratteristica</h3>
             <p>
-              A 2T motorcycle is often associated with a sharper and more direct
-              response. Its riding feel is strongly influenced by combustion
-              timing, expansion chamber design and the engine’s operating range.
+              Una moto 2T è spesso associata a una risposta più pronta e
+              diretta. La sensazione di guida è fortemente influenzata dalla
+              fasatura della combustione, dal design della camera di espansione
+              e dal range operativo del motore.
             </p>
           </motion.article>
 
           <motion.article className="infoCard" variants={cardVariants}>
             <span className="cardNumber">03</span>
-            <h3>A system, not only an engine</h3>
+            <h3>Un sistema, non solo un motore</h3>
             <p>
-              To really understand a 2-stroke motorcycle, you have to look
-              beyond the cylinder. Frame geometry, suspension setup,
-              transmission, brakes and intake/exhaust behavior all shape the
-              final character of the bike.
+              Per capire davvero una moto 2 tempi bisogna guardare oltre il
+              cilindro. Geometria del telaio, assetto delle sospensioni,
+              trasmissione, freni e comportamento di aspirazione/scarico
+              definiscono insieme il carattere finale della moto.
             </p>
           </motion.article>
         </motion.div>

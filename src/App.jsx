@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./app.scss";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
@@ -11,6 +12,8 @@ import FuelAndMixture from "./components/2Ciclo/fuelAndMixture/FuelAndMixture";
 import FirstCyclePhases from "./components/2Ciclo/firstCyclePhases/FirstCyclePhases";
 import CombustionAndIgnition from "./components/2Ciclo/combustionAndIgnition/CombustionAndIgnition";
 import ExhaustSystem from "./components/2Ciclo/exhaustSystem/ExhaustSystem";
+import MotoreIntro from "./components/3motore/motoreIntro/MotoreIntro";
+import AlimentazioneIntro from "./components/3componentiDelMotore/alimentazioneIntro/AlimentazioneIntro";
 import Carburatore from "./components/3componentiDelMotore/carburatore/Carburatore";
 import CorpoFarfallato from "./components/3componentiDelMotore/corpoFarfallato/CorpoFarfallato";
 import PompaBenzina from "./components/3componentiDelMotore/pompaBenzina/PompaBenzina";
@@ -47,16 +50,26 @@ import VolanoEStatore from "./components/3raffreddamentoEAccensione/volanoEStato
 import CDIeBobina from "./components/3raffreddamentoEAccensione/cdiEBobbina/CDIeBobina";
 import Avviamento from "./components/3raffreddamentoEAccensione/avviamento/Avviamento";
 import TelaioIntro from "./components/4telaio/telaioIntro/TelaioIntro";
-
-
-
+import Telaio from "./components/4telaio/telaio/Telaio";
+import Materiali from "./components/4telaio/materiali/Materiali";
+import Geometire from "./components/4telaio/geometrie/Geometrie";
+import Rigidita from "./components/4telaio/rigidita/Rigidita";
+import CanottoDiSterzo from "./components/4telaio/canottoDiSterzo/CanottoDiSterzo";
+import Forcellone from "./components/4telaio/forcellone/Forcellone";
+import Cavalletto from "./components/4telaio/cavalletto/Cavalletto";
+import CiclisticaIntro from "./components/5ciclistica/ciclisticaIntro/CiclisticaIntro";
+import Sidebar from "./components/sidebar/Sidebar";
 
 const App = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <div>
+      <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
+
       <section id="Homepage">
         <Navbar />
-        <Hero />
+        <Hero onOpenSidebar={() => setSidebarOpen(true)} />
       </section>
 
       {/* INTRODUZIONE */}
@@ -89,6 +102,16 @@ const App = () => {
       </section>
       <section id="ExhaustSystem">
         <ExhaustSystem />
+      </section>
+
+      {/* Motore — Intro capitolo 3 */}
+      <section id="MotoreIntro">
+        <MotoreIntro />
+      </section>
+
+      {/* 3.1 Alimentazione */}
+      <section id="AlimentazioneIntro">
+        <AlimentazioneIntro />
       </section>
 
       {/* Componenti del motore */}
@@ -208,16 +231,43 @@ const App = () => {
       <section id="Avviamento">
         <Avviamento />
       </section>
-
-
-
-
+  
 
     {/* Telaio */}
 
     <section id="Telaio">
         <TelaioIntro />
       </section>
+      <section id="Telaio">
+        <Telaio />
+      </section>
+          <section id="Materiali">
+        <Materiali />
+      </section>
+      <section id="Rigidita">
+        <Rigidita />
+      </section>
+      <section id="Geometrie">
+        <Geometire />
+      </section>
+      <section id="CanottoDiSterzo">
+        <CanottoDiSterzo/>
+      </section>
+      <section id="Forcellone">
+        <Forcellone />
+      </section>
+      <section id="Cavalletto">
+        <Cavalletto />
+      </section>
+
+      {/* Ciclistica */}
+      <section id="CiclisticaIntro">
+        <CiclisticaIntro />
+      </section>
+
+
+
+
 
 
 

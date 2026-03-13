@@ -1,0 +1,369 @@
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 1200px;
+
+$steel:       #94a3b8;
+$steel-soft:  #b0bec5;
+$steel-light: #cbd5e1;
+$steel-dim:   rgba(148, 163, 184, 0.12);
+$steel-bdr:   rgba(148, 163, 184, 0.22);
+$silver:      #e2e8f0;
+
+// accenti per sottocapitolo
+$teal:        #2dd4bf;
+$teal-soft:   #5ee0ce;
+$teal-dim:    rgba(45, 212, 191, 0.10);
+$teal-bdr:    rgba(45, 212, 191, 0.22);
+
+$yellow:      #f0c040;
+$yellow-soft: #f5d060;
+$yellow-dim:  rgba(240, 192, 64, 0.10);
+$yellow-bdr:  rgba(240, 192, 64, 0.22);
+
+$blue:        #4fa3e0;
+$blue-soft:   #74b8e8;
+$blue-dim:    rgba(79, 163, 224, 0.10);
+$blue-bdr:    rgba(79, 163, 224, 0.22);
+
+$red:         #f05252;
+$red-soft:    #f47070;
+$red-dim:     rgba(240, 82, 82, 0.10);
+$red-bdr:     rgba(240, 82, 82, 0.22);
+
+.ciclisticaIntro {
+  position: relative;
+  padding: 120px 0 80px;
+  background:
+    radial-gradient(circle at 15%  10%, rgba(45, 212, 191, 0.06), transparent 32%),
+    radial-gradient(circle at 85%  90%, rgba(79, 163, 224, 0.05), transparent 30%),
+    linear-gradient(180deg, #0a0c10 0%, #0c0e13 60%, #0a0c10 100%);
+  color: #f5f7fa;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 80px,
+      rgba(148, 163, 184, 0.013) 80px,
+      rgba(148, 163, 184, 0.013) 81px
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  // ─── HERO TEXT ─────────────────────────────────────────────────────────────
+
+  .heroText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  // tag capitolo — numero grande + nome sezione
+  .chapterTag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .chapterNumber {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: $teal-soft;
+    font-variant-numeric: tabular-nums;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: $teal-dim;
+    border: 1px solid $teal-bdr;
+  }
+
+  .chapterDivider {
+    width: 28px;
+    height: 1px;
+    background: rgba(148,163,184,0.3);
+    flex-shrink: 0;
+  }
+
+  .chapterName {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $steel-light;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2.6rem, 6vw, 5.2rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  .gradientText {
+    background: linear-gradient(135deg, $teal-soft 0%, $blue-soft 60%, $silver 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .lead {
+    margin: 0;
+    font-size: 1.12rem;
+    line-height: 1.82;
+    color: rgba(245, 247, 250, 0.78);
+    max-width: 780px;
+  }
+
+  // ─── VISUAL PLACEHOLDER ────────────────────────────────────────────────────
+
+  .visualPlaceholder { width: 100%; }
+
+  .mediaPlaceholder {
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    border-radius: 28px;
+    border: 2px dashed rgba(45,212,191,0.18);
+    background: rgba(45,212,191,0.02);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      border-color: rgba(45,212,191,0.35);
+      background: rgba(45,212,191,0.05);
+    }
+
+    img, video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 26px;
+      display: block;
+    }
+  }
+
+  .placeholderInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 24px;
+    pointer-events: none;
+  }
+
+  .placeholderIcon { font-size: 2.6rem; color: rgba(45,212,191,0.25); line-height: 1; }
+  .placeholderText { font-size: 1rem;   font-weight: 700; color: rgba(45,212,191,0.45); }
+  .placeholderSub  { font-size: 0.82rem; color: rgba(245,247,250,0.26); font-family: monospace; }
+
+  // ─── CAPITOLI GRID ─────────────────────────────────────────────────────────
+
+  .capitoliGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .capitoloCard {
+    position: relative;
+    padding: 28px 24px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow: hidden;
+    transition: transform 0.25s ease, background 0.25s ease;
+
+    &:hover { transform: translateY(-4px); }
+
+    // barra colorata in cima
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 3px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: rgba(245,247,250,0.58);
+    }
+
+    // colori specifici per sottocapitolo
+    &.cardRuote {
+      background: linear-gradient(160deg, rgba(45,212,191,0.07), rgba(45,212,191,0.03));
+      border: 1px solid $teal-bdr;
+      &::before { background: linear-gradient(90deg, $teal-soft, rgba(45,212,191,0.2)); }
+      &:hover   { background: linear-gradient(160deg, rgba(45,212,191,0.12), rgba(45,212,191,0.05)); }
+      .cardNumero { color: $teal-soft; background: $teal-dim; border-color: $teal-bdr; }
+      .cardIcon   { color: $teal-soft; }
+    }
+
+    &.cardTrasmissione {
+      background: linear-gradient(160deg, rgba(240,192,64,0.07), rgba(240,192,64,0.03));
+      border: 1px solid $yellow-bdr;
+      &::before { background: linear-gradient(90deg, $yellow-soft, rgba(240,192,64,0.2)); }
+      &:hover   { background: linear-gradient(160deg, rgba(240,192,64,0.12), rgba(240,192,64,0.05)); }
+      .cardNumero { color: $yellow-soft; background: $yellow-dim; border-color: $yellow-bdr; }
+      .cardIcon   { color: $yellow-soft; }
+    }
+
+    &.cardSospensioni {
+      background: linear-gradient(160deg, rgba(79,163,224,0.07), rgba(79,163,224,0.03));
+      border: 1px solid $blue-bdr;
+      &::before { background: linear-gradient(90deg, $blue-soft, rgba(79,163,224,0.2)); }
+      &:hover   { background: linear-gradient(160deg, rgba(79,163,224,0.12), rgba(79,163,224,0.05)); }
+      .cardNumero { color: $blue-soft; background: $blue-dim; border-color: $blue-bdr; }
+      .cardIcon   { color: $blue-soft; }
+    }
+
+    &.cardFreni {
+      background: linear-gradient(160deg, rgba(240,82,82,0.07), rgba(240,82,82,0.03));
+      border: 1px solid $red-bdr;
+      &::before { background: linear-gradient(90deg, $red-soft, rgba(240,82,82,0.2)); }
+      &:hover   { background: linear-gradient(160deg, rgba(240,82,82,0.12), rgba(240,82,82,0.05)); }
+      .cardNumero { color: $red-soft; background: $red-dim; border-color: $red-bdr; }
+      .cardIcon   { color: $red-soft; }
+    }
+  }
+
+  .cardTopRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cardNumero {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    border: 1px solid;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .cardIcon {
+    font-size: 1.5rem;
+    line-height: 1;
+    opacity: 0.7;
+  }
+
+  // ─── INTRO CARD ────────────────────────────────────────────────────────────
+
+  .introCard {
+    position: relative;
+    padding: 32px 36px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.038), rgba(255,255,255,0.016));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.26);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(45,212,191,0.06), transparent 40%);
+      pointer-events: none;
+    }
+
+    p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: 1.04rem;
+      line-height: 1.82;
+      color: rgba(245, 247, 250, 0.72);
+      max-width: none;
+    }
+  }
+
+  .introCardBar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, $teal-soft, $blue-soft, $yellow-soft, $red-soft, rgba(255,255,255,0.05));
+  }
+}
+
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────────
+
+@media (max-width: $laptop) {
+  .ciclisticaIntro {
+    .capitoliGrid   { grid-template-columns: repeat(2, 1fr); }
+    .mediaPlaceholder { aspect-ratio: 16 / 7; }
+  }
+}
+
+@media (max-width: $tablet) {
+  .ciclisticaIntro {
+    padding: 90px 0 60px;
+
+    .wrapper { gap: 36px; padding: 0 20px; }
+    h2 { font-size: clamp(2.2rem, 8vw, 3.8rem); letter-spacing: -1.2px; }
+    .lead { font-size: 1rem; line-height: 1.78; }
+
+    .mediaPlaceholder { aspect-ratio: 16 / 8; border-radius: 22px; }
+    .capitoliGrid     { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .capitoloCard     { padding: 22px 20px; border-radius: 20px; }
+    .introCard        { padding: 26px 28px; border-radius: 20px; }
+    .introCard p      { font-size: 0.98rem; }
+  }
+}
+
+@media (max-width: $mobile) {
+  .ciclisticaIntro {
+    padding: 70px 0 50px;
+
+    .wrapper { gap: 28px; padding: 0 16px; }
+    h2 { font-size: 2rem; letter-spacing: -1px; }
+    .lead { font-size: 0.96rem; }
+
+    .mediaPlaceholder { aspect-ratio: 4 / 3; border-radius: 18px; }
+    .capitoliGrid     { grid-template-columns: 1fr; gap: 12px; }
+    .capitoloCard     { padding: 20px 18px; }
+    .capitoloCard h3  { font-size: 1rem; }
+    .introCard        { padding: 22px 20px; }
+    .introCard p      { font-size: 0.94rem; line-height: 1.75; }
+  }
+}

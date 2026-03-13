@@ -48,7 +48,7 @@ const ScaricaIntro = () => {
           viewport={{ once: true, amount: 0.25 }}
         >
           <motion.span className="sectionLabel" variants={fadeUpVariants}>
-            Nuova sezione
+            Capitolo 3.5 — Scarico
           </motion.span>
 
           <motion.h2 variants={fadeUpVariants}>
