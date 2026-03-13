@@ -1,4 +1,4 @@
-import "./sospensioniIntro.scss";
+import "./freniIntro.scss";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -26,9 +26,9 @@ const cardVariants = {
   },
 };
 
-const SospensioniIntro = () => {
+const FreniIntro = () => {
   return (
-    <section className="sospensioniIntro" id="sospensioni-intro">
+    <section className="freniIntro" id="freni-intro">
       <div className="wrapper">
         {/* ── EYEBROW + TITOLO ────────────────────────────────────────────── */}
         <motion.div
@@ -39,21 +39,21 @@ const SospensioniIntro = () => {
           viewport={{ once: true, amount: 0.25 }}
         >
           <motion.span className="sectionLabel" variants={fadeUpVariants}>
-            Capitolo 5.2 — Sospensioni
+            Capitolo 5.3 — Freni
           </motion.span>
 
           <motion.h2 variants={fadeUpVariants}>
-            Le sospensioni — controllo, assorbimento e assetto dinamico
+            I freni — potenza, modulabilità e controllo della decelerazione
           </motion.h2>
 
           <motion.p className="lead" variants={fadeUpVariants}>
-            Le sospensioni non servono soltanto a rendere la moto più comoda:
-            definiscono il modo in cui la ruota resta in contatto con il terreno,
-            controllano il trasferimento di carico in frenata e accelerazione e
-            determinano stabilità, precisione di guida e capacità di assorbire
-            urti e asperità. Su una 2 tempi enduro, cross, motard o stradale,
-            forcella e monoammortizzatore cambiano radicalmente il comportamento
-            della moto.
+            Un impianto frenante non serve soltanto a fermare la moto: serve a
+            rallentarla con precisione, stabilità e sensibilità. Nelle 2 tempi
+            enduro, cross, motard e stradali, pompa, pinza, disco, pastiglie e
+            fluido lavorano insieme per trasformare la pressione della mano o
+            del piede in forza frenante reale sulla ruota. Capire come funziona
+            questo sistema significa capire dove nascono potenza, feeling e
+            sicurezza.
           </motion.p>
         </motion.div>
 
@@ -69,7 +69,7 @@ const SospensioniIntro = () => {
             <div className="placeholderInner">
               <img
                 src=""
-                alt="Forcella e monoammortizzatore su moto 2 tempi"
+                alt="Impianto frenante moto 2 tempi con disco, pinza e pompa"
                 loading="lazy"
               />
             </div>
@@ -85,11 +85,12 @@ const SospensioniIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Forcella" },
-            { num: "02", label: "Monoammortizzatore" },
-            { num: "03", label: "Escursione" },
-            { num: "04", label: "Olio sospensioni" },
-            { num: "05", label: "Compressione e ritorno" },
+            { num: "01", label: "Pompa" },
+            { num: "02", label: "Pinza" },
+            { num: "03", label: "Disco e pastiglie" },
+            { num: "04", label: "Olio freni" },
+            { num: "05", label: "Radiale e assiale" },
+            { num: "06", label: "Spurgo freni" },
           ].map((t) => (
             <motion.div
               className="topicPill"
@@ -114,15 +115,17 @@ const SospensioniIntro = () => {
           <div className="introCardBody">
             <span className="introCardTag">Perché è fondamentale</span>
             <p>
-              Nel mondo delle 2T la sospensione è uno dei sistemi più sensibili
-              di tutta la moto: se è troppo rigida la ruota rimbalza e perde
-              aderenza, se è troppo morbida affonda, scompone l’assetto e rende
-              la guida imprecisa. La forcella gestisce gran parte di frenata,
-              ingresso curva e impatto anteriore; il mono controlla trazione,
-              uscita curva e stabilità del retrotreno. Escursione, viscosità
-              dell’olio, taratura idraulica e regolazioni di compressione e
-              ritorno determinano quanto velocemente la sospensione si muove,
-              quanto assorbe e come restituisce energia dopo la deformazione.
+              Nel sistema frenante ogni elemento ha un ruolo preciso: la pompa
+              genera pressione idraulica, il fluido la trasmette, la pinza la
+              converte in spinta sui pistoncini, le pastiglie stringono il disco
+              e l’attrito trasforma l’energia cinetica in calore. Se uno solo di
+              questi passaggi lavora male — olio degradato, aria nel circuito,
+              pastiglie finite, disco surriscaldato, pompa poco efficiente —
+              tutta la frenata perde consistenza, feeling e affidabilità. Su una
+              moto 2T, dove peso contenuto e reattività rendono ogni input più
+              diretto, la qualità dell’impianto frenante cambia davvero il modo
+              in cui si entra in curva, si controlla il trasferimento di carico
+              e si gestisce il limite di aderenza.
             </p>
           </div>
         </motion.div>
@@ -131,4 +134,4 @@ const SospensioniIntro = () => {
   );
 };
 
-export default SospensioniIntro;
+export default FreniIntro;

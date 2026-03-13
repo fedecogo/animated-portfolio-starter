@@ -1,10 +1,10 @@
-import "./sospensioniIntro.scss";
+import "./elettronicaIntro.scss";
 import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.14 },
+    transition: { staggerChildren: 0.12 },
   },
 };
 
@@ -26,9 +26,9 @@ const cardVariants = {
   },
 };
 
-const SospensioniIntro = () => {
+const ElettronicaIntro = () => {
   return (
-    <section className="sospensioniIntro" id="sospensioni-intro">
+    <section className="elettronicaIntro" id="elettronica-intro">
       <div className="wrapper">
         {/* ── EYEBROW + TITOLO ────────────────────────────────────────────── */}
         <motion.div
@@ -39,21 +39,20 @@ const SospensioniIntro = () => {
           viewport={{ once: true, amount: 0.25 }}
         >
           <motion.span className="sectionLabel" variants={fadeUpVariants}>
-            Capitolo 5.2 — Sospensioni
+            Capitolo 6 — Elettronica
           </motion.span>
 
           <motion.h2 variants={fadeUpVariants}>
-            Le sospensioni — controllo, assorbimento e assetto dinamico
+            L’elettronica — energia, controllo e gestione dei segnali
           </motion.h2>
 
           <motion.p className="lead" variants={fadeUpVariants}>
-            Le sospensioni non servono soltanto a rendere la moto più comoda:
-            definiscono il modo in cui la ruota resta in contatto con il terreno,
-            controllano il trasferimento di carico in frenata e accelerazione e
-            determinano stabilità, precisione di guida e capacità di assorbire
-            urti e asperità. Su una 2 tempi enduro, cross, motard o stradale,
-            forcella e monoammortizzatore cambiano radicalmente il comportamento
-            della moto.
+            In una moto moderna l’elettronica non è un’aggiunta secondaria:
+            è il sistema nervoso che alimenta, coordina e controlla tutto ciò
+            che non è puramente meccanico. Dall’accensione alla centralina,
+            dai sensori alla strumentazione, passando per batteria, cablaggio,
+            mappe motore e sistemi come ride-by-wire e ABS, ogni componente
+            traduce corrente, impulsi e dati in funzioni reali della moto.
           </motion.p>
         </motion.div>
 
@@ -69,7 +68,7 @@ const SospensioniIntro = () => {
             <div className="placeholderInner">
               <img
                 src=""
-                alt="Forcella e monoammortizzatore su moto 2 tempi"
+                alt="Schema elettronico moto con centralina, cablaggio e sensori"
                 loading="lazy"
               />
             </div>
@@ -85,11 +84,17 @@ const SospensioniIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Forcella" },
-            { num: "02", label: "Monoammortizzatore" },
-            { num: "03", label: "Escursione" },
-            { num: "04", label: "Olio sospensioni" },
-            { num: "05", label: "Compressione e ritorno" },
+            { num: "01", label: "Accensione" },
+            { num: "02", label: "Chiave" },
+            { num: "03", label: "Batteria" },
+            { num: "04", label: "Cablaggio" },
+            { num: "05", label: "Luci" },
+            { num: "06", label: "Strumentazione" },
+            { num: "07", label: "Centralina" },
+            { num: "08", label: "Mappe" },
+            { num: "09", label: "Sensori" },
+            { num: "10", label: "Ride-by-wire" },
+            { num: "11", label: "ABS" },
           ].map((t) => (
             <motion.div
               className="topicPill"
@@ -114,15 +119,16 @@ const SospensioniIntro = () => {
           <div className="introCardBody">
             <span className="introCardTag">Perché è fondamentale</span>
             <p>
-              Nel mondo delle 2T la sospensione è uno dei sistemi più sensibili
-              di tutta la moto: se è troppo rigida la ruota rimbalza e perde
-              aderenza, se è troppo morbida affonda, scompone l’assetto e rende
-              la guida imprecisa. La forcella gestisce gran parte di frenata,
-              ingresso curva e impatto anteriore; il mono controlla trazione,
-              uscita curva e stabilità del retrotreno. Escursione, viscosità
-              dell’olio, taratura idraulica e regolazioni di compressione e
-              ritorno determinano quanto velocemente la sospensione si muove,
-              quanto assorbe e come restituisce energia dopo la deformazione.
+              Anche sulla moto più meccanica possibile, l’elettronica decide se
+              il motore si accende, come viene gestita la scintilla, come viene
+              distribuita l’energia e quali informazioni arrivano al pilota.
+              Nelle applicazioni più moderne controlla anche strategie di
+              erogazione, sicurezza attiva e risposta al comando del gas.
+              Un cablaggio ossidato, una batteria debole, un sensore fuori
+              tolleranza o una centralina mal gestita possono provocare
+              malfunzionamenti intermittenti, perdita di prestazioni, avviamenti
+              difficili o errori di lettura. Capire l’elettronica significa
+              quindi capire come la moto pensa, comunica e reagisce.
             </p>
           </div>
         </motion.div>
@@ -131,4 +137,4 @@ const SospensioniIntro = () => {
   );
 };
 
-export default SospensioniIntro;
+export default ElettronicaIntro;

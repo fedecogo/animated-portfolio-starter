@@ -2,18 +2,18 @@ $mobile: 576px;
 $tablet: 768px;
 $laptop: 1200px;
 
-$teal: #2dd4bf;
-$teal-soft: #5ee0ce;
-$teal-dim: rgba(45, 212, 191, 0.10);
-$teal-bdr: rgba(45, 212, 191, 0.22);
+$electric: #c7f36b;
+$electric-soft: #dcff8f;
+$electric-dim: rgba(199, 243, 107, 0.1);
+$electric-bdr: rgba(199, 243, 107, 0.24);
 
-.sospensioniIntro {
+.elettronicaIntro {
   position: relative;
   padding: 130px 0 100px;
   background:
     radial-gradient(
       ellipse at 50% 0%,
-      rgba(45, 212, 191, 0.08),
+      rgba(199, 243, 107, 0.08),
       transparent 55%
     ),
     linear-gradient(180deg, #0b0d13 0%, #0d1019 100%);
@@ -32,7 +32,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(45, 212, 191, 0.5),
+      rgba(199, 243, 107, 0.52),
       transparent
     );
   }
@@ -58,16 +58,16 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     align-items: center;
     gap: 20px;
     text-align: center;
-    max-width: 860px;
+    max-width: 880px;
   }
 
   .sectionLabel {
     display: inline-block;
     padding: 8px 18px;
     border-radius: 999px;
-    background: $teal-dim;
-    border: 1px solid $teal-bdr;
-    color: $teal-soft;
+    background: $electric-dim;
+    border: 1px solid $electric-bdr;
+    color: $electric-soft;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.78rem;
@@ -82,8 +82,8 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     font-weight: 800;
     background: linear-gradient(
       135deg,
-      #ffffff 40%,
-      rgba(45, 212, 191, 0.8) 100%
+      #ffffff 35%,
+      rgba(199, 243, 107, 0.9) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -95,7 +95,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     font-size: 1.08rem;
     line-height: 1.8;
     color: rgba(245, 247, 250, 0.75);
-    max-width: 720px;
+    max-width: 760px;
   }
 
   // ─── VISUAL PLACEHOLDER ────────────────────────────────────────────────
@@ -109,19 +109,21 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     width: 100%;
     aspect-ratio: 16 / 7;
     border-radius: 28px;
-    border: 2px dashed $teal-bdr;
-    background: rgba(45, 212, 191, 0.03);
+    border: 2px dashed $electric-bdr;
+    background: rgba(199, 243, 107, 0.03);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     transition:
       border-color 0.3s ease,
-      background 0.3s ease;
+      background 0.3s ease,
+      box-shadow 0.3s ease;
 
     &:hover {
-      border-color: rgba(45, 212, 191, 0.42);
-      background: rgba(45, 212, 191, 0.06);
+      border-color: rgba(199, 243, 107, 0.42);
+      background: rgba(199, 243, 107, 0.06);
+      box-shadow: 0 0 0 1px rgba(199, 243, 107, 0.08) inset;
     }
 
     img,
@@ -151,41 +153,44 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     justify-content: center;
     gap: 12px;
     width: 100%;
-    max-width: 860px;
+    max-width: 1020px;
   }
 
   .topicPill {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 20px;
+    padding: 10px 18px;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     transition:
       background 0.25s ease,
       border-color 0.25s ease,
-      transform 0.2s ease;
+      transform 0.2s ease,
+      box-shadow 0.25s ease;
     cursor: default;
 
     &:hover {
-      background: $teal-dim;
-      border-color: $teal-bdr;
+      background: $electric-dim;
+      border-color: $electric-bdr;
       transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
     }
   }
 
   .pillNum {
     font-size: 0.72rem;
     font-weight: 800;
-    color: $teal-soft;
+    color: $electric-soft;
     letter-spacing: 1px;
+    min-width: 22px;
   }
 
   .pillLabel {
     font-size: 0.92rem;
     font-weight: 600;
-    color: rgba(245, 247, 250, 0.8);
+    color: rgba(245, 247, 250, 0.82);
     letter-spacing: 0.3px;
   }
 
@@ -195,7 +200,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     display: flex;
     gap: 28px;
     align-items: flex-start;
-    max-width: 900px;
+    max-width: 920px;
     width: 100%;
     padding: 32px 36px;
     border-radius: 24px;
@@ -205,7 +210,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
       rgba(255, 255, 255, 0.018)
     );
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
     position: relative;
     overflow: hidden;
 
@@ -219,7 +224,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
       background: linear-gradient(
         90deg,
         transparent,
-        rgba(45, 212, 191, 0.4),
+        rgba(199, 243, 107, 0.4),
         transparent
       );
     }
@@ -230,7 +235,11 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     width: 3px;
     align-self: stretch;
     border-radius: 999px;
-    background: linear-gradient(180deg, $teal-soft, rgba(45, 212, 191, 0.15));
+    background: linear-gradient(
+      180deg,
+      $electric-soft,
+      rgba(199, 243, 107, 0.15)
+    );
   }
 
   .introCardBody {
@@ -244,7 +253,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: $teal-soft;
+    color: $electric-soft;
   }
 
   p {
@@ -258,7 +267,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
 // ─── RESPONSIVE ──────────────────────────────────────────────────────────
 
 @media (max-width: $laptop) {
-  .sospensioniIntro {
+  .elettronicaIntro {
     .mediaPlaceholder {
       aspect-ratio: 16 / 8;
     }
@@ -266,7 +275,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
 }
 
 @media (max-width: $tablet) {
-  .sospensioniIntro {
+  .elettronicaIntro {
     padding: 100px 0 80px;
 
     .wrapper {
@@ -292,11 +301,15 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
       padding: 24px 22px;
       gap: 20px;
     }
+
+    .topicsRow {
+      max-width: 860px;
+    }
   }
 }
 
 @media (max-width: $mobile) {
-  .sospensioniIntro {
+  .elettronicaIntro {
     padding: 80px 0 60px;
 
     .wrapper {
@@ -321,11 +334,12 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     }
 
     .topicPill {
-      padding: 8px 16px;
+      padding: 8px 14px;
+      gap: 8px;
     }
 
     .pillLabel {
-      font-size: 0.88rem;
+      font-size: 0.86rem;
     }
 
     .introCard {

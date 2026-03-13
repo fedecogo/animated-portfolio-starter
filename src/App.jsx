@@ -69,7 +69,41 @@ import Pignone from "./components/5ciclistica/5.2trasmissioneFinale/pignone/Pign
 import Corona from "./components/5ciclistica/5.2trasmissioneFinale/corona/Corona";
 import Rapporti from "./components/5ciclistica/5.2trasmissioneFinale/rapporti/Rapporti";
 import Catena from "./components/5ciclistica/5.2trasmissioneFinale/catena/Catena";
+import SospensioniIntro from "./components/5ciclistica/5.3sospensioni/sospensioniIntro/SospensioniIntro";
 
+
+
+
+
+import FreniIntro from "./components/5ciclistica/5.4sistemaFrenante/sistemaFrenanteIntro/FreniIntro";
+
+
+
+
+
+import ElettronicaIntro from "./components/6elettronica/elettronicaIntro/ElettronicaIntro";
+
+
+
+
+
+
+import CarrozzeriaIntro from "./components/7carrozzeria/carrozzeriaIntro/CarrozzeriaIntro";
+
+
+
+
+
+
+
+import FisicaFondamentiMotoreIntro from "./components/8fisicaFondamentiMotore/fisicaFondamentiMotoreIntro/FisicaFondamentiMotoreIntro";
+
+
+
+
+
+
+import ProjectOutro from "./components/projectOutro/ProjectOutro";
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -317,6 +351,55 @@ const App = () => {
 
        {/* 5.3 Sospensioni */}
 
+       <section id="SospensioniIntro">
+        <SospensioniIntro />
+      </section>
+
+
+
+
+
+      {/* 5.4 Sistema frenante */}
+        <section id="FreniIntro" >
+          <FreniIntro />
+        </section>
+
+
+
+
+
+       {/* 6 Elettronica  */}
+
+       <section id="ElettronicaIntro">
+        <ElettronicaIntro />
+       </section>
+
+
+
+
+
+
+
+
+
+       {/* 7 Carrozzeria */}
+
+       <section id="CarrozzeriaIntro">
+        <CarrozzeriaIntro />
+       </section>
+
+
+
+
+
+
+
+
+       {/* 8 Fisica e Fondamenti del Motore  */}
+
+       <section id="FisicaFondamentiMotoreIntro">
+        <FisicaFondamentiMotoreIntro />
+       </section>
 
 
 
@@ -338,26 +421,7 @@ const App = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <section id="Contact">Contact</section>
+      <section id="ProjectOutro"><ProjectOutro/></section>
     </div>
   );
 };

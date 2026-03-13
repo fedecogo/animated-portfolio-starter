@@ -2,18 +2,18 @@ $mobile: 576px;
 $tablet: 768px;
 $laptop: 1200px;
 
-$teal: #2dd4bf;
-$teal-soft: #5ee0ce;
-$teal-dim: rgba(45, 212, 191, 0.10);
-$teal-bdr: rgba(45, 212, 191, 0.22);
+$red: #ef4444;
+$red-soft: #f87171;
+$red-dim: rgba(239, 68, 68, 0.1);
+$red-bdr: rgba(239, 68, 68, 0.22);
 
-.sospensioniIntro {
+.freniIntro {
   position: relative;
   padding: 130px 0 100px;
   background:
     radial-gradient(
       ellipse at 50% 0%,
-      rgba(45, 212, 191, 0.08),
+      rgba(239, 68, 68, 0.08),
       transparent 55%
     ),
     linear-gradient(180deg, #0b0d13 0%, #0d1019 100%);
@@ -32,7 +32,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(45, 212, 191, 0.5),
+      rgba(239, 68, 68, 0.5),
       transparent
     );
   }
@@ -65,9 +65,9 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     display: inline-block;
     padding: 8px 18px;
     border-radius: 999px;
-    background: $teal-dim;
-    border: 1px solid $teal-bdr;
-    color: $teal-soft;
+    background: $red-dim;
+    border: 1px solid $red-bdr;
+    color: $red-soft;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.78rem;
@@ -82,8 +82,8 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     font-weight: 800;
     background: linear-gradient(
       135deg,
-      #ffffff 40%,
-      rgba(45, 212, 191, 0.8) 100%
+      #ffffff 38%,
+      rgba(239, 68, 68, 0.88) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -109,8 +109,8 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     width: 100%;
     aspect-ratio: 16 / 7;
     border-radius: 28px;
-    border: 2px dashed $teal-bdr;
-    background: rgba(45, 212, 191, 0.03);
+    border: 2px dashed $red-bdr;
+    background: rgba(239, 68, 68, 0.03);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,8 +120,8 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
       background 0.3s ease;
 
     &:hover {
-      border-color: rgba(45, 212, 191, 0.42);
-      background: rgba(45, 212, 191, 0.06);
+      border-color: rgba(239, 68, 68, 0.42);
+      background: rgba(239, 68, 68, 0.06);
     }
 
     img,
@@ -151,7 +151,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     justify-content: center;
     gap: 12px;
     width: 100%;
-    max-width: 860px;
+    max-width: 920px;
   }
 
   .topicPill {
@@ -169,8 +169,8 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     cursor: default;
 
     &:hover {
-      background: $teal-dim;
-      border-color: $teal-bdr;
+      background: $red-dim;
+      border-color: $red-bdr;
       transform: translateY(-2px);
     }
   }
@@ -178,7 +178,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
   .pillNum {
     font-size: 0.72rem;
     font-weight: 800;
-    color: $teal-soft;
+    color: $red-soft;
     letter-spacing: 1px;
   }
 
@@ -205,7 +205,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
       rgba(255, 255, 255, 0.018)
     );
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
     position: relative;
     overflow: hidden;
 
@@ -219,7 +219,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
       background: linear-gradient(
         90deg,
         transparent,
-        rgba(45, 212, 191, 0.4),
+        rgba(239, 68, 68, 0.42),
         transparent
       );
     }
@@ -230,7 +230,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     width: 3px;
     align-self: stretch;
     border-radius: 999px;
-    background: linear-gradient(180deg, $teal-soft, rgba(45, 212, 191, 0.15));
+    background: linear-gradient(180deg, $red-soft, rgba(239, 68, 68, 0.15));
   }
 
   .introCardBody {
@@ -244,7 +244,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: $teal-soft;
+    color: $red-soft;
   }
 
   p {
@@ -258,7 +258,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
 // ─── RESPONSIVE ──────────────────────────────────────────────────────────
 
 @media (max-width: $laptop) {
-  .sospensioniIntro {
+  .freniIntro {
     .mediaPlaceholder {
       aspect-ratio: 16 / 8;
     }
@@ -266,7 +266,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
 }
 
 @media (max-width: $tablet) {
-  .sospensioniIntro {
+  .freniIntro {
     padding: 100px 0 80px;
 
     .wrapper {
@@ -296,7 +296,7 @@ $teal-bdr: rgba(45, 212, 191, 0.22);
 }
 
 @media (max-width: $mobile) {
-  .sospensioniIntro {
+  .freniIntro {
     padding: 80px 0 60px;
 
     .wrapper {

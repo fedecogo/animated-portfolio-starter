@@ -1,10 +1,10 @@
-import "./sospensioniIntro.scss";
+import "./carrozzeriaIntro.scss";
 import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.14 },
+    transition: { staggerChildren: 0.12 },
   },
 };
 
@@ -26,9 +26,9 @@ const cardVariants = {
   },
 };
 
-const SospensioniIntro = () => {
+const CarrozzeriaIntro = () => {
   return (
-    <section className="sospensioniIntro" id="sospensioni-intro">
+    <section className="carrozzeriaIntro" id="carrozzeria-intro">
       <div className="wrapper">
         {/* ── EYEBROW + TITOLO ────────────────────────────────────────────── */}
         <motion.div
@@ -39,21 +39,21 @@ const SospensioniIntro = () => {
           viewport={{ once: true, amount: 0.25 }}
         >
           <motion.span className="sectionLabel" variants={fadeUpVariants}>
-            Capitolo 5.2 — Sospensioni
+            Capitolo 7 — Carrozzeria
           </motion.span>
 
           <motion.h2 variants={fadeUpVariants}>
-            Le sospensioni — controllo, assorbimento e assetto dinamico
+            La carrozzeria — forma, protezione, ergonomia e flusso dell’aria
           </motion.h2>
 
           <motion.p className="lead" variants={fadeUpVariants}>
-            Le sospensioni non servono soltanto a rendere la moto più comoda:
-            definiscono il modo in cui la ruota resta in contatto con il terreno,
-            controllano il trasferimento di carico in frenata e accelerazione e
-            determinano stabilità, precisione di guida e capacità di assorbire
-            urti e asperità. Su una 2 tempi enduro, cross, motard o stradale,
-            forcella e monoammortizzatore cambiano radicalmente il comportamento
-            della moto.
+            La carrozzeria non è soltanto estetica. Serbatoio, plastiche, sella,
+            codone e superfici aerodinamiche definiscono il modo in cui il
+            pilota si muove sulla moto, come vengono protetti i componenti
+            interni e come il corpo macchina gestisce aria, sporco, urti e
+            distribuzione visiva dei volumi. Su una 2 tempi enduro, cross,
+            motard o stradale, la carrozzeria condiziona comfort, controllo,
+            posizione di guida e identità tecnica del mezzo.
           </motion.p>
         </motion.div>
 
@@ -69,7 +69,7 @@ const SospensioniIntro = () => {
             <div className="placeholderInner">
               <img
                 src=""
-                alt="Forcella e monoammortizzatore su moto 2 tempi"
+                alt="Carrozzeria moto 2 tempi con serbatoio, plastiche, sella e codone"
                 loading="lazy"
               />
             </div>
@@ -85,11 +85,11 @@ const SospensioniIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Forcella" },
-            { num: "02", label: "Monoammortizzatore" },
-            { num: "03", label: "Escursione" },
-            { num: "04", label: "Olio sospensioni" },
-            { num: "05", label: "Compressione e ritorno" },
+            { num: "01", label: "Serbatoio" },
+            { num: "02", label: "Plastiche" },
+            { num: "03", label: "Sella" },
+            { num: "04", label: "Codone / Codino" },
+            { num: "05", label: "Aerodinamica" },
           ].map((t) => (
             <motion.div
               className="topicPill"
@@ -114,15 +114,15 @@ const SospensioniIntro = () => {
           <div className="introCardBody">
             <span className="introCardTag">Perché è fondamentale</span>
             <p>
-              Nel mondo delle 2T la sospensione è uno dei sistemi più sensibili
-              di tutta la moto: se è troppo rigida la ruota rimbalza e perde
-              aderenza, se è troppo morbida affonda, scompone l’assetto e rende
-              la guida imprecisa. La forcella gestisce gran parte di frenata,
-              ingresso curva e impatto anteriore; il mono controlla trazione,
-              uscita curva e stabilità del retrotreno. Escursione, viscosità
-              dell’olio, taratura idraulica e regolazioni di compressione e
-              ritorno determinano quanto velocemente la sospensione si muove,
-              quanto assorbe e come restituisce energia dopo la deformazione.
+              Nella carrozzeria ogni elemento ha una doppia funzione: pratica e
+              dinamica. Il serbatoio deve contenere carburante senza ostacolare
+              i movimenti del pilota; le plastiche devono proteggere e guidare i
+              flussi senza diventare fragili o ingombranti; la sella deve
+              garantire appoggio, trasferimento del peso e continuità nei
+              cambi di posizione; il codone organizza la parte posteriore della
+              moto; l’aerodinamica influenza stabilità, penetrazione e gestione
+              delle turbolenze. Anche quando sembra “solo design”, la
+              carrozzeria partecipa direttamente all’esperienza di guida.
             </p>
           </div>
         </motion.div>
@@ -131,4 +131,4 @@ const SospensioniIntro = () => {
   );
 };
 
-export default SospensioniIntro;
+export default CarrozzeriaIntro;
