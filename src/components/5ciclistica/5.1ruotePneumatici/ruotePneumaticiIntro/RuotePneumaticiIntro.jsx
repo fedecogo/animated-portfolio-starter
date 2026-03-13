@@ -1,4 +1,4 @@
-import "./alimentazioneIntro.scss";
+import "./ruotePneumaticiIntro.scss";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -18,9 +18,9 @@ const cardVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-const AlimentazioneIntro = () => {
+const RuotePneumaticiIntro = () => {
   return (
-    <section className="alimentazioneIntro" id="alimentazione-intro">
+    <section className="ruotePneumaticiIntro" id="ruote-pneumatici-intro">
       <div className="wrapper">
         {/* ── EYEBROW + TITOLO ────────────────────────────────────────────── */}
         <motion.div
@@ -31,20 +31,19 @@ const AlimentazioneIntro = () => {
           viewport={{ once: true, amount: 0.25 }}
         >
           <motion.span className="sectionLabel" variants={fadeUpVariants}>
-            Capitolo 3.1 — Alimentazione
+            Capitolo 5.1 — Ruote e pneumatici
           </motion.span>
 
           <motion.h2 variants={fadeUpVariants}>
-            Come entra il carburante nel motore
+            Le ruote — il contatto tra moto e terreno
           </motion.h2>
 
           <motion.p className="lead" variants={fadeUpVariants}>
-            Prima che avvenga qualsiasi combustione, il carburante deve arrivare
-            al cilindro — nella giusta quantità, alla giusta concentrazione, al
-            momento giusto. Il sistema di alimentazione è la catena di
-            componenti che trasforma benzina e aria in una miscela combustibile
-            pronta per entrare nel carter. In questa sezione esploriamo ogni
-            anello di quella catena — dal carburatore al pacco lamellare.
+            La ruota è l'unico punto di contatto tra la moto e il suolo. Tutto
+            — potenza, frenata, sterzo, peso — passa attraverso una superficie
+            di contatto grande come un palmo di mano. Comprendere mozzi, cerchi
+            e pneumatici significa capire dove si vince e si perde trazione,
+            stabilità e controllo.
           </motion.p>
         </motion.div>
 
@@ -59,8 +58,8 @@ const AlimentazioneIntro = () => {
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
               <img
-                src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773367773/Adobe_Express_-_file_1_qqmhao.png"
-                alt="Motocross 2 stroke chassis illustration"
+                src=""
+                alt="Ruote e pneumatici fuoristrada"
                 loading="lazy"
               />
             </div>
@@ -76,11 +75,10 @@ const AlimentazioneIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Carburatore" },
-            { num: "02", label: "Corpo farfallato" },
-            { num: "03", label: "Pompa benzina" },
-            { num: "04", label: "Miscelatore" },
-            { num: "05", label: "Pacco lamellare" },
+            { num: "01", label: "Mozzi" },
+            { num: "02", label: "Cerchi" },
+            { num: "03", label: "Pneumatici" },
+            { num: "04", label: "Grip e trazione" },
           ].map((t) => (
             <motion.div
               className="topicPill"
@@ -103,17 +101,16 @@ const AlimentazioneIntro = () => {
         >
           <div className="introCardLine" />
           <div className="introCardBody">
-            <span className="introCardTag">Perché è importante</span>
+            <span className="introCardTag">Perché è fondamentale</span>
             <p>
-              Nel motore a 2 tempi il sistema di alimentazione non ha valvole —
-              usa il movimento del pistone e la geometria delle luci per
-              controllare il flusso. Questo significa che ogni componente
-              dell'alimentazione ha un impatto diretto sulla curva di
-              erogazione: il carburatore determina la risposta all'acceleratore,
-              il pacco lamellare controlla la retroazione del gas nel carter, la
-              miscela olio-benzina lubrifica ogni componente in movimento.
-              Capire questo sistema è capire perché una moto tira forte in
-              allungo ma è balbuziente in uscita di curva — o viceversa.
+              Nel fuoristrada la ruota non è un componente passivo — è un
+              sistema attivo. Il pneumatico si deforma per assorbire
+              irregolarità, il mozzo trasmette i carichi dal cuscinetto al
+              cerchio, i raggi in tensione distribuiscono i carichi d'impatto.
+              Qualsiasi errore in uno di questi elementi — pressione sbagliata,
+              raggio allentato, cuscinetto consumato — si traduce direttamente
+              in instabilità, perdita di trazione o cedimento strutturale sotto
+              carico.
             </p>
           </div>
         </motion.div>
@@ -122,4 +119,4 @@ const AlimentazioneIntro = () => {
   );
 };
 
-export default AlimentazioneIntro;
+export default RuotePneumaticiIntro;

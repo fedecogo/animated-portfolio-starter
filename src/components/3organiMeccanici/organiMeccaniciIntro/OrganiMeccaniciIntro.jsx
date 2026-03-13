@@ -82,10 +82,12 @@ const OrganiMeccaniciIntro = () => {
           {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF PANORAMICA ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — organi meccanici 2T esplosi o in sezione</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+                <img
+                src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773368531/ChatGPT_Image_Mar_13_2026_11_52_00_AM_pcmhs1.png"
+                alt="Motocross 2 stroke chassis illustration"
+                loading="lazy"
+              />
+           </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
         </motion.div>

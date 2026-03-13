@@ -112,14 +112,14 @@ const Hero = ({ onOpenSidebar }) => {
             </a>
           </motion.div>
 
-          <motion.img
+          {/* <motion.img
             className="scrollIcon"
             variants={scrollVariants}
             initial="initial"
             animate="animate"
             src="/scroll.png"
             alt="Scroll down"
-          />
+          /> */}
         </motion.div>
       </div>
 

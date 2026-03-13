@@ -59,6 +59,13 @@ import Forcellone from "./components/4telaio/forcellone/Forcellone";
 import Cavalletto from "./components/4telaio/cavalletto/Cavalletto";
 import CiclisticaIntro from "./components/5ciclistica/ciclisticaIntro/CiclisticaIntro";
 import Sidebar from "./components/sidebar/Sidebar";
+import RuotePneumaticiIntro from "./components/5ciclistica/5.1ruotePneumatici/ruotePneumaticiIntro/RuotePneumaticiIntro";
+import Mozzi from "./components/5ciclistica/5.1ruotePneumatici/mozzi/Mozzi";
+import Pneumatici from "./components/5ciclistica/5.1ruotePneumatici/pneumatici/Pneumatici"; 
+import Cerchi from "./components/5ciclistica/5.1ruotePneumatici/cerchi/cerchi";
+import Grip from "./components/5ciclistica/5.1ruotePneumatici/grip/Grip";
+
+
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -263,6 +270,25 @@ const App = () => {
       {/* Ciclistica */}
       <section id="CiclisticaIntro">
         <CiclisticaIntro />
+      </section>
+
+
+    {/* 5.1 Ruote e pneumatici */}
+
+    <section id="RuotePneumaticiIntro">
+        <RuotePneumaticiIntro />
+      </section>
+      <section id="Mozzi">
+        <Mozzi />
+      </section>
+      <section id="Pneumatici">
+        <Pneumatici />
+      </section>
+      <section id="Cerchi">
+        <Cerchi />
+      </section>
+      <section id="Grip">
+        <Grip />
       </section>
 
 

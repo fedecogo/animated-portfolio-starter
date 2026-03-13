@@ -81,10 +81,12 @@ const TrasmissioneIntro = () => {
           {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF PANORAMICA ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — cambio 2T esploso con alberi, ingranaggi e selettore visibili</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+                <img
+                src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773368819/ChatGPT_Image_Mar_13_2026_11_55_58_AM_vsu7ka.png"
+                alt="Motocross 2 stroke chassis illustration"
+                loading="lazy"
+              />
+          </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
         </motion.div>

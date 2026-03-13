@@ -130,7 +130,7 @@ $violet-bdr:  rgba(167, 139, 250, 0.2);
     }
 
     img, video {
-      width: 100%;
+      width: 75%;
       height: 100%;
       object-fit: cover;
       border-radius: 26px;
@@ -384,5 +384,8 @@ $violet-bdr:  rgba(167, 139, 250, 0.2);
 
     .splitCardBody h3  { font-size: 1.1rem; }
     .splitCardBody p   { font-size: 0.95rem; line-height: 1.7; }
+  }
+  img{
+          width: 100% !important ;
   }
 }

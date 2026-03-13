@@ -2,18 +2,18 @@ $mobile: 576px;
 $tablet: 768px;
 $laptop: 1200px;
 
-$fuel: #d4a017;
-$fuel-soft: #f0c040;
-$fuel-dim: rgba(212, 160, 23, 0.12);
-$fuel-bdr: rgba(212, 160, 23, 0.2);
+$teal: #2dd4bf;
+$teal-soft: #5ee0ce;
+$teal-dim: rgba(45, 212, 191, 0.10);
+$teal-bdr: rgba(45, 212, 191, 0.22);
 
-.alimentazioneIntro {
+.ruotePneumaticiIntro {
   position: relative;
   padding: 130px 0 100px;
   background:
     radial-gradient(
       ellipse at 50% 0%,
-      rgba(212, 160, 23, 0.09),
+      rgba(45, 212, 191, 0.08),
       transparent 55%
     ),
     linear-gradient(180deg, #0b0d13 0%, #0d1019 100%);
@@ -32,7 +32,7 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(212, 160, 23, 0.5),
+      rgba(45, 212, 191, 0.5),
       transparent
     );
   }
@@ -65,9 +65,9 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
     display: inline-block;
     padding: 8px 18px;
     border-radius: 999px;
-    background: $fuel-dim;
-    border: 1px solid $fuel-bdr;
-    color: $fuel-soft;
+    background: $teal-dim;
+    border: 1px solid $teal-bdr;
+    color: $teal-soft;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.78rem;
@@ -83,7 +83,7 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
     background: linear-gradient(
       135deg,
       #ffffff 40%,
-      rgba(212, 160, 23, 0.8) 100%
+      rgba(45, 212, 191, 0.8) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -109,8 +109,8 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
     width: 100%;
     aspect-ratio: 16 / 7;
     border-radius: 28px;
-    border: 2px dashed rgba(212, 160, 23, 0.22);
-    background: rgba(212, 160, 23, 0.03);
+    border: 2px dashed $teal-bdr;
+    background: rgba(45, 212, 191, 0.03);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,8 +120,8 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
       background 0.3s ease;
 
     &:hover {
-      border-color: rgba(212, 160, 23, 0.42);
-      background: rgba(212, 160, 23, 0.06);
+      border-color: rgba(45, 212, 191, 0.42);
+      background: rgba(45, 212, 191, 0.06);
     }
 
     img,
@@ -141,22 +141,6 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
     gap: 10px;
     text-align: center;
     pointer-events: none;
-  }
-
-  .placeholderIcon {
-    font-size: 2.2rem;
-    color: rgba(212, 160, 23, 0.3);
-    line-height: 1;
-  }
-  .placeholderText {
-    font-size: 0.98rem;
-    font-weight: 700;
-    color: rgba(240, 192, 64, 0.55);
-  }
-  .placeholderSub {
-    font-size: 0.8rem;
-    color: rgba(245, 247, 250, 0.28);
-    font-family: monospace;
   }
 
   // ─── TOPICS ROW ────────────────────────────────────────────────────────────
@@ -185,8 +169,8 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
     cursor: default;
 
     &:hover {
-      background: $fuel-dim;
-      border-color: $fuel-bdr;
+      background: $teal-dim;
+      border-color: $teal-bdr;
       transform: translateY(-2px);
     }
   }
@@ -194,7 +178,7 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
   .pillNum {
     font-size: 0.72rem;
     font-weight: 800;
-    color: $fuel-soft;
+    color: $teal-soft;
     letter-spacing: 1px;
   }
 
@@ -235,7 +219,7 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
       background: linear-gradient(
         90deg,
         transparent,
-        rgba(212, 160, 23, 0.4),
+        rgba(45, 212, 191, 0.4),
         transparent
       );
     }
@@ -246,7 +230,7 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
     width: 3px;
     align-self: stretch;
     border-radius: 999px;
-    background: linear-gradient(180deg, $fuel-soft, rgba(212, 160, 23, 0.15));
+    background: linear-gradient(180deg, $teal-soft, rgba(45, 212, 191, 0.15));
   }
 
   .introCardBody {
@@ -260,7 +244,7 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: $fuel-soft;
+    color: $teal-soft;
   }
 
   p {
@@ -274,7 +258,7 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
 // ─── RESPONSIVE ──────────────────────────────────────────────────────────────
 
 @media (max-width: $laptop) {
-  .alimentazioneIntro {
+  .ruotePneumaticiIntro {
     .mediaPlaceholder {
       aspect-ratio: 16 / 8;
     }
@@ -282,24 +266,28 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
 }
 
 @media (max-width: $tablet) {
-  .alimentazioneIntro {
+  .ruotePneumaticiIntro {
     padding: 100px 0 80px;
 
     .wrapper {
       padding: 0 20px;
       gap: 40px;
     }
+
     h2 {
       font-size: clamp(2.4rem, 9vw, 3.8rem);
       letter-spacing: -1.5px;
     }
+
     .lead {
       font-size: 0.98rem;
     }
+
     .mediaPlaceholder {
       aspect-ratio: 4 / 3;
       border-radius: 22px;
     }
+
     .introCard {
       padding: 24px 22px;
       gap: 20px;
@@ -308,36 +296,43 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
 }
 
 @media (max-width: $mobile) {
-  .alimentazioneIntro {
+  .ruotePneumaticiIntro {
     padding: 80px 0 60px;
 
     .wrapper {
       padding: 0 16px;
       gap: 32px;
     }
+
     .sectionLabel {
       font-size: 0.72rem;
       padding: 7px 14px;
     }
+
     h2 {
       font-size: 2.2rem;
       letter-spacing: -1px;
     }
+
     .lead,
     p {
       font-size: 0.95rem;
       line-height: 1.7;
     }
+
     .topicPill {
       padding: 8px 16px;
     }
+
     .pillLabel {
       font-size: 0.88rem;
     }
+
     .introCard {
       padding: 20px 18px;
       gap: 16px;
     }
+
     .mediaPlaceholder {
       aspect-ratio: 4 / 3;
       border-radius: 18px;

@@ -79,15 +79,15 @@ const RaffreddamentoEAccensioneIntro = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
         >
-          {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF PANORAMICA ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — schema circuito raffreddamento + schema elettrico accensione 2T sovrapposti</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+                  <img
+                src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773369908/ChatGPT_Image_Mar_13_2026_12_14_55_PM_zqbrp1.png"
+                alt="Raffreddamento e accensione"
+                loading="lazy"
+              />
+           </div>
           </div>
-          {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
         </motion.div>
 
         {/* ── TOPICS ROW ──────────────────────────────────────────────────── */}

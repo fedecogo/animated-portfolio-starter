@@ -107,10 +107,12 @@ const MotoreIntro = () => {
         >
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — motore 2T esploso con tutti i componenti etichettati</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+            <img
+                src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773366469/ChatGPT_Image_Mar_13_2026_11_17_25_AM_cwzbky.png"
+                alt="Motocross 2 stroke chassis illustration"
+                loading="lazy"
+              />
+         </div>
           </div>
         </motion.div>
 

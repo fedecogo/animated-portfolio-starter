@@ -66,7 +66,7 @@ const GruppoTermicoIntro = () => {
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
               <img
-                src="https://wemalossistore.blob.core.windows.net/imgproducts/31%207083/31%207083_store.jpg"
+                src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773368048/Untitled_design_5_wk6qpe.png"
                 alt="Product image"
                 className="placeholderImage"
               />

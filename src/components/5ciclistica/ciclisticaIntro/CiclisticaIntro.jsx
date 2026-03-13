@@ -94,11 +94,14 @@ const CiclisticaIntro = () => {
         >
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — moto in azione con ruote, sospensioni e freni in evidenza</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+                <img
+    src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773363572/ChatGPT_Image_Mar_13_2026_10_29_22_AM_btnvjc.png"
+    loading="lazy"
+  />
+           </div>
           </div>
+
+
         </motion.div>
 
         {/* ── CAPITOLI GRID ───────────────────────────────────────────────── */}

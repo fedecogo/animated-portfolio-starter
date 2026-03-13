@@ -30,19 +30,18 @@ const pillVariants = {
 
 const TelaioIntro = () => {
   const topics = [
-    { label: "Telaio",             icon: "⬡" },
-    { label: "Materiali",          icon: "◧" },
-    { label: "Geometrie e pesi",   icon: "⌖" },
-    { label: "Rigidità",           icon: "↔" },
-    { label: "Canotto di sterzo",  icon: "◎" },
-    { label: "Forcellone",         icon: "⟵" },
-    { label: "Cavalletto",         icon: "⊥" },
+    { label: "Telaio", icon: "⬡" },
+    { label: "Materiali", icon: "◧" },
+    { label: "Geometrie e pesi", icon: "⌖" },
+    { label: "Rigidità", icon: "↔" },
+    { label: "Canotto di sterzo", icon: "◎" },
+    { label: "Forcellone", icon: "⟵" },
+    { label: "Cavalletto", icon: "⊥" },
   ];
 
   return (
     <section className="telaioIntro" id="telaio-intro">
       <div className="wrapper">
-
         {/* ── HERO TEXT ───────────────────────────────────────────────────── */}
         <motion.div
           className="heroText"
@@ -57,19 +56,20 @@ const TelaioIntro = () => {
 
           <motion.h2 variants={fadeUpVariants}>
             Il Telaio —<br />
-            <span className="gradientText">la struttura che tiene tutto insieme</span>
+            <span className="gradientText">
+              la struttura che tiene tutto insieme
+            </span>
           </motion.h2>
 
           <motion.p className="lead" variants={fadeUpVariants}>
-            Il telaio è la spina dorsale della moto: collega il motore
-            alle sospensioni, trasferisce le forze dal pilota alla ruota
-            e definisce ogni sensazione trasmessa attraverso il manubrio
-            e le pedane. Non è un contenitore passivo — è un componente
-            attivo con proprietà meccaniche precise, progettato con la
-            stessa cura del motore. In questa sezione esploriamo materiali,
-            geometrie, rigidità, canotto di sterzo, forcellone e cavalletto:
-            tutto ciò che fa stare in piedi la moto e la fa andare dove
-            vuole il pilota.
+            Il telaio è la spina dorsale della moto: collega il motore alle
+            sospensioni, trasferisce le forze dal pilota alla ruota e definisce
+            ogni sensazione trasmessa attraverso il manubrio e le pedane. Non è
+            un contenitore passivo — è un componente attivo con proprietà
+            meccaniche precise, progettato con la stessa cura del motore. In
+            questa sezione esploriamo materiali, geometrie, rigidità, canotto di
+            sterzo, forcellone e cavalletto: tutto ciò che fa stare in piedi la
+            moto e la fa andare dove vuole il pilota.
           </motion.p>
         </motion.div>
 
@@ -84,9 +84,11 @@ const TelaioIntro = () => {
           {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF PANORAMICA ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — telaio nudo con canotto, forcellone e punti di attacco motore visibili</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
+              <img
+                src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773366088/Untitled_design_3_nvh6xv.png"
+                alt="Motocross 2 stroke chassis illustration"
+                loading="lazy"
+              />
             </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
@@ -101,7 +103,11 @@ const TelaioIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {topics.map((t) => (
-            <motion.div className="topicPill" key={t.label} variants={pillVariants}>
+            <motion.div
+              className="topicPill"
+              key={t.label}
+              variants={pillVariants}
+            >
               <span className="topicIcon">{t.icon}</span>
               <span className="topicLabel">{t.label}</span>
             </motion.div>
@@ -122,15 +128,14 @@ const TelaioIntro = () => {
             reggere il peso statico e gli impatti dinamici, resistere alla
             torsione in curva su terreno sconnesso, mantenere l'allineamento
             geometrico preciso tra canotto e forcellone, fungere da elemento
-            strutturale solidale al motore, definire la posizione del pilota
-            e — non ultimo — comunicare attraverso la sua flessibilità
-            controllata le informazioni che il pilota usa per guidare.
-            Capire come è costruito e perché è fatto così è il primo passo
-            per capire perché due moto con lo stesso motore si guidano
-            in modo completamente diverso.
+            strutturale solidale al motore, definire la posizione del pilota e —
+            non ultimo — comunicare attraverso la sua flessibilità controllata
+            le informazioni che il pilota usa per guidare. Capire come è
+            costruito e perché è fatto così è il primo passo per capire perché
+            due moto con lo stesso motore si guidano in modo completamente
+            diverso.
           </p>
         </motion.div>
-
       </div>
     </section>
   );

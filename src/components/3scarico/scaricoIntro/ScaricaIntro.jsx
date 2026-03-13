@@ -78,15 +78,14 @@ const ScaricaIntro = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
         >
-          {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF PANORAMICA ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — espansione 2T in sezione con onde di pressione visualizzate</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+              <img
+              src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773369327/ChatGPT_Image_Mar_13_2026_12_05_10_PM_glq6pm.png"
+              alt=""
+              />
+           </div>
           </div>
-          {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
         </motion.div>
 
         {/* ── TOPICS ROW ──────────────────────────────────────────────────── */}
