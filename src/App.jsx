@@ -41,7 +41,7 @@ import Ingranaggi from "./components/3trasmissione/ingranaggi/Ingranaggi";
 import ScaricaIntro from "./components/3scarico/scaricoIntro/ScaricaIntro";
 import Espansione from "./components/3scarico/espansione/Espansione";
 import Terminale from "./components/3scarico/terminale/Terminale";
-import ValvolaScarico from "./components/3scarico/valvolaDiScarico/valvolaScarico";
+import ValvolaScarico from "./components/3scarico/valvolaDiScarico/ValvolaScarico";
 import RaffreddamentoEAccensioneIntro from "./components/3raffreddamentoEAccensione/raffreddamentoEAccensioneIntro/RaffreddamentoEAccensioneIntro";
 import Radiatore from "./components/3raffreddamentoEAccensione/radiatore/Radiatore";
 import PompaAcqua from "./components/3raffreddamentoEAccensione/pompaAcqua/PompaAcqua";
