@@ -171,11 +171,16 @@ const subListVariants = {
   closed: { height: 0,      opacity: 0, transition: { duration: 0.2,  ease: "easeIn"  } },
 };
 
-const Links = () => {
+const Links = ({ setOpen }) => {
   const [openSection, setOpenSection] = useState(null);
 
   const toggle = (id) =>
     setOpenSection((prev) => (prev === id ? null : id));
+
+  const handleLinkClick = () => {
+    setOpenSection(null);
+    setOpen(false);
+  };
 
   return (
     <motion.div className="links" variants={variants}>
@@ -216,6 +221,7 @@ const Links = () => {
                         href={`#${child.id}`}
                         key={child.id}
                         className="subLink subLinkSection"
+                        onClick={handleLinkClick}
                       >
                         {child.name}
                       </a>
@@ -224,6 +230,7 @@ const Links = () => {
                         href={`#${child.id}`}
                         key={child.id}
                         className="subLink"
+                        onClick={handleLinkClick}
                       >
                         {child.name}
                       </a>
@@ -240,6 +247,7 @@ const Links = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={handleLinkClick}
           >
             {item.name}
           </motion.a>

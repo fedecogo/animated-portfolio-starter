@@ -26,7 +26,7 @@ const Sidebar = ({ open, setOpen }) =>{
     return(
         <motion.div className="sidebar" initial="closed" animate={open ? "open" : "closed"}>
             <motion.div className="bg" variants = {variants}>
-                <Links/>
+                <Links setOpen={setOpen} />
             </motion.div>
             <ToggleBTN setOpen={setOpen} />
             
