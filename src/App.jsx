@@ -62,7 +62,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import RuotePneumaticiIntro from "./components/5ciclistica/5.1ruotePneumatici/ruotePneumaticiIntro/RuotePneumaticiIntro";
 import Mozzi from "./components/5ciclistica/5.1ruotePneumatici/mozzi/Mozzi";
 import Pneumatici from "./components/5ciclistica/5.1ruotePneumatici/pneumatici/Pneumatici"; 
-import Cerchi from "./components/5ciclistica/5.1ruotePneumatici/cerchi/cerchi";
+import Cerchi from "./components/5ciclistica/5.1ruotePneumatici/cerchi/Cerchi";
 import Grip from "./components/5ciclistica/5.1ruotePneumatici/grip/Grip";
 import TrasmissioneFinaleIntro from "./components/5ciclistica/5.2trasmissioneFinale/trasmissioneFinaleIntro/TrasmissioneFinaleIntro";
 import Pignone from "./components/5ciclistica/5.2trasmissioneFinale/pignone/Pignone";
