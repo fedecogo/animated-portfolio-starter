@@ -75,11 +75,6 @@ import Monoammortizzatore from "./components/5ciclistica/5.3sospensioni/monoammo
 import OlioSospensioni from "./components/5ciclistica/5.3sospensioni/olioSospensioni/OlioSospensioni";
 import Escursione from "./components/5ciclistica/5.3sospensioni/escursione/Escursione";
 import CompressioneRitornoRegolazioni from "./components/5ciclistica/5.3sospensioni/compressioneRitornoRegolazioni/CompressioneRitornoRegolazioni";
-
-
-
-
-
 import FreniIntro from "./components/5ciclistica/5.4sistemaFrenante/sistemaFrenanteIntro/FreniIntro";
 import Pompa from "./components/5ciclistica/5.4sistemaFrenante/pompa/Pompa";
 import OlioFreni from "./components/5ciclistica/5.4sistemaFrenante/olioFreni/OlioFreni";
@@ -87,12 +82,10 @@ import Pinza from "./components/5ciclistica/5.4sistemaFrenante/pinza/Pinza";
 import DiscoPastiglie from "./components/5ciclistica/5.4sistemaFrenante/discoPastiglie/DiscoPastiglie";
 import RadialeAssiale from "./components/5ciclistica/5.4sistemaFrenante/radialeAssiale/RadialeAssiale";
 import SpurgoFreni from "./components/5ciclistica/5.4sistemaFrenante/spurgoFreni/SpurgoFreni";
-
-
-
 import ElettronicaIntro from "./components/6elettronica/elettronicaIntro/ElettronicaIntro";
-
-
+import Accensione from "./components/6elettronica/accensione/Accensione";
+import Chiave from "./components/6elettronica/chiave/Chiave";
+import Batteria from "./components/6elettronica/batteria/Batteria";
 
 
 
@@ -417,6 +410,15 @@ const App = () => {
        <section id="ElettronicaIntro">
         <ElettronicaIntro />
        </section>
+       <section id="Accensione">
+        <Accensione />
+       </section>
+       <section id="Chiave">
+        <Chiave />
+       </section>
+      <section id="Batteria">
+        <Batteria />
+      </section>
 
 
 
