@@ -84,8 +84,7 @@ const Telaio = () => {
               </div>
               <div className="miniStep">
                 <span className="miniIndex">03</span>
-                <span className="miniStep">
-                </span>
+                
                 <span className="miniText">Partecipa alla struttura rigida insieme al motore — in quasi tutti i 2T il propulsore è elemento portante</span>
               </div>
               <div className="miniStep">
