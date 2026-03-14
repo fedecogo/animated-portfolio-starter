@@ -22,10 +22,15 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
-            padding: 80px 40px 40px;
+            justify-content: flex-start;
+            padding: 80px 40px 60px;
             gap: 4px;
             overflow-y: auto;
+            scroll-behavior: smooth;
+            // webkit scrollbar nascosta ma funzionale
+            &::-webkit-scrollbar { width: 4px; }
+            &::-webkit-scrollbar-track { background: transparent; }
+            &::-webkit-scrollbar-thumb { background: #ddd; border-radius: 2px; }
 
             // top-level direct links (motion.a)
             > a {
@@ -84,6 +89,22 @@
                 &:hover {
                     color: black;
                     padding-left: 6px;
+                }
+            }
+
+            .subLinkSection {
+                font-size: 13px;
+                font-weight: 700;
+                color: #999;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                padding: 10px 0 4px;
+                margin-top: 6px;
+                border-top: 1px solid #ebebeb;
+                &:first-child { border-top: none; margin-top: 0; }
+                &:hover {
+                    color: #444;
+                    padding-left: 0;
                 }
             }
         }

@@ -5,7 +5,18 @@
       "Bash(sed -n '53,55p' \"c:/Users/ASUS/Documents/GitHub/animated-portfolio-starter/src/components/3trasmissione/trasmissioneIntro/TrasmissioneIntro.jsx\")",
       "Bash(sed -n '50,52p' \"c:/Users/ASUS/Documents/GitHub/animated-portfolio-starter/src/components/3scarico/scaricoIntro/ScaricaIntro.jsx\")",
       "Bash(sed -n '53,55p' \"c:/Users/ASUS/Documents/GitHub/animated-portfolio-starter/src/components/3raffreddamentoEAccensione/raffreddamentoEAccensioneIntro/RaffreddamentoEAccensioneIntro.jsx\")",
-      "Bash(sed -n '54,56p' \"c:/Users/ASUS/Documents/GitHub/animated-portfolio-starter/src/components/4telaio/telaioIntro/TelaioIntro.jsx\")"
+      "Bash(sed -n '54,56p' \"c:/Users/ASUS/Documents/GitHub/animated-portfolio-starter/src/components/4telaio/telaioIntro/TelaioIntro.jsx\")",
+      "Bash(mv 3componentiDelMotore 3motore/3.1componentiDelMotore)",
+      "Bash(mv 3gruppoTermico 3motore/3.2gruppoTermico)",
+      "Bash(mv 3organiMeccanici 3motore/3.3organiMeccanici)",
+      "Bash(mv 3trasmissione 3motore/3.4trasmissione)",
+      "Bash(mv 3scarico 3motore/3.5scarico)",
+      "Bash(mv 3raffreddamentoEAccensione 3motore/3.6raffreddamentoEAccensione)",
+      "Bash(cp -r 3gruppoTermico 3motore/3.2gruppoTermico)",
+      "Bash(cp -r 3organiMeccanici 3motore/3.3organiMeccanici)",
+      "Bash(cp -r 3trasmissione 3motore/3.4trasmissione)",
+      "Bash(cp -r 3scarico 3motore/3.5scarico)",
+      "Bash(cp -r 3raffreddamentoEAccensione 3motore/3.6raffreddamentoEAccensione)"
     ]
   }
 }

@@ -1,0 +1,1894 @@
+═══════════════════════════════════════════════════════════════════════════════
+  PROMPT IMMAGINI — PORTFOLIO MOTO 2 TEMPI
+  Totale placeholder: 129 immagini
+═══════════════════════════════════════════════════════════════════════════════
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  BASE COMUNE — DA APPLICARE A TUTTI I PROMPT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Aggiungi SEMPRE alla fine di ogni prompt:
+"No background, no text, no labels, no watermarks, no writing of any kind.
+Transparent background or solid black (#0d1019). High-detail technical
+illustration style, clean lines, realistic materials, soft shadows.
+Dark palette with bright accent colors (white, orange, blue, teal, green)
+to highlight key components. 3D render or high-quality vector illustration."
+
+In italiano: sfondo trasparente o nero pieno, NESSUN TESTO, nessuna etichetta,
+nessun watermark, nessuna scritta di alcun tipo.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEZIONE 3 — COMPONENTI DEL MOTORE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE: src/components/3componentiDelMotore/pompaBenzina/PompaBenzina.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-01] — Riga 122
+Titolo: Pompa benzina a diaframma — schema in sezione
+Prompt:
+Technical cutaway illustration of a 2-stroke motorcycle fuel diaphragm pump.
+Cross-section view showing: flexible rubber diaphragm in the center, inlet
+check valve on the left with ball and spring, outlet check valve on the right,
+vacuum port connecting to the engine crankcase, fuel inlet and fuel outlet
+passages. Show the diaphragm in two positions — one pushed (pressure) in
+orange/amber glow, one pulled (vacuum) in blue tint. Metal housing rendered
+in dark aluminum. All internal passages clearly visible. Exploded slightly
+to show component layers.
+
+[IMG-02] — Riga 274
+Titolo: Pompa benzina elettrica e schema circuito
+Prompt:
+Technical illustration of a 2-stroke motorcycle electric fuel pump system.
+Show a cylindrical electric fuel pump unit cut in cross-section revealing:
+small electric motor, impeller/roller vane pump mechanism, inlet filter,
+pressure regulator valve, outlet port. Connected via fuel lines to a small
+fuel tank (semi-transparent) on the left and a carburetor/injector body on
+the right. Wiring harness in orange connecting to relay and fuse. Dark
+engineering style, metal components in brushed aluminum and black.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3componentiDelMotore/miscelatore/Miscelatore.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-03] — Riga 122
+Titolo: Schema generale miscelatore olio 2T
+Prompt:
+Technical diagram of a 2-stroke oil injection system (oil pump/mixer).
+Show the complete system: oil tank (semi-transparent, dark) on the upper
+left, oil pump unit in the center with internal gears visible in cross-
+section, connecting linkage to throttle cable, oil line going down to
+crankcase and intake manifold. Show oil flow direction with thin glowing
+blue arrows. The pump body cut in half to reveal the metering gear and
+output port. Clean dark background, mechanical components in steel and
+aluminum tones.
+
+[IMG-04] — Riga 225
+Titolo: Miscelatore meccanico e sistema di leveraggio
+Prompt:
+Close-up technical illustration of a mechanical 2-stroke oil pump linkage
+system. Show: throttle cable connection point on the left, pivot arm and
+mechanical leverage mechanism in the center, oil pump plunger/rotor on the
+right, and the cam profile that regulates oil flow proportionally to throttle
+opening. The linkage shown in exploded view with motion arrows (orange) showing
+the range of movement. Brushed steel and aluminum materials, precise engineering
+detail on pivot pins and cable attachment.
+
+[IMG-05] — Riga 319
+Titolo: Miscelatore elettronico con schema ECU
+Prompt:
+Technical schematic of an electronic oil injection system for 2-stroke engines.
+Central element: electric oil pump (cylindrical, cut to show motor and pump
+mechanism). Connected by colored lines to: throttle position sensor (TPS)
+in blue, engine speed sensor (RPM) in green, ECU/control unit in amber (shown
+as a circuit board inside a black housing), battery power in red, oil level
+sensor in teal. Oil delivery line in dark blue going to injection point on
+intake. Clean flow diagram style with the physical components rendered
+realistically and connecting lines in distinct colors.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3componentiDelMotore/corpoFarfallato/CorpoFarfallato.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-06] — Riga 287
+Titolo: Schema ECU e sensori corpo farfallato
+Prompt:
+Technical system diagram of a throttle body with ECU and sensors for a
+2-stroke motorcycle. Center: throttle body cut in section showing butterfly
+valve, air passage, TPS sensor on the shaft. Connected to: ECU (circuit
+board visible inside housing, amber glow) in the upper right, MAP sensor
+(intake manifold pressure) in teal on the left, TPS wiring in blue, idle
+air control valve in orange, fuel injector (if EFI) in green. Signal flow
+arrows in thin glowing lines. Dark engineering illustration style.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3componentiDelMotore/paccoLamellare/PaccoLamellare.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-07] — Riga 122
+Titolo: Pacco lamellare 2T — vista esplosa
+Prompt:
+Exploded view technical illustration of a 2-stroke reed valve assembly
+(pacco lamellare). Show floating in air with clear separation between layers:
+aluminum/composite reed block (V-shaped, dark) in the center, two pairs of
+thin reed petals (one side steel, shiny; other side carbon fiber, dark woven
+pattern) separated from the block, reed stop limiters (curved metal pieces)
+above each petal, and mounting bolts at corners. Show intake air flow direction
+with blue arrows through the V opening. Perspective view, slightly isometric.
+
+[IMG-08] — Riga 290
+Titolo: Confronto lamelle acciaio vs carbonio
+Prompt:
+Side-by-side technical comparison of two reed valve petals. Left petal:
+steel reed — shiny, reflective, slightly thicker, showing surface scratches
+from use. Right petal: carbon fiber reed — dark woven texture, thinner,
+lighter appearance, with epoxy matrix visible under top light. Both shown
+from above and in slight isometric perspective to show thickness difference.
+A thin cross-section slice of each shown at the bottom to compare thickness
+and material layers. Dark background, studio lighting from above.
+
+[IMG-09] — Riga 479
+Titolo: Lamelle usurate vs nuove — confronto
+Prompt:
+Comparative illustration of reed valve petals: new vs worn. Left side:
+new reed petal — perfectly flat, smooth surface, sharp edges, uniform color.
+Right side: worn reed petal — curved/warped at the tip (no longer seating
+flat), micro-cracks visible at the base, dark discoloration from heat, edge
+chipping visible. Both petals shown from the side to emphasize the warping,
+and from above to show surface damage. Dramatic raking light from the left
+to emphasize surface texture and deformation.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEZIONE 3 — GRUPPO TERMICO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE: src/components/3gruppoTermico/testata/Testata.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-10] — Riga 114
+Titolo: Testata 2T in sezione — camera di combustione e squish band
+Prompt:
+Precise cross-section technical illustration of a 2-stroke cylinder head
+(testata). The cut plane bisects the head showing: central dome-shaped
+combustion chamber cavity (glowing orange-amber from residual heat), flat
+squish band area around the perimeter (highlighted in teal), spark plug
+bore angled from the right, cooling fins (for air-cooled) or water jacket
+passages (for liquid-cooled, shown in blue semi-transparent channels), head
+gasket seating face at the bottom. Show the squish gap measurement arrow.
+High precision engineering cutaway, isometric perspective.
+
+[IMG-11] — Riga 339
+Titolo: Flusso squish al PMI e fronte di fiamma
+Prompt:
+Dynamic technical illustration showing the squish effect in a 2-stroke engine
+at BDC (bottom dead center approach to TDC). Show: piston crown moving upward
+(motion blur), squish band area compressing the mixture from the periphery
+toward the center (show compressed gas movement with orange flow arrows
+radiating inward), the turbulent mixture in the central combustion chamber,
+spark plug electrode with spark arc in electric blue, flame front spreading
+outward from ignition point in orange-red gradient. Semi-transparent piston
+visible below. Dark cinematic style.
+
+[IMG-12] — Riga 544
+Titolo: Guarnizione testata e misura clearance squish
+Prompt:
+Technical illustration showing head gasket installation and squish clearance
+measurement. Left panel: head gasket (copper colored, with cylinder bore hole
+and bolt holes visible) shown flat from above, then from the side showing
+its thickness. Right panel: cross-section of assembled head showing piston
+at TDC, the squish gap between piston crown squish band and head squish band
+(highlighted with an orange measurement arrow), head gasket compressed between
+cylinder and head. A feeler gauge (spessimetro) inserted in the squish gap
+shown in a detail circle inset.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3gruppoTermico/fasce/Fasce.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-13] — Riga 113
+Titolo: Fascia elastica sul pistone 2T — posizione
+Prompt:
+Technical illustration of a 2-stroke piston with piston ring installed.
+Show the piston from a 3/4 isometric view: aluminum piston body with the
+ring groove visible, a single compression ring seated in the groove (shown
+slightly expanded and glowing in steel-blue), the locating pin (anti-rotation
+pin) in the groove highlighted in amber, and the ring gap aligned with the
+pin. Below the main view, show a cross-section detail of the ring in the
+groove: ring face, ring back, groove walls, and the thin oil film between
+ring and cylinder wall in teal.
+
+[IMG-14] — Riga 298
+Titolo: Sezione fascia in sede e giunto
+Prompt:
+Detailed cross-section illustration of a piston ring (fascia elastica) in
+its groove, showing the ring-cylinder interface. Main view: ring seated in
+groove, cylinder wall on the right, ring end gap (giunto) visible with the
+gap measurement arrow. Secondary close-up inset (circle): the ring face
+geometry against the honed cylinder wall showing micro-surface texture,
+oil film between ring and bore in translucent blue, ring edge pressure
+contact zone highlighted in amber. The anti-rotation pin shown in cross-
+section below the ring.
+
+[IMG-15] — Riga 570
+Titolo: Misura giunto fascia con spessimetro
+Prompt:
+Technical illustration of ring gap measurement procedure. Show: cylinder
+bore from above (circular), piston ring inserted into bore to measure the
+gap at the end-gap (giunto), feeler gauge blades (spessimetro) being inserted
+into the gap from above. The feeler gauge shown in gold/amber color, the
+ring in steel blue, the cylinder bore in dark aluminum. Close-up perspective
+looking slightly down into the bore. An inset shows the gap measurement
+result with acceptable vs worn gap indication.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3gruppoTermico/pistone/Pistone.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-16] — Riga 112
+Titolo: Pistone 2T esploso in sezione
+Prompt:
+Exploded cross-section technical illustration of a 2-stroke piston assembly.
+Floating apart in vertical sequence from top to bottom: piston crown (domed
+aluminum, with squish band area, intake and exhaust ports visible on sides),
+piston ring in its groove (expanded, steel), circlip in groove (C-shaped,
+bright steel), wrist pin/gudgeon pin (cylindrical, polished steel, horizontal),
+second circlip, small end of connecting rod (visible at the bottom with needle
+bearing). Each component clearly separated and shown with subtle ambient
+glow. Isometric exploded view.
+
+[IMG-17] — Riga 239
+Titolo: Squish band e geometria della testa
+Prompt:
+Top-down cross-section illustration of a 2-stroke piston crown showing
+squish band geometry. View from above looking down: circular piston dome
+in the center (slightly raised, amber warm metal tone), surrounding flat
+squish band area (larger ring around dome, highlighted in teal), and the
+outer ring of the piston crown. An arrow indicates the squish band width
+measurement. A side cross-section inset shows the dome height (H) and the
+squish band angle relative to the head squish surface. Precision engineering
+diagram style.
+
+[IMG-18] — Riga 500
+Titolo: Spinotto, circlip e biella — montaggio
+Prompt:
+Exploded assembly illustration of wrist pin, circlips and connecting rod
+small end. Show: aluminum piston (semi-transparent) with pin bore visible,
+two circlips (C-shaped snap rings) floating on each side, wrist pin
+(cylindrical, polished chrome steel) in the center, connecting rod small
+end with needle bearing (show individual needles in circle arrangement)
+aligned below. Assembly sequence arrows showing direction of pin insertion.
+The pin highlighted in bright steel, circlips in amber, needle bearing
+in blue-teal.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3gruppoTermico/cilindro/Cilindro.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-19] — Riga 112
+Titolo: Cilindro 2T in sezione con luci
+Prompt:
+Precise cross-section technical illustration of a 2-stroke cylinder showing
+all ports. Cut plane bisects the cylinder revealing: honed bore surface
+with micro-texture, exhaust port (scarico) at the top-right with rounded
+port edge (highlighted in orange-red), transfer ports (travaso) on the sides
+with passages going from crankcase to bore (highlighted in teal-blue),
+intake port at the bottom (highlighted in green), Nikasil or chrome plating
+layer on bore wall shown as thin bright line. Port timing positions shown
+with piston ghost-image. Fins visible on exterior (air-cooled version).
+
+[IMG-20] — Riga 318
+Titolo: Scavenging Schnürle e flusso travaso
+Prompt:
+Dynamic flow illustration of Schnürle loop scavenging in a 2-stroke cylinder.
+Top-down cross-section view of cylinder bore showing: two transfer ports
+on opposite sides (highlighted in teal), fresh charge entering as two streams
+that angle upward and curve toward the center top (show as flowing blue-teal
+arrows), the streams meeting and looping up along the back wall, then
+sweeping down across the exhaust port (orange), pushing burnt gases out.
+The flow pattern forms a distinct Schnürle loop visible as a 3D ribbon of
+motion. Piston crown visible at the bottom.
+
+[IMG-21] — Riga 499
+Titolo: Cilindro raffreddato a liquido — sezione con camera d'acqua
+Prompt:
+Cross-section illustration of a liquid-cooled 2-stroke cylinder showing
+water jacket. Cut plane reveals: bore in the center with honed surface,
+surrounding the bore a network of water passages (water jacket) shown in
+translucent blue with subtle flow arrows, coolant inlet port highlighted
+in cold blue, coolant outlet port in warm orange-red (heated coolant),
+cylinder base flange at the bottom for head sealing, transfer port passages
+cutting through the water jacket. The metal between bore and water jacket
+shown in dark aluminum with heat gradient from hot (orange near bore) to
+cool (blue near water jacket).
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3gruppoTermico/candela/Candela.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-22] — Riga 119
+Titolo: Candela 2T in sezione con parti nominate
+Prompt:
+Detailed cross-section illustration of a 2-stroke spark plug with all
+components visible. Full cross-section from terminal nut to ground electrode:
+terminal nut (top, hexagonal), ceramic insulator body (white/ivory), center
+electrode (nickel alloy rod in bright silver), copper core conductor inside
+insulator, steel shell with hex body and threaded section, upper gasket seat,
+insulator seat inside shell, ground electrode bent at 90° (L-shaped, steel)
+at the bottom with the spark gap visible as a small air gap between center
+and ground electrode with a small electric arc in electric blue. Side view,
+perfectly centered.
+
+[IMG-23] — Riga 365
+Titolo: Scala colori candela usata — lettura termica
+Prompt:
+Technical comparison illustration showing 5 spark plug electrode conditions
+arranged in a horizontal row. From left to right: (1) too cold — black, sooty,
+carbon fouling on insulator (pure black deposits), (2) rich mixture — black,
+oily wet deposits on electrodes, (3) correct — light tan/grey insulator,
+clean electrodes with slight wear (shown with amber warm light), (4) lean/hot
+— white, chalky insulator, eroded electrodes, (5) overheating — blistered
+insulator, melted/rounded electrode, blue-gray discoloration. Each plug shown
+from the electrode end and from the side. Studio lighting, dark background.
+
+[IMG-24] — Riga 573
+Titolo: Compressimetro nel foro candela
+Prompt:
+Technical illustration of a compression tester (compressimetro) being used
+on a 2-stroke engine. Show: the cylinder head from a 3/4 angle with spark
+plug removed (hole visible), the rubber cone tip of the compression tester
+inserted and sealed in the plug hole, the hose leading to the pressure gauge
+body, the gauge face showing compression reading (needle pointing to ~8-10
+bar). Hands holding the gauge shown schematically. The engine head in dark
+aluminum, gauge in matte black, pressure reading highlighted in amber.
+
+[IMG-25] — Riga 644
+Titolo: Confronto candele — nuova vs usata vs bruciata
+Prompt:
+Three spark plugs shown side by side from the electrode end and side profile.
+Left (new): perfect ivory insulator, sharp electrode edges, clean metal,
+factory appearance. Center (used, correct): light gray-tan insulator,
+slightly worn electrode edges, normal combustion deposits. Right (burned/
+failed): blistered white insulator, severely eroded center electrode
+(rounded), ground electrode partially melted, blue-gray discoloration on
+shell from extreme heat. Dramatic studio lighting from above, dark background,
+each plug on a slight pedestal for separation.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEZIONE 3 — ORGANI MECCANICI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE: src/components/3organiMeccanici/biella/Biella.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-26] — Riga 115
+Titolo: Biella 2T — struttura con testa piccola, fusto e testa grande
+Prompt:
+Exploded and cross-sectioned technical illustration of a 2-stroke connecting
+rod (biella). Show: small end (testa piccola) at top with needle bearing
+visible inside (individual needles arranged in circle, teal color), I-beam
+shank/beam (fusto) in the center with the I-beam cross-section shown in a
+detail inset, large end (testa grande) at bottom with caged needle roller
+bearing visible inside (needles in circle, blue). The rod material shown as
+forged aluminum or steel with machining marks visible on contact surfaces.
+Isometric perspective, exploded slightly to show bearing integration.
+
+[IMG-27] — Riga 341
+Titolo: Cuscinetto a rulli — testa grande biella
+Prompt:
+Detailed technical illustration of the big-end needle roller bearing of a
+2-stroke connecting rod. Exploded view showing: outer race (integral with
+crankpin, dark steel cylinder), cage (Käfig, plastic or steel, holding the
+rollers), individual needle rollers arranged in perfect circle (bright steel,
+highlighted in blue-white), inner race (crankpin surface). Show a partial
+cross-section revealing the needle contact pattern and the oil film gap.
+A close-up detail circle shows 3-4 individual needles in macro detail with
+surface geometry. Dark industrial aesthetic.
+
+[IMG-28] — Riga 515
+Titolo: Confronto biella lunga vs corta e angolo di manovella
+Prompt:
+Technical comparison diagram showing two connecting rod geometries side by
+side. Left: short rod — compact, higher angularity at TDC/BDC, wider rod
+angle shown with orange angle arc, piston shown at TDC and BDC ghost
+positions. Right: long rod — slender, reduced angularity, narrower angle
+arc in teal. Below each rod: diagram showing piston velocity curve shape
+(asymmetric vs more symmetric). The crankpin circle shown as a reference
+dashed circle. Clean engineering diagram style, dark background.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3organiMeccanici/alberoMotore/AlberoMotore.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-29] — Riga 117
+Titolo: Albero motore 2T — esploso con parti nominate
+Prompt:
+Exploded view technical illustration of a 2-stroke crankshaft assembly.
+Floating apart horizontally: left crankweb (half-moon shaped, counterbalanced,
+dark forged steel), left main bearing (needle or ball bearing, blue), left
+crankcase seal/oil seal (black rubber), crankpin (central cylindrical pin,
+bright chrome steel), big-end needle bearing (cage and needles visible),
+right crankweb (mirror of left), right main bearing, right oil seal. The
+assembly axis shown as a thin dotted line. Each component separated by
+equal spacing. Precision machining surface finish visible on all contact
+surfaces.
+
+[IMG-30] — Riga 347
+Titolo: Allineamento albero su prismi V con comparatore
+Prompt:
+Technical illustration of crankshaft runout measurement procedure. Show:
+two V-blocks (prismi V, precision steel, V-groove visible) supporting the
+crankshaft main bearing journals on a flat surface plate. Crankshaft shown
+horizontally across both V-blocks. A dial indicator (comparatore a centesimi)
+mounted on a magnetic stand (base in black) with the tip touching the center
+of the crankpin or flywheel taper. The dial face showing a needle deflection.
+One crankweb shown slightly off-center to illustrate the runout being
+measured. Dark industrial workspace aesthetic.
+
+[IMG-31] — Riga 466
+Titolo: Ciclo di pompaggio del carter con albero in rotazione
+Prompt:
+Dynamic cross-section illustration of the 2-stroke crankcase pumping cycle.
+Show a crankcase cross-section with the crankshaft rotating (motion blur
+arc on crank throw), piston shown in TWO positions: (left ghost) piston
+going up — crankcase volume expanding, fresh mixture entering through reed
+valve (teal flow arrows going in), (right ghost) piston going down —
+crankcase volume compressing, mixture being pushed up through transfer
+ports (orange arrows going up). The piston in the two positions shown as
+semi-transparent overlays. Reed valve shown open/closed accordingly.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3organiMeccanici/guarnizioni/Guarnizioni.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-32] — Riga 200
+Titolo: Kit guarnizioni completo — vista esplosa
+Prompt:
+Exploded technical illustration of a complete 2-stroke engine gasket kit.
+Show floating in vertical arrangement from top to bottom: copper head gasket
+(circular with bolt holes, warm copper color, slightly embossed ring visible),
+base cylinder gasket (paper or composite, between cylinder and crankcase,
+showing the port openings in the correct positions), intake manifold gasket,
+exhaust gasket (shown slightly thicker), and oil seals (two cylindrical
+lip seals in black rubber). Each component floating with thin shadow. Studio
+lighting, dark background, slight warm ambient light.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3organiMeccanici/cuscinettiDiBanco/CuscinettiDiBanco.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-33] — Riga 117
+Titolo: Cuscinetti di banco nel carter 2T in sezione
+Prompt:
+Cross-section technical illustration of a 2-stroke crankcase (carter) showing
+main bearings in situ. Bisect the crankcase along the crankshaft axis:
+show the left half of crankcase with left bearing seat (bore), bearing
+pressed in (show individual balls or needle rollers in blue), oil seal
+behind bearing (black rubber lip seal), crankshaft journal passing through
+bearing center. Mirror the same on the right. The crankcase halves in dark
+aluminum casting with visible ribs. The mating face (joint plane) highlighted
+with a thin amber line. Precise engineering cross-section.
+
+[IMG-34] — Riga 385
+Titolo: Marcatura cuscinetto e codice identificazione
+Prompt:
+Close-up technical illustration of a ball bearing showing the marking/
+stamping on the outer race. Show: the bearing from a 3/4 front angle,
+outer race clearly showing etched/stamped ISO code (e.g., "6204 2RS C3"
+style code, but no actual readable text — show as abstract marking symbols),
+the bearing dimensions shown with measurement arrows (outer diameter, inner
+diameter, width). A separate detail shows the bearing in cross-section:
+outer race, ball, cage, inner race, with the clearance class (C3) gap
+exaggerated. Precision tool steel appearance, dark background.
+
+[IMG-35] — Riga 565
+Titolo: Montaggio cuscinetto con riscaldamento sede e paraolio
+Prompt:
+Technical illustration of bearing installation on heated crankcase. Show:
+induction heater or heat gun applying heat to crankcase bearing seat (orange
+glow radiating from the heated zone), bearing being guided into the hot seat
+with a bearing driver tool (cylindrical driver, steel), the bearing just
+entering the seat. Nearby: oil seal (paraolio, black rubber lip seal) shown
+separately before installation, with its lip geometry visible in cross-section
+inset. The crankcase held in a soft-jaw vice. Warm industrial workshop
+lighting.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3organiMeccanici/olio/Olio.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-36] — Riga 163
+Titolo: Schema motore 2T — carter separati e paraolio divisore
+Prompt:
+Technical cross-section schematic of a 2-stroke engine showing the two
+separate crankcase chambers. Bisect the engine vertically showing: top half
+— cylinder with piston, combustion chamber, transfer and exhaust ports;
+bottom half — crankcase split into TWO chambers by the center oil seal
+(paraolio di divisione), left chamber and right chamber each sealed from
+the other. The oil seal shown as a thick black rubber seal on the crankshaft
+at center. Show fresh mixture (teal arrows) pumped in left/right chambers
+separately. The concept of isolated chambers clearly communicated by color
+coding each sealed zone.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3organiMeccanici/crater/Carter.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-37] — Riga 115
+Titolo: Carter 2T aperto — albero motore e cuscinetti di banco
+Prompt:
+Technical illustration of a 2-stroke crankcase opened (split in half) showing
+internal components. Show the right half of the crankcase as if looking into
+it: crankshaft assembly seated in the bearing (ball bearing visible in seat,
+glowing blue), crankwebs and crankpin visible, connecting rod big end
+at bottom of stroke. The crankcase interior walls show machined bearing seats,
+oil seal seat, and transfer port passages (highlighted in teal). The mating
+face of the split crankcase shown around the perimeter. Dark aluminum casting
+with machined surfaces.
+
+[IMG-38] — Riga 353
+Titolo: Test pressione carter con vacuometro
+Prompt:
+Technical illustration of a crankcase pressure/vacuum test procedure. Show:
+2-stroke engine block (crankcase) with all openings plugged (intake, exhaust,
+transfer ports shown with rubber plugs in amber), one port connected via
+a hose to a vacuum/pressure gauge (vacuometro, analog gauge face visible),
+a hand pump (mano pump or mityvac) connected in-line. The gauge needle
+shown at a reading, the hose connections clear. The crankcase shown as dark
+aluminum block. A small leak path shown as thin orange dotted arrows where
+gasket would fail (diagnostic illustration).
+
+[IMG-39] — Riga 526
+Titolo: Semicarter — sede cuscinetti e paraolio visibili
+Prompt:
+Technical illustration of one half of a 2-stroke crankcase (semicarter)
+shown as an isolated component. View from the mating face side: machined
+bore for main bearing on the left (perfectly circular seat, with bearing
+pressed in showing balls/races), oil seal groove next to bearing (black
+rubber seal installed), transfer port passages cutting through the casting
+(teal highlighted), intake port stub, and the flat mating face with o-ring
+groove. The cast aluminum surface shows casting texture alternating with
+precision-machined zones. Isometric view, workshop lighting.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEZIONE 3 — TRASMISSIONE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE: src/components/3trasmissione/frizione/Frizione.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-40] — Riga 189
+Titolo: Pacco frizione esploso — dischi, molle e piatto pressore
+Prompt:
+Exploded view illustration of a 2-stroke motorcycle wet clutch assembly
+(pacco frizione). Floating apart vertically: outer basket (hub with external
+teeth, dark aluminum), alternating friction discs (textured dark brown
+cork/organic material on steel backing) and plain steel drive discs (smooth
+polished steel, slightly smaller), pressure plate (round aluminum disc with
+spring seats), five or six coil springs (compressed springs, orange-tinted),
+and center hub (inner basket with splined bore). Each layer separated with
+breathing room. Isometric perspective, precise mechanical detail.
+
+[IMG-41] — Riga 385
+Titolo: Meccanismo disinnesto frizione — spingitore e regolazione leva
+Prompt:
+Technical cross-section illustration of a clutch release mechanism (disinnesto
+frizione). Show: lever pivot on handlebar (left side), cable running through
+housing to the right engine cover, cable end connecting to the release arm
+(braccio), the push rod (spingitore, steel rod) running through the hollow
+primary shaft, the ball and ramp actuator or pressure plate contact at the
+end. A detail inset shows the cable adjuster (barrel adjuster) with locknut
+for free-play (gioco) adjustment. Arrows indicating motion direction.
+The pushrod highlighted in amber.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3trasmissione/alberi/Alberi.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-42] — Riga 184
+Titolo: Albero primario e secondario estratti dal carter
+Prompt:
+Technical illustration of two transmission shafts (alberi) removed from
+gearbox and floating in parallel. Top shaft (primary/input): shorter, with
+gear cluster showing different gear pairs, bearing journals highlighted,
+splined section for clutch drum. Bottom shaft (secondary/output): longer,
+with corresponding gear pairs meshing with primary gears (show gear pairs
+aligned), bearing seats, output sprocket/gear at the end. The gear teeth
+visible on both shafts with engagement dogs (cani) shown as small protrusions.
+Alternating gears highlighted in teal and orange to distinguish pairs.
+
+[IMG-43] — Riga 310
+Titolo: Sezione ingranaggio folle — needle bearing e manicotto
+Prompt:
+Detailed cross-section of a freewheeling gear on a transmission shaft.
+Show: the shaft (horizontal, dark steel), needle bearing (individual thin
+needles arranged in circle inside the gear bore, highlighted in blue),
+the gear itself floating on the bearing (gear teeth visible on outside,
+bore visible through section), the shift fork groove on the side of the
+gear, the adjacent engagement sleeve (manicotto/dog ring) with its dog
+teeth shown in relief. The gear shown as NOT engaged (folle) with the
+sleeve displaced to the side. Clear engineering cross-section.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3trasmissione/cambio/Cambio.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-44] — Riga 196
+Titolo: Schema cambio 2T — alberi e ingranaggi per ogni marcia
+Prompt:
+Schematic cross-section of a 2-stroke gearbox showing all gear pairs on
+two parallel shafts. Primary shaft on top, secondary shaft below. Show
+6 gear pairs (6 speed) with different sizes (smaller ratio = bigger gear on
+secondary). Each gear pair shown in a different color (1st in red, 2nd in
+orange, 3rd in amber, 4th in yellow, 5th in teal, 6th in blue). The active
+gear pair (e.g., 3rd) shown with fuller color, others slightly faded.
+Dog engagement shown as mating teeth between sliding collar and gear.
+Clean schematic style.
+
+[IMG-45] — Riga 391
+Titolo: Tamburo selettore — forcelle, scanalature e cani di innesto
+Prompt:
+Technical illustration of the gear selector drum (tamburo selettore) and
+shift forks. The cylindrical drum shown in 3/4 perspective with its complex
+cam grooves (scanalature) carved into the surface — show the grooves as
+recessed channels running around the drum in a complex path. Three shift
+forks (forcelle, flat C-shaped steel pieces) engaged in the grooves with
+their pins visible in the channels. Detail inset: close-up of two gear
+dogs (cani di innesto) meshing — square-cut dogs shown in steel, the
+engagement gap highlighted in amber.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3trasmissione/selettore/Selettore.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-46] — Riga 200
+Titolo: Tamburo selettore con forcelle montate
+Prompt:
+Technical illustration of the complete gear selector drum (tamburo selettore)
+assembly viewed from a 3/4 isometric angle. The drum cylinder (dark steel,
+machined) with its three helical cam grooves visible on the surface. Three
+shift forks clipped into the grooves: each fork shown as a flat steel
+C-shape with the engagement pins visible in the groove, the fork ears engaging
+with the gear sliding collars (shown as small rectangular contacts). The
+drum rotation axis shown as a thin line. Each fork shown in a distinct
+color (teal, orange, blue) to differentiate the three rails.
+
+[IMG-47] — Riga 435
+Titolo: Leverismo esterno — pawl, disco dentato e sfera di detent
+Prompt:
+Technical exploded illustration of the external gear shift mechanism. Show:
+gear shift lever arm (flat steel, with rubber tip outline), ratchet pawl
+(triangular pawl, steel, with pivot pin), star ratchet disc (circular disc
+with equally-spaced triangular teeth — like a star, 6-point), torsion spring
+for pawl return, detent ball and spring assembly (small steel ball + compressed
+spring in housing, highlighted in amber), neutral indicator groove. Each
+part floating with precise separation. The detent ball shown at the moment
+of snapping into a tooth notch.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3trasmissione/ingranaggi/Ingranaggi.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-48] — Riga 201
+Titolo: Profilo ad evolvente — forze sul dente e polo primitivo
+Prompt:
+Engineering diagram of involute gear tooth geometry and force decomposition.
+Show: two meshing gear teeth in cross-section, the involute tooth profile
+highlighted, pitch circle (cerchio primitivo) shown as a dashed circle on
+each gear, the pressure angle arc shown in amber, the line of action (linea
+d'azione) as a diagonal line through the contact point. At the contact point:
+three force vectors shown as arrows — total contact force along line of
+action (orange), tangential component (teal, driving force), radial/
+separating component (blue). Clean technical diagram with geometric precision.
+
+[IMG-49] — Riga 483
+Titolo: Cani di ingranaggio — nuovi vs arrotondati
+Prompt:
+Macro close-up technical illustration comparing gear dog engagement teeth.
+Left: new gear dogs — sharp, square-cut teeth with flat engagement faces,
+perfect 90° corners shown in clean steel. Right: worn gear dogs — rounded
+corners on engagement faces (hook shape visible), the tips worn and narrowed.
+The contact force arrows show how the worn profile causes the gear to "jump
+out" (orange arrows pushing outward). Each detail shown from the side and
+a 3/4 perspective. The surface wear pattern shown with subtle texture.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEZIONE 3 — SCARICO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE: src/components/3scarico/valvolaDiScarico/ValvolaScarico.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-50] — Riga 315
+Titolo: Valvola YPVS in sezione — chiusa vs aperta
+Prompt:
+Side-by-side cross-section illustration of a 2-stroke exhaust power valve
+(YPVS/ATAC/VForce) in two positions. Left panel: valve CLOSED (low RPM) —
+the rotary drum or slide shown blocking part of the exhaust port (orange
+port), the reduced port area shown in red/orange, exhaust gas barely flowing.
+Right panel: valve OPEN (high RPM) — drum rotated to fully open position,
+exhaust port at maximum area, exhaust flow shown as fast-moving orange-red
+arrows. The actuator cable/servo connection shown at top. Split view format
+with the cylinder head and port geometry clearly visible in each.
+
+[IMG-51] — Riga 479
+Titolo: Tamburo valvola — depositi carboniosi vs pulito
+Prompt:
+Comparative illustration of a power valve drum component. Left: dirty/seized
+drum — cylindrical metal component coated in thick black-brown carbon deposits,
+surface details obscured by buildup, edges caked with oily carbon residue.
+Right: clean drum — same component after cleaning, bright metal visible,
+machined surface details clear, the valve port opening perfectly defined,
+smooth surfaces. Both shown from the same 3/4 angle for direct comparison.
+Strong directional lighting to emphasize surface texture difference.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3scarico/espansione/Espansione.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-52] — Riga 201
+Titolo: Propagazione onde di pressione nell'espansione — sequenza temporale
+Prompt:
+Technical diagram showing pressure wave propagation in a 2-stroke expansion
+chamber in time sequence. Show the expansion pipe in cross-section (bullet-
+shaped profile with convergent front cone and divergent rear diffuser cone).
+Time sequence in 4 panels from top to bottom: (1) exhaust pulse exits cylinder
+(orange pressure wave expanding into pipe), (2) positive wave traveling
+toward diffuser (orange arrow rightward), (3) reflected negative wave
+returning from diffuser toward cylinder (blue arrow leftward), (4) timed
+return charging the cylinder (teal arrows entering port). Sinusoidal wave
+patterns overlaid. Physics diagram style.
+
+[IMG-53] — Riga 370
+Titolo: Sezione espansione quotata — 5 zone colorate
+Prompt:
+Precise cross-section technical illustration of a 2-stroke expansion chamber
+pipe, showing all 5 zones in distinct colors. The complete silhouette of
+the pipe in cross-section (horizontal): (1) header/stinger (narrow tube from
+cylinder) in red-orange, (2) convergent cone (widening toward center) in
+orange, (3) belly/center cylinder (widest section) in amber, (4) diffuser
+cone (narrowing toward exit) in teal, (5) silencer/stinger exit (narrow
+tube) in blue. Each zone separated by a subtle white dividing line.
+The included angles of the cones shown as measurement arcs. Clean technical
+cutaway, viewed slightly from above and to the side.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3scarico/terminale/Terminale.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-54] — Riga 198
+Titolo: Terminale sezionato — tubo perforato, lana e stinger
+Prompt:
+Cross-section technical illustration of a motorcycle exhaust silencer
+(terminale). Cut plane along the long axis reveals: outer canister shell
+(cylindrical, aluminum), inner perforated core tube (tube with many small
+holes, bright steel, highlighted in amber), packing material (fiberglass/
+steel wool packing) surrounding the core tube (shown as fibrous gray material),
+inlet pipe entering from the left, stinger/exit tube (smaller diameter tube
+exiting at right with spark arrester mesh visible). End caps shown in section.
+The gas flow path shown as red-orange arrows through the core tube.
+
+[IMG-55] — Riga 390
+Titolo: Lana di vetro — nuova vs compattata dopo uso
+Prompt:
+Side-by-side comparison illustration of silencer packing material. Left:
+new fiberglass/steel wool packing — fluffy, open fibrous structure, pale
+gray-white color, fibers clearly separated with air gaps, shown as a
+compressed cylinder of material. Right: used/burned packing — same shape
+but compacted to roughly 1/3 volume, fibers sintered and matted together,
+dark gray-brown color, some areas discolored from heat. Both shown as
+cylindrical sections with the same outer dimensions for scale comparison.
+Raking light to show texture.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEZIONE 3 — RAFFREDDAMENTO E ACCENSIONE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE: src/components/3raffreddamentoEAccensione/radiatore/Radiatore.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-56] — Riga 186
+Titolo: Radiatore in sezione — serbatoi, tubi piatti e alette
+Prompt:
+Technical cutaway illustration of a motorcycle radiator. Cut plane through
+the width reveals: top tank (upper header, aluminum, with inlet hose stub),
+core section (array of flat tubes running vertically with thin aluminum fins
+between them — show 4-5 tubes in cross-section revealing oval internal
+passages), bottom tank (lower header with outlet hose stub and drain plug).
+Coolant flow shown as blue arrows entering top, flowing down through tubes,
+exiting bottom. Air flow shown as thin teal horizontal arrows passing through
+the fin gaps from front to back. Pressure cap shown on top tank.
+
+[IMG-57] — Riga 403
+Titolo: Radiatore con protezione griglia — dettaglio pacco alettato
+Prompt:
+Technical illustration of a 2-stroke motorcycle radiator with protective
+guard installed. Front view showing: outer protective grille/guard (aluminum
+or plastic frame with metal mesh, shown in dark with slightly visible mesh
+pattern), behind it the radiator core visible through the guard openings,
+a circular detail inset showing a close-up of 3-4 fin-and-tube rows of the
+radiator core (show individual fins as thin parallel sheets between flat
+tubes, with air gaps between fins). Slight 3/4 perspective. Aluminum and
+mesh materials.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3raffreddamentoEAccensione/pompaAcqua/PompaAcqua.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-58] — Riga 270
+Titolo: Pompa acqua esplosa — albero, girante, tenuta meccanica e corpo
+Prompt:
+Exploded view technical illustration of a motorcycle water pump. Components
+floating in sequence along the shaft axis: outer housing/cover (circular
+aluminum casting), mechanical seal (tenuta meccanica, show the two sliding
+faces — carbon and ceramic rings), impeller/girante (multi-blade centrifugal
+impeller, aluminum, shown from the front to see blade geometry), shaft seal
+(lip seal, black rubber), pump shaft (thin steel rod), and the drive gear or
+impeller drive connection at the back. Coolant inlet port shown on housing
+in teal, outlet in orange-red. Isometric perspective.
+
+[IMG-59] — Riga 392
+Titolo: Olio emulsionato vs olio sano — comparazione
+Prompt:
+Comparative illustration of engine oil samples. Left container (glass/
+transparent cylinder): healthy 2-stroke gear oil — clear, amber/golden
+translucent color, clean appearance, oil droplets cling to glass sides.
+Right container: emulsified oil (contaminated with coolant) — opaque milky
+white-grey color ("color of cappuccino"), completely opaque, bubbly froth
+at the top, condensation on glass. Both containers shown side by side with
+identical proportions. Strong backlight to emphasize the opacity difference.
+Dark background, clinical comparison style.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3raffreddamentoEAccensione/circuitoAcqua/CircuitoAcqua.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-60] — Riga 285
+Titolo: Circuito completo — flusso freddo/caldo con termostato
+Prompt:
+Technical schematic of a complete 2-stroke liquid cooling circuit. Show in
+isometric or flat schematic style: water pump (left, rotation arrow), cold
+coolant line (blue) going from pump to cylinder/engine block, warm coolant
+line (orange-red gradient) going from engine to radiator top, radiator
+(center, shown as grid), cooled coolant returning (blue) to pump, thermostat
+shown as a valve in the circuit (closed in cold state = bypass route shown
+in dashed teal, open in warm state = main circuit). Temperature gradient
+color coding throughout. Clean flow diagram.
+
+[IMG-61] — Riga 479
+Titolo: Procedura spurgo circuito acqua — bolle d'aria in uscita
+Prompt:
+Technical illustration of coolant bleeding procedure. Show: radiator top
+section with the bleed bolt/screw (bullone di spurgo) partially opened
+(shown from above), coolant bubbling out around the screw (air bubbles
+shown as white spheres escaping the liquid stream), a transparent hose or
+vessel below catching the coolant. The air bubbles highlighted as white/
+light blue spheres in a stream of green-tinted coolant. An inset shows
+the closed (sealed) vs open (bleeding) position of the bleed bolt.
+Procedural illustration style.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3raffreddamentoEAccensione/cdiEBobbina/CDIeBobina.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-62] — Riga 271
+Titolo: CDI aperta — condensatore, SCR e circuito di timing
+Prompt:
+Technical illustration of a CDI (Capacitor Discharge Ignition) unit opened
+to reveal internal electronics. The black plastic housing opened (like a
+clam shell), circuit board visible inside. On the board: large cylindrical
+capacitor (amber, prominent), SCR/thyristor component (small black component
+highlighted in orange), transformer (small square component, teal), and
+the PCB traces visible. External connectors shown at the bottom — multi-pin
+connector with individual pin functions differentiated by color coding.
+The opening shown from a 3/4 angle, electronics rendered precisely.
+
+[IMG-63] — Riga 415
+Titolo: Bobina in sezione — nucleo, primario, secondario e cappuccio
+Prompt:
+Cross-section technical illustration of an ignition coil (bobina di
+accensione). The coil bisected along its axis revealing: iron core (laminated
+ferrite stack, dark gray, center), primary winding (few turns of thick
+copper wire around core, amber/copper colored), secondary winding (many
+turns of thin wire, blue, wound over the primary), plastic coil housing
+(dark), primary low-voltage connector (2-pin at base), secondary high-voltage
+terminal at top (with spark plug cap shown detached, the silicon cap in
+black). Electric field lines between coil and cap shown as subtle blue arcs.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3raffreddamentoEAccensione/volanoEStatore/VolanoEStatore.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-64] — Riga 191
+Titolo: Volano smontato — magneti e statore con avvolgimenti
+Prompt:
+Technical illustration showing flywheel (volano) and stator (statore)
+separated. Left: flywheel — circular disc with permanent magnets visible
+on inner circumference (alternating N/S polarity blocks, show as alternating
+dark and light colored segments around the inner ring), taper bore in center,
+pulling threads visible. Right: stator — star-shaped laminated iron core
+with multiple poles, copper wire windings on each pole (shown as tidy
+orange-copper coils), connector leads exiting at bottom, positioned to
+show how it sits inside the flywheel. Both components shown from the same
+axial perspective.
+
+[IMG-65] — Riga 374
+Titolo: Verifica traferro pick-up — spessimetro a lamelle sul volano
+Prompt:
+Technical illustration of pickup coil air gap measurement. Show: flywheel
+rotating (or static for measurement), the magnetic pickup coil (pick-up
+sensor, small cylindrical component mounted on stator plate), feeler gauge
+blades (spessimetro a lamelle, thin leaf gauges in gold) inserted between
+the tip of the pickup and the trigger tooth on the flywheel. The gap shown
+as an exaggerated space between sensor tip and trigger lug. An analog
+multimeter (ohmmeter) shown nearby for coil resistance verification.
+Workshop setting, focused lighting on the measurement point.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/3raffreddamentoEAccensione/avviamento/Avviamento.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-66] — Riga 276
+Titolo: Meccanismo kick — cliquet, molla di riporto e albero
+Prompt:
+Exploded technical illustration of a kick-start mechanism (avviamento a
+pedale). Components floating in assembly sequence: kick shaft (splined steel
+shaft), kick gear (large ratchet gear with angled ratchet teeth), pawl
+(cliquet, flat steel L-shaped pawl with pivot pin), pawl spring (flat leaf
+spring or torsion spring in amber), return spring (coil spring around shaft),
+stop pin. Show how the pawl engages the gear teeth in one direction only,
+with motion arrows showing kick stroke (orange, downward) and return stroke
+(teal, upward). The cliquet engagement detail shown in inset circle.
+
+[IMG-67] — Riga 407
+Titolo: Motorino di avviamento smontato — Bendix, spazzole e connettori
+Prompt:
+Exploded cross-section technical illustration of an electric starter motor.
+Show along the motor axis: front endplate with brush holder, carbon brushes
+(4 brushes, dark rectangular blocks with springs), armature/rotor (wound
+coils on core, copper windings visible, commutator at one end), field magnets
+(permanent magnets inside housing or wound field coils), rear endplate,
+Bendix drive assembly (spiral spline, overrunning clutch gear). Electrical
+connector shown at rear. Each component floating with clear separation.
+The Bendix gear highlighted in orange, brushes in amber.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEZIONE 4 — TELAIO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE: src/components/4telaio/telaio/Telaio.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-68] — Riga 301
+Titolo: Telaio a doppia trave — motore montato, punti di attacco
+Prompt:
+Technical illustration of a twin-spar (doppia trave) aluminum frame with
+engine installed. 3/4 perspective view showing: two large aluminum beams
+running from the steering head to the swingarm pivot (rectangular extruded
+sections, machined aluminum appearance), the engine block mounted inside
+the frame (dark, showing cylinder and exhaust port), engine mounting points
+highlighted as glowing amber circles or bolts, steering head tube at front
+(circular tube, reinforced), swingarm pivot plates at rear, footpeg mounts.
+The frame structure shows machined surfaces vs cast sections. No body panels.
+
+[IMG-69] — Riga 273
+Titolo: Sezione tubo cromoly vs trave alluminio estruso
+Prompt:
+Cross-section comparison of two frame construction materials. Left panel:
+steel tube (cromoly, CrMo) cross-section — circular tube profile, wall
+thickness visible, fine grain steel structure, weld bead shown at a joint
+(TIG weld profile, slight dome). Right panel: aluminum extruded beam cross-
+section — rectangular or complex profile with internal ribs (show I-beam or
+box section), variable wall thickness (thicker at corners), extrusion lines
+on surface. Both shown as clean geometric cross-sections with material
+texture indicated. A closeup circle shows the weld zone grain structure for
+the steel, and the extruded billet structure for the aluminum.
+
+[IMG-70] — Riga 296
+Titolo: Telaio — torsione, flessione e zone di rigidità
+Prompt:
+Technical diagram of a motorcycle frame showing structural stress zones.
+Same frame shown TWICE overlaid or side by side: (1) under torsional load
+— frame shown with color gradient (red zones = high torsional stress at
+steering head and pivot, green = low), twist direction shown with curved
+orange arrows. (2) under bending load — color gradient showing bending
+stress distribution along the main beams (compression top, tension bottom
+shown in blue and orange), lateral flex arrows in teal. The zones of
+intentional rigidity vs intentional compliance highlighted in distinct colors.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/4telaio/geometrie/Geometrie.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-71] — Riga 333
+Titolo: Geometria moto — angolo sterzo, trail, interasse, baricentro
+Prompt:
+Technical side-view diagram of a motorcycle silhouette showing key geometry
+measurements. Clean line drawing of motorcycle profile: front fork shown
+with the rake angle (angolo sterzo/caster) measured from vertical as an
+arc (shown in orange), the trail measurement (teal horizontal arrow from
+tire contact patch to steering axis ground intersection), wheelbase
+(interasse, long horizontal double arrow in blue), center of gravity
+position (baricentro, shown as a target/crosshair symbol at the correct
+position with coordinate arrows). The steering axis shown as an extended
+dashed line through the fork. Geometric precision, clean lines.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/4telaio/canottoDiSterzo/CanottoDiSterzo.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-72] — Riga 353
+Titolo: Canotto di sterzo in sezione — cuscinetti conici e dado di registro
+Prompt:
+Cross-section technical illustration of a motorcycle steering head tube
+(canotto di sterzo) with tapered roller bearings installed. Cut the steering
+head and top fork yoke along the vertical axis revealing: outer bearing cups
+(races pressed into the head tube, conical shaped, top and bottom), tapered
+roller cages (individual tapered rollers visible in their race, upper and
+lower bearing), inner races on the steering stem, the fork stem passing
+through the center, the top nut/adjuster nut (dado di registro) with locknut
+above. Show the preload direction arrows on the bearing. Cross-section
+precision with realistic materials.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/4telaio/forcellone/Forcellone.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-73] — Riga 333
+Titolo: Testa forcellone in sezione — pivot, cuscinetti e perno
+Prompt:
+Cross-section technical illustration of the swingarm pivot area (testa
+forcellone). Cut through the swingarm pivot tube showing: the main pivot
+bolt/axle (perno, large diameter steel bolt passing through center, highlighted
+in steel blue), sealed bearing or needle roller bearings pressed into the
+swingarm pivot tube (show individual rollers or balls in blue), the spacer
+between bearings, the frame pivot plate on each side, the protective dust
+caps. Show the torque tightening direction arrow on the pivot nut. The
+swingarm tube cross-section showing wall thickness. Precision machined
+surfaces vs cast/welded surfaces.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/4telaio/cavalletto/Cavalletto.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-74] — Riga 333
+Titolo: Schema sensore cavalletto — centralina, switch e logica
+Prompt:
+Technical schematic diagram of a motorcycle sidestand kill switch circuit.
+Show: sidestand/kickstand shown in two positions (down = amber, up = teal),
+the magnetic or mechanical switch (interruttore) at the pivot point, wiring
+going to the ECU/CDI (shown as black box with circuit board), the logical
+circuit path: stand UP = switch CLOSED = engine runs (green path); stand
+DOWN = switch OPEN = engine stops (red X path). Include the relay in the
+circuit. Clean electrical schematic style with component symbols and color-
+coded wire paths. Component boxes shown realistically, wire routes cleanly.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEZIONE 5.1 — RUOTE E PNEUMATICI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE: src/components/5ciclistica/5.1ruotePneumatici/cerchi/Cerchi.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-75] — Riga 178
+Titolo: Cerchio — sezione trasversale con canale a doppia camera
+Prompt:
+Precise cross-section illustration of a motorcycle spoke rim (cerchio a
+raggi). Cut through the rim cross-section showing: the double-wall channel
+profile (hooked flanges on each side for tire bead seating, the hollow
+center channel, inner and outer wall with reinforcing bead), spoke nipple
+holes in the inner wall, the tire bead seats (flanged shoulders) highlighted
+in teal. A detail inset shows the tire bead locking in the hook profile.
+The rim cross-section shown in aluminum with brushed finish on the outer
+surfaces, anodized inner channel. Side profile also shown.
+
+[IMG-76] — Riga 274
+Titolo: Geometria raggi a 3 croce — schema di intrecciatura
+Prompt:
+Technical illustration of spoke wheel lacing pattern (3-cross pattern).
+Front view of a motorcycle wheel hub and partial rim with spokes. Show:
+the hub with flange holes, outgoing spokes at 3 different angles from
+the flange holes (trailing and leading spokes at hub), each spoke crossing
+3 other spokes before reaching the rim (the 3-cross points highlighted in
+amber at each crossing). Show alternating leading and trailing spoke sets
+in two colors (blue vs teal). The spoke angle relative to the rim
+flange shown with measurement arc. A side inset shows the dish offset
+between the two hub flanges.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.1ruotePneumatici/mozzi/Mozzi.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-77] — Riga 176
+Titolo: Sezione del mozzo — cuscinetti, spaziatore e distanziali
+Prompt:
+Cross-section technical illustration of a motorcycle wheel hub (mozzo).
+Cut along the axle axis showing: axle bore in center, two sealed ball
+bearings (one each side, deep groove, show balls and races in blue), inner
+spacer tube between bearings (precise steel cylinder, highlighted in steel
+color), bearing seats machined into hub (show surface finish), two outer
+spacers/spacer collars (one each side, aluminum, sitting between bearing
+outer face and fork dropout or swingarm). The hub flanges for spokes shown
+on each side. Axle shown as ghost passing through.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.1ruotePneumatici/pneumatici/Pneumatici.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-78] — Riga 166
+Titolo: Sezione trasversale pneumatico — struttura a strati
+Prompt:
+Detailed cross-section of a motorcycle tire (pneumatico) showing all internal
+layers. The tire cut across its width revealing (from outside in): tread
+compound (patterned rubber surface, dark), belt/breaker layers (two crossed
+nylon/steel belts at different angles, shown as thin angled lines in amber),
+carcass plies (bias or radial cord plies, shown as continuous fibers from
+bead to bead in teal), inner liner (smooth thin layer in light gray), bead
+bundle (steel wire coils at each edge, shown as circular cross-sections
+in steel blue), chafer strip at bead area. Each layer clearly separated
+with a thin gap and distinct color.
+
+[IMG-79] — Riga 260
+Titolo: Impronta pneumatico a diverse pressioni — confronto footprint
+Prompt:
+Comparative illustration of tire contact patches (footprint) at three
+different pressure levels. Show three rectangular/oval footprint shapes on
+a flat surface, viewed from below (as if looking through glass). Left:
+under-inflated — wide, elongated footprint, edges showing full width contact,
+pressure distribution shown as color heat map (hot/amber at edges, warmer
+overall). Center: correct pressure — balanced oval footprint, even pressure
+distribution in green. Right: over-inflated — narrow footprint, high pressure
+concentrated at center crown (amber spot at center, faded at edges).
+Top-down view, clean scientific comparison.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.1ruotePneumatici/grip/Grip.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-80] — Riga 183
+Titolo: Impronta pneumatico posteriore su terreno — distribuzione carico
+Prompt:
+Technical illustration of a rear motorcycle tire contact patch on soft ground.
+View from slightly above and behind: the tire profile contacting the surface,
+the footprint area shown as an oval depression in the terrain (dirt/mud
+texture), pressure distribution shown as a color heat map (orange-red at
+center of contact patch, fading to teal at edges), tread knobs impressing
+into the soil with soil displacement arrows around each knob. Load vectors
+(vertical force arrows in white) shown converging to the footprint center.
+Off-road tire knobby tread pattern visible.
+
+[IMG-81] — Riga 281
+Titolo: Cerchio di grip — vettori di trazione, frenata e sterzo
+Prompt:
+Technical diagram of the traction circle (cerchio di grip / friction circle).
+Show a perfect circle (the grip limit boundary) on a flat plane, viewed
+from slightly above. Four force vectors shown as arrows from the tire contact
+patch center: (1) maximum braking (blue arrow pointing forward/negative),
+(2) maximum acceleration (orange arrow pointing backward), (3) maximum left
+cornering (teal arrow left), (4) maximum right cornering (teal arrow right).
+A diagonal vector shows combined braking + cornering (at approximately 45°,
+in amber, touching the circle boundary). The circle filled with a subtle
+gradient. A tire footprint shown at center.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEZIONE 5.2 — TRASMISSIONE FINALE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE: src/components/5ciclistica/5.2trasmissioneFinale/trasmissioneFinaleIntro/TrasmissioneFinaleIntro.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-82] — Riga 81
+Titolo: Ruota completa esplosa — mozzo, raggi, cerchio, pneumatico
+Prompt:
+Exploded view illustration of a complete motorcycle wheel assembly floating
+apart along the axle axis. From the center outward: axle (thin steel rod),
+hub/mozzo (center, dark aluminum, showing bearing holes), spokes (floating
+in their crossing pattern, thin steel rods), rim/cerchio (large ring,
+aluminum, visible cross-section profile), tire/pneumatico (rubber torus,
+dark, tread pattern visible on outside). Each component given clear breathing
+room in the explosion. Isometric perspective, studio lighting, components
+glowing subtly at edges.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.2trasmissioneFinale/pignone/Pignone.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-83] — Riga 302
+Titolo: Confronto pignone 12T vs 14T — profilo denti e sede catena
+Prompt:
+Technical side-by-side comparison of two sprockets (pignoni). Left: small
+sprocket 12T — compact, fewer and wider teeth (relative to circumference),
+deeper chain engagement valley, shown from front face and edge-on. Right:
+large sprocket 14T — larger diameter, same tooth profile but more teeth
+visible around circumference, slightly different chain engagement geometry.
+Both shown in steel with the chain pitch measurement arrow between two teeth.
+A detail inset shows the tooth profile geometry in cross-section: standard
+sprocket tooth form with chain roller contact point highlighted in amber.
+
+[IMG-84] — Riga 472
+Titolo: Pignone nuovo vs usurato — profilo denti
+Prompt:
+Direct comparison illustration of drive sprocket tooth wear. Left: new
+sprocket — teeth with symmetric profile, sharp tip, flat flanks, clean
+steel surface. Right: worn sprocket — teeth with hook/shark-fin profile
+(asymmetric, one flank thinned and bent toward direction of chain travel),
+tip worn to a point, surface shows wear grooves. Both shown from the side
+with the tooth outline overlaid as a ghost for comparison. The wear direction
+indicated with an orange arrow showing chain travel direction. Cross-section
+of one tooth from each sprocket shown in a detail inset at the bottom.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.2trasmissioneFinale/rapporti/Rapporti.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-85] — Riga 322
+Titolo: Schema trasmissione completa — motore → ruota con tre rapporti
+Prompt:
+Flow diagram showing the complete 2-stroke motorcycle drive train power path.
+Horizontal linear diagram: engine block (left, with crank rotation arrow),
+arrow to primary drive (gear pair, show large and small gear meshing),
+arrow to gearbox (show multiple gear pairs with selected gear highlighted),
+arrow to output shaft/sprocket (pignone), chain (show link pattern), final
+drive sprocket/corona (larger gear), arrow to rear wheel (circle with tire).
+Above each stage: gear ratio displayed as a fraction (e.g., 3.2:1, 1.8:1,
+3.5:1). The three multiplication stages shown in three distinct accent colors.
+
+[IMG-86] — Riga 593
+Titolo: Due tracciati — rapporto corto vs lungo
+Prompt:
+Top-view schematic diagram of two motorcycle race track layouts. Left track:
+tight and technical — many sharp corners, short straights, show "rapporto
+corto" indicator at corner entry zones in orange (many acceleration zones),
+the track path shown as a winding white line on dark surface. Right track:
+fast and open — long sweeping straights, few but fast corners, show "rapporto
+lungo" indicator at straight sections in teal (high speed zones). Both
+tracks shown to same scale with straight/corner ratio clearly different.
+Clean circuit map style, viewed from directly above.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.2trasmissioneFinale/corona/Corona.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-87] — Riga 307
+Titolo: Corona acciaio vs ergal vs ibrida — confronto materiali
+Prompt:
+Side-by-side comparison of three rear sprockets (corone). Left: steel sprocket
+— darker color, thicker teeth, solid construction, heavier appearance, uniform
+dark steel finish. Center: ergal/aluminum sprocket — bright aluminum color,
+lighter construction, teeth with rounded form, anodized surface (may show
+gold/red/blue anodizing), more holes/lightening cuts in the body. Right:
+hybrid sprocket — aluminum carrier body with steel teeth insert (two-color,
+steel teeth riveted onto aluminum body). Each sprocket shown from the front
+face. A weight comparison shown symbolically (heavier = lower position).
+
+[IMG-88] — Riga 548
+Titolo: Corona nuova vs usurata — usura dente a uncino
+Prompt:
+Detailed comparison of rear sprocket teeth wear progression. Show 4 teeth
+in close-up, from left to right showing wear stages: (1) new tooth —
+symmetric profile, full height, sharp tip. (2) early wear — slight asymmetry
+developing, chain contact face wearing faster. (3) hook wear — tooth has
+curved/hook shape (uncino/shark fin), one flank significantly thinner.
+(4) severely worn — tooth point only, extreme hook, risk of chain skipping.
+All four shown at the same scale with the original tooth profile shown as
+a ghost overlay. Raking studio light to emphasize profile.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.2trasmissioneFinale/catena/Catena.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-89] — Riga 327
+Titolo: Sezione esplosa maglia catena — piastre, perni, bussole, O-ring
+Prompt:
+Exploded isometric view of a single motorcycle chain link (maglia catena).
+Components floating apart: outer plates (two flat steel plates with holes,
+bright steel), inner plates (two slightly narrower flat plates), pin/rivet
+(cylindrical steel rod, chrome), bushing/sleeve (cylindrical bushing inside
+inner plates, around the pin, dark steel), roller (outer rotating cylinder
+around bushing, hollow, shown transparent to see bushing inside), O-ring
+seals (two flat toroidal rubber seals, amber, one on each side of inner
+plate/outer plate joint). Grease pocket shown between O-ring and bushing.
+Each component clearly separated.
+
+[IMG-90] — Riga 592
+Titolo: Catena — nuova vs usurata con O-ring e clip
+Prompt:
+Comparative technical illustration of chain condition. Left section of chain:
+new — O-rings plump and round (amber torus shapes visible between plates),
+uniform link pitch, clean plates, pin holes not elongated, master link clip
+shown correctly oriented (open end facing opposite to direction of travel).
+Right section: worn chain — O-rings flat/cracked and extruded (deformed),
+stretched pitch (measured gap exaggerated), rusty surface, one link shown
+stiff/seized (highlighted in red). Master link clip shown incorrectly oriented
+(open end facing direction of travel, marked with red X warning).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEZIONE 5.3 — SOSPENSIONI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE: src/components/5ciclistica/5.3sospensioni/forcelle/Forcelle.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-91] — Riga 130
+Titolo: Forcella USD esplosa — steli, cartuccia, molla, paraolio
+Prompt:
+Exploded cross-section illustration of an upside-down (USD) fork leg. Components
+floating apart along the vertical axis: outer tube (stanchion, large diameter
+aluminum tube, dark), inner tube (slider, smaller diameter, bright aluminum
+anodized), damper cartridge (cylindrical hydraulic unit, cut to show piston
+and shim stack inside, teal), fork spring (steel coil spring, orange), oil
+seal (paraolio, black rubber lip seal with spring), dust wiper seal (above
+oil seal), spring preload adjuster nut at top, compression adjuster at bottom
+cap (blue), rebound adjuster at top cap (orange). Each component floating
+at precise spacing.
+
+[IMG-92] — Riga 359
+Titolo: Confronto forcelle — cross, enduro, motard, stradale
+Prompt:
+Technical comparison illustration showing four fork assemblies side by side,
+viewed from the front (all same scale). From left to right: (1) MX/Cross fork
+— long travel, slim tubes, minimal external hardware, red accents; (2) Enduro
+fork — similar to cross but with more sealed design, stiffer lower legs,
+green accents; (3) Motard fork — shorter travel, larger diameter tubes, radial
+brake caliper mount visible on lower leg, orange accents; (4) Road/Street fork
+— even shorter travel, larger diameter, often with stabilizer bridge, purple/
+blue accents. Each fork labeled by discipline at base. Same height reference
+line shown across all four.
+
+[IMG-93] — Riga 475
+Titolo: Misura SAG anteriore con metro su forcella cross
+Prompt:
+Technical illustration of front sag measurement procedure on a motocross bike.
+Side view: motorcycle with rider in normal riding position (simplified rider
+silhouette), a measuring tape extended from a fixed point on the front axle
+to a reference point on the lower triple clamp or fork tube, showing the
+current sag distance. Inset 1: free sag measurement (no rider, show measurement
+difference). Inset 2: race sag with rider (show target 30-35mm arrow on
+fork travel diagram). The measurement tape shown in bright yellow, the
+measurement value highlighted in amber. Clean technical procedural style.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.3sospensioni/monoammortizzatore/Monoammortizzatore.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-94] — Riga 113
+Titolo: Monoammortizzatore esploso con parti nominate
+Prompt:
+Exploded technical illustration of a motorcycle rear shock absorber
+(monoammortizzatore). Components floating apart along the shock axis:
+reservoir (separated gas/oil reservoir, cylindrical, dark with port),
+reservoir hose connection, damper body (main cylinder, cut to show piston
+and shim stack inside), damper piston (with shim stacks visible — thin
+steel discs in teal and orange on each face), bump rubber (polyurethane
+bump stop), shaft/rod (polished chrome), rod guide and seal assembly
+(black seals), spring (coil spring, orange), spring preload collar,
+upper mount eye, lower mount eye. Full decomposition, isometric view.
+
+[IMG-95] — Riga 340
+Titolo: Misura SAG posteriore con metro e pilota
+Prompt:
+Technical illustration of rear sag measurement procedure. Side view of
+a dirt bike: rider in normal seated position (schematic silhouette) causing
+the rear to compress, measuring tape stretched from rear axle to a reference
+point on the rear subframe or seat stay. The measurement distance shown
+as an amber labeled arrow. Inset diagrams show: (1) free length (fully
+extended shock, no weight, measure A), (2) static sag (bike weight only,
+no rider, measure B), (3) race sag (with rider, measure C = A minus C).
+A formula shown symbolically (no text, just schematic values).
+
+[IMG-96] — Riga 454
+Titolo: Schema flusso olio — compressione ed estensione con shim stack
+Prompt:
+Cross-section diagram of a shock absorber piston showing oil flow in two
+states. The piston shown as a cylindrical disc in section. Left half (compression
+stroke): oil below piston pressurized (amber), flowing UP through small
+holes in piston, held back by compression shim stack (curved thin discs,
+shown deflecting upward, highlighted in orange), controlled flow shown as
+thin arrows between shim and hole. Right half (extension/rebound stroke):
+oil above piston pressurized, flowing DOWN through rebound holes, rebound
+shim stack deflecting downward (teal), controlled flow arrows in blue.
+Both flow paths shown simultaneously in split view.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.3sospensioni/olioSospensioni/OlioSospensioni.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-97] — Riga 132
+Titolo: Curva viscosità-temperatura — confronto 5W, 7.5W, 10W
+Prompt:
+Technical graph showing viscosity vs temperature curves for three fork oil
+grades. X-axis: temperature (low left to high right). Y-axis: viscosity
+(high bottom to low top — as viscosity decreases with temperature). Three
+curves: 5W (thin line, teal — lowest viscosity at all temps), 7.5W (medium
+line, amber — middle curve), 10W (thick line, orange — highest viscosity).
+All three curves showing the typical exponential drop in viscosity with
+increasing temperature. The operating temperature range for forks highlighted
+as a vertical band in the middle. The ideal viscosity zone shown as a
+horizontal band. Clean scientific graph, dark grid lines.
+
+[IMG-98] — Riga 365
+Titolo: Misurazione livello olio forcella — righello, molla rimossa
+Prompt:
+Technical illustration of fork oil level measurement. Show: fork leg standing
+vertically (outer tube of USD fork), fork cap removed, spring removed (coil
+spring shown nearby), a ruler/measuring rod (righello, thin flat rule, bright
+yellow/amber) inserted into the fork tube from the top, the oil surface level
+visible on the ruler (shown as a meniscus line). The measurement from the top
+of the fork tube to the oil surface shown with an arrow and measurement line.
+The fork compressed (at full compression for measurement). A side view and
+a top-down view showing the ruler position.
+
+[IMG-99] — Riga 479
+Titolo: Confronto campioni olio sospensioni — nuovo, 30h, 60h
+Prompt:
+Comparative illustration of three fork oil samples. Three identical glass
+containers (test tubes or small beakers) arranged left to right on a white/
+light surface with dark background. Left: new oil — completely clear or
+very light amber, transparent, clean. Center: used 30h oil — golden amber
+with slight cloudiness, fine metallic particles visible in suspension
+(show as tiny specks), slightly darker. Right: used 60h oil — dark brown,
+significantly more opaque, visible sediment particles, metallic sheen from
+aluminum and iron particles. Each container shown with the same fill level.
+Backlit to show opacity difference.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.3sospensioni/escursione/Escursione.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-100] — Riga 131
+Titolo: Schema corsa sospensione — estensione, SAG, fine corsa
+Prompt:
+Technical diagram showing suspension travel stages on a fork leg. One fork
+shown vertically four times as ghost overlays or separate columns: (1) full
+extension — fork fully extended, gap between stanchion/slider at maximum;
+(2) free sag — fork slightly compressed by bike weight, small gap, measurement
+arrow in blue; (3) race sag — fork compressed by rider weight, medium gap,
+measurement arrow in orange (target zone); (4) full compression — fork fully
+compressed, stanchion and slider nearly flush, bump rubber contact shown
+in red. Each stage shown with the wheel position and travel arrows.
+
+[IMG-101] — Riga 361
+Titolo: Moto a piena estensione, SAG e fine corsa — variazione geometria
+Prompt:
+Side-view silhouette diagram of a motorcycle in three overlapping states.
+Show the same motorcycle in three positions simultaneously (superimposed
+ghost images): (1) full extension — highest position, normal geometry,
+steering head angle at design rake; (2) race sag/normal — mid position,
+standard geometry (most opaque, clearest); (3) full compression — lowest
+position, fork completely compressed, steering head angle changes (more
+upright), trail decreases (show with geometry angle arc changes). The
+geometry change highlighted with colored angle arcs on the steering head.
+
+[IMG-102] — Riga 484
+Titolo: Sequenza atterraggio cross — fase aerea, impatto, compressione, recupero
+Prompt:
+Sequential illustration showing a motocross bike landing from a jump in
+4 frames. Frame 1 (aerial): bike in air, forks fully extended (both wheels
+airborne, fork at maximum travel), rider slightly forward. Frame 2 (impact):
+front wheel touching down, fork beginning to compress, impact force vector
+arrow downward in orange. Frame 3 (full compression): fork fully compressed
+or near limit, bump rubber contact indicated, rear wheel coming down, rider
+absorbing shock. Frame 4 (recovery): fork extending again, bike returning
+to normal sag position. All frames shown in the same image as a storyboard
+strip, dark background, motion blur on wheels.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.3sospensioni/compressioneRitornoRegolazioni/CompressioneRitornoRegolazioni.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-103] — Riga 128
+Titolo: Grafico F-V — curva forza-velocità, zone LSC/HSC/LSR/HSR
+Prompt:
+Technical engineering graph showing the force-velocity curve of a suspension
+damper. X-axis: shaft velocity (negative = compression left, positive =
+rebound right, zero at center), Y-axis: damping force. The curve shown as a
+smooth non-linear S-curve passing through origin. Four zones highlighted:
+LSC (Low Speed Compression, left lower area, violet), HSC (High Speed
+Compression, left upper area, blue), LSR (Low Speed Rebound, right lower
+area, teal), HSR (High Speed Rebound, right upper area, green). The "knee"
+of the curve at ~0.3 m/s highlighted with an amber circle. Clean dark grid,
+glowing curve line in white.
+
+[IMG-104] — Riga 535
+Titolo: Schema sezione cartuccia forcella — pistone, shim stack, LSC, HSC
+Prompt:
+Cross-section technical illustration of a fork damper cartridge (cartuccia
+forcella). Cut along the axis showing: outer cartridge tube (cylindrical,
+dark), hydraulic piston in the middle of the tube (with center bleed hole/
+needle adjuster in amber — for LSC), two shim stacks on the piston faces
+(stack of thin curved discs visible — one stack per side, each stack in a
+different color: violet for compression side, teal for rebound side),
+check valve/HSC circuit shown as a secondary passage bypassing the piston
+(blue highlighted bypass circuit). Oil flow arrows showing LSC path through
+needle and HSC path through bypass.
+
+[IMG-105] — Riga 680
+Titolo: Simulazione packing — whoops con LSR lento
+Prompt:
+Sequential technical illustration of suspension packing (progressive sinking)
+on a series of whoops (small bumps in a row). Show a side-view strip of 5
+frames: Frame 1 — bike at start of whoops section, suspension at sag level.
+Frame 2 — after first whoop, compression fully absorbed, but rebound slow
+(LSR too slow), fork only partially extended (lower than start). Frame 3 —
+hits second whoop while still lower, compresses further, less remaining
+travel. Frame 4 — progressive sinking visible. Frame 5 — suspension almost
+fully compressed, bike lower than initial position. Position reference line
+(white dashed horizontal) shows the progressive sinking. Warning arrows
+in orange at the final frame.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEZIONE 5.4 — SISTEMA FRENANTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE: src/components/5ciclistica/5.4sistemaFrenante/pompa/Pompa.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-106] — Riga 135
+Titolo: Master cylinder in sezione — due posizioni riposo e pressione
+Prompt:
+Cross-section technical illustration of a hydraulic brake master cylinder
+(pompa del freno) shown in two states. Split view or two panels: Left (riposo
+= rest): piston retracted, compensating port (foro compensatore) OPEN (teal
+arrow showing fluid communication with reservoir), reservoir shown above
+with fluid level, return spring extended. Right (pressione = braking): piston
+advanced, compensating port CLOSED (blocked by piston primary seal, orange
+indicator), pressure building (red gradient in pressure chamber), primary
+seal and secondary seal positions shown. Reservoir shown semi-transparent,
+fluid shown in amber.
+
+[IMG-107] — Riga 486
+Titolo: Confronto bore pompa 10mm vs 16mm — volumi e curva pressione
+Prompt:
+Technical comparison diagram of two master cylinder bore sizes. Left column:
+small bore (10mm) — narrow cylinder cross-section shown, small volume
+displacement per mm of piston travel (thin slice shown), pressure vs lever
+stroke curve on graph below: steep rise (high pressure from small stroke).
+Right column: large bore (16mm) — wider cylinder, larger volume per mm,
+pressure vs lever stroke curve: gentler rise (more lever travel needed,
+more fluid volume moved). Both bore cross-sections shown to actual scale
+ratio, the volume difference visualized as a cylinder of displaced fluid.
+
+[IMG-108] — Riga 603
+Titolo: Sistema frizione idraulica completo — master cylinder e slave
+Prompt:
+Technical illustration of a complete hydraulic clutch system. Left side:
+master cylinder on handlebar (clutch lever side) — show the lever connected
+to master cylinder pushrod, the reservoir above, the banjo bolt output.
+Center: brake line (tubo idraulico, braided steel or black hose) running
+from master cylinder to engine. Right: slave cylinder (cilindro ricevitore)
+mounted on engine cover — show the piston emerging from slave cylinder,
+pushing on the clutch release arm. A parallel view shows the old cable
+system as a ghost overlay (dashed) for comparison. Hydraulic connection
+points highlighted in amber.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.4sistemaFrenante/olioFreni/OlioFreni.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-109] — Riga 135
+Titolo: Grafico comparativo — punti di ebollizione DOT 3, 4, 5.1, 5
+Prompt:
+Technical bar chart or grouped column chart showing boiling points of brake
+fluids. Four sets of columns (DOT 3, DOT 4, DOT 5.1, DOT 5), each set with
+two bars: dry boiling point (tall bar, warm color gradient) and wet boiling
+point (shorter bar, cooler color). DOT 3 bars in steel/gray, DOT 4 in green,
+DOT 5.1 in teal, DOT 5 in violet. A horizontal danger zone band shown in
+red-orange at the vapor lock threshold temperature. The bar heights accurately
+proportional to real values (DOT 3 dry ~205°C, DOT 4 ~230°C, DOT 5.1 ~260°C).
+Clean dark grid, temperature scale on Y-axis (no text, just scale marks).
+
+[IMG-110] — Riga 536
+Titolo: Curva degrado wet boiling point nel tempo — DOT 4 uso normale vs intenso
+Prompt:
+Line graph showing wet boiling point degradation over time for DOT 4 brake
+fluid. X-axis: time in months (0 to 24). Y-axis: wet boiling point temperature
+(starting high, decreasing). Two curves: (1) normal road use — gentle decline
+in amber/orange, crossing danger threshold at ~18-24 months. (2) intense/
+racing use — steep rapid decline in red, crossing danger threshold at ~3-6
+months. The danger threshold line shown as a dashed red horizontal line
+(vapor lock risk zone below it). The safe zone above the threshold shown in
+subtle green tint. The curves start at the same point (new fluid) and diverge.
+
+[IMG-111] — Riga 654
+Titolo: Confronto campioni fluido freno — nuovo, 6 mesi, 1 anno, 2 anni
+Prompt:
+Comparative illustration of brake fluid samples in four identical transparent
+glass vials arranged left to right. Left to right progression of degradation:
+(1) new — completely clear, water-white or very pale amber, perfectly
+transparent; (2) 6 months — light amber tint, still mostly transparent,
+slight color shift; (3) 1 year — medium amber-brown, noticeably darker,
+slightly less transparent; (4) 2 years — dark brown/near black, nearly
+opaque, significant darkening. Below each vial: a brake fluid test strip
+showing the corresponding color change (chemical indicator). Backlit to
+show transparency gradient, dark background.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.4sistemaFrenante/pinza/Pinza.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-112] — Riga 137
+Titolo: Pinza freno a 4 pistoncini fissa — sezione con forze
+Prompt:
+Precise cross-section technical illustration of a fixed 4-piston brake caliper.
+Cut plane bisects the caliper body showing: caliper body (billet aluminum,
+two halves bolted together — show the center bolt flange), two pistons on
+each side (4 total, circular cross-sections, anodized aluminum, highlighted
+in steel blue), hydraulic seals (quadring shape visible in piston groove,
+black, shown in cross-section detail), dust boot/soffietti (folded rubber
+boot around piston stem), internal fluid passage connecting all pistons
+(highlighted in teal), bleed nipple at top (shown in amber). Force arrows
+from pistons pointing inward toward the disc gap (disc position shown as
+phantom dashed lines). Brake pad positions shown as thin rectangles.
+
+[IMG-113] — Riga 526
+Titolo: Schema comparativo — pinza flottante vs fissa
+Prompt:
+Side-by-side cross-section comparison of floating vs fixed brake calipers.
+Left: floating caliper (pinza flottante) — one piston side only (single
+piston shown), sliding pins/guide bolts shown as cylinders running through
+caliper ears (shown in amber, with sliding motion arrows indicating caliper
+movement direction), reaction side without piston, the caliper body sliding
+direction shown with orange arrows. Right: fixed caliper (pinza fissa) —
+pistons on BOTH sides (two pistons visible, one each side), caliper body
+rigidly bolted (mounting bolts shown in steel, no sliding), symmetrical
+force arrows both sides. The disc phantom position shown as dashed line in
+center of each. Visual balance emphasized.
+
+[IMG-114] — Riga 667
+Titolo: GIF cambio pastiglie — push-back pistoncini corretto vs sbagliato
+Prompt:
+Sequential step illustration of brake pad replacement procedure. Four panels:
+(1) Before: fluid removed from reservoir (dropper shown), old pads removed.
+(2) Correct tool: flat plastic piston pusher tool (rectangular flat face)
+pushing piston back uniformly — shown in teal/green "correct" frame.
+(3) Wrong tool: flathead screwdriver wedged against piston — shown in red
+"incorrect" frame, with scratches appearing on piston surface (red warning
+marks). (4) New pads installed: new thick pads in place, pistons retracted,
+lever being pumped. Each panel has a thin colored border (green correct,
+red incorrect). Instructional illustration style.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.4sistemaFrenante/discoPastiglie/DiscoPastiglie.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-115] — Riga 127
+Titolo: Sezione disco freno — mozzo, corona forata, spessore, rotazione
+Prompt:
+Technical cross-section illustration of a wave/petal brake disc (disco freno
+a petali). Side cross-section view showing: center hub flange (dark aluminum,
+bolt holes visible), thin spoke area connecting hub to rotor, outer friction
+ring/corona (the actual braking surface, showing the wave/sinusoidal outer
+edge profile, steel, with drilled holes shown in cross-section as dark circles),
+nominal thickness measurement arrow (showing full thickness), minimum discard
+thickness arrow (shorter, closer to the worn limit, highlighted in orange
+warning), rotation direction arrow curved around the disc perimeter in teal.
+The disc floating in space, precisely rendered.
+
+[IMG-116] — Riga 529
+Titolo: Sezione pastiglia freno esplosa — backing plate, interlayer, compound
+Prompt:
+Exploded cross-section illustration of a brake pad (pastiglia freno). Three
+layers floating apart vertically: (1) bottom — steel backing plate (piatto
+in acciaio, dark steel, flat rectangular, with anti-squeal shim slot visible),
+(2) middle — interlayer adhesive/bonding layer (thin layer, amber, semi-
+transparent), (3) top — friction compound (materiale attritivo, shown as
+textured material with specific composite texture, darker color with chamfer
+cuts at the two front edges highlighted). A detail shows the wear indicator
+slot (scanalatura di usura) visible on the friction face — shown at full
+depth (new) and with slot flush to surface (wear limit). Side view emphasis.
+
+[IMG-117] — Riga 669
+Titolo: Procedura rodaggio disco — transfer film uniforme vs judder spots
+Prompt:
+Comparison illustration of brake disc surface condition after bedding.
+Left disc (correct bedding): brake disc face-on view showing smooth, uniform
+iridescent/rainbow discoloration (teal-to-gold gradient) across the entire
+friction ring — the transfer film evenly deposited, surface appears smooth.
+Right disc (incorrect bedding): same disc view but showing uneven coloration —
+dark circular deposit spots (judder spots) at irregular intervals around
+the ring (shown as darker oval patches), areas of missing transfer film
+(lighter patches alternating). Subtle surface texture visible on both.
+A cross-section detail shows the film thickness difference (uniform thin
+film vs uneven thick deposits).
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.4sistemaFrenante/radialeAssiale/RadialeAssiale.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-118] — Riga 135
+Titolo: Schema comparativo — montaggio assiale vs radiale pinza
+Prompt:
+Technical engineering diagram comparing axial vs radial brake caliper mounting.
+Two fork legs shown side by side in cross-section from below. Left (assiale):
+fork slider with caliper mounting bolts running PARALLEL to the wheel axle
+(horizontal arrows showing bolt direction), caliper body shown with braking
+torque force vector creating a MOMENT on the mounting lug (curved orange
+arrow showing rotation tendency, caliper body deformation exaggerated in
+orange). Right (radiale): fork slider with caliper mounting bolts running
+PERPENDICULAR to axle (vertical arrows in radial direction), caliper body
+shown with force vector in line with bolts (teal straight arrows, no moment,
+stiffer connection). The bolt patterns highlighted in contrasting colors.
+
+[IMG-119] — Riga 375
+Titolo: Schema tecnico — flessione piedino forcella assiale vs radiale
+Prompt:
+Engineering illustration showing fork mounting lug deformation under braking
+force. Two fork lower leg cross-sections side by side. Left (assiale mounting):
+the mounting lug (ear) shown under braking torque load — the lug bending/
+flexing shown as an exaggerated deformation (orange arrows showing flex
+direction, the lug visibly curved from its normal position shown as ghost
+outline). Right (radiale mounting): the mounting lug under same braking
+force — minimal deformation because the force aligns with the bolt axis
+(teal arrows along bolt axis, lug shown rigid, ghost outline almost coincident
+with actual position). The structural difference visualized clearly.
+
+[IMG-120] — Riga 557
+Titolo: Forcella motard radiale 320mm vs forcella assiale disco piccolo
+Prompt:
+Side-by-side technical illustration of two fork/caliper configurations.
+Left: motard setup — fork slider with radial caliper mounting (show the
+two mounting bolts coming from the forward face of the slider in radial
+direction), large brake disc (320mm diameter, wave disc, shown as large
+circle behind caliper, highlighted in amber), caliper body positioned at
+the correct radius from the axle. Right: standard/axial setup — same fork
+size but with axial caliper (bolts parallel to axle, shown from the side),
+smaller disc (260mm), caliper positioned lower. The disc diameter difference
+shown with concentric circle outlines and radius arrows.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/5ciclistica/5.4sistemaFrenante/spurgoFreni/SpurgoFreni.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-121] — Riga 130
+Titolo: Schema circuito freno — pompa, tubo, pinza e vite di spurgo
+Prompt:
+Technical schematic of a front brake hydraulic circuit showing air bleeding
+principle. Show: brake master cylinder on handlebar (left, with reservoir
+above), braided brake line running down to caliper (dark hose), caliper
+at bottom right with bleed nipple at the TOP (shown highlighted in amber).
+Inside the circuit: air bubbles shown as white spheres rising upward through
+the fluid column (natural buoyancy), concentrating at the highest point
+near the bleed nipple. The brake fluid shown as translucent amber liquid
+in semi-transparent tubing. The circuit components connected and clearly
+visible in 3/4 technical diagram style.
+
+[IMG-122] — Riga 341
+Titolo: Diagramma step-by-step spurgo — sequenza in 5 fasi
+Prompt:
+Step-by-step sequential diagram of the brake bleeding procedure in 5 numbered
+panels arranged horizontally. Step 1: hand squeezing brake lever (lever
+toward handlebar). Step 2: bleed nipple being opened with wrench (partial
+turn, wrench in teal). Step 3: fluid + air bubbles exiting through clear
+tube into collection container (air bubbles visible as white spheres in
+amber fluid flow, arrow showing exit direction). Step 4: nipple being
+closed (wrench returning, tightening). Step 5: lever being released (hand
+releasing, lever springing back). Each step shown as a clear icon-style
+panel with motion arrows. Clean instructional diagram style.
+
+[IMG-123] — Riga 521
+Titolo: Foto/schema spurgo — leva, tubicino trasparente, contenitore
+Prompt:
+Technical illustration of the complete brake bleeding setup from a workshop
+perspective. Show: brake caliper in the foreground (detailed, with bleed
+nipple visible), clear plastic tubing slipped over the nipple (transparent
+tubing showing fluid + bubbles inside), the other end of the tubing in a
+small transparent collection bottle (amber fluid collected, a few air bubbles
+visible at top). In the background: handlebar with brake master cylinder,
+reservoir cap removed, fresh fluid level visible. A hand holds the wrench
+ready at the nipple. The entire circuit implied by the connected components.
+Workshop ambient lighting, dark background.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEZIONE 6 — ELETTRONICA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE: src/components/6elettronica/accensione/Accensione.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-124] — Riga 132
+Titolo: Schema completo accensione — statore, CDI, bobina, candela
+Prompt:
+Technical schematic of a complete 2-stroke ignition system. Flow diagram
+style: stator/generator (left, circular coil symbol) → pickup/trigger coil
+(small coil above the stator, with trigger tooth on flywheel) → CDI unit
+(black box with circuit board visible inside, amber glow) → ignition coil
+(transformer symbol, shown as a component with primary and secondary windings)
+→ high voltage cable (thick cable with electric arc potential shown as spark
+symbols) → spark plug cap and electrode (spark arc at gap in electric blue).
+Connecting lines color-coded: low voltage trigger in amber, HT line in
+electric blue. The signal path shown with animated-style arrows.
+
+[IMG-125] — Riga 413
+Titolo: Schema pistone al PMS — anticipo corretto, anticipato, ritardato
+Prompt:
+Technical diagram showing ignition timing effects. Three panels side by side,
+each showing a cross-section of the engine cylinder with piston approaching
+or at TDC (PMS). Left (anticipo eccessivo — too advanced): spark fires when
+piston is still descending well before TDC, pressure curve peaks too early
+(orange peak well left of TDC centerline), detonation risk highlighted in
+red. Center (timing corretto): spark fires slightly before TDC, pressure
+curve peaks just after TDC (green/amber optimal peak), piston being pushed
+down effectively. Right (ritardo — retarded): spark fires near or at TDC,
+pressure peak late (teal, lower, to the right of TDC). TDC reference line
+vertical in each panel.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/6elettronica/batteria/Batteria.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-126] — Riga 134
+Titolo: Batteria moto in sezione — celle, piastre, poli e flusso corrente
+Prompt:
+Cross-section technical illustration of a sealed motorcycle battery. Cut
+plane reveals internal structure: lead-acid or lithium cells shown as
+rectangular elements inside the housing, plate stacks (positive plates in
+amber, negative plates in dark blue, separator sheets between them in white),
+electrolyte (shown as translucent acid liquid between plates), battery
+terminals on top (positive marked with larger terminal, negative slightly
+smaller, both in bright copper-gold), current flow arrows inside battery
+during discharge (electron flow from negative to positive through external
+circuit shown as orange arrows exiting positive terminal to the starter
+motor or load).
+
+[IMG-127] — Riga 401
+Titolo: Confronto tensione batteria — sana vs debole durante avviamento
+Prompt:
+Technical comparison graph showing battery voltage behavior during engine
+cranking. Two curves plotted on the same graph (V vs time during crank):
+(1) healthy battery (green line) — starts at 12.6V, drops to ~11.5V during
+crank start, recovers quickly after engine starts, stays above 10V throughout.
+(2) weak battery (red line) — starts at 12.0V, drops sharply to 8-9V during
+crank (below minimum cranking voltage threshold shown as dashed red horizontal
+line at 9.5V), may not recover. The voltage drop event shown as a sharp
+dip on both curves. The danger threshold line clearly visible. Time axis
+shows pre-crank, crank event, and post-start phases.
+
+────────────────────────────────────────────────────────────────────────────
+FILE: src/components/6elettronica/chiave/Chiave.jsx
+────────────────────────────────────────────────────────────────────────────
+
+[IMG-128] — Riga 132
+Titolo: Blocchetto chiave in sezione — cilindro, nottolini, contatti
+Prompt:
+Cross-section technical illustration of a motorcycle key switch (blocchetto
+chiave/interruttore di accensione). Bisect along the key insertion axis
+showing: key slot (keyway) at top, tumbler pins (nottolini, small rectangular
+or cylindrical pins inside the lock cylinder that align when correct key
+is inserted, shown in amber when aligned), rotary cylinder body (dark metal),
+back face of cylinder with electrical contact plates/wipers (copper colored,
+making contact with fixed terminals), wire connector at rear (multi-pin
+connector, colored wires exiting). Show the cylinder in ON position with
+key inserted (ghost key outline).
+
+[IMG-129] — Riga 400
+Titolo: Retro blocchetto chiave — fascio cavi, connettore e punto di flessione
+Prompt:
+Technical illustration of the rear of a motorcycle key switch assembly showing
+the wiring harness exit. Show: the back plate of the ignition switch with the
+multi-pin connector (rectangular or round, showing individual pin sockets),
+the wiring harness emerging from the connector (bundle of 4-6 wires in
+different colors — without actual text labels — routed through a protective
+corrugated sheath), the wiring harness routed along the handlebar and steering
+head, bending at the steering head pivot point (punto di flessione highlighted
+in orange circle), the area where the harness flexes with handlebar movement
+shown with flex stress marks. Wires bundled with cable ties visible.
+
+═══════════════════════════════════════════════════════════════════════════════
+  FINE LISTA — TOTALE: 129 IMMAGINI
+═══════════════════════════════════════════════════════════════════════════════
+
+RIEPILOGO PER SEZIONE:
+  3componentiDelMotore ........... IMG-01 → IMG-09  (9 immagini)
+  3gruppoTermico ................. IMG-10 → IMG-25  (16 immagini)
+  3organiMeccanici ............... IMG-26 → IMG-39  (14 immagini)
+  3trasmissione .................. IMG-40 → IMG-49  (10 immagini)
+  3scarico ....................... IMG-50 → IMG-55  (6 immagini)
+  3raffreddamentoEAccensione ..... IMG-56 → IMG-67  (12 immagini)
+  4telaio ........................ IMG-68 → IMG-74  (7 immagini)
+  5.1ruotePneumatici ............. IMG-75 → IMG-81  (7 immagini)
+  5.2trasmissioneFinale .......... IMG-82 → IMG-90  (9 immagini)
+  5.3sospensioni ................. IMG-91 → IMG-105 (15 immagini)
+  5.4sistemaFrenante ............. IMG-106 → IMG-123 (18 immagini)
+  6elettronica ................... IMG-124 → IMG-129 (6 immagini)
+
+NOTA: Le immagini devono essere generate SENZA background, SENZA testo,
+SENZA etichette, SENZA watermark. Sfondo trasparente (PNG) o nero pieno.
