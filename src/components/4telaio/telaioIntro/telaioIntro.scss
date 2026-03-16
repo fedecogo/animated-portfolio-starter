@@ -176,7 +176,9 @@ $silver-bdr:  rgba(226, 232, 240, 0.15);
     border-radius: 999px;
     background: $steel-dim;
     border: 1px solid $steel-bdr;
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
     transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
 
     &:hover {

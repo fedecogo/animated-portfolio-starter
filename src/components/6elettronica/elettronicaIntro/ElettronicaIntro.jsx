@@ -84,26 +84,27 @@ const ElettronicaIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Accensione" },
-            { num: "02", label: "Chiave" },
-            { num: "03", label: "Batteria" },
-            { num: "04", label: "Cablaggio" },
-            { num: "05", label: "Luci" },
-            { num: "06", label: "Strumentazione" },
-            { num: "07", label: "Centralina" },
-            { num: "08", label: "Mappe" },
-            { num: "09", label: "Sensori" },
-            { num: "10", label: "Ride-by-wire" },
-            { num: "11", label: "ABS" },
+            { num: "01", label: "Accensione",     id: "Accensione" },
+            { num: "02", label: "Chiave",          id: "Chiave" },
+            { num: "03", label: "Batteria",        id: "Batteria" },
+            { num: "04", label: "Cablaggio",       id: "Cablaggio" },
+            { num: "05", label: "Luci",            id: "Luci" },
+            { num: "06", label: "Strumentazione",  id: "Strumentazione" },
+            { num: "07", label: "Centralina",      id: "Centralina" },
+            { num: "08", label: "Mappe",           id: "Mappe" },
+            { num: "09", label: "Sensori",         id: "Sensori" },
+            { num: "10", label: "Ride-by-wire",    id: "RideByWire" },
+            { num: "11", label: "ABS",             id: "Abs" },
           ].map((t) => (
-            <motion.div
+            <motion.a
+              href={`#${t.id}`}
               className="topicPill"
               key={t.num}
               variants={cardVariants}
             >
               <span className="pillNum">{t.num}</span>
               <span className="pillLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

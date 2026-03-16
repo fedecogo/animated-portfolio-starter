@@ -1,0 +1,875 @@
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 1200px;
+
+// ─── Primary accent — rose ───────────────────────────────────────────────────
+$rose:        #f43f5e;
+$rose-soft:   #fb7185;
+$rose-dim:    rgba(244, 63, 94, 0.12);
+$rose-bdr:    rgba(244, 63, 94, 0.22);
+
+// ─── Secondary tones ─────────────────────────────────────────────────────────
+$blue:        #4fa3e0;
+$blue-dim:    rgba(79, 163, 224, 0.10);
+$blue-bdr:    rgba(79, 163, 224, 0.20);
+
+$green:       #3ecf8e;
+$green-soft:  #67e3a6;
+$green-dim:   rgba(62, 207, 142, 0.10);
+$green-bdr:   rgba(62, 207, 142, 0.20);
+
+$violet:      #a78bfa;
+$violet-dim:  rgba(167, 139, 250, 0.10);
+$violet-bdr:  rgba(167, 139, 250, 0.20);
+
+$yellow:      #f0c040;
+$yellow-dim:  rgba(240, 192, 64, 0.10);
+$yellow-bdr:  rgba(240, 192, 64, 0.20);
+
+$steel:       #94a3b8;
+$steel-soft:  #c6d0db;
+$steel-dim:   rgba(148, 163, 184, 0.10);
+$steel-bdr:   rgba(148, 163, 184, 0.20);
+
+// ─── Root ────────────────────────────────────────────────────────────────────
+
+.strumentazione {
+  position: relative;
+  padding: 120px 0;
+  background:
+    radial-gradient(circle at 8% 5%, rgba(244, 63, 94, 0.08), transparent 25%),
+    radial-gradient(circle at 92% 86%, rgba(79, 163, 224, 0.05), transparent 24%),
+    linear-gradient(180deg, #0d1019 0%, #0b0d13 55%, #0d1019 100%);
+  color: #f5f7fa;
+  overflow: hidden;
+
+  .wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  // ─── INTRO BLOCK ───────────────────────────────────────────────────────────
+
+  .introBlock {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 42px;
+  }
+
+  .titleColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 780px;
+  }
+
+  .sectionLabel {
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: $rose-dim;
+    border: 1px solid $rose-bdr;
+    color: $rose-soft;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
+    line-height: 1;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+    max-width: 820px;
+  }
+
+  .lead {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.88);
+    max-width: 760px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(245, 247, 250, 0.72);
+    max-width: 760px;
+  }
+
+  // ─── INFO PANEL ────────────────────────────────────────────────────────────
+
+  .infoPanel {
+    position: sticky;
+    top: 110px;
+    padding: 28px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.28);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(244, 63, 94, 0.10), transparent 32%);
+      pointer-events: none;
+    }
+  }
+
+  .panelHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+
+    .panelTag {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: $rose;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.35rem;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
+
+  .flowStepsMini {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .miniStep {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .miniIndex {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid $rose-bdr;
+    background: $rose-dim;
+    color: $rose-soft;
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+
+  .miniText {
+    padding-top: 6px;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: rgba(245,247,250,0.9);
+    font-weight: 500;
+  }
+
+  // ─── VISUAL PLACEHOLDER ────────────────────────────────────────────────────
+
+  .visualBlock {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 32px;
+
+    &.visualBlockAlt {
+      grid-template-columns: 380px 1fr;
+
+      .visualCaption {
+        order: -1;
+      }
+    }
+  }
+
+  .mediaPlaceholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 24px;
+    border: 2px dashed rgba(244, 63, 94, 0.28);
+    background: rgba(244, 63, 94, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      border-color: rgba(244, 63, 94, 0.48);
+      background: rgba(244, 63, 94, 0.07);
+    }
+
+    img, video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 22px;
+      display: block;
+    }
+  }
+
+  .placeholderInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 24px;
+    pointer-events: none;
+  }
+
+  .placeholderIcon {
+    font-size: 2.4rem;
+    color: rgba(244, 63, 94, 0.38);
+    line-height: 1;
+  }
+
+  .placeholderText {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(251, 113, 133, 0.66);
+  }
+
+  .placeholderSub {
+    font-size: 0.82rem;
+    color: rgba(245,247,250,0.3);
+    font-family: monospace;
+  }
+
+  .visualCaption {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .captionTag {
+      display: inline-block;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: $rose-dim;
+      border: 1px solid $rose-bdr;
+      color: $rose-soft;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: rgba(245,247,250,0.72);
+      max-width: none;
+    }
+  }
+
+  // ─── SHARED BLOCK SHELL ────────────────────────────────────────────────────
+
+  .tipologieBlock,
+  .informazioniBlock,
+  .canBlock,
+  .diagnosiBlock {
+    margin-bottom: 32px;
+    padding: 36px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tipologieBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(244, 63, 94, 0.07), transparent 40%);
+    pointer-events: none;
+  }
+
+  .informazioniBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(79, 163, 224, 0.06), transparent 40%);
+    pointer-events: none;
+  }
+
+  .canBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at bottom left, rgba(62, 207, 142, 0.06), transparent 38%);
+    pointer-events: none;
+  }
+
+  .diagnosiBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at bottom right, rgba(240, 192, 64, 0.05), transparent 36%);
+    pointer-events: none;
+  }
+
+  // ─── SHARED HEADER ─────────────────────────────────────────────────────────
+
+  .tipologieHeader,
+  .informazioniHeader,
+  .canHeader,
+  .diagnosiHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+    max-width: 820px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    h3 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.25;
+    }
+
+    p {
+      max-width: none;
+    }
+  }
+
+  // ─── TIPOLOGIE GRID ────────────────────────────────────────────────────────
+
+  .tipologieGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .tipCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: background 0.25s ease, border-color 0.25s ease;
+
+    h4 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.68;
+      color: rgba(245, 247, 250, 0.65);
+      max-width: none;
+    }
+
+    &.tipAnalogico {
+      background: rgba(148, 163, 184, 0.05);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+
+      &:hover { background: rgba(148, 163, 184, 0.09); }
+    }
+
+    &.tipDigitale {
+      background: rgba(244, 63, 94, 0.05);
+      border: 1px solid rgba(244, 63, 94, 0.14);
+
+      &:hover { background: rgba(244, 63, 94, 0.09); }
+    }
+
+    &.tipTFT {
+      background: rgba(79, 163, 224, 0.05);
+      border: 1px solid rgba(79, 163, 224, 0.14);
+
+      &:hover { background: rgba(79, 163, 224, 0.09); }
+    }
+
+    &.tipGPS {
+      background: rgba(62, 207, 142, 0.05);
+      border: 1px solid rgba(62, 207, 142, 0.14);
+
+      &:hover { background: rgba(62, 207, 142, 0.09); }
+    }
+  }
+
+  .tipCardTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .tipBadge {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &.badgeAnalogico {
+      background: $steel-dim;
+      border: 1px solid $steel-bdr;
+      color: $steel-soft;
+    }
+
+    &.badgeDigitale {
+      background: $rose-dim;
+      border: 1px solid $rose-bdr;
+      color: $rose-soft;
+    }
+
+    &.badgeTFT {
+      background: $blue-dim;
+      border: 1px solid $blue-bdr;
+      color: $blue;
+    }
+
+    &.badgeGPS {
+      background: $green-dim;
+      border: 1px solid $green-bdr;
+      color: $green-soft;
+    }
+  }
+
+  .tipSub {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba(245, 247, 250, 0.35);
+    white-space: nowrap;
+  }
+
+  // ─── INFORMAZIONI GRID ─────────────────────────────────────────────────────
+
+  .informazioniGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .informazioniCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(244, 63, 94, 0.2);
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.68;
+      color: rgba(245, 247, 250, 0.65);
+      max-width: none;
+    }
+  }
+
+  .informazioniIdx {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: $rose;
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(244, 63, 94, 0.28);
+  }
+
+  // ─── CAN GRID ──────────────────────────────────────────────────────────────
+
+  .canGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .canCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(62, 207, 142, 0.2);
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.68;
+      color: rgba(245, 247, 250, 0.65);
+      max-width: none;
+    }
+  }
+
+  .canIdx {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: $green;
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(62, 207, 142, 0.24);
+  }
+
+  // ─── DIAGNOSI GRID ─────────────────────────────────────────────────────────
+
+  .diagnosiGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .diagnosiCard {
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover {
+      background: rgba(255,255,255,0.04);
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.68;
+      color: rgba(245, 247, 250, 0.65);
+      max-width: none;
+    }
+  }
+
+  .diagnosiBadge {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &.badgeSintomo {
+      background: $yellow-dim;
+      border: 1px solid $yellow-bdr;
+      color: $yellow;
+    }
+
+    &.badgeMisura {
+      background: $blue-dim;
+      border: 1px solid $blue-bdr;
+      color: $blue;
+    }
+
+    &.badgeIntervallo {
+      background: $violet-dim;
+      border: 1px solid $violet-bdr;
+      color: $violet;
+    }
+  }
+
+  // ─── CARDS GRID ────────────────────────────────────────────────────────────
+
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .infoCard {
+    position: relative;
+    min-height: 250px;
+    padding: 28px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.2);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(244, 63, 94, 0.6), transparent);
+      opacity: 0.7;
+    }
+
+    h3 {
+      margin: 0 0 14px;
+      font-size: 1.24rem;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.75;
+      color: rgba(245, 247, 250, 0.72);
+      max-width: none;
+    }
+  }
+
+  .cardTag {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $rose;
+    text-transform: uppercase;
+  }
+}
+
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────────
+
+@media (max-width: $laptop) {
+  .strumentazione {
+    .introBlock {
+      grid-template-columns: 1fr;
+    }
+
+    .infoPanel {
+      position: relative;
+      top: 0;
+    }
+
+    .visualBlock,
+    .visualBlock.visualBlockAlt {
+      grid-template-columns: 1fr;
+
+      .visualCaption {
+        order: 0;
+      }
+    }
+
+    .tipologieGrid,
+    .informazioniGrid,
+    .canGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .diagnosiGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cardsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .strumentazione {
+    padding: 90px 0;
+
+    .wrapper {
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      line-height: 1.02;
+    }
+
+    .lead,
+    p {
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    .tipologieBlock,
+    .informazioniBlock,
+    .canBlock,
+    .diagnosiBlock,
+    .infoPanel,
+    .infoCard {
+      padding: 24px;
+      border-radius: 22px;
+    }
+
+    .tipologieGrid,
+    .informazioniGrid,
+    .canGrid,
+    .diagnosiGrid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .tipCard,
+    .informazioniCard,
+    .canCard,
+    .diagnosiCard {
+      padding: 20px 18px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .strumentazione {
+    padding: 70px 0;
+
+    .wrapper {
+      padding: 0 16px;
+    }
+
+    .sectionLabel {
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      padding: 7px 12px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      letter-spacing: -1px;
+    }
+
+    .lead,
+    p,
+    .infoCard p,
+    .informazioniCard p,
+    .canCard p,
+    .tipCard p,
+    .diagnosiCard p,
+    .miniText {
+      font-size: 0.95rem;
+      line-height: 1.68;
+    }
+
+    .tipologieBlock,
+    .informazioniBlock,
+    .canBlock,
+    .diagnosiBlock,
+    .infoPanel,
+    .infoCard {
+      padding: 20px;
+    }
+
+    .miniStep {
+      grid-template-columns: 38px 1fr;
+      gap: 10px;
+    }
+
+    .miniIndex {
+      width: 32px;
+      height: 32px;
+      font-size: 0.72rem;
+    }
+
+    .mediaPlaceholder {
+      aspect-ratio: 4 / 3;
+      border-radius: 18px;
+    }
+
+    .tipCardTop {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .infoCard h3 {
+      font-size: 1.1rem;
+    }
+  }
+}

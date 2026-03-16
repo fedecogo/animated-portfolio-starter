@@ -149,7 +149,9 @@ $blue-bdr:    rgba(79, 163, 224, 0.2);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.09);
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
     transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
 
     &:hover {

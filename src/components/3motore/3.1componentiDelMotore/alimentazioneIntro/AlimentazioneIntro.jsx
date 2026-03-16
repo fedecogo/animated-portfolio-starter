@@ -76,20 +76,21 @@ const AlimentazioneIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Carburatore" },
-            { num: "02", label: "Corpo farfallato" },
-            { num: "03", label: "Pompa benzina" },
-            { num: "04", label: "Miscelatore" },
-            { num: "05", label: "Pacco lamellare" },
+            { num: "01", label: "Carburatore",      id: "Carburatore" },
+            { num: "02", label: "Corpo farfallato", id: "CorpoFarfallato" },
+            { num: "03", label: "Pompa benzina",    id: "PompaBenzina" },
+            { num: "04", label: "Miscelatore",      id: "Miscelatore" },
+            { num: "05", label: "Pacco lamellare",  id: "PaccoLamellare" },
           ].map((t) => (
-            <motion.div
+            <motion.a
+              href={`#${t.id}`}
               className="topicPill"
               key={t.num}
               variants={cardVariants}
             >
               <span className="pillNum">{t.num}</span>
               <span className="pillLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

@@ -9,10 +9,9 @@
 
 Aggiungi SEMPRE alla fine di ogni prompt:
 "No background, no text, no labels, no watermarks, no writing of any kind.
-Transparent background or solid black (#0d1019). High-detail technical
+Transparent background . High-detail technical
 illustration style, clean lines, realistic materials, soft shadows.
-Dark palette with bright accent colors (white, orange, blue, teal, green)
-to highlight key components. 3D render or high-quality vector illustration."
+high-quality vector illustration."
 
 In italiano: sfondo trasparente o nero pieno, NESSUN TESTO, nessuna etichetta,
 nessun watermark, nessuna scritta di alcun tipo.

@@ -1,0 +1,529 @@
+// ─── ABS — color token ───────────────────────────────────────────────────────
+$primary: #ef4444;       // red
+$primary-dim: rgba(239, 68, 68, 0.18);
+$primary-glow: rgba(239, 68, 68, 0.08);
+$text: #e2e8f0;
+$text-muted: #94a3b8;
+$bg-card: rgba(255, 255, 255, 0.04);
+$bg-card-hover: rgba(255, 255, 255, 0.07);
+$border: rgba(255, 255, 255, 0.08);
+$radius: 16px;
+$radius-sm: 10px;
+
+// ─── Breakpoints ────────────────────────────────────────────────────────────
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 1200px;
+
+// ─── Root ───────────────────────────────────────────────────────────────────
+.abs {
+  width: 100%;
+  color: $text;
+  font-family: "Inter", sans-serif;
+
+  .wrapper {
+    width: 100%;
+  }
+
+  // ── Shared block header ────────────────────────────────────────────────────
+  .blockHeader {
+    margin-bottom: 40px;
+
+    .sectionLabel {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: $primary;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: $text;
+      margin: 0 0 12px;
+    }
+
+    p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: $text-muted;
+      max-width: 600px;
+    }
+  }
+
+  // ── introBlock ────────────────────────────────────────────────────────────
+  .introBlock {
+    display: flex;
+    gap: 48px;
+    padding: 80px 6vw 60px;
+    align-items: flex-start;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      padding: 48px 5vw 40px;
+    }
+
+    .titleColumn {
+      flex: 1.2;
+
+      .chapterLabel {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: $primary;
+        margin-bottom: 14px;
+      }
+
+      h2 {
+        font-size: clamp(1.8rem, 3.5vw, 3rem);
+        font-weight: 800;
+        line-height: 1.15;
+        margin: 0 0 24px;
+        background: linear-gradient(135deg, #fff 40%, $primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.75;
+        color: $text-muted;
+        margin-bottom: 16px;
+        max-width: 580px;
+
+        strong {
+          color: $text;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .infoPanel {
+      flex: 0.85;
+      background: $bg-card;
+      border: 1px solid $border;
+      border-radius: $radius;
+      padding: 28px;
+      position: sticky;
+      top: 24px;
+
+      @media (max-width: $tablet) {
+        position: static;
+        width: 100%;
+      }
+
+      h4 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: $primary;
+        margin: 0 0 20px;
+      }
+
+      .miniStep {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 16px;
+        align-items: flex-start;
+
+        .stepNum {
+          min-width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          background: $primary-dim;
+          border: 1px solid $primary;
+          color: $primary;
+          font-size: 0.75rem;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .stepText {
+          font-size: 0.88rem;
+          line-height: 1.55;
+          color: $text-muted;
+
+          strong {
+            display: block;
+            color: $text;
+            font-weight: 600;
+            margin-bottom: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  // ── visualBlock + visualBlockAlt ──────────────────────────────────────────
+  .visualBlock,
+  .visualBlockAlt {
+    width: 100%;
+    min-height: 300px;
+    background: radial-gradient(ellipse at 50% 50%, rgba(239, 68, 68, 0.12) 0%, transparent 70%),
+      #0a0a0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .visualContent {
+      text-align: center;
+      padding: 48px 6vw;
+
+      .visualTitle {
+        font-size: clamp(1.2rem, 2.5vw, 1.9rem);
+        font-weight: 700;
+        color: $text;
+        margin-bottom: 12px;
+      }
+
+      .visualSub {
+        font-size: 0.95rem;
+        color: $text-muted;
+        max-width: 560px;
+        margin: 0 auto 28px;
+        line-height: 1.65;
+      }
+
+      .dataGrid {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .dataPill {
+          background: $bg-card;
+          border: 1px solid $border;
+          border-radius: 40px;
+          padding: 9px 20px;
+          font-size: 0.85rem;
+          color: $text;
+
+          span {
+            color: $primary;
+            font-weight: 700;
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  .visualBlockAlt {
+    background: radial-gradient(ellipse at 70% 30%, rgba(239, 68, 68, 0.1) 0%, transparent 60%),
+      #0a0a0f;
+  }
+
+  // ── fisicaBlock ───────────────────────────────────────────────────────────
+  .fisicaBlock {
+    padding: 72px 6vw;
+    background: radial-gradient(ellipse at 10% 50%, rgba(239, 68, 68, 0.07) 0%, transparent 55%),
+      #0d0d14;
+
+    .cardsRow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+
+      @media (max-width: $laptop) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+      }
+
+      .infoCard {
+        background: $bg-card;
+        border: 1px solid $border;
+        border-radius: $radius;
+        padding: 24px;
+        transition: background 0.25s, transform 0.25s;
+
+        &:hover {
+          background: $bg-card-hover;
+          transform: translateY(-4px);
+        }
+
+        .cardIcon {
+          font-size: 1.5rem;
+          margin-bottom: 14px;
+        }
+
+        h4 {
+          font-size: 1rem;
+          font-weight: 700;
+          color: $primary;
+          margin: 0 0 10px;
+        }
+
+        p {
+          font-size: 0.84rem;
+          line-height: 1.65;
+          color: $text-muted;
+          margin: 0;
+
+          strong {
+            color: $text;
+          }
+        }
+      }
+    }
+  }
+
+  // ── hardwareBlock ─────────────────────────────────────────────────────────
+  .hardwareBlock {
+    padding: 72px 6vw;
+    background: #0a0a0f;
+
+    .tipCardsGrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+
+      @media (max-width: $laptop) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+      }
+
+      .tipCard {
+        background: $bg-card;
+        border: 1px solid $border;
+        border-radius: $radius;
+        padding: 24px;
+        transition: background 0.25s, border-color 0.25s, transform 0.25s;
+
+        &:hover {
+          background: $bg-card-hover;
+          transform: translateY(-4px);
+        }
+
+        .tipIcon {
+          font-size: 1.6rem;
+          margin-bottom: 12px;
+        }
+
+        h4 {
+          font-size: 1rem;
+          font-weight: 700;
+          color: $text;
+          margin: 0 0 10px;
+        }
+
+        p {
+          font-size: 0.84rem;
+          line-height: 1.6;
+          color: $text-muted;
+          margin: 0;
+        }
+
+        &.steel {
+          border-left: 3px solid #94a3b8;
+        }
+        &.amber {
+          border-left: 3px solid #f59e0b;
+          &:hover { border-color: #f59e0b; }
+        }
+        &.violet {
+          border-left: 3px solid #a78bfa;
+          &:hover { border-color: #a78bfa; }
+        }
+        &.green {
+          border-left: 3px solid #22c55e;
+          &:hover { border-color: #22c55e; }
+        }
+      }
+    }
+  }
+
+  // ── sistemiBlock ──────────────────────────────────────────────────────────
+  .sistemiBlock {
+    padding: 72px 6vw;
+    background: radial-gradient(ellipse at 80% 20%, rgba(239, 68, 68, 0.07) 0%, transparent 55%),
+      #0d0d14;
+
+    .cardsRow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+
+      @media (max-width: $laptop) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+      }
+
+      .infoCard {
+        background: $bg-card;
+        border: 1px solid $border;
+        border-radius: $radius;
+        padding: 24px;
+        transition: background 0.25s, transform 0.25s;
+
+        &:hover {
+          background: $bg-card-hover;
+          transform: translateY(-4px);
+        }
+
+        .cardIcon {
+          font-size: 1.5rem;
+          margin-bottom: 14px;
+        }
+
+        h4 {
+          font-size: 1rem;
+          font-weight: 700;
+          color: $primary;
+          margin: 0 0 10px;
+        }
+
+        p {
+          font-size: 0.84rem;
+          line-height: 1.65;
+          color: $text-muted;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // ── diagnosiBlock ─────────────────────────────────────────────────────────
+  .diagnosiBlock {
+    padding: 72px 6vw;
+    background: #0a0a0f;
+
+    .diagGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+
+      @media (max-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+      }
+
+      .diagCard {
+        background: $bg-card;
+        border: 1px solid $border;
+        border-radius: $radius;
+        padding: 22px;
+        transition: background 0.25s, transform 0.25s;
+
+        &:hover {
+          background: $bg-card-hover;
+          transform: translateY(-3px);
+        }
+
+        &.sintomo {
+          border-top: 2px solid #f97316;
+          .diagLabel { color: #f97316; }
+        }
+
+        &.misura {
+          border-top: 2px solid $primary;
+          .diagLabel { color: $primary; }
+        }
+
+        &.intervallo {
+          border-top: 2px solid #22c55e;
+          .diagLabel { color: #22c55e; }
+        }
+
+        .diagLabel {
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          margin-bottom: 8px;
+        }
+
+        h4 {
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: $text;
+          margin: 0 0 8px;
+        }
+
+        p {
+          font-size: 0.82rem;
+          line-height: 1.6;
+          color: $text-muted;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // ── cardsGrid (footer 3 infoCards) ────────────────────────────────────────
+  .cardsGrid {
+    padding: 72px 6vw 96px;
+    background: radial-gradient(ellipse at 50% 0%, rgba(239, 68, 68, 0.09) 0%, transparent 60%),
+      #0d0d14;
+
+    .blockTitle {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: $text;
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+
+      @media (max-width: $tablet) {
+        grid-template-columns: 1fr;
+      }
+
+      .infoCard {
+        background: $bg-card;
+        border: 1px solid $border;
+        border-radius: $radius;
+        padding: 28px;
+        transition: background 0.25s, transform 0.25s;
+
+        &:hover {
+          background: $bg-card-hover;
+          border-color: $primary-dim;
+          transform: translateY(-4px);
+        }
+
+        h4 {
+          font-size: 1.05rem;
+          font-weight: 700;
+          color: $primary;
+          margin: 0 0 12px;
+        }
+
+        p {
+          font-size: 0.86rem;
+          line-height: 1.7;
+          color: $text-muted;
+          margin: 0;
+
+          strong {
+            color: $text;
+          }
+        }
+      }
+    }
+  }
+}

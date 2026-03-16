@@ -85,20 +85,21 @@ const SospensioniIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Forcella" },
-            { num: "02", label: "Monoammortizzatore" },
-            { num: "03", label: "Escursione" },
-            { num: "04", label: "Olio sospensioni" },
-            { num: "05", label: "Compressione e ritorno" },
+            { num: "01", label: "Forcella",               id: "Forcelle" },
+            { num: "02", label: "Monoammortizzatore",     id: "Monoammortizzatore" },
+            { num: "03", label: "Escursione",             id: "Escursione" },
+            { num: "04", label: "Olio sospensioni",       id: "OlioSospensioni" },
+            { num: "05", label: "Compressione e ritorno", id: "CompressioneRitornoRegolazioni" },
           ].map((t) => (
-            <motion.div
+            <motion.a
+              href={`#${t.id}`}
               className="topicPill"
               key={t.num}
               variants={cardVariants}
             >
               <span className="pillNum">{t.num}</span>
               <span className="pillLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

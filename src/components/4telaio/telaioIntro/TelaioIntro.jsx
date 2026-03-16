@@ -30,13 +30,13 @@ const pillVariants = {
 
 const TelaioIntro = () => {
   const topics = [
-    { label: "Telaio", icon: "⬡" },
-    { label: "Materiali", icon: "◧" },
-    { label: "Geometrie e pesi", icon: "⌖" },
-    { label: "Rigidità", icon: "↔" },
-    { label: "Canotto di sterzo", icon: "◎" },
-    { label: "Forcellone", icon: "⟵" },
-    { label: "Cavalletto", icon: "⊥" },
+    { label: "Telaio",            icon: "⬡", id: "Telaio" },
+    { label: "Materiali",         icon: "◧", id: "Materiali" },
+    { label: "Geometrie e pesi",  icon: "⌖", id: "Geometrie" },
+    { label: "Rigidità",          icon: "↔", id: "Rigidita" },
+    { label: "Canotto di sterzo", icon: "◎", id: "CanottoDiSterzo" },
+    { label: "Forcellone",        icon: "⟵", id: "Forcellone" },
+    { label: "Cavalletto",        icon: "⊥", id: "Cavalletto" },
   ];
 
   return (
@@ -103,14 +103,15 @@ const TelaioIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {topics.map((t) => (
-            <motion.div
+            <motion.a
+              href={`#${t.id}`}
               className="topicPill"
               key={t.label}
               variants={pillVariants}
             >
               <span className="topicIcon">{t.icon}</span>
               <span className="topicLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

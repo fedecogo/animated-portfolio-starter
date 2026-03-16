@@ -30,12 +30,12 @@ const pillVariants = {
 
 const OrganiMeccaniciIntro = () => {
   const topics = [
-    { label: "Biella",           icon: "⟋" },
-    { label: "Albero motore",    icon: "◎" },
-    { label: "Cuscinetti di banco", icon: "⊙" },
-    { label: "Carter",           icon: "▣" },
-    { label: "Olio motore",      icon: "◈" },
-    { label: "Guarnizione",      icon: "◻" },
+    { label: "Biella",              icon: "⟋", id: "Biella" },
+    { label: "Albero motore",       icon: "◎", id: "AlberoMotore" },
+    { label: "Cuscinetti di banco", icon: "⊙", id: "CuscinettiDiBanco" },
+    { label: "Carter",              icon: "▣", id: "Carter" },
+    { label: "Olio motore",         icon: "◈", id: "Olio" },
+    { label: "Guarnizione",         icon: "◻", id: "Guarnizioni" },
   ];
 
   return (
@@ -101,10 +101,10 @@ const OrganiMeccaniciIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {topics.map((t) => (
-            <motion.div className="topicPill" key={t.label} variants={pillVariants}>
+            <motion.a href={`#${t.id}`} className="topicPill" key={t.label} variants={pillVariants}>
               <span className="topicIcon">{t.icon}</span>
               <span className="topicLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

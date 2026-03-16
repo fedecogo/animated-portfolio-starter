@@ -30,9 +30,9 @@ const pillVariants = {
 
 const ScaricaIntro = () => {
   const topics = [
-    { label: "Camera di espansione", icon: "◁▷" },
-    { label: "Terminale",            icon: "⊳" },
-    { label: "Valvola di scarico",   icon: "◫" },
+    { label: "Camera di espansione", icon: "◁▷", id: "Espansione" },
+    { label: "Terminale",            icon: "⊳",  id: "Terminale" },
+    { label: "Valvola di scarico",   icon: "◫",  id: "ValvolaDiScarico" },
   ];
 
   return (
@@ -97,10 +97,10 @@ const ScaricaIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {topics.map((t) => (
-            <motion.div className="topicPill" key={t.label} variants={pillVariants}>
+            <motion.a href={`#${t.id}`} className="topicPill" key={t.label} variants={pillVariants}>
               <span className="topicIcon">{t.icon}</span>
               <span className="topicLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

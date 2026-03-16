@@ -75,19 +75,20 @@ const RuotePneumaticiIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Mozzi" },
-            { num: "02", label: "Cerchi" },
-            { num: "03", label: "Pneumatici" },
-            { num: "04", label: "Grip e trazione" },
+            { num: "01", label: "Mozzi",          id: "Mozzi" },
+            { num: "02", label: "Cerchi",         id: "Cerchi" },
+            { num: "03", label: "Pneumatici",     id: "Pneumatici" },
+            { num: "04", label: "Grip e trazione",id: "Grip" },
           ].map((t) => (
-            <motion.div
+            <motion.a
+              href={`#${t.id}`}
               className="topicPill"
               key={t.num}
               variants={cardVariants}
             >
               <span className="pillNum">{t.num}</span>
               <span className="pillLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

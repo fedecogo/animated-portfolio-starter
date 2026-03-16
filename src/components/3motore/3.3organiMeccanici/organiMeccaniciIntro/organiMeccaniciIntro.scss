@@ -160,7 +160,9 @@ $orange-bdr:  rgba(255, 107, 53, 0.18);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.09);
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
     transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
 
     &:hover {

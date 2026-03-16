@@ -30,12 +30,12 @@ const pillVariants = {
 
 const TrasmissioneIntro = () => {
   const topics = [
-    { label: "Frizione",              icon: "◉" },
-    { label: "Cambio",                icon: "⊞" },
-    { label: "Albero primario",       icon: "⟼" },
-    { label: "Albero secondario",     icon: "⟻" },
-    { label: "Selettore",             icon: "◈" },
-    { label: "Ingranaggi",            icon: "⚙" },
+    { label: "Frizione",          icon: "◉", id: "Frizione" },
+    { label: "Cambio",            icon: "⊞", id: "Cambio" },
+    { label: "Albero primario",   icon: "⟼", id: "Alberi" },
+    { label: "Albero secondario", icon: "⟻", id: "Alberi" },
+    { label: "Selettore",         icon: "◈", id: "Selettore" },
+    { label: "Ingranaggi",        icon: "⚙", id: "Ingranaggi" },
   ];
 
   return (
@@ -100,10 +100,10 @@ const TrasmissioneIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {topics.map((t) => (
-            <motion.div className="topicPill" key={t.label} variants={pillVariants}>
+            <motion.a href={`#${t.id}`} className="topicPill" key={t.label} variants={pillVariants}>
               <span className="topicIcon">{t.icon}</span>
               <span className="topicLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

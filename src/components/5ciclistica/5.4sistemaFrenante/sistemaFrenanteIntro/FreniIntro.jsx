@@ -85,21 +85,22 @@ const FreniIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Pompa" },
-            { num: "02", label: "Pinza" },
-            { num: "03", label: "Disco e pastiglie" },
-            { num: "04", label: "Olio freni" },
-            { num: "05", label: "Radiale e assiale" },
-            { num: "06", label: "Spurgo freni" },
+            { num: "01", label: "Pompa",             id: "Pompa" },
+            { num: "02", label: "Pinza",             id: "Pinza" },
+            { num: "03", label: "Disco e pastiglie", id: "DiscoPastiglie" },
+            { num: "04", label: "Olio freni",        id: "OlioFreni" },
+            { num: "05", label: "Radiale e assiale", id: "RadialeAssiale" },
+            { num: "06", label: "Spurgo freni",      id: "SpurgoFreni" },
           ].map((t) => (
-            <motion.div
+            <motion.a
+              href={`#${t.id}`}
               className="topicPill"
               key={t.num}
               variants={cardVariants}
             >
               <span className="pillNum">{t.num}</span>
               <span className="pillLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

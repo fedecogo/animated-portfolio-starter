@@ -182,7 +182,9 @@ $fuel-bdr: rgba(212, 160, 23, 0.2);
       background 0.25s ease,
       border-color 0.25s ease,
       transform 0.2s ease;
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 
     &:hover {
       background: $fuel-dim;

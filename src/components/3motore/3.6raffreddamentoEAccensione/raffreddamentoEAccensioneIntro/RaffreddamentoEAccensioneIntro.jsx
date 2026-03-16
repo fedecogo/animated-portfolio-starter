@@ -30,12 +30,12 @@ const pillVariants = {
 
 const RaffreddamentoEAccensioneIntro = () => {
   const topics = [
-    { label: "Radiatore",         icon: "⊟" },
-    { label: "Pompa acqua",       icon: "↺"  },
-    { label: "Circuito acqua",    icon: "⌁"  },
-    { label: "Volano e statore",  icon: "◎"  },
-    { label: "CDI e bobina",      icon: "⚡" },
-    { label: "Avviamento",        icon: "⊳"  },
+    { label: "Radiatore",        icon: "⊟",  id: "Radiatore" },
+    { label: "Pompa acqua",      icon: "↺",  id: "PompaAcqua" },
+    { label: "Circuito acqua",   icon: "⌁",  id: "CircuitoAcqua" },
+    { label: "Volano e statore", icon: "◎",  id: "Volano" },
+    { label: "CDI e bobina",     icon: "⚡", id: "CDI" },
+    { label: "Avviamento",       icon: "⊳",  id: "Avviamento" },
   ];
 
   return (
@@ -99,10 +99,10 @@ const RaffreddamentoEAccensioneIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {topics.map((t) => (
-            <motion.div className="topicPill" key={t.label} variants={pillVariants}>
+            <motion.a href={`#${t.id}`} className="topicPill" key={t.label} variants={pillVariants}>
               <span className="topicIcon">{t.icon}</span>
               <span className="topicLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

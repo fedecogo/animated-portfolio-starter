@@ -84,21 +84,22 @@ const GruppoTermicoIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Cilindro" },
-            { num: "02", label: "Pistone" },
-            { num: "03", label: "Testa" },
-            { num: "04", label: "Guarnizione" },
-            { num: "05", label: "Fascia elastica" },
-            { num: "06", label: "Spinotto" },
+            { num: "01", label: "Cilindro",        id: "Cilindro" },
+            { num: "02", label: "Pistone",         id: "Pistone" },
+            { num: "03", label: "Testa",           id: "Testata" },
+            { num: "04", label: "Guarnizione",     id: "Guarnizioni" },
+            { num: "05", label: "Fascia elastica", id: "Fasce" },
+            { num: "06", label: "Spinotto",        id: "Pistone" },
           ].map((t) => (
-            <motion.div
+            <motion.a
+              href={`#${t.id}`}
               className="topicPill"
               key={t.num}
               variants={cardVariants}
             >
               <span className="pillNum">{t.num}</span>
               <span className="pillLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

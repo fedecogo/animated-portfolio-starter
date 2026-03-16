@@ -166,7 +166,9 @@ $red-bdr: rgba(239, 68, 68, 0.22);
       background 0.25s ease,
       border-color 0.25s ease,
       transform 0.2s ease;
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 
     &:hover {
       background: $red-dim;
