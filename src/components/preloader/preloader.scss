@@ -1,0 +1,69 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 107, 53, 0.06), transparent 35%),
+    radial-gradient(circle at 80% 80%, rgba(79, 163, 224, 0.04), transparent 30%),
+    #0b0d13;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloaderInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 280px;
+}
+
+.preloaderLogo {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -4px;
+  user-select: none;
+
+  .logoNum {
+    color: #ff6b35;
+  }
+
+  .logoT {
+    color: #f5f7fa;
+  }
+}
+
+.preloaderLabel {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(245, 247, 250, 0.35);
+}
+
+.preloaderTrack {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.preloaderFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff6b35, #ff8a5f);
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(255, 107, 53, 0.5);
+}
+
+.preloaderPercent {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 107, 53, 0.6);
+  letter-spacing: 1px;
+  font-family: monospace;
+}

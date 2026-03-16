@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import Preloader from "./components/preloader/Preloader";
 import "./app.scss";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
@@ -114,8 +116,13 @@ import ProjectOutro from "./components/projectOutro/ProjectOutro";
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   return (
+    <>
+    <AnimatePresence>
+      {!loaded && <Preloader onComplete={() => setLoaded(true)} />}
+    </AnimatePresence>
     <div>
       <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
 
@@ -495,6 +502,7 @@ const App = () => {
 
       <section id="ProjectOutro"><ProjectOutro/></section>
     </div>
+    </>
   );
 };
 
