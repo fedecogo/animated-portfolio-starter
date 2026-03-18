@@ -15,14 +15,33 @@
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     height: 100%;
 
-    span {
-      font-weight: 700;
-      color: #f5f7fa;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
+    .navTitle {
+      display: flex;
+      align-items: baseline;
+      gap: 0;
+      cursor: default;
+      user-select: none;
+
+      span {
+        font-size: 1.05rem;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        line-height: 1;
+      }
+
+      .tWhite  { color: #f5f7fa; }
+      .tDim    { color: rgba(245, 247, 250, 0.38); }
+      .tAccent {
+        font-size: 1.22rem;
+        background: linear-gradient(135deg, #ff6b35 0%, #f59e0b 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin: 0 1px;
+      }
     }
     .languageBtn {
       border: none;

@@ -30,17 +30,39 @@ const Navbar = () => {
     console.log("the new language is " + newLanguage);
   };
 
+  const titleParts = [
+    { text: "How",    cls: "tWhite" },
+    { text: "2",      cls: "tAccent" },
+    { text: "Stroke", cls: "tWhite" },
+    { text: "Works",  cls: "tDim" },
+  ];
+
+  const titleContainer = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.09, delayChildren: 0.15 } },
+  };
+
+  const wordVariant = {
+    hidden: { opacity: 0, y: -14 },
+    show:   { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+  };
+
   return (
     <div className="navbar">
       <div className="wrapper">
-        <motion.span
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+        <motion.div
+          className="navTitle"
+          variants={titleContainer}
+          initial="hidden"
+          animate="show"
         >
-          How2StrokeWorks
-        </motion.span>
-        <p>${language === "en" ? "EN" : "IT"}</p>
+          {titleParts.map((p, i) => (
+            <motion.span key={i} className={p.cls} variants={wordVariant}>
+              {p.text}
+            </motion.span>
+          ))}
+        </motion.div>
+        {/* <p>${language === "en" ? "EN" : "IT"}</p>
 
         <motion.button
           className="languageBtn"
@@ -56,7 +78,7 @@ const Navbar = () => {
           >
             {language === "en" ? "Cambia lingua 🇮🇹" : "Change language 🇬🇧"}
           </motion.span>
-        </motion.button>
+        </motion.button> */}
       </div>
     </div>
   );

@@ -115,13 +115,13 @@ const PompaBenzina = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
         >
-          {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
+         
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — pompa a diaframma</span>
-              <span className="placeholderSub">Sostituisci questo div con un tag &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+              <img src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773803624/ChatGPT_Image_Mar_18_2026_12_43_33_PM_dipglg.png"
+              alt=""
+             />
+           </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
 
@@ -267,12 +267,11 @@ const PompaBenzina = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
         >
-          {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
+         
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — pompa elettrica e circuito</span>
-              <span className="placeholderSub">Sostituisci questo div con un tag &lt;img&gt; o &lt;video&gt;</span>
+              <img src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773803839/ChatGPT_Image_Mar_18_2026_12_47_10_PM_fzz3iy.png" alt=""
+              />
             </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}

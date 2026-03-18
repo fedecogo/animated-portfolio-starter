@@ -93,7 +93,7 @@ const PaccoLamellare = () => {
               </div>
               <div className="miniStep">
                 <span className="miniIndex">02</span>
-                <span className="miniStep">Lamelle — petali flessibili in fibra di carbonio o acciaio</span>
+                <span className="miniText">Lamelle — petali flessibili in fibra di carbonio o acciaio</span>
               </div>
               <div className="miniStep">
                 <span className="miniIndex">03</span>
@@ -118,10 +118,8 @@ const PaccoLamellare = () => {
           {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — pacco lamellare esploso</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+            <img src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773805612/ChatGPT_Image_Mar_18_2026_01_16_43_PM_gqiom7.png" alt="PaccoLamellare"/>
+        </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
           <div className="visualCaption">
@@ -286,10 +284,8 @@ const PaccoLamellare = () => {
           {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — confronto lamelle acciaio vs carbonio</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+              <img src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773805821/ChatGPT_Image_Mar_18_2026_01_20_12_PM_b2yevy.png" alt="AcciaioVsCarbonio" />
+          </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
         </motion.div>
@@ -475,10 +471,8 @@ const PaccoLamellare = () => {
           {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — lamelle usurate vs nuove</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+              <img src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773805983/ChatGPT_Image_Mar_18_2026_01_22_53_PM_txdqwh.png" alt="NuoveVsUsurate" />
+           </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
           <div className="visualCaption">

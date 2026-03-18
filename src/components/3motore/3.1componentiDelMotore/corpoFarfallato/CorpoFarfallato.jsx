@@ -283,14 +283,9 @@ const CorpoFarfallato = () => {
           {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">
-                Immagine / GIF — schema ECU & sensori
-              </span>
-              <span className="placeholderSub">
-                Sostituisci questo div con un tag &lt;img&gt; o &lt;video&gt;
-              </span>
-            </div>
+            <img src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773805424/ChatGPT_Image_Mar_18_2026_01_13_28_PM_zmfrlj.png" alt="CorpoFarfallato"/>
+      
+        </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
 

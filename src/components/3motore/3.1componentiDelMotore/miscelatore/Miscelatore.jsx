@@ -118,10 +118,9 @@ const Miscelatore = () => {
           {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — schema miscelatore</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+            <img
+            src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773804120/ChatGPT_Image_Mar_18_2026_12_51_46_PM_bx2pzv.png"/>
+         </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
 
@@ -221,10 +220,8 @@ const Miscelatore = () => {
             {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
             <div className="mediaPlaceholder mediaPlaceholderWide">
               <div className="placeholderInner">
-                <span className="placeholderIcon">⊕</span>
-                <span className="placeholderText">Immagine / GIF — miscelatore meccanico e leveraggio</span>
-                <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-              </div>
+                <img src=""/>         
+             </div>
             </div>
             {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
           </motion.div>
@@ -315,10 +312,8 @@ const Miscelatore = () => {
             {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
             <div className="mediaPlaceholder mediaPlaceholderWide">
               <div className="placeholderInner">
-                <span className="placeholderIcon">⊕</span>
-                <span className="placeholderText">Immagine / GIF — miscelatore elettronico e schema ECU</span>
-                <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-              </div>
+              <img src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773804551/ChatGPT_Image_Mar_18_2026_12_58_50_PM_ogrgie.png" alt="Miscelatore eletronico"/>
+            </div>
             </div>
             {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
           </motion.div>

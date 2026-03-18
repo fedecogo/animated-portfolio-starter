@@ -96,9 +96,9 @@ const Hero = ({ onOpenSidebar }) => {
           </motion.p>
 
           <motion.div className="statsRow" variants={itemVariants}>
-            <span>5 Capitoli</span>
+            <span>8 Capitoli</span>
             <span className="dot">·</span>
-            <span>40+ Componenti</span>
+            <span>100+ Sezioni</span>
             <span className="dot">·</span>
             <span>Guida tecnica completa</span>
           </motion.div>

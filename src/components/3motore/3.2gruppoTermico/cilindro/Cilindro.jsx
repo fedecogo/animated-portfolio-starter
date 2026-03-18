@@ -108,10 +108,8 @@ const Cilindro = () => {
           {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — cilindro 2T in sezione con luci</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+              <img src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773809053/ChatGPT_Image_Mar_18_2026_02_13_51_PM_c5yr74.png" alt="placeholder" /> 
+          </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
           <div className="visualCaption">
@@ -314,10 +312,8 @@ const Cilindro = () => {
           {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — scavenging Schnürle e flusso travaso</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+              <img src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773809149/ChatGPT_Image_Mar_18_2026_02_15_39_PM_s1om9o.png" alt="gasFLow" />
+           </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
         </motion.div>
@@ -495,10 +491,8 @@ const Cilindro = () => {
           {/* ↓↓↓ INSERISCI QUI LA TUA IMG O GIF ↓↓↓ */}
           <div className="mediaPlaceholder">
             <div className="placeholderInner">
-              <span className="placeholderIcon">⊕</span>
-              <span className="placeholderText">Immagine / GIF — cilindro a liquido in sezione con camera d'acqua</span>
-              <span className="placeholderSub">Sostituisci questo div con &lt;img&gt; o &lt;video&gt;</span>
-            </div>
+              <img src="https://res.cloudinary.com/dorr4si5z/image/upload/v1773809464/ChatGPT_Image_Mar_18_2026_02_20_39_PM_ckkbmc.png" alt="Cilindro" />
+           </div>
           </div>
           {/* ↑↑↑ FINE PLACEHOLDER ↑↑↑ */}
           <div className="visualCaption">
