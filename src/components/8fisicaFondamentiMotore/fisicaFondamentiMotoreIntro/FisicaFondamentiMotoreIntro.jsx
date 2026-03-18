@@ -89,22 +89,23 @@ const FisicaFondamentiMotoreIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Cavalli" },
-            { num: "02", label: "Coppia" },
-            { num: "03", label: "Cilindrata" },
-            { num: "04", label: "Temperatura ottimale" },
-            { num: "05", label: "Rapporto aria-benzina" },
-            { num: "06", label: "Detonazione" },
-            { num: "07", label: "Momento torcente e rovesciante" },
+            { num: "01", label: "Cavalli",                       id: "Cavalli" },
+            { num: "02", label: "Coppia",                        id: "Coppia" },
+            { num: "03", label: "Cilindrata",                    id: "Cilindrata" },
+            { num: "04", label: "Temperatura ottimale",          id: "TemperaturaOttimale" },
+            { num: "05", label: "Rapporto aria-benzina",         id: "RapportoAriaBenzina" },
+            { num: "06", label: "Detonazione",                   id: "Detonazione" },
+            { num: "07", label: "Momento torcente e rovesciante", id: "MomentoTorcenteRovesciante" },
           ].map((t) => (
-            <motion.div
+            <motion.a
+              href={`#${t.id}`}
               className="topicPill"
               key={t.num}
               variants={cardVariants}
             >
               <span className="pillNum">{t.num}</span>
               <span className="pillLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

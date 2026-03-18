@@ -26,6 +26,7 @@ const MotoreIntro = () => {
       desc: "Carburatore, corpo farfallato, pompa benzina, miscelatore e pacco lamellare",
       icon: "⛽",
       cls: "cardAlimentazione",
+      id: "AlimentazioneIntro",
     },
     {
       numero: "3.2",
@@ -33,6 +34,7 @@ const MotoreIntro = () => {
       desc: "Pistone, fasce elastiche, cilindro, testata e candela",
       icon: "🔥",
       cls: "cardGruppoTermico",
+      id: "GruppoTermico",
     },
     {
       numero: "3.3",
@@ -40,6 +42,7 @@ const MotoreIntro = () => {
       desc: "Biella, albero motore, cuscinetti di banco, carter, olio e guarnizioni",
       icon: "⚙",
       cls: "cardOrgani",
+      id: "OrganiMeccanici",
     },
     {
       numero: "3.4",
@@ -47,6 +50,7 @@ const MotoreIntro = () => {
       desc: "Frizione, cambio, alberi, selettore e ingranaggi",
       icon: "⇌",
       cls: "cardTrasmissione",
+      id: "Trasmissione",
     },
     {
       numero: "3.5",
@@ -54,6 +58,7 @@ const MotoreIntro = () => {
       desc: "Camera di espansione, terminale e valvola di scarico",
       icon: "〰",
       cls: "cardScarico",
+      id: "Scarico",
     },
     {
       numero: "3.6",
@@ -61,6 +66,7 @@ const MotoreIntro = () => {
       desc: "Radiatore, pompa acqua, volano, statore, CDI, bobina e avviamento",
       icon: "◈",
       cls: "cardRaffreddamento",
+      id: "Raffreddamento",
     },
   ];
 
@@ -125,7 +131,8 @@ const MotoreIntro = () => {
           viewport={{ once: true, amount: 0.15 }}
         >
           {capitoli.map((c) => (
-            <motion.div
+            <motion.a
+              href={`#${c.id}`}
               className={`capitoloCard ${c.cls}`}
               key={c.numero}
               variants={cardVariants}
@@ -136,7 +143,7 @@ const MotoreIntro = () => {
               </div>
               <h3>{c.titolo}</h3>
               <p>{c.desc}</p>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

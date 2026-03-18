@@ -26,6 +26,7 @@ const CiclisticaIntro = () => {
       desc: "Mozzi, cerchi, pneumatici e grip — il contatto tra la moto e il terreno",
       icon: "◎",
       cls: "cardRuote",
+      id: "RuotePneumaticiIntro",
     },
     {
       numero: "5.2",
@@ -33,6 +34,7 @@ const CiclisticaIntro = () => {
       desc: "Pignone, catena, corona e rapporti — come la potenza arriva a terra",
       icon: "⟳",
       cls: "cardTrasmissione",
+      id: "TrasmissioneFinaleIntro",
     },
     {
       numero: "5.3",
@@ -40,6 +42,7 @@ const CiclisticaIntro = () => {
       desc: "Forcella, monoammortizzatore, escursione, regolazioni e olio",
       icon: "↕",
       cls: "cardSospensioni",
+      id: "SospensioniIntro",
     },
     {
       numero: "5.4",
@@ -47,6 +50,7 @@ const CiclisticaIntro = () => {
       desc: "Pompa, pinza, disco, olio freni, spurgo e geometrie radiale/assiale",
       icon: "⊗",
       cls: "cardFreni",
+      id: "FreniIntro",
     },
   ];
 
@@ -113,7 +117,8 @@ const CiclisticaIntro = () => {
           viewport={{ once: true, amount: 0.15 }}
         >
           {capitoli.map((c) => (
-            <motion.div
+            <motion.a
+              href={`#${c.id}`}
               className={`capitoloCard ${c.cls}`}
               key={c.numero}
               variants={cardVariants}
@@ -124,7 +129,7 @@ const CiclisticaIntro = () => {
               </div>
               <h3>{c.titolo}</h3>
               <p>{c.desc}</p>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 

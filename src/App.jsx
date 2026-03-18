@@ -96,21 +96,20 @@ import Strumentazione from "./components/6elettronica/strumentazione/Strumentazi
 import Abs from "./components/6elettronica/abs/Abs";
 import RideByWire from "./components/6elettronica/rideByWire/RideByWire";
 import Sensori from "./components/6elettronica/sensori/Sensori";
-
 import CarrozzeriaIntro from "./components/7carrozzeria/carrozzeriaIntro/CarrozzeriaIntro";
-
-
-
-
-
-
-
+import Plastiche from "./components/7carrozzeria/plastiche/Plastiche";
+import Sella from "./components/7carrozzeria/sella/Sella";
+import Codone from "./components/7carrozzeria/codone/Codone";
+import Aerodinamica from "./components/7carrozzeria/aerodinamica/Aerodinamica";
+import Serbatorio from "./components/7carrozzeria/serbatorio/Serbatorio";
 import FisicaFondamentiMotoreIntro from "./components/8fisicaFondamentiMotore/fisicaFondamentiMotoreIntro/FisicaFondamentiMotoreIntro";
-
-
-
-
-
+import Cavalli from "./components/8fisicaFondamentiMotore/cavalli/Cavalli";
+import Coppia from "./components/8fisicaFondamentiMotore/coppia/Coppia";
+import Cilindrata from "./components/8fisicaFondamentiMotore/cilindrata/Cilindrata";
+import TemperaturaOttimale from "./components/8fisicaFondamentiMotore/temperaturaOttimale/TemperaturaOttimale";
+import RapportoAriaBenzina from "./components/8fisicaFondamentiMotore/rapportoAriaBenzina/RapportoAriaBenzina";
+import Detonazione from "./components/8fisicaFondamentiMotore/detonazione/Detonazione";
+import MomentoTorcenteRovesciante from "./components/8fisicaFondamentiMotore/momentoTorcenteRovesciante/MomentoTorcenteRovesciante";
 
 import ProjectOutro from "./components/projectOutro/ProjectOutro";
 
@@ -325,6 +324,10 @@ const App = () => {
         <CiclisticaIntro />
       </section>
 
+      {/* 5.1 Serbatorio */}
+      <section id="Serbatorio">
+        <Serbatorio />
+      </section>
 
     {/* 5.1 Ruote e pneumatici */}
 
@@ -466,6 +469,21 @@ const App = () => {
        <section id="CarrozzeriaIntro">
         <CarrozzeriaIntro />
        </section>
+       <section id="Serbatorio">
+        <Serbatorio />
+       </section>
+       <section id="Plastiche">
+        <Plastiche />
+       </section>
+       <section id="Sella">
+        <Sella />
+       </section>
+       <section id="Codone">
+        <Codone />
+       </section>
+       <section id="Aerodinamica">
+        <Aerodinamica />
+       </section>
 
 
 
@@ -478,6 +496,27 @@ const App = () => {
 
        <section id="FisicaFondamentiMotoreIntro">
         <FisicaFondamentiMotoreIntro />
+       </section>
+       <section id="Cavalli">
+        <Cavalli />
+       </section>
+       <section id="Coppia">
+        <Coppia />
+       </section>
+       <section id="Cilindrata">
+        <Cilindrata />
+       </section>
+       <section id="TemperaturaOttimale">
+        <TemperaturaOttimale />
+       </section>
+       <section id="RapportoAriaBenzina">
+        <RapportoAriaBenzina />
+       </section>
+       <section id="Detonazione">
+        <Detonazione />
+       </section>
+       <section id="MomentoTorcenteRovesciante">
+        <MomentoTorcenteRovesciante />
        </section>
 
 

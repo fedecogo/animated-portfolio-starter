@@ -85,20 +85,21 @@ const CarrozzeriaIntro = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {[
-            { num: "01", label: "Serbatoio" },
-            { num: "02", label: "Plastiche" },
-            { num: "03", label: "Sella" },
-            { num: "04", label: "Codone / Codino" },
-            { num: "05", label: "Aerodinamica" },
+            { num: "01", label: "Serbatoio",     id: "Serbatorio" },
+            { num: "02", label: "Plastiche",     id: "Plastiche" },
+            { num: "03", label: "Sella",         id: "Sella" },
+            { num: "04", label: "Codone / Codino", id: "Codone" },
+            { num: "05", label: "Aerodinamica",  id: "Aerodinamica" },
           ].map((t) => (
-            <motion.div
+            <motion.a
+              href={`#${t.id}`}
               className="topicPill"
               key={t.num}
               variants={cardVariants}
             >
               <span className="pillNum">{t.num}</span>
               <span className="pillLabel">{t.label}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 
