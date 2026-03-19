@@ -197,7 +197,7 @@ const Cilindrata = () => {
                 la dimensione delle porte di travaso e di scarico —
                 porte più grandi (alesaggio maggiore) permettono
                 portate di gas superiori e supportano regimi più
-                alti. Un alesaggio grande (motore "oversquare", D > C)
+                alti. Un alesaggio grande (motore "oversquare", D {">"} C)
                 permette regimi elevati e potenza di picco alta.
                 Un alesaggio piccolo limita la portata di gas ma
                 aumenta la pressione specifica — favorisce la coppia
@@ -218,7 +218,7 @@ const Cilindrata = () => {
                 (PMS, massima compressione) alla Posizione di Punto
                 Morto Inferiore (PMI, massima espansione). È uguale
                 al doppio del raggio di manovella dell'albero motore.
-                Una corsa lunga (motore "undersquare", C > D) genera
+                Una corsa lunga (motore "undersquare", C {">"} D) genera
                 un braccio di manovella lungo — più coppia per la
                 stessa pressione nel cilindro — ma limita il regime
                 massimo per ragioni di velocità lineare del pistone
