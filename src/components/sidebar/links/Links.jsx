@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 
 const navItems = [
-  { name: "Homepage", id: "Homepage" },
+  { name: "Homepage", id: "Homepage", route: "/" },
 
   {
     name: "1 — Introduzione",
     id: "Introduzione",
+    route: "/",
     children: [
       { name: "1.1 — Introduzione",  id: "Introduzione" },
       { name: "1.2 — Cos'è una 2T", id: "WhatIsA2TMotorcycle" },
@@ -17,6 +19,7 @@ const navItems = [
   {
     name: "2 — Ciclo del motore",
     id: "The engine cycle",
+    route: "/ciclo",
     children: [
       { name: "2.1 — Ciclo del motore",         id: "The engine cycle" },
       { name: "2.2 — Carburante e miscela",     id: "FuelAndMixture" },
@@ -30,6 +33,7 @@ const navItems = [
   {
     name: "3 — Il motore",
     id: "MotoreIntro",
+    route: "/motore",
     children: [
       { name: "Introduzione",          id: "MotoreIntro" },
 
@@ -80,8 +84,9 @@ const navItems = [
   {
     name: "4 — Telaio",
     id: "Telaio",
+    route: "/telaio",
     children: [
-      { name: "Introduzione",               id: "Telaio" },
+      { name: "Introduzione",               id: "TelaioIntro" },
       { name: "4.1 — Telaio",              id: "Telaio" },
       { name: "4.2 — Materiali",           id: "Materiali" },
       { name: "4.3 — Rigidità",            id: "Rigidita" },
@@ -95,6 +100,7 @@ const navItems = [
   {
     name: "5 — Ciclistica",
     id: "CiclisticaIntro",
+    route: "/ciclistica",
     children: [
       { name: "Introduzione",              id: "CiclisticaIntro" },
 
@@ -130,6 +136,7 @@ const navItems = [
   {
     name: "6 — Elettronica",
     id: "ElettronicaIntro",
+    route: "/elettronica",
     children: [
       { name: "Introduzione",              id: "ElettronicaIntro" },
       { name: "6.1 — Accensione",         id: "Accensione" },
@@ -149,6 +156,7 @@ const navItems = [
   {
     name: "7 — Carrozzeria",
     id: "CarrozzeriaIntro",
+    route: "/carrozzeria",
     children: [
       { name: "Introduzione",             id: "CarrozzeriaIntro" },
       { name: "7.1 — Serbatoio",         id: "Serbatorio" },
@@ -162,6 +170,7 @@ const navItems = [
   {
     name: "8 — Fisica e Fondamenti",
     id: "FisicaFondamentiMotoreIntro",
+    route: "/fisica",
     children: [
       { name: "Introduzione",                   id: "FisicaFondamentiMotoreIntro" },
       { name: "8.1 — Cavalli",                  id: "Cavalli" },
@@ -174,7 +183,7 @@ const navItems = [
     ],
   },
 
-  { name: "Contatti", id: "ProjectOutro" },
+  { name: "Contatti", id: "ProjectOutro", route: "/#ProjectOutro" },
 ];
 
 const variants = {
@@ -194,6 +203,7 @@ const subListVariants = {
 
 const Links = ({ setOpen }) => {
   const [openSection, setOpenSection] = useState(null);
+  const navigate = useNavigate();
 
   const toggle = (id) =>
     setOpenSection((prev) => (prev === id ? null : id));
@@ -201,6 +211,12 @@ const Links = ({ setOpen }) => {
   const handleLinkClick = () => {
     setOpenSection(null);
     setOpen(false);
+  };
+
+  const handleChapterClick = (item) => {
+    navigate(item.route);
+    setOpen(false);
+    setOpenSection(null);
   };
 
   return (
@@ -214,10 +230,10 @@ const Links = ({ setOpen }) => {
           >
             <div
               className="accordionHeader"
-              onClick={() => toggle(item.id)}
+              onClick={() => handleChapterClick(item)}
               role="button"
               tabIndex={0}
-              onKeyDown={(e) => e.key === "Enter" && toggle(item.id)}
+              onKeyDown={(e) => e.key === "Enter" && handleChapterClick(item)}
             >
               <span>{item.name}</span>
               <span className={`accordionIcon${openSection === item.id ? " open" : ""}`}>
@@ -236,42 +252,31 @@ const Links = ({ setOpen }) => {
                   variants={subListVariants}
                   style={{ overflow: "hidden" }}
                 >
-                  {item.children.map((child) =>
-                    child.isSection ? (
-                      <a
-                        href={`#${child.id}`}
-                        key={child.id}
-                        className="subLink subLinkSection"
-                        onClick={handleLinkClick}
-                      >
-                        {child.name}
-                      </a>
-                    ) : (
-                      <a
-                        href={`#${child.id}`}
-                        key={child.id}
-                        className="subLink"
-                        onClick={handleLinkClick}
-                      >
-                        {child.name}
-                      </a>
-                    )
-                  )}
+                  {item.children.map((child) => (
+                    <Link
+                      to={`${item.route}#${child.id}`}
+                      key={child.id}
+                      className={`subLink${child.isSection ? " subLinkSection" : ""}`}
+                      onClick={handleLinkClick}
+                    >
+                      {child.name}
+                    </Link>
+                  ))}
                 </motion.div>
               )}
             </AnimatePresence>
           </motion.div>
         ) : (
-          <motion.a
-            href={`#${item.id}`}
-            key={item.id}
-            variants={itemVariants}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handleLinkClick}
-          >
-            {item.name}
-          </motion.a>
+          <motion.div key={item.id} variants={itemVariants}>
+            <Link
+              to={item.route}
+              className="topLink"
+              onClick={handleLinkClick}
+              style={{ display: "block" }}
+            >
+              {item.name}
+            </Link>
+          </motion.div>
         )
       )}
     </motion.div>

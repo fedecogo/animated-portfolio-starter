@@ -1,5 +1,7 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Search from "../search/Search";
 
 const textVariants = {
   initial: {
@@ -107,19 +109,14 @@ const Hero = ({ onOpenSidebar }) => {
             <button className="primaryBtn" onClick={onOpenSidebar}>
               Esplora le sezioni ↗
             </button>
-            <a href="#MotoreIntro" className="secondaryBtn">
+            <Link to="/ciclo" className="secondaryBtn">
               Inizia a leggere
-            </a>
+            </Link>
           </motion.div>
 
-          {/* <motion.img
-            className="scrollIcon"
-            variants={scrollVariants}
-            initial="initial"
-            animate="animate"
-            src="/scroll.png"
-            alt="Scroll down"
-          /> */}
+          <motion.div variants={itemVariants}>
+            <Search />
+          </motion.div>
         </motion.div>
       </div>
 

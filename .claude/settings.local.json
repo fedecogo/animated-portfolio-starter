@@ -16,7 +16,13 @@
       "Bash(cp -r 3organiMeccanici 3motore/3.3organiMeccanici)",
       "Bash(cp -r 3trasmissione 3motore/3.4trasmissione)",
       "Bash(cp -r 3scarico 3motore/3.5scarico)",
-      "Bash(cp -r 3raffreddamentoEAccensione 3motore/3.6raffreddamentoEAccensione)"
+      "Bash(cp -r 3raffreddamentoEAccensione 3motore/3.6raffreddamentoEAccensione)",
+      "Bash(grep -r \"pistons\\\\|hero\\\\|scroll\\\\|mountains\\\\|planets\\\\|stars\\\\|sun\\\\|people\\\\|facebook\\\\|instagram\\\\|youtube\" c:UsersASUSDocumentsGitHubhow-2-stroke-engine-work --include=*.html --include=*.scss)",
+      "Bash(for file:*)",
+      "Bash(do echo:*)",
+      "Bash(grep -r $file c:UsersASUSDocumentsGitHubhow-2-stroke-engine-worksrc --include=*.jsx --include=*.js --include=*.scss)",
+      "Bash(done)",
+      "Bash(npm install:*)"
     ]
   }
 }

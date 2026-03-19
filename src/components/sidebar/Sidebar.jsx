@@ -29,7 +29,7 @@ const Sidebar = ({ open, setOpen }) =>{
                 <Links setOpen={setOpen} />
             </motion.div>
             <ToggleBTN setOpen={setOpen} />
-            
+
         </motion.div>
     )
 }

@@ -1,5 +1,5 @@
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -13,9 +13,11 @@
   .wrapper {
     max-width: 1366px;
     margin: auto;
+    padding: 0 24px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    gap: 24px;
     height: 100%;
 
     .navTitle {
@@ -34,6 +36,11 @@
 
       .tWhite  { color: #f5f7fa; }
       .tDim    { color: rgba(245, 247, 250, 0.38); }
+
+      @media (max-width: 576px) {
+        display: none;
+      }
+
       .tAccent {
         font-size: 1.22rem;
         background: linear-gradient(135deg, #ff6b35 0%, #f59e0b 100%);
@@ -61,6 +68,37 @@
       gap: 20px;
       img {
         width: 18px;
+      }
+    }
+
+    .navSearch {
+      flex: 1;
+      max-width: 380px;
+
+      @media (max-width: 576px) {
+        margin-left: 33%;
+        max-width: 57%;
+      }
+
+      .heroSearch__input {
+        padding: 9px 38px 9px 40px;
+        font-size: 0.88rem;
+        border-radius: 999px;
+      }
+
+      .heroSearch__icon {
+        width: 16px;
+        height: 16px;
+        left: 14px;
+      }
+
+      .heroSearch__clear {
+        right: 12px;
+        font-size: 1.15rem;
+      }
+
+      .heroSearch__dropdown {
+        border-radius: 14px;
       }
     }
   }

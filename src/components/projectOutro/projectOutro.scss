@@ -2,10 +2,10 @@ $mobile: 576px;
 $tablet: 768px;
 $laptop: 1200px;
 
-$steel: #60a5fa;
-$steel-soft: #93c5fd;
-$steel-dim: rgba(96, 165, 250, 0.1);
-$steel-bdr: rgba(96, 165, 250, 0.24);
+$steel: #ff6b35;
+$steel-soft: #ffb347;
+$steel-dim: rgba(255, 107, 53, 0.1);
+$steel-bdr: rgba(255, 107, 53, 0.24);
 
 .projectOutro {
   position: relative;
@@ -31,7 +31,7 @@ $steel-bdr: rgba(96, 165, 250, 0.24);
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(96, 165, 250, 0.5),
+      rgba(255, 107, 53, 0.5),
       transparent
     );
   }
@@ -75,14 +75,14 @@ $steel-bdr: rgba(96, 165, 250, 0.24);
 
   h2 {
     margin: 0;
-    font-size: clamp(2.6rem, 5.8vw, 5rem);
+    font-size: clamp(2rem, 4.5vw, 3.8rem);
     line-height: 1;
-    letter-spacing: -2px;
+    letter-spacing: -1.5px;
     font-weight: 800;
     background: linear-gradient(
       135deg,
       #ffffff 35%,
-      rgba(147, 197, 253, 0.95) 100%
+      rgba(255, 179, 71, 0.95) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -130,7 +130,7 @@ $steel-bdr: rgba(96, 165, 250, 0.24);
       background: linear-gradient(
         90deg,
         transparent,
-        rgba(96, 165, 250, 0.4),
+        rgba(255, 107, 53, 0.4),
         transparent
       );
     }
@@ -148,7 +148,7 @@ $steel-bdr: rgba(96, 165, 250, 0.24);
     width: 3px;
     align-self: stretch;
     border-radius: 999px;
-    background: linear-gradient(180deg, $steel-soft, rgba(96, 165, 250, 0.15));
+    background: linear-gradient(180deg, $steel-soft, rgba(255, 107, 53, 0.15));
   }
 
   .storyCardBody {
@@ -303,8 +303,8 @@ $steel-bdr: rgba(96, 165, 250, 0.24);
     }
 
     h2 {
-      font-size: clamp(2.2rem, 8vw, 3.7rem);
-      letter-spacing: -1.4px;
+      font-size: clamp(1.8rem, 7vw, 3rem);
+      letter-spacing: -1px;
     }
 
     .lead {
@@ -337,8 +337,8 @@ $steel-bdr: rgba(96, 165, 250, 0.24);
     }
 
     h2 {
-      font-size: 2.1rem;
-      letter-spacing: -1px;
+      font-size: 1.75rem;
+      letter-spacing: -0.8px;
     }
 
     .lead,

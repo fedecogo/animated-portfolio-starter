@@ -1,6 +1,7 @@
 import "./navbar.scss";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Search from "../search/Search";
 
 const Navbar = () => {
   const [language, setLanguage] = useState("en");
@@ -51,6 +52,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="wrapper">
         <motion.div
+          id="nome"
           className="navTitle"
           variants={titleContainer}
           initial="hidden"
@@ -62,23 +64,9 @@ const Navbar = () => {
             </motion.span>
           ))}
         </motion.div>
-        {/* <p>${language === "en" ? "EN" : "IT"}</p>
-
-        <motion.button
-          className="languageBtn"
-          onClick={toggleLanguage}
-          whileHover={{ scale: 1.08 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <motion.span
-            key={language}
-            initial={{ opacity: 0, y: 4 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            {language === "en" ? "Cambia lingua 🇮🇹" : "Change language 🇬🇧"}
-          </motion.span>
-        </motion.button> */}
+        <div className="navSearch">
+          <Search />
+        </div>
       </div>
     </div>
   );
