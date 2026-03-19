@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Preloader from "./components/preloader/Preloader";
 import "./app.scss";
 
@@ -14,6 +14,23 @@ import ElettronicaPagina from "./pages/ElettronicaPagina";
 import CarrozzeriaPagina from "./pages/CarrozzeriaPagina";
 import FisicaPagina from "./pages/FisicaPagina";
 
+const ScrollToHash = () => {
+  const { hash, pathname } = useLocation();
+  useEffect(() => {
+    if (!hash) return;
+    const id = hash.slice(1);
+    const scroll = () => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    };
+    // prova subito, poi riprova dopo che la pagina ha renderizzato
+    scroll();
+    const t = setTimeout(scroll, 100);
+    return () => clearTimeout(t);
+  }, [hash, pathname]);
+  return null;
+};
+
 const App = () => {
   const [loaded, setLoaded] = useState(false);
 
@@ -24,6 +41,7 @@ const App = () => {
       </AnimatePresence>
 
       <BrowserRouter>
+        <ScrollToHash />
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<HomePage />} />

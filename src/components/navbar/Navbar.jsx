@@ -1,6 +1,7 @@
 import "./navbar.scss";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Search from "../search/Search";
 
 const Navbar = () => {
@@ -51,19 +52,21 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="wrapper">
-        <motion.div
-          id="nome"
-          className="navTitle"
-          variants={titleContainer}
-          initial="hidden"
-          animate="show"
-        >
-          {titleParts.map((p, i) => (
-            <motion.span key={i} className={p.cls} variants={wordVariant}>
-              {p.text}
-            </motion.span>
-          ))}
-        </motion.div>
+        <Link to="/#Homepage" style={{ textDecoration: "none" }}>
+          <motion.div
+            id="nome"
+            className="navTitle"
+            variants={titleContainer}
+            initial="hidden"
+            animate="show"
+          >
+            {titleParts.map((p, i) => (
+              <motion.span key={i} className={p.cls} variants={wordVariant}>
+                {p.text}
+              </motion.span>
+            ))}
+          </motion.div>
+        </Link>
         <div className="navSearch">
           <Search />
         </div>

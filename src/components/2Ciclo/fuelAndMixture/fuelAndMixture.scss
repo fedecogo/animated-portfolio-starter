@@ -2,12 +2,34 @@ $mobile: 576px;
 $tablet: 768px;
 $laptop: 1200px;
 
+$orange:      #ff6b35;
+$orange-soft: #ff8a5f;
+$orange-dim:  rgba(255, 107, 53, 0.12);
+$orange-bdr:  rgba(255, 107, 53, 0.18);
+
+$green:       #3ecf8e;
+$green-dim:   rgba(62, 207, 142, 0.1);
+$green-bdr:   rgba(62, 207, 142, 0.2);
+
+$blue:        #4fa3e0;
+$blue-dim:    rgba(79, 163, 224, 0.1);
+$blue-bdr:    rgba(79, 163, 224, 0.2);
+
+$yellow:      #f0c040;
+$yellow-dim:  rgba(240, 192, 64, 0.1);
+$yellow-bdr:  rgba(240, 192, 64, 0.2);
+
+$red:         #e05555;
+$red-dim:     rgba(224, 85, 85, 0.1);
+$red-bdr:     rgba(224, 85, 85, 0.2);
+
 .fuelAndMixture {
   position: relative;
   padding: 120px 0;
   background:
-    radial-gradient(circle at top left, rgba(255, 107, 53, 0.08), transparent 22%),
-    linear-gradient(180deg, #111132 0%, #0b0d13 100%);
+    radial-gradient(circle at 88% 12%, rgba(255, 107, 53, 0.07), transparent 26%),
+    radial-gradient(circle at 10% 85%, rgba(255, 107, 53, 0.04), transparent 24%),
+    linear-gradient(180deg, #0b0d13 0%, #0d1019 50%, #0b0d13 100%);
   color: #f5f7fa;
   overflow: hidden;
 
@@ -20,12 +42,14 @@ $laptop: 1200px;
     z-index: 2;
   }
 
+  // ─── INTRO BLOCK ───────────────────────────────────────────────────────────
+
   .introBlock {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 32px;
     align-items: start;
-    margin-bottom: 36px;
+    margin-bottom: 42px;
   }
 
   .titleColumn {
@@ -40,9 +64,9 @@ $laptop: 1200px;
     width: fit-content;
     padding: 8px 14px;
     border-radius: 999px;
-    background: rgba(255, 107, 53, 0.12);
-    border: 1px solid rgba(255, 107, 53, 0.18);
-    color: #ff8a5f;
+    background: $orange-dim;
+    border: 1px solid $orange-bdr;
+    color: $orange-soft;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.78rem;
@@ -74,13 +98,14 @@ $laptop: 1200px;
     max-width: 760px;
   }
 
+  // ─── INFO PANEL ────────────────────────────────────────────────────────────
+
   .infoPanel {
     position: sticky;
     top: 110px;
     padding: 28px;
     border-radius: 28px;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+    background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
     overflow: hidden;
@@ -89,8 +114,7 @@ $laptop: 1200px;
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at top right, rgba(255, 107, 53, 0.08), transparent 30%);
+      background: radial-gradient(circle at top right, rgba(255,107,53,0.08), transparent 30%);
       pointer-events: none;
     }
   }
@@ -103,7 +127,7 @@ $laptop: 1200px;
     .panelTag {
       display: inline-block;
       margin-bottom: 14px;
-      color: #ff6b35;
+      color: $orange;
       font-size: 0.82rem;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -119,73 +143,274 @@ $laptop: 1200px;
     }
   }
 
-  .miniRows {
+  .flowStepsMini {
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 0;
   }
 
-  .miniRow {
+  .miniStep {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     padding: 14px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    &:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
+    &:last-child { border-bottom: 0; padding-bottom: 0; }
   }
 
   .miniLabel {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: rgba(245, 247, 250, 0.45);
+    color: rgba(245, 247, 250, 0.42);
     font-weight: 700;
   }
 
   .miniValue {
     font-size: 1rem;
+    color: rgba(245, 247, 250, 0.9);
     line-height: 1.5;
-    color: rgba(245, 247, 250, 0.92);
     font-weight: 500;
   }
 
-  .topCards {
+  // ─── SHARED BLOCK SHELL ────────────────────────────────────────────────────
+
+  .benzineBlock,
+  .rapportoBlock,
+  .olioBlock {
+    margin-bottom: 32px;
+    padding: 36px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .benzineBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255,107,53,0.06), transparent 40%);
+    pointer-events: none;
+  }
+
+  .rapportoBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at bottom right, rgba(79,163,224,0.05), transparent 40%);
+    pointer-events: none;
+  }
+
+  .olioBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(62,207,142,0.04), transparent 40%);
+    pointer-events: none;
+  }
+
+  // ─── SHARED BLOCK HEADER ───────────────────────────────────────────────────
+
+  .benzineHeader,
+  .rapportoHeader,
+  .olioHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    h3 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+      line-height: 1.25;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p { max-width: none; }
+  }
+
+  // ─── BENZINE GRID ──────────────────────────────────────────────────────────
+
+  .benzineGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .benzineCard {
+    padding: 24px 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 107, 53, 0.2);
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.68;
+      color: rgba(245, 247, 250, 0.65);
+      max-width: none;
+    }
+  }
+
+  .benzineIdx {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: $orange;
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(255,107,53,0.22);
+  }
+
+  // ─── RAPPORTO GRID ─────────────────────────────────────────────────────────
+
+  .rapportoGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .rapportoCard {
+    padding: 24px 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(255, 255, 255, 0.04); }
+
+    p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.68;
+      color: rgba(245, 247, 250, 0.65);
+      max-width: none;
+    }
+  }
+
+  .rapportoRatio {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    line-height: 1;
+  }
+
+  .rapportoBadge {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &.badgeRicco   { background: $red-dim;    border: 1px solid $red-bdr;    color: $red; }
+    &.badgeNormale { background: $yellow-dim;  border: 1px solid $yellow-bdr; color: $yellow; }
+    &.badgeCorretto{ background: $green-dim;   border: 1px solid $green-bdr;  color: $green; }
+    &.badgeMagro   { background: $blue-dim;    border: 1px solid $blue-bdr;   color: $blue; }
+  }
+
+  // ─── OLIO CONTENT ──────────────────────────────────────────────────────────
+
+  .olioContent {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+
+  .olioItem {
+    padding: 24px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    p {
+      margin: 0;
+      font-size: 0.93rem;
+      line-height: 1.72;
+      color: rgba(245, 247, 250, 0.68);
+      max-width: none;
+    }
+  }
+
+  .olioLabel {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: $green;
+  }
+
+  // ─── CARDS GRID ────────────────────────────────────────────────────────────
+
+  .cardsGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
-    margin-bottom: 28px;
   }
 
-  .featureCard {
+  .infoCard {
     position: relative;
     min-height: 250px;
     padding: 28px;
     border-radius: 24px;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.2);
     overflow: hidden;
 
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       height: 1px;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 107, 53, 0.55),
-        transparent
-      );
+      background: linear-gradient(90deg, transparent, rgba(255,107,53,0.55), transparent);
       opacity: 0.7;
     }
 
@@ -212,160 +437,24 @@ $laptop: 1200px;
     font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 2px;
-    color: #ff6b35;
+    color: $orange;
     text-transform: uppercase;
-  }
-
-  .mixtureGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    margin-bottom: 24px;
-  }
-
-  .mixtureCard {
-    position: relative;
-    min-height: 320px;
-    padding: 28px;
-    border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-
-    h3 {
-      margin: 0 0 14px;
-      font-size: 1.3rem;
-      line-height: 1.3;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    p {
-      max-width: none;
-      font-size: 0.98rem;
-      line-height: 1.75;
-      color: rgba(245, 247, 250, 0.74);
-    }
-
-    &.lean {
-      background:
-        linear-gradient(180deg, rgba(96, 157, 255, 0.08), rgba(255, 255, 255, 0.018));
-    }
-
-    &.medium {
-      background:
-        linear-gradient(180deg, rgba(255, 107, 53, 0.1), rgba(255, 255, 255, 0.018));
-    }
-
-    &.rich {
-      background:
-        linear-gradient(180deg, rgba(255, 196, 64, 0.08), rgba(255, 255, 255, 0.018));
-    }
-  }
-
-  .mixtureBadge {
-    display: inline-block;
-    margin-bottom: 18px;
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #ffffff;
-    opacity: 0.8;
-  }
-
-  .stateBox {
-    margin-top: 22px;
-    padding: 16px 18px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .stateLabel {
-    font-size: 0.76rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
-    color: rgba(245, 247, 250, 0.46);
-  }
-
-  .stateValue {
-    font-size: 0.95rem;
-    line-height: 1.55;
-    color: rgba(245, 247, 250, 0.92);
-    font-weight: 500;
-  }
-
-  .bottomStrip {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-  }
-
-  .stripCard {
-    padding: 22px 24px;
-    border-radius: 22px;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
-    display: grid;
-    grid-template-columns: 44px 1fr;
-    gap: 14px;
-    align-items: start;
-
-    h4 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-      line-height: 1.3;
-      color: #ffffff;
-      font-weight: 700;
-    }
-
-    p {
-      max-width: none;
-      font-size: 0.94rem;
-      line-height: 1.65;
-      color: rgba(245, 247, 250, 0.72);
-    }
-  }
-
-  .stripIndex {
-    display: inline-flex;
-    width: 36px;
-    height: 36px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 107, 53, 0.22);
-    background: rgba(255, 107, 53, 0.08);
-    color: #ff8a5f;
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 1px;
   }
 }
 
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────────
+
 @media (max-width: $laptop) {
   .fuelAndMixture {
-    .introBlock {
-      grid-template-columns: 1fr;
-    }
+    .introBlock { grid-template-columns: 1fr; }
+    .infoPanel  { position: relative; top: 0; }
 
-    .infoPanel {
-      position: relative;
-      top: 0;
-    }
+    .benzineGrid,
+    .rapportoGrid { grid-template-columns: repeat(2, 1fr); }
 
-    .topCards,
-    .mixtureGrid,
-    .bottomStrip {
-      grid-template-columns: 1fr;
-    }
+    .olioContent { grid-template-columns: 1fr; }
+
+    .cardsGrid { grid-template-columns: 1fr; }
   }
 }
 
@@ -373,36 +462,24 @@ $laptop: 1200px;
   .fuelAndMixture {
     padding: 90px 0;
 
-    .wrapper {
-      padding: 0 20px;
-    }
+    .wrapper { padding: 0 20px; }
 
-    h2 {
-      font-size: clamp(2rem, 8vw, 3.5rem);
-      line-height: 1.02;
-    }
+    h2 { font-size: clamp(2rem, 8vw, 3.4rem); line-height: 1.02; }
+    .lead, p { font-size: 0.98rem; line-height: 1.75; }
 
-    .lead,
-    p {
-      font-size: 0.98rem;
-      line-height: 1.75;
-    }
-
+    .benzineBlock,
+    .rapportoBlock,
+    .olioBlock,
     .infoPanel,
-    .featureCard,
-    .mixtureCard {
-      padding: 24px;
-      border-radius: 22px;
-    }
+    .infoCard { padding: 24px; border-radius: 22px; }
 
-    .stripCard {
-      padding: 20px;
-      border-radius: 20px;
-    }
+    .benzineGrid,
+    .rapportoGrid { grid-template-columns: 1fr; gap: 14px; }
 
-    .mixtureCard {
-      min-height: auto;
-    }
+    .benzineCard,
+    .rapportoCard { padding: 20px 18px; }
+
+    .olioItem { padding: 20px; }
   }
 }
 
@@ -410,54 +487,23 @@ $laptop: 1200px;
   .fuelAndMixture {
     padding: 70px 0;
 
-    .wrapper {
-      padding: 0 16px;
-    }
+    .wrapper { padding: 0 16px; }
 
-    .sectionLabel {
-      font-size: 0.72rem;
-      letter-spacing: 1.5px;
-      padding: 7px 12px;
-    }
+    .sectionLabel { font-size: 0.72rem; letter-spacing: 1.5px; padding: 7px 12px; }
+    h2            { font-size: 2rem; letter-spacing: -1px; }
 
-    h2 {
-      font-size: 2rem;
-      letter-spacing: -1px;
-    }
+    .lead, p,
+    .infoCard p,
+    .benzineCard p,
+    .rapportoCard p,
+    .olioItem p { font-size: 0.95rem; line-height: 1.68; }
 
-    .lead,
-    p,
-    .featureCard p,
-    .mixtureCard p,
-    .stripCard p,
-    .miniValue,
-    .stateValue {
-      font-size: 0.95rem;
-      line-height: 1.68;
-    }
-
+    .benzineBlock,
+    .rapportoBlock,
+    .olioBlock,
     .infoPanel,
-    .featureCard,
-    .mixtureCard {
-      padding: 20px;
-    }
+    .infoCard { padding: 20px; }
 
-    .panelHeader h3,
-    .featureCard h3,
-    .mixtureCard h3 {
-      font-size: 1.12rem;
-    }
-
-    .stripCard {
-      grid-template-columns: 38px 1fr;
-      gap: 12px;
-      padding: 18px;
-    }
-
-    .stripIndex {
-      width: 32px;
-      height: 32px;
-      font-size: 0.72rem;
-    }
+    .infoCard h3 { font-size: 1.1rem; }
   }
 }

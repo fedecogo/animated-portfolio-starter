@@ -3,47 +3,75 @@ import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
+  show: { transition: { staggerChildren: 0.12 } },
 };
 
 const fadeUpVariants = {
-  hidden: {
-    opacity: 0,
-    y: 32,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      ease: "easeOut",
-    },
-  },
+  hidden: { opacity: 0, y: 32 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
 const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 26,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.65,
-      ease: "easeOut",
-    },
-  },
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
+
+const carbCards = [
+  {
+    num: "01",
+    label: "Getto principale",
+    badge: "badgeGetto",
+    badgeText: "Alti regimi",
+    desc: "Calibra la portata di carburante ai regimi medio-alti. Un getto troppo piccolo impoverisce la miscela in allungata, rischiando il grippaggio del pistone per eccesso di temperatura.",
+  },
+  {
+    num: "02",
+    label: "Spillo e clip",
+    badge: "badgeSpillo",
+    badgeText: "Medi",
+    desc: "Governano l'erogazione nella zona di transizione (¼–¾ di gas). La posizione della clip sullo spillo alza o abbassa il livello del carburante nel diffusore, influenzando risposta e carattere.",
+  },
+  {
+    num: "03",
+    label: "Getto del minimo",
+    badge: "badgeMinimo",
+    badgeText: "Bassi regimi",
+    desc: "Alimenta il circuito di minimo e il primo quarto di gas. Un minimo troppo magro causa la moto a spegnersi in rilascio o a tossire all'apertura improvvisa del gas.",
+  },
+  {
+    num: "04",
+    label: "Vaschetta galleggiante",
+    badge: "badgeVaschetta",
+    badgeText: "Livello carburante",
+    desc: "Mantiene costante il livello del carburante nel corpo del carburatore. Un livello troppo alto inonda il circuito, uno troppo basso impoverisce il dosaggio indipendentemente dalla calibrazione dei getti.",
+  },
+];
+
+const lamellareItems = [
+  {
+    label: "Funzione valvola di non ritorno",
+    text: "Il pacco lamellare si apre quando la pressione sul lato aspirazione supera quella del carter, lasciando entrare la miscela. Si richiude quando la pressione nel carter sale, impedendo il reflusso verso il carburatore.",
+  },
+  {
+    label: "Materiali: fibra vs carbonio",
+    text: "Le lamelle in fibra di vetro sono standard e durevoli. Quelle in fibra di carbonio — più leggere e reattive — sono preferite nelle preparazioni da gara perché rispondono più velocemente alle variazioni di pressione ad alti regimi.",
+  },
+  {
+    label: "Petali rotti o deformati",
+    text: "Un petalo rotto non sigilla più correttamente: la miscela rifluisce parzialmente verso il carburatore, impoverendo il riempimento del carter e causando perdita di risposta ai bassi e ai medi.",
+  },
+  {
+    label: "Geometria e angolo del pacco",
+    text: "L'angolo con cui il pacco lamellare è inclinato rispetto al condotto di aspirazione influenza la portata d'aria massima. I modelli racing usano angoli e profili ottimizzati per ridurre la perdita di carico.",
+  },
+];
 
 const AirAndFuel = () => {
   return (
-    <section className="airAndFuel" id="air-and-fuel">
+    <section className="airAndFuel" id="AirAndFuel">
       <div className="wrapper">
+
+        {/* ── INTRO BLOCK ─────────────────────────────────────────────────── */}
         <motion.div
           className="introBlock"
           variants={containerVariants}
@@ -53,100 +81,121 @@ const AirAndFuel = () => {
         >
           <div className="titleColumn">
             <motion.span className="sectionLabel" variants={fadeUpVariants}>
-              Ciclo del motore
+              2.2 — Aria e carburante
             </motion.span>
 
             <motion.h2 variants={fadeUpVariants}>
-              Flusso di aria e carburante
+              Dal filtro al carter: il percorso della miscela
             </motion.h2>
 
             <motion.p className="lead" variants={fadeUpVariants}>
-              In un motore 2 tempi, il percorso dell'aria e del carburante è
-              uno degli aspetti più importanti dell'intero sistema. Prima che
-              avvenga la combustione, il motore deve aspirare aria, mescolarla
-              con il carburante, guidarla attraverso il lato aspirazione e
-              spingerla verso il carter e il cilindro.
+              Prima che avvenga qualsiasi combustione, aria e carburante devono
+              percorrere un tragitto preciso attraverso filtro, carburatore,
+              pacco lamellare e carter. Ogni tratto di questo percorso
+              condiziona il dosaggio finale che raggiungerà il cilindro.
             </motion.p>
 
             <motion.p variants={fadeUpVariants}>
-              Questo flusso non è un semplice passaggio. Influisce direttamente
-              sulla risposta all'acceleratore, sulla qualità della combustione,
-              sull'efficienza del motore e sul carattere complessivo della moto.
+              In un motore 2T con carburatore, non esiste un sistema elettronico
+              che corregga gli errori di calibrazione. Se il getto è sbagliato,
+              lo spillo è fuori posizione o il pacco lamellare è deteriorato,
+              il motore lo comunica attraverso la risposta, la temperatura e
+              il colore della candela — non attraverso una spia sul cruscotto.
             </motion.p>
           </div>
 
           <motion.div className="infoPanel" variants={fadeUpVariants}>
             <div className="panelHeader">
-              <span className="panelTag">Panoramica del flusso</span>
-              <h3>Percorso base della miscela</h3>
+              <span className="panelTag">Percorso della miscela</span>
+              <h3>4 stazioni prima della combustione</h3>
             </div>
-
             <div className="flowStepsMini">
               <div className="miniStep">
-                <span className="miniIndex">01</span>
-                <span className="miniText">L'aria entra attraverso il filtro dell'aria</span>
+                <span className="miniLabel">1 — Filtro aria</span>
+                <span className="miniValue">Blocca polvere e particolato, garantisce aria pulita e costante</span>
               </div>
               <div className="miniStep">
-                <span className="miniIndex">02</span>
-                <span className="miniText">Il carburante viene dosato dal carburatore</span>
+                <span className="miniLabel">2 — Carburatore</span>
+                <span className="miniValue">Dosa il carburante e lo nebulizza nell'aria in transito</span>
               </div>
               <div className="miniStep">
-                <span className="miniIndex">03</span>
-                <span className="miniText">La miscela attraversa il pacco lamellare</span>
+                <span className="miniLabel">3 — Pacco lamellare</span>
+                <span className="miniValue">Valvola di non ritorno: ammette la carica, blocca il reflusso</span>
               </div>
               <div className="miniStep">
-                <span className="miniIndex">04</span>
-                <span className="miniText">Il carter aiuta a trasferire la carica fresca</span>
+                <span className="miniLabel">4 — Carter</span>
+                <span className="miniValue">Accumula e precomprime la miscela prima del travaso</span>
               </div>
             </div>
           </motion.div>
         </motion.div>
 
+        {/* ── CARBURATORE ─────────────────────────────────────────────────── */}
         <motion.div
-          className="diagramBlock"
+          className="carbBlock"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
         >
-          <motion.div className="flowDiagram" variants={cardVariants}>
-            <div className="diagramTrack"></div>
-
-            <div className="diagramNode node1">
-              <span className="nodeNumber">01</span>
-              <h3>Filtro dell'aria</h3>
-              <p>L'aria esterna viene pulita prima di entrare nel sistema di aspirazione.</p>
-            </div>
-
-            <div className="diagramNode node2">
-              <span className="nodeNumber">02</span>
-              <h3>Carburatore</h3>
-              <p>
-                Il carburante viene miscelato con l'aria in entrata nella
-                proporzione corretta per il funzionamento del motore.
-              </p>
-            </div>
-
-            <div className="diagramNode node3">
-              <span className="nodeNumber">03</span>
-              <h3>Pacco lamellare</h3>
-              <p>
-                La miscela passa verso il carter aiutando a limitare
-                il flusso inverso.
-              </p>
-            </div>
-
-            <div className="diagramNode node4">
-              <span className="nodeNumber">04</span>
-              <h3>Carter e travaso</h3>
-              <p>
-                La carica viene compressa e guidata verso l'alto nel cilindro
-                attraverso la fase di travaso.
-              </p>
-            </div>
+          <div className="carbHeader">
+            <h3>Il carburatore: quattro circuiti, un dosaggio</h3>
+            <p>
+              Il carburatore a spillo (PWK, PWM, VHSB…) è il cuore del sistema
+              di alimentazione nel 2T da cross. Il suo compito è trasformare la
+              benzina liquida in un aerosol finemente nebulizzato che si mescola
+              con l&apos;aria in ingresso. La calibrazione non è universale:
+              cambia con la quota, la temperatura, il tipo di scarico e il
+              rapporto di compressione.
+            </p>
+          </div>
+          <motion.div
+            className="carbGrid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            {carbCards.map((c) => (
+              <motion.div className="carbCard" key={c.num} variants={cardVariants}>
+                <span className={`carbBadge ${c.badge}`}>{c.badgeText}</span>
+                <h4>{c.label}</h4>
+                <p>{c.desc}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.div>
 
+        {/* ── PACCO LAMELLARE ─────────────────────────────────────────────── */}
+        <motion.div
+          className="lamellareBlock"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+        >
+          <div className="lamellareHeader">
+            <h3>Il pacco lamellare: valvola intelligente a pressione</h3>
+            <p>
+              Il pacco lamellare è uno dei componenti più eleganti del 2T:
+              non ha attuatori, molle o controllo elettronico. Si apre e si
+              chiude in risposta pura alla differenza di pressione tra il
+              condotto di aspirazione e il carter — centinaia di volte al
+              secondo ad alti regimi. La sua efficienza determina direttamente
+              la qualità del riempimento del carter.
+            </p>
+          </div>
+          <div className="lamellareContent">
+            {lamellareItems.map((l) => (
+              <div className="lamellareItem" key={l.label}>
+                <span className="lamellareLabel">{l.label}</span>
+                <p>{l.text}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* ── CARDS FINALI ────────────────────────────────────────────────── */}
         <motion.div
           className="cardsGrid"
           variants={containerVariants}
@@ -155,38 +204,41 @@ const AirAndFuel = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.article className="infoCard" variants={cardVariants}>
-            <span className="cardTag">Aria</span>
-            <h3>Perché la qualità dell'aria è importante</h3>
+            <span className="cardTag">Filtro aria</span>
+            <h3>Un filtro sporco cambia tutto</h3>
             <p>
-              Il motore dipende da un volume stabile di aria pulita in entrata.
-              Se il filtro è sporco o il flusso è limitato, l'equilibrio della
-              miscela può cambiare e il comportamento del motore diventa meno
-              preciso.
+              Il filtro dell&apos;aria non è solo protezione meccanica. Se è
+              intasato, aumenta la resistenza al flusso e impoverisce la miscela
+              perché il carburatore eroga la stessa quantità di benzina ma con
+              meno aria. Il risultato: miscela più ricca, candela nera, risposta
+              attutita.
             </p>
           </motion.article>
 
           <motion.article className="infoCard" variants={cardVariants}>
-            <span className="cardTag">Carburante</span>
-            <h3>Perché il dosaggio del carburante è importante</h3>
+            <span className="cardTag">Temperatura aria</span>
+            <h3>L&apos;aria più calda è meno densa</h3>
             <p>
-              In un 2T con carburatore, la dosatura del carburante influisce
-              fortemente sulla combustione, sulla risposta e sulla temperatura.
-              La miscela deve essere vicina al rapporto corretto perché il
-              motore funzioni correttamente.
+              A temperatura elevata l&apos;aria si espande: entra lo stesso
+              volume ma con meno molecole di ossigeno. Il carburatore deve
+              essere ricalibrato per l&apos;estate o per le gare in quota
+              dove la densità dell&apos;aria scende ulteriormente.
             </p>
           </motion.article>
 
           <motion.article className="infoCard" variants={cardVariants}>
-            <span className="cardTag">Flusso</span>
-            <h3>Perché il percorso è importante</h3>
+            <span className="cardTag">Carter come pompa</span>
+            <h3>Il carter è parte attiva del ciclo</h3>
             <p>
-              Aria e carburante non "entrano semplicemente nel motore". Seguono
-              un percorso temporizzato attraverso filtro, carburatore, pacco
-              lamellare e carter prima di contribuire alla combustione nel
-              cilindro.
+              Nel 2T il carter non è un semplice contenitore: è una camera di
+              pompaggio. Quando il pistone scende, la pressione nel carter sale
+              e spinge la miscela verso le luci di travaso. Quando il pistone
+              sale, la depressione nel carter aspira la nuova carica dal pacco
+              lamellare.
             </p>
           </motion.article>
         </motion.div>
+
       </div>
     </section>
   );

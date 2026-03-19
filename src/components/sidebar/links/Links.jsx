@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const navItems = [
-  { name: "Homepage", id: "Homepage", route: "/" },
+  { name: "Homepage", id: "Homepage", route: "/#Homepage" },
 
   {
     name: "1 — Introduzione",
@@ -21,12 +21,12 @@ const navItems = [
     id: "The engine cycle",
     route: "/ciclo",
     children: [
-      { name: "2.1 — Ciclo del motore",         id: "The engine cycle" },
-      { name: "2.2 — Carburante e miscela",     id: "FuelAndMixture" },
-      { name: "2.3 — Aria e carburante",        id: "AirAndFuel" },
-      { name: "2.4 — Fasi del ciclo",           id: "FirstCyclePhases" },
-      { name: "2.5 — Combustione e accensione", id: "CombustionAndIgnition" },
-      { name: "2.6 — Sistema di scarico",       id: "ExhaustSystem" },
+      { name: "Introduzione",                   id: "The engine cycle" },
+      { name: "2.1 — Carburante e miscela",     id: "FuelAndMixture" },
+      { name: "2.2 — Aria e carburante",        id: "AirAndFuel" },
+      { name: "2.3 — Fasi del ciclo",           id: "FirstCyclePhases" },
+      { name: "2.4 — Combustione e accensione", id: "CombustionAndIgnition" },
+      { name: "2.5 — Sistema di scarico",       id: "ExhaustSystem" },
     ],
   },
 
@@ -203,7 +203,6 @@ const subListVariants = {
 
 const Links = ({ setOpen }) => {
   const [openSection, setOpenSection] = useState(null);
-  const navigate = useNavigate();
 
   const toggle = (id) =>
     setOpenSection((prev) => (prev === id ? null : id));
@@ -213,13 +212,7 @@ const Links = ({ setOpen }) => {
     setOpen(false);
   };
 
-  const handleChapterClick = (item) => {
-    navigate(item.route);
-    setOpen(false);
-    setOpenSection(null);
-  };
-
-  return (
+return (
     <motion.div className="links" variants={variants}>
       {navItems.map((item) =>
         item.children ? (
@@ -230,10 +223,10 @@ const Links = ({ setOpen }) => {
           >
             <div
               className="accordionHeader"
-              onClick={() => handleChapterClick(item)}
+              onClick={() => toggle(item.id)}
               role="button"
               tabIndex={0}
-              onKeyDown={(e) => e.key === "Enter" && handleChapterClick(item)}
+              onKeyDown={(e) => e.key === "Enter" && toggle(item.id)}
             >
               <span>{item.name}</span>
               <span className={`accordionIcon${openSection === item.id ? " open" : ""}`}>

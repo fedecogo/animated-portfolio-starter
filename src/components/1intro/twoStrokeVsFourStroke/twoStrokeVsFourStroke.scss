@@ -2,12 +2,34 @@ $mobile: 576px;
 $tablet: 768px;
 $laptop: 1200px;
 
+$orange:      #ff6b35;
+$orange-soft: #ff8a5f;
+$orange-dim:  rgba(255, 107, 53, 0.12);
+$orange-bdr:  rgba(255, 107, 53, 0.18);
+
+$blue:        #4fa3e0;
+$blue-dim:    rgba(79, 163, 224, 0.1);
+$blue-bdr:    rgba(79, 163, 224, 0.2);
+
+$green:       #3ecf8e;
+$green-dim:   rgba(62, 207, 142, 0.1);
+$green-bdr:   rgba(62, 207, 142, 0.2);
+
+$yellow:      #f0c040;
+$yellow-dim:  rgba(240, 192, 64, 0.1);
+$yellow-bdr:  rgba(240, 192, 64, 0.2);
+
+$violet:      #a78bfa;
+$violet-dim:  rgba(167, 139, 250, 0.1);
+$violet-bdr:  rgba(167, 139, 250, 0.2);
+
 .twoStrokeVsFourStroke {
   position: relative;
   padding: 120px 0;
   background:
-    radial-gradient(circle at top right, rgba(255, 107, 53, 0.08), transparent 24%),
-    linear-gradient(180deg, #0b0d13 0%, #111132 100%);
+    radial-gradient(circle at 12% 8%,  rgba(255, 107, 53, 0.07), transparent 26%),
+    radial-gradient(circle at 88% 88%, rgba(255, 107, 53, 0.04), transparent 24%),
+    linear-gradient(180deg, #0d1019 0%, #0b0d13 50%, #0d1019 100%);
   color: #f5f7fa;
   overflow: hidden;
 
@@ -20,15 +42,17 @@ $laptop: 1200px;
     z-index: 2;
   }
 
-  .topSection {
+  // ─── INTRO BLOCK ───────────────────────────────────────────────────────────
+
+  .introBlock {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 32px;
     align-items: start;
-    margin-bottom: 44px;
+    margin-bottom: 42px;
   }
 
-  .headingBlock {
+  .titleColumn {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -40,9 +64,9 @@ $laptop: 1200px;
     width: fit-content;
     padding: 8px 14px;
     border-radius: 999px;
-    background: rgba(255, 107, 53, 0.12);
-    border: 1px solid rgba(255, 107, 53, 0.18);
-    color: #ff8a5f;
+    background: $orange-dim;
+    border: 1px solid $orange-bdr;
+    color: $orange-soft;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.78rem;
@@ -74,13 +98,14 @@ $laptop: 1200px;
     max-width: 760px;
   }
 
-  .comparisonPanel {
+  // ─── INFO PANEL ────────────────────────────────────────────────────────────
+
+  .infoPanel {
     position: sticky;
     top: 110px;
     padding: 28px;
     border-radius: 28px;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+    background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
     overflow: hidden;
@@ -89,8 +114,7 @@ $laptop: 1200px;
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at top right, rgba(255, 107, 53, 0.08), transparent 30%);
+      background: radial-gradient(circle at top right, rgba(255,107,53,0.08), transparent 30%);
       pointer-events: none;
     }
   }
@@ -103,7 +127,7 @@ $laptop: 1200px;
     .panelTag {
       display: inline-block;
       margin-bottom: 14px;
-      color: #ff6b35;
+      color: $orange;
       font-size: 0.82rem;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -119,72 +143,176 @@ $laptop: 1200px;
     }
   }
 
-  .miniRows {
+  .flowStepsMini {
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 0;
   }
 
-  .miniRow {
+  .miniStep {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     padding: 14px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    &:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
+    &:last-child { border-bottom: 0; padding-bottom: 0; }
   }
 
   .miniLabel {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: rgba(245, 247, 250, 0.45);
+    color: rgba(245, 247, 250, 0.42);
     font-weight: 700;
   }
 
   .miniValue {
-    font-size: 1rem;
+    font-size: 0.96rem;
     line-height: 1.5;
     color: rgba(245, 247, 250, 0.92);
     font-weight: 500;
   }
 
+  // ─── SHARED BLOCK SHELL ────────────────────────────────────────────────────
+
+  .cicloBlock,
+  .caratteristicheBlock {
+    margin-bottom: 32px;
+    padding: 36px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cicloBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(79,163,224,0.05), transparent 40%);
+    pointer-events: none;
+  }
+
+  .caratteristicheBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at bottom right, rgba(255,107,53,0.05), transparent 40%);
+    pointer-events: none;
+  }
+
+  // ─── SHARED BLOCK HEADER ───────────────────────────────────────────────────
+
+  .cicloHeader,
+  .caratteristicheHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    h3 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+      line-height: 1.25;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p { max-width: none; }
+  }
+
+  // ─── CICLO GRID ────────────────────────────────────────────────────────────
+
+  .cicloGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .cicloCard {
+    padding: 24px 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(255, 255, 255, 0.04); }
+
+    h4 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.68;
+      color: rgba(245, 247, 250, 0.65);
+      max-width: none;
+    }
+  }
+
+  .cicloBadge {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &.badge2T { background: $orange-dim; border: 1px solid $orange-bdr; color: $orange-soft; }
+    &.badge4T { background: $blue-dim;   border: 1px solid $blue-bdr;   color: $blue; }
+  }
+
+  // ─── COMPARISON GRID ───────────────────────────────────────────────────────
+
   .comparisonGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
   }
 
   .engineCard {
     position: relative;
     padding: 28px;
     border-radius: 24px;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 107, 53, 0.2);
+    }
 
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       height: 1px;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 107, 53, 0.55),
-        transparent
-      );
+      background: linear-gradient(90deg, transparent, rgba(255,107,53,0.55), transparent);
       opacity: 0.7;
     }
 
@@ -218,13 +346,71 @@ $laptop: 1200px;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #ff6b35;
+    color: $orange;
   }
+
+  // ─── CARATTERISTICHE GRID ──────────────────────────────────────────────────
+
+  .caratteristicheGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .caratteristicaCard {
+    padding: 24px 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(255, 255, 255, 0.04); }
+
+    h4 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.68;
+      color: rgba(245, 247, 250, 0.65);
+      max-width: none;
+    }
+  }
+
+  .caratteristicaBadge {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &.badgePotenza      { background: $orange-dim; border: 1px solid $orange-bdr; color: $orange-soft; }
+    &.badgeBanda        { background: $blue-dim;   border: 1px solid $blue-bdr;   color: $blue; }
+    &.badgeManutenzione { background: $yellow-dim; border: 1px solid $yellow-bdr; color: $yellow; }
+    &.badgeEmissioni    { background: $green-dim;  border: 1px solid $green-bdr;  color: $green; }
+  }
+
+  // ─── ACCORDION BLOCK ───────────────────────────────────────────────────────
 
   .accordionBlock {
     display: flex;
     flex-direction: column;
     gap: 18px;
+    margin-bottom: 32px;
   }
 
   .accordionHeading {
@@ -263,16 +449,13 @@ $laptop: 1200px;
 
   .accordionItem {
     border-radius: 22px;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
+    background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.015));
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
     overflow: hidden;
-    transition: border-color 0.25s ease, transform 0.25s ease;
+    transition: border-color 0.25s ease;
 
-    &.open {
-      border-color: rgba(255, 107, 53, 0.22);
-    }
+    &.open { border-color: rgba(255, 107, 53, 0.22); }
   }
 
   .accordionHeader {
@@ -295,12 +478,10 @@ $laptop: 1200px;
     flex-shrink: 0;
     font-size: 1.5rem;
     line-height: 1;
-    color: #ff8a5f;
+    color: $orange-soft;
   }
 
-  .accordionContent {
-    overflow: hidden;
-  }
+  .accordionContent { overflow: hidden; }
 
   .accordionInner {
     padding: 0 24px 24px;
@@ -330,20 +511,77 @@ $laptop: 1200px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 800;
-    color: #ff8a5f;
+    color: $orange-soft;
+  }
+
+  // ─── CARDS GRID ────────────────────────────────────────────────────────────
+
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .infoCard {
+    position: relative;
+    min-height: 250px;
+    padding: 28px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.2);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,107,53,0.55), transparent);
+      opacity: 0.7;
+    }
+
+    h3 {
+      margin: 0 0 14px;
+      font-size: 1.24rem;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.75;
+      color: rgba(245, 247, 250, 0.72);
+      max-width: none;
+    }
+  }
+
+  .cardTag {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $orange;
+    text-transform: uppercase;
   }
 }
 
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────────
+
 @media (max-width: $laptop) {
   .twoStrokeVsFourStroke {
-    .topSection {
-      grid-template-columns: 1fr;
-    }
+    .introBlock { grid-template-columns: 1fr; }
+    .infoPanel  { position: relative; top: 0; }
 
-    .comparisonPanel {
-      position: relative;
-      top: 0;
-    }
+    .cicloGrid,
+    .caratteristicheGrid { grid-template-columns: repeat(2, 1fr); }
+
+    .comparisonGrid { grid-template-columns: 1fr; }
+    .cardsGrid      { grid-template-columns: 1fr; }
   }
 }
 
@@ -351,42 +589,25 @@ $laptop: 1200px;
   .twoStrokeVsFourStroke {
     padding: 90px 0;
 
-    .wrapper {
-      padding: 0 20px;
-    }
+    .wrapper { padding: 0 20px; }
 
-    // .comparisonGrid {
-    //   grid-template-columns: 1fr;
-    // }
+    h2 { font-size: clamp(2rem, 8vw, 3.5rem); line-height: 1.02; }
+    .lead, p { font-size: 0.98rem; line-height: 1.75; }
 
-    // .accordionInner {
-    //   grid-template-columns: 1fr;
-    // }
+    .cicloBlock,
+    .caratteristicheBlock,
+    .infoPanel,
+    .engineCard { padding: 24px; border-radius: 22px; }
 
-    h2 {
-      font-size: clamp(2rem, 8vw, 3.5rem);
-      line-height: 1.02;
-    }
+    .cicloGrid,
+    .caratteristicheGrid { grid-template-columns: 1fr; gap: 14px; }
 
-    .lead,
-    p {
-      font-size: 0.98rem;
-      line-height: 1.75;
-    }
+    .cicloCard,
+    .caratteristicaCard { padding: 20px 18px; }
 
-    .comparisonPanel,
-    .engineCard {
-      padding: 24px;
-      border-radius: 22px;
-    }
-
-    .accordionHeader {
-      padding: 20px;
-    }
-
-    .accordionInner {
-      padding: 0 20px 20px;
-    }
+    .accordionInner { grid-template-columns: 1fr; }
+    .accordionHeader { padding: 20px; }
+    .accordionInner  { padding: 0 20px 20px; }
   }
 }
 
@@ -394,50 +615,31 @@ $laptop: 1200px;
   .twoStrokeVsFourStroke {
     padding: 70px 0;
 
-    .wrapper {
-      padding: 0 16px;
-    }
+    .wrapper { padding: 0 16px; }
 
-    .sectionLabel {
-      font-size: 0.72rem;
-      letter-spacing: 1.5px;
-      padding: 7px 12px;
-    }
+    .sectionLabel { font-size: 0.72rem; letter-spacing: 1.5px; padding: 7px 12px; }
+    h2            { font-size: 2rem; letter-spacing: -1px; }
 
-    h2 {
-      font-size: 2rem;
-      letter-spacing: -1px;
-    }
-
-    .lead,
-    p,
+    .lead, p,
+    .infoCard p,
+    .cicloCard p,
+    .caratteristicaCard p,
     .engineCard li,
-    .accordionSide p {
-      font-size: 0.95rem;
-      line-height: 1.68;
-    }
+    .accordionSide p { font-size: 0.95rem; line-height: 1.68; }
 
-    .comparisonPanel,
-    .engineCard {
-      padding: 20px;
-    }
+    .cicloBlock,
+    .caratteristicheBlock,
+    .infoPanel,
+    .engineCard,
+    .infoCard { padding: 20px; }
 
     .engineCard h3,
-    .accordionHeading h3 {
-      font-size: 1.12rem;
-    }
+    .accordionHeading h3 { font-size: 1.12rem; }
 
-    .accordionHeader {
-      padding: 18px;
-      font-size: 0.98rem;
-    }
+    .accordionHeader { padding: 18px; font-size: 0.98rem; }
+    .accordionInner  { padding: 0 18px 18px; }
+    .accordionSide   { padding: 16px; }
 
-    .accordionInner {
-      padding: 0 18px 18px;
-    }
-
-    .accordionSide {
-      padding: 16px;
-    }
+    .infoCard h3 { font-size: 1.1rem; }
   }
 }

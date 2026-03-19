@@ -3,47 +3,98 @@ import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
+  show: { transition: { staggerChildren: 0.12 } },
 };
 
 const fadeUpVariants = {
-  hidden: {
-    opacity: 0,
-    y: 32,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      ease: "easeOut",
-    },
-  },
+  hidden: { opacity: 0, y: 32 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
 const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 26,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.65,
-      ease: "easeOut",
-    },
-  },
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
+
+const candelaCards = [
+  {
+    num: "01",
+    badge: "badgeTermico",
+    badgeText: "Grado termico",
+    label: "Fredda o calda?",
+    desc: "Il grado termico descrive la capacità della candela di dissipare calore. Una candela fredda (alto grado) disperde il calore velocemente — ideale per motori ad alto regime. Una candela calda (basso grado) mantiene la punta più calda per evitare fouling in condizioni di uso leggero.",
+  },
+  {
+    num: "02",
+    badge: "badgeElettro",
+    badgeText: "Elettrodi",
+    label: "Gap e geometria elettrodi",
+    desc: "Il gap (distanza inter-elettrodica) determina la tensione necessaria per far scattare la scintilla. Gap troppo stretto: scintilla debole. Gap troppo ampio: rischio di mancata accensione ad alto regime o con miscele ricche.",
+  },
+  {
+    num: "03",
+    badge: "badgeColore",
+    badgeText: "Lettura candela",
+    label: "Il colore della punta non mente",
+    desc: "Punta marrone/beige: miscela corretta. Punta nera e umida: miscela troppo ricca o grado termico sbagliato. Punta bianca o grigiastra: miscela troppo magra — pericolo imminente per il pistone. La candela è la finestra sul cuore del motore.",
+  },
+  {
+    num: "04",
+    badge: "badgeFasatura",
+    badgeText: "Anticipo",
+    label: "Fasatura di accensione",
+    desc: "La scintilla scatta qualche grado prima del PMS (anticipata) perché la combustione impiega tempo a propagarsi. L'anticipo ottimale massimizza la pressione nel momento più favorevole per spingere il pistone in discesa.",
+  },
+];
+
+const processoSteps = [
+  {
+    num: "01",
+    label: "Miscela compressa nella camera",
+    text: "Il pistone ha raggiunto la sua posizione più alta (PMS). La miscela aria-carburante-olio è compressa in un volume minimo. La pressione è massima prima dell'accensione.",
+  },
+  {
+    num: "02",
+    label: "La scintilla genera il fronte di fiamma",
+    text: "La candela scocca e crea un punto caldo agli elettrodi. Il fronte di fiamma si propaga attraverso la miscela compressa in modo concentrico, partendo dal centro-testata verso le pareti.",
+  },
+  {
+    num: "03",
+    label: "La pressione sale in modo esplosivo",
+    text: "La combustione è rapida ma non istantanea: dura qualche grado di rotazione dell'albero. In questo arco, la pressione nel cilindro sale da 15–20 bar (compressione) a 50–80 bar (combustione picco) nei motori da cross.",
+  },
+  {
+    num: "04",
+    label: "I gas spingono il pistone verso il PMI",
+    text: "La pressione sui gas agisce sulla testa del pistone, generando forza sulla biella e coppia sull'albero motore. La potenza effettiva del motore dipende da quanto velocemente e quanto in alto sale la pressione in questo momento.",
+  },
+];
+
+const fasaturaItems = [
+  {
+    label: "Anticipo troppo elevato (in anticipo)",
+    text: "La combustione inizia troppo presto: il pistone sta ancora salendo mentre la pressione cresce già contro di lui. Si genera battito in testa (detonazione), calore eccessivo e rischio di forare la testa del pistone. Il motore suona metallico.",
+  },
+  {
+    label: "Anticipo troppo ridotto (in ritardo)",
+    text: "La miscela inizia a bruciare quando il pistone è già in discesa. La pressione picco si raggiunge troppo tardi, parte dell'energia termica viene persa nello scarico e il motore perde potenza e risposta ai medi-alti.",
+  },
+  {
+    label: "Anticipo corretto",
+    text: "La pressione massima si sviluppa tipicamente 10–15° dopo il PMS. In questo punto il volume del cilindro è già sufficiente per l'espansione, la biella è in posizione favorevole e la forza si trasferisce in modo ottimale all'albero motore.",
+  },
+  {
+    label: "Anticipo variabile (CDI programmabile)",
+    text: "Alcuni motori 2T moderni e preparazioni racing usano CDI con mappa di accensione variabile: l'anticipo cambia in funzione del regime, ottimizzando la combustione su tutto l'arco di utilizzo anziché su un punto solo.",
+  },
+];
 
 const CombustionAndIgnition = () => {
   return (
-    <section className="combustionAndIgnition" id="combustion-and-ignition">
+    <section className="combustionAndIgnition" id="CombustionAndIgnition">
       <div className="wrapper">
+
+        {/* ── INTRO BLOCK ─────────────────────────────────────────────────── */}
         <motion.div
           className="introBlock"
           variants={containerVariants}
@@ -53,225 +104,201 @@ const CombustionAndIgnition = () => {
         >
           <div className="titleColumn">
             <motion.span className="sectionLabel" variants={fadeUpVariants}>
-              Ciclo a due tempi
+              2.4 — Combustione e accensione
             </motion.span>
 
             <motion.h2 variants={fadeUpVariants}>
-              Combustione, candela e aumento di pressione
+              Candela, fronte di fiamma e pressione nel cilindro
             </motion.h2>
 
             <motion.p className="lead" variants={fadeUpVariants}>
-              Una volta che la carica fresca è stata compressa nella camera di
-              combustione, la candela dà inizio all'accensione. In quel momento,
-              la miscela aria-carburante compressa inizia a bruciare, la
-              pressione sale rapidamente e i gas in espansione spingono il
-              pistone verso il basso.
+              La combustione è l&apos;evento centrale del ciclo termodinamico.
+              In pochi gradi di rotazione dell&apos;albero motore, la miscela
+              compressa si accende, il fronte di fiamma si propaga e la
+              pressione nel cilindro triplica o quadruplica. È da questo
+              aumento di pressione che nasce tutta la coppia del motore.
             </motion.p>
 
             <motion.p variants={fadeUpVariants}>
-              Questo è l'evento energetico centrale del motore. La fase di
-              combustione trasforma l'energia chimica in pressione nel cilindro,
-              e quella pressione diventa lavoro meccanico attraverso il pistone,
-              la biella e l'albero motore.
+              In un 2T la combustione non è solo chimica: è fisica, geometria
+              e timing. La forma della camera di combustione, il grado termico
+              della candela, l&apos;anticipo d&apos;accensione e la qualità
+              della miscela sono variabili che si influenzano a vicenda. Capire
+              come interagiscono è la chiave per interpretare la salute del
+              motore e intervenire con le modifiche corrette.
             </motion.p>
           </div>
 
           <motion.div className="infoPanel" variants={fadeUpVariants}>
             <div className="panelHeader">
               <span className="panelTag">Evento centrale</span>
-              <h3>L'accensione avvia l'aumento di pressione che guida il tempo motore</h3>
+              <h3>Dalla scintilla alla forza sul pistone</h3>
             </div>
-
-            <div className="miniRows">
-              <div className="miniRow">
+            <div className="flowStepsMini">
+              <div className="miniStep">
                 <span className="miniLabel">Candela</span>
-                <span className="miniValue">
-                  Genera la scintilla che accende la miscela compressa
-                </span>
+                <span className="miniValue">Genera la scintilla agli elettrodi al momento corretto</span>
               </div>
-
-              <div className="miniRow">
-                <span className="miniLabel">Camera di combustione</span>
-                <span className="miniValue">
-                  Lo spazio in cui la carica intrappolata brucia e la pressione sale
-                </span>
+              <div className="miniStep">
+                <span className="miniLabel">Fronte di fiamma</span>
+                <span className="miniValue">Si propaga attraverso la miscela dalla scintilla alle pareti</span>
               </div>
-
-              <div className="miniRow">
-                <span className="miniLabel">Risultato</span>
-                <span className="miniValue">
-                  I gas in espansione spingono il pistone verso il basso
-                </span>
+              <div className="miniStep">
+                <span className="miniLabel">Pressione picco</span>
+                <span className="miniValue">50–80 bar nei motori da cross — 10–15° dopo il PMS</span>
+              </div>
+              <div className="miniStep">
+                <span className="miniLabel">Coppia</span>
+                <span className="miniValue">Pressione × area testa pistone = forza sulla biella</span>
               </div>
             </div>
           </motion.div>
         </motion.div>
 
+        {/* ── CANDELA BLOCK ───────────────────────────────────────────────── */}
         <motion.div
-          className="mainGrid"
+          className="candelaBlock"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
         >
-          <motion.article className="mainCard" variants={cardVariants}>
-            <span className="cardTag">Accensione</span>
-            <h3>Il ruolo della candela</h3>
+          <div className="candelaHeader">
+            <h3>La candela: non è semplice come sembra</h3>
             <p>
-              La candela è responsabile dell'accensione della miscela compressa
-              al momento corretto. Crea una scintilla elettrica tra i suoi
-              elettrodi, e quella scintilla diventa il punto di partenza del
-              fronte di fiamma nella camera.
+              La candela è l&apos;unico componente del motore che può essere
+              estratto e letto in pochi secondi. Il colore della punta, lo
+              stato degli elettrodi e i depositi sulla ceramica raccontano
+              tutto sulla salute del motore — miscela, temperatura, qualità
+              dell&apos;olio e correttezza della fasatura.
             </p>
-            <p>
-              La fasatura è importante. Se l'accensione avviene troppo presto o
-              troppo tardi, lo sviluppo della pressione nel cilindro cambia e
-              il motore può perdere efficienza, fluidità o sicurezza.
-            </p>
-          </motion.article>
-
-          <motion.article className="mainCard" variants={cardVariants}>
-            <span className="cardTag">Compressione</span>
-            <h3>Rapporto di compressione e aumento di pressione</h3>
-            <p>
-              Prima dell'accensione, il pistone comprime la carica intrappolata
-              nel volume della testata e nella camera di combustione. Questa
-              riduzione di volume aumenta la densità della miscela e innalza il
-              livello di pressione prima che scocchi la scintilla.
-            </p>
-            <p>
-              In termini generali, il rapporto di compressione descrive la
-              relazione tra il volume maggiore del cilindro e il volume minore
-              che rimane quando il pistone raggiunge il punto morto superiore.
-            </p>
-          </motion.article>
+          </div>
+          <motion.div
+            className="candelaGrid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            {candelaCards.map((c) => (
+              <motion.div className="candelaCard" key={c.num} variants={cardVariants}>
+                <div className="candelaTop">
+                  <span className="candelaNum">{c.num}</span>
+                  <span className={`candelaBadge ${c.badge}`}>{c.badgeText}</span>
+                </div>
+                <h4>{c.label}</h4>
+                <p>{c.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
 
+        {/* ── PROCESSO BLOCK ──────────────────────────────────────────────── */}
         <motion.div
-          className="processGrid"
+          className="processoBlock"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+        >
+          <div className="processoHeader">
+            <h3>Sequenza di combustione passo per passo</h3>
+            <p>
+              La combustione non è un&apos;esplosione istantanea ma un evento
+              controllato che dura qualche millisecondo — equivalente a una
+              decina di gradi di rotazione dell&apos;albero. In questo
+              intervallo brevissimo, tutto deve funzionare perfettamente.
+            </p>
+          </div>
+          <motion.div
+            className="processoGrid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            {processoSteps.map((s) => (
+              <motion.div className="processoCard" key={s.num} variants={cardVariants}>
+                <span className="processoNum">{s.num}</span>
+                <h4>{s.label}</h4>
+                <p>{s.text}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
+
+        {/* ── FASATURA BLOCK ──────────────────────────────────────────────── */}
+        <motion.div
+          className="fasaturaBlock"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+        >
+          <div className="fasaturaHeader">
+            <h3>Anticipo d&apos;accensione: il parametro più sensibile</h3>
+            <p>
+              L&apos;anticipo d&apos;accensione (ignition timing) è la variabile
+              che più influenza potenza, sicurezza e carattere del motore.
+              Modificarlo — attraverso il CDI, la bobina o lo statore — cambia
+              il punto in cui la pressione picco si sviluppa nel cilindro.
+            </p>
+          </div>
+          <div className="fasaturaContent">
+            {fasaturaItems.map((f) => (
+              <div className="fasaturaItem" key={f.label}>
+                <span className="fasaturaLabel">{f.label}</span>
+                <p>{f.text}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* ── CARDS FINALI ────────────────────────────────────────────────── */}
+        <motion.div
+          className="cardsGrid"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
         >
-          <motion.article className="processCard" variants={cardVariants}>
-            <span className="stepNumber">01</span>
-            <h3>Miscela intrappolata nella camera</h3>
+          <motion.article className="infoCard" variants={cardVariants}>
+            <span className="cardTag">Battito in testa</span>
+            <h3>Detonazione: il nemico silenzioso del pistone</h3>
             <p>
-              La carica aria-carburante compressa è confinata sopra il pistone,
-              nella camera di combustione e nel volume finale del cilindro vicino
-              al punto morto superiore.
+              La detonazione (knocking) avviene quando parte della miscela
+              s&apos;accende spontaneamente prima che il fronte di fiamma arrivi.
+              Si genera un&apos;onda di pressione distruttiva. Nei 2T da cross
+              basta qualche minuto di detonazione sostenuta per forare la testa
+              del pistone o rompere i segmenti.
             </p>
           </motion.article>
 
-          <motion.article className="processCard" variants={cardVariants}>
-            <span className="stepNumber">02</span>
-            <h3>La scintilla dà inizio all'accensione</h3>
+          <motion.article className="infoCard" variants={cardVariants}>
+            <span className="cardTag">Pre-accensione</span>
+            <h3>Quando il motore si accende da solo</h3>
             <p>
-              La candela scocca e crea un punto di accensione controllato. Il
-              fronte di fiamma inizia a propagarsi attraverso la miscela compressa.
+              La pre-accensione avviene quando un punto caldo nella camera
+              (deposito carbonioso, spigolo vivo della testata, punta candela
+              surriscaldata) accende la miscela prima della scintilla. Il
+              risultato è simile alla detonazione: pressione in anticipo,
+              forza contro il pistone in salita, danni.
             </p>
           </motion.article>
 
-          <motion.article className="processCard" variants={cardVariants}>
-            <span className="stepNumber">03</span>
-            <h3>La pressione sale rapidamente</h3>
+          <motion.article className="infoCard" variants={cardVariants}>
+            <span className="cardTag">Rapporto compressione</span>
+            <h3>Compressione e accensione si influenzano</h3>
             <p>
-              La combustione aumenta la temperatura e la pressione dei gas. La
-              camera è piccola, i gas si espandono e la pressione nel cilindro
-              sale molto rapidamente.
-            </p>
-          </motion.article>
-
-          <motion.article className="processCard" variants={cardVariants}>
-            <span className="stepNumber">04</span>
-            <h3>Il pistone viene spinto verso il basso</h3>
-            <p>
-              I gas in espansione premono sulla testa del pistone, producendo la
-              forza che muove la biella e fa ruotare l'albero motore.
-            </p>
-          </motion.article>
-        </motion.div>
-
-        <motion.div
-          className="technicalGrid"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          <motion.article className="techCard" variants={cardVariants}>
-            <span className="cardTag">Fasatura accensione</span>
-            <h3>La combustione deve iniziare al momento giusto</h3>
-            <p>
-              L'evento di accensione deve essere sincronizzato con la posizione
-              del pistone. La fasatura corretta consente alla pressione di
-              costruirsi nella parte più efficace del ciclo.
-            </p>
-          </motion.article>
-
-          <motion.article className="techCard" variants={cardVariants}>
-            <span className="cardTag">Camera di combustione</span>
-            <h3>La forma della camera influisce sullo sviluppo della fiamma</h3>
-            <p>
-              La geometria della testata e della camera influenza la turbolenza,
-              la propagazione della fiamma e la qualità complessiva dell'evento
-              di combustione.
-            </p>
-          </motion.article>
-
-          <motion.article className="techCard" variants={cardVariants}>
-            <span className="cardTag">Pressione</span>
-            <h3>La combustione è un evento di pressione controllato</h3>
-            <p>
-              Il motore non funziona grazie a un'esplosione caotica, ma perché
-              la combustione crea un rapido e controllato aumento di pressione
-              che agisce sulla testa del pistone.
+              Un rapporto di compressione più alto aumenta la densità e la
+              temperatura della miscela al PMS, richiedendo benzina con ottano
+              più alto per evitare la detonazione. I motori da gara con
+              compressione 14:1 usano benzina 98 o racing e anticipo calibrato
+              con precisione.
             </p>
           </motion.article>
         </motion.div>
 
-        <motion.div
-          className="bottomStrip"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          <motion.div className="stripCard" variants={cardVariants}>
-            <span className="stripIndex">A</span>
-            <div>
-              <h4>Punto morto superiore</h4>
-              <p>
-                L'accensione avviene quando il pistone è molto vicino al punto
-                morto superiore, dove il volume intrappolato è al minimo.
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div className="stripCard" variants={cardVariants}>
-            <span className="stripIndex">B</span>
-            <div>
-              <h4>Carica compressa</h4>
-              <p>
-                Una carica più densa è più facile da accendere efficacemente e
-                consente un aumento di pressione più forte durante la combustione.
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div className="stripCard" variants={cardVariants}>
-            <span className="stripIndex">C</span>
-            <div>
-              <h4>Inizio del tempo motore</h4>
-              <p>
-                Una volta che la pressione di combustione agisce sulla testa del
-                pistone, l'evento energetico diventa moto meccanico nel gruppo
-                rotante.
-              </p>
-            </div>
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );

@@ -2,12 +2,34 @@ $mobile: 576px;
 $tablet: 768px;
 $laptop: 1200px;
 
+$orange:      #ff6b35;
+$orange-soft: #ff8a5f;
+$orange-dim:  rgba(255, 107, 53, 0.12);
+$orange-bdr:  rgba(255, 107, 53, 0.18);
+
+$green:       #3ecf8e;
+$green-dim:   rgba(62, 207, 142, 0.1);
+$green-bdr:   rgba(62, 207, 142, 0.2);
+
+$blue:        #4fa3e0;
+$blue-dim:    rgba(79, 163, 224, 0.1);
+$blue-bdr:    rgba(79, 163, 224, 0.2);
+
+$violet:      #a78bfa;
+$violet-dim:  rgba(167, 139, 250, 0.1);
+$violet-bdr:  rgba(167, 139, 250, 0.2);
+
+$yellow:      #f0c040;
+$yellow-dim:  rgba(240, 192, 64, 0.1);
+$yellow-bdr:  rgba(240, 192, 64, 0.2);
+
 .whatIsA2TMotorcycle {
   position: relative;
   padding: 120px 0;
   background:
-    radial-gradient(circle at top left, rgba(255, 107, 53, 0.08), transparent 22%),
-    linear-gradient(180deg, #111132 0%, #0b0d13 100%);
+    radial-gradient(circle at 88% 12%, rgba(255, 107, 53, 0.07), transparent 26%),
+    radial-gradient(circle at 10% 85%, rgba(255, 107, 53, 0.04), transparent 24%),
+    linear-gradient(180deg, #0b0d13 0%, #0d1019 50%, #0b0d13 100%);
   color: #f5f7fa;
   overflow: hidden;
 
@@ -20,15 +42,17 @@ $laptop: 1200px;
     z-index: 2;
   }
 
-  .introGrid {
+  // ─── INTRO BLOCK ───────────────────────────────────────────────────────────
+
+  .introBlock {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 36px;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
     align-items: start;
-    margin-bottom: 52px;
+    margin-bottom: 42px;
   }
 
-  .leftColumn {
+  .titleColumn {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -40,9 +64,9 @@ $laptop: 1200px;
     width: fit-content;
     padding: 8px 14px;
     border-radius: 999px;
-    background: rgba(255, 107, 53, 0.12);
-    border: 1px solid rgba(255, 107, 53, 0.18);
-    color: #ff8a5f;
+    background: $orange-dim;
+    border: 1px solid $orange-bdr;
+    color: $orange-soft;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.78rem;
@@ -53,12 +77,13 @@ $laptop: 1200px;
     margin: 0;
     font-size: clamp(2.3rem, 5vw, 4.6rem);
     line-height: 1;
-    letter-spacing: -1.6px;
+    letter-spacing: -1.5px;
     font-weight: 800;
     max-width: 760px;
   }
 
   .lead {
+    margin: 0;
     font-size: 1.08rem;
     line-height: 1.8;
     color: rgba(245, 247, 250, 0.88);
@@ -73,17 +98,14 @@ $laptop: 1200px;
     max-width: 760px;
   }
 
-  .rightColumn {
-    width: 100%;
-  }
+  // ─── INFO PANEL ────────────────────────────────────────────────────────────
 
   .infoPanel {
     position: sticky;
     top: 110px;
-    border-radius: 28px;
     padding: 28px;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
     overflow: hidden;
@@ -92,8 +114,7 @@ $laptop: 1200px;
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at top right, rgba(255, 107, 53, 0.08), transparent 30%);
+      background: radial-gradient(circle at top right, rgba(255,107,53,0.08), transparent 30%);
       pointer-events: none;
     }
   }
@@ -101,12 +122,12 @@ $laptop: 1200px;
   .panelHeader {
     position: relative;
     z-index: 1;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
 
     .panelTag {
       display: inline-block;
       margin-bottom: 14px;
-      color: #ff6b35;
+      color: $orange;
       font-size: 0.82rem;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -115,48 +136,263 @@ $laptop: 1200px;
 
     h3 {
       margin: 0;
-      font-size: 1.45rem;
-      line-height: 1.25;
+      font-size: 1.35rem;
+      line-height: 1.3;
       font-weight: 700;
       color: #ffffff;
     }
   }
 
-  .panelLines {
+  .flowStepsMini {
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 0;
   }
 
-  .lineItem {
+  .miniStep {
     display: flex;
     flex-direction: column;
     gap: 4px;
     padding: 14px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    &:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
+    &:last-child { border-bottom: 0; padding-bottom: 0; }
   }
 
-  .lineLabel {
-    font-size: 0.8rem;
+  .miniLabel {
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: rgba(245, 247, 250, 0.45);
+    color: rgba(245, 247, 250, 0.42);
     font-weight: 700;
   }
 
-  .lineValue {
+  .miniValue {
     font-size: 1rem;
     color: rgba(245, 247, 250, 0.9);
     line-height: 1.5;
     font-weight: 500;
   }
+
+  // ─── SHARED BLOCK SHELL ────────────────────────────────────────────────────
+
+  .carterBlock,
+  .luciBlock,
+  .lubrificazioneBlock {
+    margin-bottom: 32px;
+    padding: 36px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carterBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255,107,53,0.06), transparent 40%);
+    pointer-events: none;
+  }
+
+  .luciBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at bottom right, rgba(79,163,224,0.05), transparent 40%);
+    pointer-events: none;
+  }
+
+  .lubrificazioneBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(62,207,142,0.04), transparent 40%);
+    pointer-events: none;
+  }
+
+  // ─── SHARED BLOCK HEADER ───────────────────────────────────────────────────
+
+  .carterHeader,
+  .luciHeader,
+  .lubrificazioneHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    h3 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+      line-height: 1.25;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p { max-width: none; }
+  }
+
+  // ─── CARTER GRID ───────────────────────────────────────────────────────────
+
+  .carterGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .carterCard {
+    padding: 24px 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 107, 53, 0.2);
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.68;
+      color: rgba(245, 247, 250, 0.65);
+      max-width: none;
+    }
+  }
+
+  .carterIdx {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: $orange;
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(255,107,53,0.22);
+  }
+
+  // ─── LUCI GRID ─────────────────────────────────────────────────────────────
+
+  .luciGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .luciCard {
+    padding: 24px 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(255, 255, 255, 0.04); }
+
+    h4 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.68;
+      color: rgba(245, 247, 250, 0.65);
+      max-width: none;
+    }
+  }
+
+  .luciBadge {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &.badgeAsp  { background: $orange-dim; border: 1px solid $orange-bdr; color: $orange-soft; }
+    &.badgeTrav { background: $blue-dim;   border: 1px solid $blue-bdr;   color: $blue; }
+    &.badgeSca  { background: $yellow-dim; border: 1px solid $yellow-bdr; color: $yellow; }
+    &.badgeReed { background: $green-dim;  border: 1px solid $green-bdr;  color: $green; }
+  }
+
+  // ─── LUBRIFICAZIONE CONTENT ────────────────────────────────────────────────
+
+  .lubrificazioneContent {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .lubColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .lubItem {
+    padding: 24px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    p {
+      margin: 0;
+      font-size: 0.93rem;
+      line-height: 1.72;
+      color: rgba(245, 247, 250, 0.68);
+      max-width: none;
+    }
+  }
+
+  .lubLabel {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: $green;
+  }
+
+  // ─── CARDS GRID ────────────────────────────────────────────────────────────
 
   .cardsGrid {
     display: grid;
@@ -169,31 +405,24 @@ $laptop: 1200px;
     min-height: 250px;
     padding: 28px;
     border-radius: 24px;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.2);
     overflow: hidden;
 
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       height: 1px;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 107, 53, 0.55),
-        transparent
-      );
+      background: linear-gradient(90deg, transparent, rgba(255,107,53,0.55), transparent);
       opacity: 0.7;
     }
 
     h3 {
       margin: 0 0 14px;
-      font-size: 1.28rem;
+      font-size: 1.24rem;
       line-height: 1.3;
       font-weight: 700;
       color: #ffffff;
@@ -208,30 +437,30 @@ $laptop: 1200px;
     }
   }
 
-  .cardNumber {
+  .cardTag {
     display: inline-block;
     margin-bottom: 18px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 2px;
-    color: #ff6b35;
+    color: $orange;
+    text-transform: uppercase;
   }
 }
 
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────────
+
 @media (max-width: $laptop) {
   .whatIsA2TMotorcycle {
-    .introGrid {
-      grid-template-columns: 1fr;
-    }
+    .introBlock { grid-template-columns: 1fr; }
+    .infoPanel  { position: relative; top: 0; }
 
-    .infoPanel {
-      position: relative;
-      top: 0;
-    }
+    .carterGrid,
+    .luciGrid { grid-template-columns: repeat(2, 1fr); }
 
-    .cardsGrid {
-      grid-template-columns: 1fr;
-    }
+    .lubrificazioneContent { grid-template-columns: 1fr; }
+
+    .cardsGrid { grid-template-columns: 1fr; }
   }
 }
 
@@ -239,45 +468,24 @@ $laptop: 1200px;
   .whatIsA2TMotorcycle {
     padding: 90px 0;
 
-    .wrapper {
-      padding: 0 20px;
-    }
-    //   .rightColumn {
-    //   display: none;
-    // }
-    // .cardsGrid {
-    //   display: none;
-    // }
-    // .infoPanel{
-    //   display: none;
-    // }
+    .wrapper { padding: 0 20px; }
 
-    .introGrid {
-      gap: 28px;
-      margin-bottom: 36px;
-    }
+    h2 { font-size: clamp(2rem, 8vw, 3.4rem); line-height: 1.02; }
+    .lead, p { font-size: 0.98rem; line-height: 1.75; }
 
-    h2 {
-      font-size: clamp(2rem, 8vw, 3.4rem);
-      line-height: 1.02;
-    }
+    .carterBlock,
+    .luciBlock,
+    .lubrificazioneBlock,
+    .infoPanel,
+    .infoCard { padding: 24px; border-radius: 22px; }
 
-    .lead,
-    p {
-      font-size: 0.98rem;
-      line-height: 1.75;
-    }
+    .carterGrid,
+    .luciGrid { grid-template-columns: 1fr; gap: 14px; }
 
-    .infoPanel {
-      padding: 24px;
-      border-radius: 24px;
-    }
+    .carterCard,
+    .luciCard { padding: 20px 18px; }
 
-    .infoCard {
-      min-height: auto;
-      padding: 24px;
-      border-radius: 22px;
-    }
+    .lubItem { padding: 20px; }
   }
 }
 
@@ -285,39 +493,23 @@ $laptop: 1200px;
   .whatIsA2TMotorcycle {
     padding: 70px 0;
 
-    .wrapper {
-      padding: 0 16px;
-    }
-  
+    .wrapper { padding: 0 16px; }
 
-    .sectionLabel {
-      font-size: 0.72rem;
-      letter-spacing: 1.5px;
-      padding: 7px 12px;
-    }
+    .sectionLabel { font-size: 0.72rem; letter-spacing: 1.5px; padding: 7px 12px; }
+    h2            { font-size: 2rem; letter-spacing: -1px; }
 
-    h2 {
-      font-size: 2rem;
-      letter-spacing: -1px;
-    }
+    .lead, p,
+    .infoCard p,
+    .carterCard p,
+    .luciCard p,
+    .lubItem p { font-size: 0.95rem; line-height: 1.68; }
 
-    .lead,
-    p {
-      font-size: 0.95rem;
-      line-height: 1.68;
-    }
-
-    .panelHeader h3 {
-      font-size: 1.2rem;
-    }
-
+    .carterBlock,
+    .luciBlock,
+    .lubrificazioneBlock,
     .infoPanel,
-    .infoCard {
-      padding: 20px;
-    }
+    .infoCard { padding: 20px; }
 
-    .infoCard h3 {
-      font-size: 1.1rem;
-    }
+    .infoCard h3 { font-size: 1.1rem; }
   }
 }

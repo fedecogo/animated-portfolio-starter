@@ -32,9 +32,9 @@
             &::-webkit-scrollbar-track { background: transparent; }
             &::-webkit-scrollbar-thumb { background: #ddd; border-radius: 2px; }
 
-            // top-level direct links (motion.a)
-            > a {
-                font-size: 32px;
+            // top-level direct links (Homepage, Contatti)
+            .topLink {
+                font-size: 24px;
                 font-weight: 600;
                 text-decoration: none;
                 color: black;
@@ -52,7 +52,7 @@
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
-                font-size: 32px;
+                font-size: 24px;
                 font-weight: 600;
                 color: black;
                 cursor: pointer;

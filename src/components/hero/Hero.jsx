@@ -114,9 +114,9 @@ const Hero = ({ onOpenSidebar }) => {
             </Link>
           </motion.div>
 
-          <motion.div variants={itemVariants}>
+          {/* <motion.div variants={itemVariants}>
             <Search />
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
 

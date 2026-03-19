@@ -2,12 +2,30 @@ $mobile: 576px;
 $tablet: 768px;
 $laptop: 1200px;
 
+$orange:      #ff6b35;
+$orange-soft: #ff8a5f;
+$orange-dim:  rgba(255, 107, 53, 0.12);
+$orange-bdr:  rgba(255, 107, 53, 0.18);
+
+$green:       #3ecf8e;
+$green-dim:   rgba(62, 207, 142, 0.1);
+$green-bdr:   rgba(62, 207, 142, 0.2);
+
+$blue:        #4fa3e0;
+$blue-dim:    rgba(79, 163, 224, 0.1);
+$blue-bdr:    rgba(79, 163, 224, 0.2);
+
+$yellow:      #f0c040;
+$yellow-dim:  rgba(240, 192, 64, 0.1);
+$yellow-bdr:  rgba(240, 192, 64, 0.2);
+
 .firstCyclePhases {
   position: relative;
   padding: 120px 0;
   background:
-    radial-gradient(circle at top right, rgba(255, 107, 53, 0.08), transparent 24%),
-    linear-gradient(180deg, #0b0d13 0%, #111132 100%);
+    radial-gradient(circle at 88% 12%, rgba(255, 107, 53, 0.07), transparent 26%),
+    radial-gradient(circle at 10% 85%, rgba(255, 107, 53, 0.04), transparent 24%),
+    linear-gradient(180deg, #0b0d13 0%, #0d1019 50%, #0b0d13 100%);
   color: #f5f7fa;
   overflow: hidden;
 
@@ -20,19 +38,21 @@ $laptop: 1200px;
     z-index: 2;
   }
 
+  // ─── INTRO BLOCK ───────────────────────────────────────────────────────────
+
   .introBlock {
     display: grid;
-    grid-template-columns: 1.08fr 0.92fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 32px;
     align-items: start;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 
   .titleColumn {
     display: flex;
     flex-direction: column;
     gap: 18px;
-    max-width: 790px;
+    max-width: 780px;
   }
 
   .sectionLabel {
@@ -40,9 +60,9 @@ $laptop: 1200px;
     width: fit-content;
     padding: 8px 14px;
     border-radius: 999px;
-    background: rgba(255, 107, 53, 0.12);
-    border: 1px solid rgba(255, 107, 53, 0.18);
-    color: #ff8a5f;
+    background: $orange-dim;
+    border: 1px solid $orange-bdr;
+    color: $orange-soft;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.78rem;
@@ -51,9 +71,9 @@ $laptop: 1200px;
 
   h2 {
     margin: 0;
-    font-size: clamp(2.4rem, 5vw, 4.8rem);
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
     line-height: 1;
-    letter-spacing: -1.6px;
+    letter-spacing: -1.5px;
     font-weight: 800;
     max-width: 760px;
   }
@@ -61,7 +81,7 @@ $laptop: 1200px;
   .lead {
     margin: 0;
     font-size: 1.08rem;
-    line-height: 1.82;
+    line-height: 1.8;
     color: rgba(245, 247, 250, 0.88);
     max-width: 760px;
   }
@@ -74,13 +94,14 @@ $laptop: 1200px;
     max-width: 760px;
   }
 
+  // ─── INFO PANEL ────────────────────────────────────────────────────────────
+
   .infoPanel {
     position: sticky;
     top: 110px;
     padding: 28px;
     border-radius: 28px;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+    background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
     overflow: hidden;
@@ -89,8 +110,7 @@ $laptop: 1200px;
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at top right, rgba(255, 107, 53, 0.08), transparent 30%);
+      background: radial-gradient(circle at top right, rgba(255,107,53,0.08), transparent 30%);
       pointer-events: none;
     }
   }
@@ -103,7 +123,7 @@ $laptop: 1200px;
     .panelTag {
       display: inline-block;
       margin-bottom: 14px;
-      color: #ff6b35;
+      color: $orange;
       font-size: 0.82rem;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -113,217 +133,284 @@ $laptop: 1200px;
     h3 {
       margin: 0;
       font-size: 1.35rem;
-      line-height: 1.32;
+      line-height: 1.3;
       font-weight: 700;
       color: #ffffff;
     }
   }
 
-  .miniRows {
+  .flowStepsMini {
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 14px;
   }
 
-  .miniRow {
+  .miniStep {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     padding: 14px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    &:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
+    &:last-child { border-bottom: 0; padding-bottom: 0; }
   }
 
   .miniLabel {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: rgba(245, 247, 250, 0.45);
+    color: rgba(245, 247, 250, 0.42);
     font-weight: 700;
   }
 
   .miniValue {
     font-size: 1rem;
-    line-height: 1.55;
-    color: rgba(245, 247, 250, 0.92);
+    color: rgba(245, 247, 250, 0.9);
+    line-height: 1.5;
     font-weight: 500;
   }
 
-  .phasesGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
-    margin-bottom: 28px;
-  }
+  // ─── SHARED BLOCK SHELL ────────────────────────────────────────────────────
 
-  .phaseCard {
-    position: relative;
-    min-height: 460px;
-    padding: 30px;
+  .fasiBlock,
+  .timingBlock {
+    margin-bottom: 32px;
+    padding: 36px;
     border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    position: relative;
     overflow: hidden;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-          135deg,
-          transparent 0%,
-          rgba(255, 255, 255, 0.02) 45%,
-          transparent 100%
-        );
-      pointer-events: none;
-    }
-
-    h3 {
-      margin: 0 0 18px;
-      font-size: 1.5rem;
-      line-height: 1.25;
-      font-weight: 700;
-      color: #ffffff;
-      max-width: 480px;
-    }
-
-    p {
-      max-width: none;
-      font-size: 0.98rem;
-      line-height: 1.76;
-      color: rgba(245, 247, 250, 0.74);
-      margin-bottom: 14px;
-    }
-
-    &.aspirationCard {
-      background:
-        linear-gradient(180deg, rgba(73, 148, 255, 0.09), rgba(255, 255, 255, 0.018));
-    }
-
-    &.compressionCard {
-      background:
-        linear-gradient(180deg, rgba(255, 107, 53, 0.09), rgba(255, 255, 255, 0.018));
-    }
   }
 
-  .phaseTop {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
+  .fasiBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255,107,53,0.06), transparent 40%);
+    pointer-events: none;
   }
 
-  .phaseIndex {
-    display: inline-flex;
-    width: 42px;
-    height: 42px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #ffffff;
-    font-size: 0.82rem;
-    font-weight: 800;
-    letter-spacing: 1px;
+  .timingBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at bottom right, rgba(79,163,224,0.05), transparent 40%);
+    pointer-events: none;
   }
 
-  .phaseTag {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #ff8a5f;
-  }
+  // ─── SHARED BLOCK HEADER ───────────────────────────────────────────────────
 
-  .phaseDetails {
-    margin-top: 22px;
+  .fasiHeader,
+  .timingHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+    max-width: 760px;
     display: flex;
     flex-direction: column;
     gap: 14px;
+
+    h3 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+      line-height: 1.25;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p { max-width: none; }
   }
-  .combustionImage {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 60px 0;
-}
 
-.combustionImage img {
-  max-width: 520px;
-  width: 100%;
-  height: auto;
+  // ─── FASI GRID ─────────────────────────────────────────────────────────────
 
-  border-radius: 14px;
+  .fasiGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
 
-  box-shadow:
-    0 40px 90px rgba(0,0,0,0.45),
-    0 0 20px rgba(255,107,53,0.15);
-}
-
-  .detailItem {
-    padding: 15px 16px;
+  .faseCard {
+    padding: 24px 20px;
     border-radius: 18px;
-    background: rgba(255, 255, 255, 0.028);
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &:hover { background: rgba(255, 255, 255, 0.04); }
+
+    h4 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.68;
+      color: rgba(245, 247, 250, 0.65);
+      max-width: none;
+      flex: 1;
+    }
+  }
+
+  .faseTop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .faseNum {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: $orange;
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(255,107,53,0.22);
+  }
+
+  .faseBadge {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &.badgeSalita  { background: $blue-dim;   border: 1px solid $blue-bdr;   color: $blue; }
+    &.badgeSalita2 { background: $blue-dim;   border: 1px solid $blue-bdr;   color: $blue; }
+    &.badgeDiscesa { background: $orange-dim; border: 1px solid $orange-bdr; color: $orange-soft; }
+    &.badgeDiscesa2{ background: $orange-dim; border: 1px solid $orange-bdr; color: $orange-soft; }
+  }
+
+  .faseDetails {
+    margin-top: 4px;
+    padding: 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.06);
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
+  }
+
+  .faseDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
   }
 
   .detailLabel {
-    font-size: 0.76rem;
+    font-size: 0.72rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+    color: rgba(245, 247, 250, 0.4);
     font-weight: 700;
-    color: rgba(245, 247, 250, 0.45);
   }
 
   .detailValue {
-    font-size: 0.98rem;
-    line-height: 1.55;
-    color: rgba(245, 247, 250, 0.92);
+    font-size: 0.88rem;
+    color: rgba(245, 247, 250, 0.88);
     font-weight: 500;
+    line-height: 1.4;
   }
 
-  .technicalGrid {
+  // ─── COMBUSTION IMAGE ──────────────────────────────────────────────────────
+
+  .combustionImage {
+    margin-bottom: 32px;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  // ─── TIMING CONTENT ────────────────────────────────────────────────────────
+
+  .timingContent {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+
+  .timingItem {
+    padding: 24px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    p {
+      margin: 0;
+      font-size: 0.93rem;
+      line-height: 1.72;
+      color: rgba(245, 247, 250, 0.68);
+      max-width: none;
+    }
+  }
+
+  .timingLabel {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: $blue;
+  }
+
+  // ─── CARDS GRID ────────────────────────────────────────────────────────────
+
+  .cardsGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
   }
 
-  .techCard {
+  .infoCard {
     position: relative;
     min-height: 250px;
     padding: 28px;
     border-radius: 24px;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.2);
     overflow: hidden;
 
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       height: 1px;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 107, 53, 0.55),
-        transparent
-      );
+      background: linear-gradient(90deg, transparent, rgba(255,107,53,0.55), transparent);
       opacity: 0.7;
     }
 
@@ -350,25 +437,23 @@ $laptop: 1200px;
     font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 2px;
-    color: #ff6b35;
+    color: $orange;
     text-transform: uppercase;
   }
 }
 
+// ─── RESPONSIVE ──────────────────────────────────────────────────────────────
+
 @media (max-width: $laptop) {
   .firstCyclePhases {
-    .introBlock {
-      grid-template-columns: 1fr;
-    }
+    .introBlock { grid-template-columns: 1fr; }
+    .infoPanel  { position: relative; top: 0; }
 
-    .infoPanel {
-      position: relative;
-      top: 0;
-    }
+    .fasiGrid { grid-template-columns: repeat(2, 1fr); }
 
-    .technicalGrid {
-      grid-template-columns: 1fr;
-    }
+    .timingContent { grid-template-columns: 1fr; }
+
+    .cardsGrid { grid-template-columns: 1fr; }
   }
 }
 
@@ -376,35 +461,19 @@ $laptop: 1200px;
   .firstCyclePhases {
     padding: 90px 0;
 
-    .wrapper {
-      padding: 0 20px;
-    }
+    .wrapper { padding: 0 20px; }
 
-    h2 {
-      font-size: clamp(2rem, 8vw, 3.5rem);
-      line-height: 1.02;
-    }
+    h2 { font-size: clamp(2rem, 8vw, 3.4rem); line-height: 1.02; }
+    .lead, p { font-size: 0.98rem; line-height: 1.75; }
 
-    .lead,
-    p {
-      font-size: 0.98rem;
-      line-height: 1.75;
-    }
-
-    .phasesGrid {
-      grid-template-columns: 1fr;
-    }
-
+    .fasiBlock,
+    .timingBlock,
     .infoPanel,
-    .phaseCard,
-    .techCard {
-      padding: 24px;
-      border-radius: 22px;
-    }
+    .infoCard { padding: 24px; border-radius: 22px; }
 
-    .phaseCard {
-      min-height: auto;
-    }
+    .fasiGrid { grid-template-columns: 1fr; gap: 14px; }
+    .faseCard  { padding: 20px 18px; }
+    .timingItem { padding: 20px; }
   }
 }
 
@@ -412,47 +481,21 @@ $laptop: 1200px;
   .firstCyclePhases {
     padding: 70px 0;
 
-    .wrapper {
-      padding: 0 16px;
-    }
+    .wrapper { padding: 0 16px; }
 
-    .sectionLabel {
-      font-size: 0.72rem;
-      letter-spacing: 1.5px;
-      padding: 7px 12px;
-    }
+    .sectionLabel { font-size: 0.72rem; letter-spacing: 1.5px; padding: 7px 12px; }
+    h2            { font-size: 2rem; letter-spacing: -1px; }
 
-    h2 {
-      font-size: 2rem;
-      letter-spacing: -1px;
-    }
+    .lead, p,
+    .infoCard p,
+    .faseCard p,
+    .timingItem p { font-size: 0.95rem; line-height: 1.68; }
 
-    .lead,
-    p,
-    .phaseCard p,
-    .techCard p,
-    .miniValue,
-    .detailValue {
-      font-size: 0.95rem;
-      line-height: 1.68;
-    }
-
+    .fasiBlock,
+    .timingBlock,
     .infoPanel,
-    .phaseCard,
-    .techCard {
-      padding: 20px;
-    }
+    .infoCard { padding: 20px; }
 
-    .panelHeader h3,
-    .phaseCard h3,
-    .techCard h3 {
-      font-size: 1.12rem;
-    }
-
-    .phaseIndex {
-      width: 36px;
-      height: 36px;
-      font-size: 0.74rem;
-    }
+    .infoCard h3 { font-size: 1.1rem; }
   }
 }
